@@ -1,5 +1,5 @@
 import "./App.css";
-import AboutUs from "./Components/AboutUs";
+// import AboutUs from "./Components/AboutUs";
 import Agenda from "./Components/Agenda";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
@@ -8,13 +8,13 @@ import Sponsors from "./Components/Sponsors";
 
 function App() {
 	return (
-		<div className="relative ">
-			<Navbar />
-			<div className="w-screen h-screen bg-gradient-to-br from-pink-400 to-purple-500">
+		<div className="relative bg-gradient-to-br from-pink-400 to-purple-500">
+			<div className="">
+				<Navbar />
 				<Home />
 				<Sponsors />
 				<Agenda />
-				<AboutUs />
+				{/* <AboutUs /> */}
 				<Footer />
 			</div>
 		</div>
