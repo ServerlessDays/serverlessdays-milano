@@ -77,18 +77,18 @@ export const InfiniteMovingImage = ({
 			>
 				{items.map((item, idx) => (
 					<li
-						className="w-[250px] max-w-full relative rounded-2xl  flex-shrink-0  px-8 py-6 md:w-[250px]"
+						className="w-[250px] justify-center  max-w-full relative rounded-2xl  flex-shrink-0 bg-fuchsia-600 shadow-lg  px-8 py-6 md:w-[250px]"
 						// style={{
 						// 	background: "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
 						// }}
 						key={item + idx}
 					>
-						<blockquote>
+						<div className="h-full ">
 							<div
 								aria-hidden="true"
 								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
 							></div>
-							<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center justify-center items-center ">
+							<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full ">
 								<img src={item} alt="quote" className="w-full h-full " />
 							</span>
 							{/* <div className="relative z-20 flex flex-row items-center mt-6">
@@ -97,7 +97,7 @@ export const InfiniteMovingImage = ({
 									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</span>
 								</span>
 							</div> */}
-						</blockquote>
+						</div>
 					</li>
 				))}
 			</ul>
