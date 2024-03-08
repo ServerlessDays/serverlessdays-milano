@@ -1,6 +1,6 @@
 import "./App.css";
 // import AboutUs from "./Components/AboutUs";
-import Agenda from "./Components/Agenda";
+import AgendaAccordion from "./Components/Agenda";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
@@ -13,7 +13,7 @@ function App() {
 				<Navbar />
 				<Home />
 				<Sponsors />
-				<Agenda />
+				<AgendaAccordion />
 				{/* <AboutUs /> */}
 				<Footer />
 			</div>
