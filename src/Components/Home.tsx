@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import UnicornMascot from "../assets/unicorn_mascot.svg";
 import { Button } from "./ui/button";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
@@ -9,7 +10,13 @@ const Home = () => {
 					<h1 className="text-6xl font-extrabold">
 						Serverless Days <br /> Milan 🇮🇹
 					</h1>
-					<h3 className="text-4xl font-semibold text-secondary">10 May 2024</h3>
+					<h3 className="text-4xl font-semibold text-secondary">
+						<a href="/Serverless_Day_2024.ics">June, 13th 2024</a>
+						&nbsp;@&nbsp;
+						<a href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8" target="_blank">
+							Milano C30
+						</a>
+					</h3>
 					<TextGenerateEffect
 						words={"Join the biggest Serverless community conference in Italy."}
 						className="text-2xl font-medium text-white text-secondary"
@@ -18,7 +25,20 @@ const Home = () => {
 
 						Join the biggest Serverless community conference in Italy.
 					</p> */}
-					<Button className="font-semibold text-white rounded-xl">🎫 Buy your ticket!</Button>
+
+					<motion.div
+						animate={{
+							//jump with spring every 2 seconds
+							y: [0, -5, 0],
+							transition: {
+								duration: 0.3,
+								repeat: Infinity,
+								repeatDelay: 2,
+							},
+						}}
+					>
+						<Button className="font-semibold text-white rounded-xl">🎫 Buy your ticket!</Button>
+					</motion.div>
 				</div>
 				<div>
 					<img src={UnicornMascot} alt="unicorn" className="hidden md:block w-48 md:w-72 scale-x-[-1] " />

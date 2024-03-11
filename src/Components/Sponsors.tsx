@@ -2,13 +2,20 @@ import logoServerlessDark from "../assets/sponsors/logo serverless dark.svg";
 import logoServerlessLight from "../assets/sponsors/serverless-guru-logo.svg";
 import logoBeSharp from "../assets/sponsors/logo_besharp.svg";
 
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 import { InfiniteMovingImage } from "./ui/infinite-moving-cards";
 
 const Sponsors = () => {
-	const testimonials = [logoBeSharp, logoServerlessDark, logoServerlessLight];
+	const testimonials = [
+		logoBeSharp,
+		logoServerlessDark,
+		logoServerlessLight,
+		logoBeSharp,
+		logoServerlessDark,
+		logoServerlessLight,
+	];
 	return (
-		<div className="pt-3 text-center bg-transparent">
+		<div className="pt-3 mb-10 text-center bg-transparent lg:mb-0">
 			<h5 className="mb-2 text-sm font-semibold text-gray-300">Sponsors</h5>
 			{/* <h2 className="text-2xl font-semibold text-white ">Headline</h2> *2024 edition sponsors/}
 			{/* <div className="flex flex-wrap justify-center ">
@@ -30,18 +37,18 @@ const Sponsors = () => {
 
 export default Sponsors;
 
-const SponsorCard = ({
-	logo,
-	cardClassName,
-	imgClassName,
-}: {
-	logo: string;
-	cardClassName?: string;
-	imgClassName?: string;
-}) => {
-	return (
-		<div className={cn(" p-3 rounded-xl items-center flex", cardClassName)}>
-			<img src={logo} alt="logo" className={cn("w-80", imgClassName)} />
-		</div>
-	);
-};
+// const SponsorCard = ({
+// 	logo,
+// 	cardClassName,
+// 	imgClassName,
+// }: {
+// 	logo: string;
+// 	cardClassName?: string;
+// 	imgClassName?: string;
+// }) => {
+// 	return (
+// 		<div className={cn(" p-3 rounded-xl items-center flex", cardClassName)}>
+// 			<img src={logo} alt="logo" className={cn("w-80", imgClassName)} />
+// 		</div>
+// 	);
+// };

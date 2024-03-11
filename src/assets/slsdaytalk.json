@@ -1,174 +1,157 @@
 [
-    {
-        "agenda_details": {
-            "start_time": "2024-05-01T09:00:00.000Z",
-            "end_time": "2024-05-01T10:00:00.000Z",
-            "minutes": 60,
-            "type": "talk"
-        },
-        "talk": {
-            "name": "Akshata Sawant",
-            "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
-            "location": "London",
-            "bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
-            "twitter": "sawantakshata02",
-            "url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
-            "organization": "Salesforce",
-            "shirt_size": "Women's M",
-            "name_2": null,
-            "email_2": null,
-            "avatar_2": null,
-            "location_2": null,
-            "bio_2": null,
-            "twitter_2": null,
-            "url_2": null,
-            "organization_2": null,
-            "shirt_size_2": null,
-            "title": "Zero Trust Security for your APIs",
-            "abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
-            "description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
-            "audience_level": "Intermediate",
-            "tags": [
-                "API security",
-                "zero trust security",
-                "API management"
-            ]
-        }
-    },
-    {
-        "agenda_details": {
-            "start_time": "2024-05-01T10:00:00.000Z",
-            "end_time": "2024-05-01T11:00:00.000Z",
-            "minutes": 60,
-            "type": "talk"
-        },
-        "talk": {
-            "name": "Akshata Sawant",
-            "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
-            "location": "London",
-            "bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
-            "twitter": "sawantakshata02",
-            "url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
-            "organization": "Salesforce",
-            "shirt_size": "Women's M",
-            "name_2": null,
-            "email_2": null,
-            "avatar_2": null,
-            "location_2": null,
-            "bio_2": null,
-            "twitter_2": null,
-            "url_2": null,
-            "organization_2": null,
-            "shirt_size_2": null,
-            "title": "Zero Trust Security for your APIs",
-            "abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
-            "description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
-            "audience_level": "Intermediate",
-            "tags": [
-                "API security",
-                "zero trust security",
-                "API management"
-            ]
-        }
-    },
-    {
-        "agenda_details": {
-            "start_time": "2024-05-01T11:00:00.000Z",
-            "end_time": "2024-05-01T12:00:00.000Z",
-            "minutes": 30,
-            "type": "break"
-        },
-        "brake": {
-            "title": "Coffee Break",
-            "inline_abstract": "Take a break and grab a coffee",
-            "location": "Cafeteria"
-        }
-    },
-    {
-        "agenda_details": {
-            "start_time": "2024-05-01T10:00:00.000Z",
-            "end_time": "2024-05-01T11:00:00.000Z",
-            "minutes": 60,
-            "type": "talk"
-        },
-        "talk": {
-            "name": "Akshata Sawant",
-            "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
-            "location": "London",
-            "bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
-            "twitter": "sawantakshata02",
-            "url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
-            "organization": "Salesforce",
-            "shirt_size": "Women's M",
-            "name_2": null,
-            "email_2": null,
-            "avatar_2": null,
-            "location_2": null,
-            "bio_2": null,
-            "twitter_2": null,
-            "url_2": null,
-            "organization_2": null,
-            "shirt_size_2": null,
-            "title": "Zero Trust Security for your APIs",
-            "abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
-            "description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
-            "audience_level": "Intermediate",
-            "tags": [
-                "API security",
-                "zero trust security",
-                "API management"
-            ]
-        }
-    },
-    {
-        "agenda_details": {
-            "start_time": "2024-05-01T11:00:00.000Z",
-            "end_time": "2024-05-01T12:00:00.000Z",
-            "minutes": 120,
-            "type": "break"
-        },
-        "brake": {
-            "title": "Lunch Break",
-            "inline_abstract": "Take a break and grab a lunch",
-            "location": "Cafeteria",
-            "description": "(dropdown) menu The menu is: fried rice, chicken curry, and salad"
-        }
-
-    },
-    {
-        "agenda_details": {
-            "start_time": "2024-05-01T10:00:00.000Z",
-            "end_time": "2024-05-01T11:00:00.000Z",
-            "minutes": 60,
-            "type": "talk"
-        },
-        "talk": {
-            "name": "Akshata Sawant",
-            "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
-            "location": "London",
-            "bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
-            "twitter": "sawantakshata02",
-            "url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
-            "organization": "Salesforce",
-            "shirt_size": "Women's M",
-            "name_2": null,
-            "email_2": null,
-            "avatar_2": null,
-            "location_2": null,
-            "bio_2": null,
-            "twitter_2": null,
-            "url_2": null,
-            "organization_2": null,
-            "shirt_size_2": null,
-            "title": "Zero Trust Security for your APIs",
-            "abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
-            "description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
-            "audience_level": "Intermediate",
-            "tags": [
-                "API security",
-                "zero trust security",
-                "API management"
-            ]
-        }
-    }
+	{
+		"agenda_details": {
+			"start_time": "2024-05-01T09:00:00.000Z",
+			"end_time": "2024-05-01T10:00:00.000Z",
+			"minutes": 60,
+			"type": "talk"
+		},
+		"talk": {
+			"name": "Akshata Sawant",
+			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
+			"location": "London",
+			"bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
+			"twitter": "sawantakshata02",
+			"url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
+			"organization": "Salesforce",
+			"shirt_size": "Women's M",
+			"name_2": null,
+			"email_2": null,
+			"avatar_2": null,
+			"location_2": null,
+			"bio_2": null,
+			"twitter_2": null,
+			"url_2": null,
+			"organization_2": null,
+			"shirt_size_2": null,
+			"title": "Zero Trust Security for your APIs",
+			"abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
+			"description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
+			"audience_level": "Intermediate",
+			"tags": ["API security", "zero trust security", "API management"]
+		}
+	},
+	{
+		"agenda_details": {
+			"start_time": "2024-05-01T10:00:00.000Z",
+			"end_time": "2024-05-01T11:00:00.000Z",
+			"minutes": 60,
+			"type": "talk"
+		},
+		"talk": {
+			"name": "Akshata Sawant",
+			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
+			"location": "London",
+			"bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
+			"twitter": "sawantakshata02",
+			"url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
+			"organization": "Salesforce",
+			"shirt_size": "Women's M",
+			"name_2": null,
+			"email_2": null,
+			"avatar_2": null,
+			"location_2": null,
+			"bio_2": null,
+			"twitter_2": null,
+			"url_2": null,
+			"organization_2": null,
+			"shirt_size_2": null,
+			"title": "Zero Trust Security for your APIs",
+			"abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
+			"description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
+			"audience_level": "Intermediate",
+			"tags": ["API security", "zero trust security", "API management"]
+		}
+	},
+	{
+		"agenda_details": {
+			"start_time": "2024-05-01T11:00:00.000Z",
+			"end_time": "2024-05-01T12:00:00.000Z",
+			"minutes": 30,
+			"type": "break"
+		},
+		"break": {
+			"title": "Coffee Break",
+			"inline_abstract": "Take a break and grab a coffee",
+			"location": "Cafeteria"
+		}
+	},
+	{
+		"agenda_details": {
+			"start_time": "2024-05-01T10:00:00.000Z",
+			"end_time": "2024-05-01T11:00:00.000Z",
+			"minutes": 60,
+			"type": "talk"
+		},
+		"talk": {
+			"name": "Akshata Sawant",
+			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
+			"location": "London",
+			"bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
+			"twitter": "sawantakshata02",
+			"url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
+			"organization": "Salesforce",
+			"shirt_size": "Women's M",
+			"name_2": null,
+			"email_2": null,
+			"avatar_2": null,
+			"location_2": null,
+			"bio_2": null,
+			"twitter_2": null,
+			"url_2": null,
+			"organization_2": null,
+			"shirt_size_2": null,
+			"title": "Zero Trust Security for your APIs",
+			"abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
+			"description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
+			"audience_level": "Intermediate",
+			"tags": ["API security", "zero trust security", "API management"]
+		}
+	},
+	{
+		"agenda_details": {
+			"start_time": "2024-05-01T11:00:00.000Z",
+			"end_time": "2024-05-01T12:00:00.000Z",
+			"minutes": 120,
+			"type": "break"
+		},
+		"break": {
+			"title": "Lunch Break",
+			"inline_abstract": "Take a break and grab a lunch",
+			"location": "Cafeteria",
+			"description": "(dropdown) menu The menu is: fried rice, chicken curry, and salad"
+		}
+	},
+	{
+		"agenda_details": {
+			"start_time": "2024-05-01T10:00:00.000Z",
+			"end_time": "2024-05-01T11:00:00.000Z",
+			"minutes": 60,
+			"type": "talk"
+		},
+		"talk": {
+			"name": "Akshata Sawant",
+			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/85537/52454670477_eddda65ccc_o.jpg",
+			"location": "London",
+			"bio": "Akshata Sawant is a proficient technical speaker with over 5+ years of industry experience. She's currently working as a DevRel at MuleSoft.\r\nHer core domain includes Integration, Security, and DevOps. Within a short span of her career, she has delivered presentations at numerous conferences, events, and Meetups. Her notable speaking deliveries would include Devoxx Belgium, Salesforce TrailheadX, APIDays -NewYork, and India, and so on\r\nShe has also written blogs and articles for several industry publications. Currently, she is co-authoring a book named “MuleSoft for Salesforce developers” with Packt Publication. She’s an active member of the MuleSoft Community and also a global MuleSoft Ambassador and a Meetup leader for several cities. She has hosted several Meetups and also participated as a speaker in several Meetups.\r\nShe has a deep understanding of the latest technologies and trends and can explain complex concepts clearly and concisely. She has conducted a few training sessions on MuleSoft for several organizations.\r\nShe is a dynamic and engaging speaker who can connect with her audience and deliver powerful messages. Her passion for her work is evident in her delivery, and she can inspire others to action. If you are looking for a speaker who will engage your audience and leave them inspired, Akshata Sawant is a perfect choice.\r\nTo learn more about her accomplishments, check out her LinkedIn profile: https://www.linkedin.com/in/akshata-sawant-192a3a121/\r\n",
+			"twitter": "sawantakshata02",
+			"url": "https://www.linkedin.com/in/akshata-sawant-192a3a121/",
+			"organization": "Salesforce",
+			"shirt_size": "Women's M",
+			"name_2": null,
+			"email_2": null,
+			"avatar_2": null,
+			"location_2": null,
+			"bio_2": null,
+			"twitter_2": null,
+			"url_2": null,
+			"organization_2": null,
+			"shirt_size_2": null,
+			"title": "Zero Trust Security for your APIs",
+			"abstract": "This topic primarily focuses on security concerns in a complex or mesh-like API architecture where there could be loose ends. We will provide the audience with an effective resolution to achieve API Security in an efficient way. Also, we aim to resolve queries put forward by the audience.",
+			"description": "Are you a mid-level developer or an architect who’s curious about API Security and how to achieve it? In that case, we’re excited to help!!\r\nAs you already know APIs are the building blocks of your application network. They are the medium of communication and participate in a lot of data transactions. As per Gartner’s report, API abuse will be the most frequent vector attack, and it’s quite evident. We have heard about API abuses and attacks quite often.\r\nTo protect your APIs and provide complete security we will adopt the Zero Trust Security model. We will learn about the Zero trust model and its architecture. We will also understand how to implement Zero Trust Security in easy steps.\r\nBy the end of the presentation, you’ll have a fair idea about API Security and how to protect your API ecosystems using Zero Trust Security. Come along with your queries for us! \r\n",
+			"audience_level": "Intermediate",
+			"tags": ["API security", "zero trust security", "API management"]
+		}
+	}
 ]
