@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+LAST-MODIFIED:20231222T233358Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/Europe/Rome
+X-LIC-LOCATION:Europe/Rome
+BEGIN:DAYLIGHT
+TZNAME:CEST
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:CET
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20240311T144446Z
+UID:1710168261724-47757@ical.marudot.com
+DTSTART;TZID=Europe/Rome:20240613T090000
+DTEND;TZID=Europe/Rome:20240613T180000
+SUMMARY:Serverless Day
+URL:https://milan.serverlessdays.io/
+DESCRIPTION:Serverless became a buzzword in 2014\, and 10 years later\, it now clearly represents the state-of-the-art of software development in a cloud-native world. ServerlessDays is a global network of conferences\, born in 2017\, and it hosts several events worldwide.\n\nServerlessDays is a community-focused\, single-track\, one-day\, and no-profit event that moves away from the hype and focuses on the reality of serverless solutions. It’s about fostering a community locally and helping us learn from each other as we embrace the new way of building applications.\n\nWe are building on the success of JeffConf Milano 2017\, ServerlessDays Milano 2018\, 2019\, 2020\, 2021 and hosting ServerlessDays Milano in 2024.\n\nThe event will be held in English. A couple of short community talks might be in Italian to guarrantee an event also representing our local community.
+LOCATION:Viale Cassala\, 30\, 20143 Milano MI
+END:VEVENT
+END:VCALENDAR
