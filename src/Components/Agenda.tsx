@@ -8,12 +8,7 @@ const AgendaAccordion = () => {
 		<div className="h-full pt-10 bg-white ">
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
 
-			<h1
-				className="mb-3 text-2xl font-extrabold text-center text-purple-800 uppercase lg:text-5xl md:text-4xl"
-				style={{
-					wordSpacing: "0.5rem",
-				}}
-			>
+			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
 				Agenda 2024
 			</h1>
 			{IS_COMING_SOON && <ComingSoon />}
@@ -96,9 +91,12 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	const name = agendaTalk?.talk?.name || "";
 	const duration = agendaTalk?.agenda_details.minutes || 0;
 	const profileImg = agendaTalk?.talk?.avatar || "";
+	const talkType = agendaTalk.agenda_details.type;
 
-	console.log({ agendaTalk });
+	// console.log({ agendaTalk });
 
+	// Calculate the height of the item on the agenda based on the duration provided,
+	//the max height is capped to 110px,
 	const calculateItemHeight = (minutes: number) => {
 		const height = minutes * 1.5;
 		if (height > 170) return 110;
@@ -128,7 +126,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 					<AccordionItem className="border-0 " value={index + agendaTalk.agenda_details.start_time}>
 						<AccordionTrigger
 							className={`flex justify-start text-start my-auto text-xs md:text-base ${
-								agendaTalk.agenda_details.type === "break" ? "text-purple-900" : ""
+								talkType === "break" ? "text-purple-900" : ""
 							}`}
 						>
 							{title}
@@ -136,7 +134,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						<AccordionContent className="text-start">
 							<div id="talk-description">
 								<p>{description}</p>
-								{agendaTalk.agenda_details.type === "talk" && (
+								{talkType === "talk" && (
 									<p className="pt-2 text-gray-600">
 										By&nbsp;
 										<a href={agendaTalk.talk?.url} target="_blank" className="underline underline-offset-2">

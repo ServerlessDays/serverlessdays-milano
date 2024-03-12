@@ -21,10 +21,6 @@ const Home = () => {
 						words={"Join the biggest Serverless community conference in Italy."}
 						className="text-2xl font-medium text-white text-secondary"
 					/>
-					{/* <p className="text-2xl font-medium text-secondary">
-
-						Join the biggest Serverless community conference in Italy.
-					</p> */}
 
 					<motion.div
 						animate={{
