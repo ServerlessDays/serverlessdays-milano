@@ -2,6 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+export type Image = {
+	image: string;
+	imageClassName?: string;
+};
 
 export const InfiniteMovingImage = ({
 	items,
@@ -10,7 +14,7 @@ export const InfiniteMovingImage = ({
 	pauseOnHover = true,
 	className,
 }: {
-	items: string[];
+	items: Image[];
 	direction?: "left" | "right";
 	speed?: "fast" | "normal" | "slow";
 	pauseOnHover?: boolean;
@@ -20,6 +24,9 @@ export const InfiniteMovingImage = ({
 	const scrollerRef = React.useRef<HTMLUListElement>(null);
 
 	useEffect(() => {
+		if (items.length < 8) items = [...items, ...items];
+
+		// console.log({ items });
 		addAnimation();
 	}, []);
 	const [start, setStart] = useState(false);
@@ -81,15 +88,15 @@ export const InfiniteMovingImage = ({
 						// style={{
 						// 	background: "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
 						// }}
-						key={item + idx}
+						key={item.image + idx}
 					>
 						<div className="h-full ">
 							<div
 								aria-hidden="true"
 								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
 							></div>
-							<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full ">
-								<img src={item} alt="quote" className="w-full h-full " />
+							<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full justify-center items-center">
+								<img src={item.image} alt="quote" className={cn("w-full h-full", item.imageClassName)} />
 							</span>
 							{/* <div className="relative z-20 flex flex-row items-center mt-6">
 								<span className="flex flex-col gap-1">
