@@ -7,7 +7,7 @@ const Navbar = () => {
 			<div className="block h-10 p-0 md:hidden">
 				<img src={Logo2024} alt="logo" className="w-full h-full" />
 			</div>
-			<div className="hidden w-48 p-0 sm:block">
+			<div className="hidden w-48 p-0 md:block">
 				<img src={Logo2024} alt="logo" />
 			</div>
 			<div className="flex items-center space-x-2 md:space-x-9">
