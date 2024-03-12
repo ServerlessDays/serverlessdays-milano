@@ -76,6 +76,9 @@
 		@apply h-screen;
 		font-family: "IBM Plex Sans", sans-serif;
 	}
+	html {
+		scroll-behavior: smooth;
+	}
 }
 
 .ibm-plex sans-thin {
