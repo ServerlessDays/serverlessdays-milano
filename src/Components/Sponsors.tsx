@@ -3,7 +3,7 @@ import logoServerlessLight from "../assets/sponsors/serverless-guru-logo.svg";
 import logoBeSharp from "../assets/sponsors/logo_besharp.svg";
 
 // import { cn } from "@/lib/utils";
-import { InfiniteMovingImage } from "./ui/infinite-moving-cards";
+import { Image, InfiniteMovingImage } from "./ui/infinite-moving-cards";
 
 const Sponsors = () => {
 	const testimonials = [
@@ -13,6 +13,7 @@ const Sponsors = () => {
 		logoBeSharp,
 		logoServerlessDark,
 		logoServerlessLight,
+	const testimonials: Image[] = [
 	];
 	return (
 		<div className="pt-3 mb-10 text-center bg-transparent lg:mb-0">
