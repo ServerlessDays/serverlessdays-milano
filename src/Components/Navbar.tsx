@@ -36,7 +36,7 @@ const Navbar = () => {
 					</div> */}
 				</div>
 				<div className="">
-					<a href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047">
+					<a href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047" target="_blank">
 						<Button
 							variant={"default"}
 							className="font-semibold text-white rounded-xl bg-gradient-to-br from-pink-400 to-purple-600 md:w-24"
