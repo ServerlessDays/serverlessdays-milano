@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const IS_COMING_SOON = false;
 const AgendaAccordion = () => {
 	return (
-		<div className="h-full pt-10 bg-white ">
+		<div className="h-full pt-10 bg-white " id="agenda">
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
 
 			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">

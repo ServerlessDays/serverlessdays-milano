@@ -11,10 +11,16 @@ const Navbar = () => {
 				<img src={Logo2024} alt="logo" />
 			</div>
 			<div className="flex items-center space-x-2 md:space-x-9">
-				<div className="hidden md:block">Home</div>
-				<div className="hidden md:block">Ticket</div>
+				<div className="hidden md:block">
+					<a href="/">Home</a>
+				</div>
+				<div className="hidden md:block">
+					<a href="#agenda">Agenda</a>
+				</div>
 
-				<div className="hidden md:block">About us</div>
+				<div className="hidden md:block">
+					<a href="#aboutUs">About us</a>
+				</div>
 				<div className="">
 					<Button
 						variant={"default"}
