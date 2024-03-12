@@ -1,9 +1,9 @@
 const Footer = () => {
 	return (
-		<footer className="flex items-center justify-between h-16 p-2 text-xs text-center bg-slate-200 text-slate-600 md:text-base">
+		<footer className="relative flex items-center justify-around w-screen h-16 p-3 pt-0 pb-0 text-xs bg-slate-200 text-slate-600 lg:text-base">
 			<p>Serverless Italy © 2024</p>
-			<div>
-				<ul className="flex items-center justify-center gap-4">
+			<div className="w-fit">
+				<ul className="flex items-center justify-center gap-4 ">
 					<li>
 						<a href="https://twitter.com/ServerlessItaly" target="_blank" className="transition-all hover:underline">
 							Twitter
@@ -25,13 +25,14 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
-			<p className="hidden md:block">
-				Built with ❤️ by{" "}
-				<a href="https://tensi.dev" target="_blank" className="transition-all hover:underline ">
-					Federico Tensi
-				</a>
-				, a community member.
-			</p>
+			<div className="hidden md:block">
+				<p className="">
+					Built with ❤️ by{" "}
+					<a href="https://tensi.dev" target="_blank" className="transition-all hover:underline ">
+						Federico Tensi
+					</a>
+				</p>
+			</div>
 		</footer>
 	);
 };
