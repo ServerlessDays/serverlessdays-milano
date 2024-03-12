@@ -18,8 +18,22 @@ const Navbar = () => {
 					<a href="#agenda">Agenda</a>
 				</div>
 
-				<div className="hidden md:block">
-					<a href="#aboutUs">About us</a>
+				<div className="relative hidden md:block">
+					<a href="#aboutUs" className="pointer-events-none">
+						About us
+					</a>
+					<div className="absolute -rotate-[5deg] w-28 top-3 -left-2 text-sm font-normal text-fuchsia-700">
+						coming soon
+					</div>
+					<div className="absolute top-3 w-20 -left-2 h-[2px] opacity-70 rotate-[175deg] bg-fuchsia-700 rounded-xl"></div>
+					{/* <div className="absolute wrapper">
+						<div className="picture ">
+							<div className="hook "></div>
+							<div className="frame">
+								<div className="inside">coming soon</div>
+							</div>
+						</div>
+					</div> */}
 				</div>
 				<div className="">
 					<Button
