@@ -36,12 +36,14 @@ const Navbar = () => {
 					</div> */}
 				</div>
 				<div className="">
-					<Button
-						variant={"default"}
-						className="font-semibold text-white rounded-xl bg-gradient-to-br from-pink-400 to-purple-600 md:w-24"
-					>
-						Ticket
-					</Button>
+					<a href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047">
+						<Button
+							variant={"default"}
+							className="font-semibold text-white rounded-xl bg-gradient-to-br from-pink-400 to-purple-600 md:w-24"
+						>
+							Ticket
+						</Button>
+					</a>
 				</div>
 			</div>
 		</nav>
