@@ -5,22 +5,18 @@ const Footer = () => {
 			<div>
 				<ul className="flex items-center justify-center gap-4">
 					<li>
-						<a href="https://twitter.com/ServerlessMIL" target="_blank" className="transition-all hover:underline">
+						<a href="https://twitter.com/ServerlessItaly" target="_blank" className="transition-all hover:underline">
 							Twitter
 						</a>
 					</li>
 					<li>
-						<a
-							href="https://www.linkedin.com/company/serverlessdays-milan"
-							target="_blank"
-							className="transition-all hover:underline"
-						>
-							LinkedIn
+						<a href="https://linktr.ee/serverlessitaly" target="_blank" className="transition-all hover:underline">
+							Linktr.ee
 						</a>
 					</li>
 					<li>
 						<a
-							href="https://www.meetup.com/Serverless-Milan/"
+							href="https://www.meetup.com/it-IT/serverless-italy/"
 							target="_blank"
 							className="transition-all hover:underline"
 						>
