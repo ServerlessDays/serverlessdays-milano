@@ -25,9 +25,6 @@ export const InfiniteMovingImage = ({
 	const scrollerRef = React.useRef<HTMLUListElement>(null);
 
 	useEffect(() => {
-		if (items.length < 8) items = [...items, ...items];
-
-		// console.log({ items });
 		addAnimation();
 	}, []);
 	const [start, setStart] = useState(false);
