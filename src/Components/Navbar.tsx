@@ -22,7 +22,7 @@ const Navbar = () => {
 					<a href="#aboutUs" className="pointer-events-none">
 						About us
 					</a>
-					<div className="absolute -rotate-[5deg] w-28 top-3 -left-2 text-sm font-normal text-fuchsia-700">
+					<div className="absolute -rotate-[5deg] w-28 top-4 -left-2 text-sm font-normal text-fuchsia-700 handwriting-1">
 						coming soon
 					</div>
 					<div className="absolute top-3 w-20 -left-2 h-[2px] opacity-70 rotate-[175deg] bg-fuchsia-700 rounded-xl"></div>
@@ -41,7 +41,7 @@ const Navbar = () => {
 							variant={"default"}
 							className="font-semibold text-white rounded-xl bg-gradient-to-br from-pink-400 to-purple-600 md:w-24"
 						>
-							Ticket
+							Buy Ticket
 						</Button>
 					</a>
 				</div>
