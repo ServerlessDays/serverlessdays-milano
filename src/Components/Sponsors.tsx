@@ -1,5 +1,5 @@
 import logoServerlessDark from "../assets/sponsors/logo serverless dark.svg";
-import logoServerlessLight from "../assets/sponsors/serverless-guru-logo.svg";
+import logoServerlessGuru from "../assets/sponsors/serverless-guru-logo.svg";
 import logoBeSharp from "../assets/sponsors/logo_besharp.svg";
 import logoAWS from "../assets/sponsors/Amazon_Web_Services_Logo.svg";
 
@@ -10,16 +10,20 @@ const Sponsors = () => {
 	const sponsors: Image[] = [
 		{
 			image: logoBeSharp,
+			url: "https://www.besharp.it/",
 		},
 		{
 			image: logoServerlessDark,
+			url: "https://www.serverless.com/",
 		},
 		{
-			image: logoServerlessLight,
+			image: logoServerlessGuru,
+			url: "https://www.serverlessguru.com/",
 		},
 		{
 			image: logoAWS,
 			imageClassName: "w-24 ",
+			url: "https://aws.amazon.com/",
 		},
 	];
 	return (

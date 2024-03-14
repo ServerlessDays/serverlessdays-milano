@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 export type Image = {
 	image: string;
 	imageClassName?: string;
+	url: string;
 };
 
 export const InfiniteMovingImage = ({
@@ -95,9 +96,11 @@ export const InfiniteMovingImage = ({
 								aria-hidden="true"
 								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
 							></div>
-							<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full justify-center items-center">
-								<img src={item.image} alt="quote" className={cn("w-full h-full", item.imageClassName)} />
-							</span>
+							<a href={item.url === undefined ? "#" : item.url} target="_blank">
+								<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full justify-center items-center">
+									<img src={item.image} alt="quote" className={cn("w-full h-full", item.imageClassName)} />
+								</span>
+							</a>
 							{/* <div className="relative z-20 flex flex-row items-center mt-6">
 								<span className="flex flex-col gap-1">
 									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>
