@@ -24,6 +24,11 @@ const Footer = () => {
 								Meetup
 							</a>
 						</li>
+						<li>
+							<a href="https://serverlessdays.io/coc" target="_blank" className="transition-all hover:underline">
+								Code of Conduct
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
