@@ -18,7 +18,7 @@ const AgendaAccordion = () => {
 		};
 	}, []);
 
-	const isMobile = width <= 768;
+	const isMobile = width <= 1024;
 	return (
 		<div className="h-full pt-10 bg-white " id="agenda">
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
