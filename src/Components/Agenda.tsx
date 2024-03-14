@@ -120,6 +120,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	const profileImg = agendaTalk?.talk?.avatar || "";
 	const talkType = agendaTalk.agenda_details.type;
 	const isKeynote = agendaTalk.agenda_details.keynote || false;
+	const jobTitle = agendaTalk?.talk?.job_title || "";
+	const organization = agendaTalk?.talk?.organization || "";
 
 	// console.log({ agendaTalk });
 
@@ -151,14 +153,14 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 					{/* <span>({agendaTalk.agenda_details.minutes} mins)</span> */}
 				</div>
 				<div id="talk-content" className="w-full ">
-					<AccordionItem className="pb-0 border-0" value={index + agendaTalk.agenda_details.start_time}>
+					<AccordionItem className="pb-0 border-0 " value={index + agendaTalk.agenda_details.start_time}>
 						<AccordionTrigger
 							disabled={talkType === "break"}
 							showIcon={talkType === "talk"}
-							className={`flex justify-start text-start my-auto text-xs md:text-base ${
+							className={`flex justify-start text-start my-auto text-sm md:text-base ${
 								talkType === "break" ? "text-purple-900" : ""
 							} ${isKeynote ? "text-fuchsia-700 font-bold" : ""}
-							${talkType === "talk" ? "pb-0" : ""}`}
+							${talkType === "talk" ? "pb-0 pt-0" : ""}`}
 						>
 							{title}
 						</AccordionTrigger>
@@ -169,11 +171,12 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						</AccordionContent>
 					</AccordionItem>{" "}
 					{talkType === "talk" && (
-						<p className="text-xs text-gray-600 md:text-sm">
+						<p className="text-xs text-gray-600 md:text-xs">
 							By&nbsp;
 							<a href={agendaTalk.talk?.url} target="_blank" className="underline underline-offset-2">
 								{name}
-							</a>
+							</a>{" "}
+							- {jobTitle} @ {organization}
 						</p>
 					)}
 				</div>
@@ -186,8 +189,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 								src={profileImg}
 								height={100}
 								width={100}
-								alt={name}
-								title={name}
+								alt={`${name} - ${jobTitle} @ ${organization}`}
+								title={`${name} - ${jobTitle} @ ${organization}`}
 								loading="lazy"
 							/>
 						</a>
@@ -216,6 +219,7 @@ interface Talk {
 	avatar: string;
 	url: string;
 	organization: string;
+	job_title: string;
 }
 
 interface Break {
