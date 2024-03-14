@@ -16,7 +16,7 @@ const Home = () => {
 						ServerlessDays <br /> Milano 🇮🇹
 					</h1>
 					<h3 className="text-3xl font-semibold md:text-4xl text-secondary">
-						<a href="../../Serverless_Day_2024.ics">June, 13th 2024</a> <br className="block sm:hidden" />
+						<a href="/Serverless_Day_2024.ics">June, 13th 2024</a> <br className="block sm:hidden" />
 						&nbsp;@&nbsp;
 						<a href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8" target="_blank">
 							Milano C30
