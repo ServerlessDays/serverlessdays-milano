@@ -6,6 +6,7 @@ export type Image = {
 	image: string;
 	imageClassName?: string;
 	url: string;
+	sponsorType: string;
 };
 
 export const InfiniteMovingImage = ({
@@ -97,13 +98,13 @@ export const InfiniteMovingImage = ({
 								<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full justify-center items-center">
 									<img src={item.image} alt="quote" className={cn("w-full h-full", item.imageClassName)} />
 								</span>
+								<div className="relative z-20 flex items-center justify-center">
+									<span className="">
+										{/* <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span> */}
+										<span className="text-sm font-bold text-gray-300 ">{item.sponsorType}</span>
+									</span>
+								</div>
 							</a>
-							{/* <div className="relative z-20 flex flex-row items-center mt-6">
-								<span className="flex flex-col gap-1">
-									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>
-									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</span>
-								</span>
-							</div> */}
 						</div>
 					</li>
 				))}
