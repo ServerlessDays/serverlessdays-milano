@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="relative flex flex-col items-center justify-between w-screen h-16 p-3 pt-0 pb-0 text-xs md:flex-row bg-slate-200 text-slate-600 lg:text-base">
+		<footer className="relative flex flex-col items-center justify-between w-screen h-16 p-6 pt-0 pb-0 text-xs md:flex-row bg-slate-200 text-slate-600 lg:text-base">
 			<div className="flex items-center justify-center pt-3 md:pt-0">
 				<p>Serverless Italy © 2024</p>
 				<div className="ml-6">
