@@ -13,8 +13,14 @@ const AgendaAccordion = () => {
 			</h1>
 			{IS_COMING_SOON && <ComingSoon />}
 			{!IS_COMING_SOON && (
-				<Accordion type="single" defaultValue="item-1" collapsible className="w-full md:p-10 lg:pb-10 lg:p-52 lg:pt-0">
-					<AccordionItem value="item-1" className="rounded-lg ">
+				<Accordion
+					type="multiple"
+					// defaultValue="item-1"
+					defaultValue={["main_stage", "community_track"]}
+					// collapsible
+					className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10"
+				>
+					<AccordionItem value="main_stage" className="rounded-lg lg:w-1/2">
 						<AccordionTrigger className="p-2 text-2xl font-bold text-purple-900 no-underline min-h-16 hover:no-underline">
 							🚀 Main stage
 						</AccordionTrigger>
@@ -22,7 +28,7 @@ const AgendaAccordion = () => {
 							<Agenda talks={slsTalk as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
-					<AccordionItem value="item-2" className="mt-4 rounded-lg ">
+					<AccordionItem value="community_track" className="mt-4 rounded-lg lg:mt-0 lg:w-1/2">
 						<AccordionTrigger className="p-2 text-2xl font-bold text-purple-900 no-underline hover:no-underline min-h-16">
 							💬 Community track
 						</AccordionTrigger>
@@ -92,6 +98,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	const duration = agendaTalk?.agenda_details.minutes || 0;
 	const profileImg = agendaTalk?.talk?.avatar || "";
 	const talkType = agendaTalk.agenda_details.type;
+	const isKeynote = agendaTalk.agenda_details.keynote || false;
 
 	// console.log({ agendaTalk });
 
@@ -127,7 +134,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						<AccordionTrigger
 							className={`flex justify-start text-start my-auto text-xs md:text-base ${
 								talkType === "break" ? "text-purple-900" : ""
-							}`}
+							} ${isKeynote ? "text-fuchsia-700 font-bold" : ""}`}
 						>
 							{title}
 						</AccordionTrigger>
@@ -174,6 +181,7 @@ interface AgendaDetails {
 	start_time: string;
 	end_time: string;
 	minutes: number;
+	keynote?: boolean;
 	type: "talk" | "break";
 }
 

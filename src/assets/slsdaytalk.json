@@ -4,7 +4,8 @@
 			"start_time": "2024-05-01T09:00:00.000Z",
 			"end_time": "2024-05-01T10:00:00.000Z",
 			"minutes": 60,
-			"type": "talk"
+			"type": "talk",
+			"keynote": true
 		},
 		"talk": {
 			"name": "Akshata Sawant",
@@ -127,7 +128,8 @@
 			"start_time": "2024-05-01T10:00:00.000Z",
 			"end_time": "2024-05-01T11:00:00.000Z",
 			"minutes": 60,
-			"type": "talk"
+			"type": "talk",
+			"keynote": true
 		},
 		"talk": {
 			"name": "Akshata Sawant",
