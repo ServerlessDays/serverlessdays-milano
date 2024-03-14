@@ -19,7 +19,7 @@ interface AccordionTriggerProps extends React.ComponentPropsWithoutRef<typeof Ac
 }
 
 const AccordionTrigger = React.forwardRef<React.ElementRef<typeof AccordionPrimitive.Trigger>, AccordionTriggerProps>(
-	({ className, children, showIcon, ...props }, ref) => (
+	({ className, children, showIcon = true, ...props }, ref) => (
 		<AccordionPrimitive.Header className="flex">
 			<AccordionPrimitive.Trigger
 				ref={ref}
