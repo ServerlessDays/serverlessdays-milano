@@ -4,6 +4,21 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 const IS_COMING_SOON = false;
 const AgendaAccordion = () => {
+	const [width, setWidth] = useState<number>(window.innerWidth);
+
+	const handleWindowSizeChange = () => {
+		setWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", handleWindowSizeChange);
+
+		return () => {
+			window.removeEventListener("resize", handleWindowSizeChange);
+		};
+	}, []);
+
+	const isMobile = width <= 768;
 	return (
 		<div className="h-full pt-10 bg-white " id="agenda">
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
@@ -20,16 +35,22 @@ const AgendaAccordion = () => {
 					// collapsible
 					className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10"
 				>
-					<AccordionItem value="main_stage" className="rounded-lg lg:w-1/2">
-						<AccordionTrigger className="p-2 text-2xl font-bold text-purple-900 no-underline min-h-16 hover:no-underline">
+					<AccordionItem value="main_stage" className="rounded-lg lg:w-1/2" disabled={!isMobile}>
+						<AccordionTrigger
+							className="p-2 text-2xl font-bold text-purple-900 no-underline min-h-16 hover:no-underline"
+							showIcon={isMobile}
+						>
 							🚀 Main stage
 						</AccordionTrigger>
 						<AccordionContent>
 							<Agenda talks={slsTalk as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
-					<AccordionItem value="community_track" className="mt-4 rounded-lg lg:mt-0 lg:w-1/2">
-						<AccordionTrigger className="p-2 text-2xl font-bold text-purple-900 no-underline hover:no-underline min-h-16">
+					<AccordionItem value="community_track" className="mt-4 rounded-lg lg:mt-0 lg:w-1/2" disabled={!isMobile}>
+						<AccordionTrigger
+							className="p-2 text-2xl font-bold text-purple-900 no-underline hover:no-underline min-h-16"
+							showIcon={isMobile}
+						>
 							💬 Community track
 						</AccordionTrigger>
 						<AccordionContent>
