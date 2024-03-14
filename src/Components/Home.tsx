@@ -8,7 +8,7 @@ const Home = () => {
 			<div className="w-full h-full my-auto md:items-center md:flex md:justify-around">
 				<div className="space-y-5 ">
 					<h1 className="text-6xl font-extrabold">
-						Serverless Days <br /> Milan 🇮🇹
+						ServerlessDays <br /> Milano 🇮🇹
 					</h1>
 					<h3 className="text-4xl font-semibold text-secondary">
 						<a href="/Serverless_Day_2024.ics">June, 13th 2024</a>
@@ -18,7 +18,7 @@ const Home = () => {
 						</a>
 					</h3>
 					<TextGenerateEffect
-						words={"Join the biggest Serverless community conference in Italy."}
+						words={"Join the biggest serverless community conference in Italy."}
 						className="text-2xl font-medium text-white text-secondary"
 					/>
 
@@ -34,7 +34,7 @@ const Home = () => {
 						}}
 					>
 						<a href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047" target="_blank">
-							<Button className="font-semibold text-white rounded-xl">🎫 Buy your ticket!</Button>
+								🎫 Buy Ticket!
 						</a>
 					</motion.div>
 				</div>

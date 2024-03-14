@@ -24,7 +24,7 @@ const AgendaAccordion = () => {
 					</AccordionItem>
 					<AccordionItem value="item-2" className="mt-4 rounded-lg ">
 						<AccordionTrigger className="p-2 text-2xl font-bold text-purple-900 no-underline hover:no-underline min-h-16">
-							💬 Community Track
+							💬 Community track
 						</AccordionTrigger>
 						<AccordionContent>
 							<Agenda talks={slsTalk as AgendaItem[]} />
