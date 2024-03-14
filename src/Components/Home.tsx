@@ -55,7 +55,7 @@ const Home = () => {
 						</a>
 					</motion.div>
 				</div>
-				<div className="mt-24 md:mt-0">
+				<div className="mt-24 md:mt-16 lg:mt-0">
 					<img src={UnicornMascot} alt="unicorn" className="hidden md:block w-48 md:w-72 scale-x-[-1] " />
 
 					<img

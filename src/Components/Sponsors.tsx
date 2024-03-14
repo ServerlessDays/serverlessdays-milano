@@ -25,6 +25,23 @@ const Sponsors = () => {
 			imageClassName: "w-24 ",
 			url: "https://aws.amazon.com/",
 		},
+		{
+			image: logoBeSharp,
+			url: "https://www.besharp.it/",
+		},
+		{
+			image: logoServerlessDark,
+			url: "https://www.serverless.com/",
+		},
+		{
+			image: logoServerlessGuru,
+			url: "https://www.serverlessguru.com/",
+		},
+		{
+			image: logoAWS,
+			imageClassName: "w-24 ",
+			url: "https://aws.amazon.com/",
+		},
 	];
 	return (
 		<div className="pt-3 mb-10 text-center bg-transparent lg:mb-0 ">
