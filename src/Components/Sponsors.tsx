@@ -1,4 +1,3 @@
-import logoServerlessDark from "../assets/sponsors/logo serverless dark.svg";
 import logoServerlessGuru from "../assets/sponsors/serverless-guru-logo.svg";
 import logoBeSharp from "../assets/sponsors/logo_besharp.svg";
 import logoAWS from "../assets/sponsors/Amazon_Web_Services_Logo.svg";
@@ -12,31 +11,37 @@ const Sponsors = () => {
 		{
 			image: logoBeSharp,
 			url: "https://www.besharp.it/",
-			sponsorType: "Gold",
+			sponsorType: "Headline",
+			type: "single",
 		},
 		{
 			image: logoNTTData,
 			url: "https://www.nttdata.com/global/en/",
 			sponsorType: "Headline",
-			imageClassName: "h-10",
+			imageClassName: "",
+			type: "single",
 		},
 		{
 			image: logoAWS,
 			url: "https://aws.amazon.com/",
-			sponsorType: "Gold",
+			sponsorType: "Headline",
 			imageClassName: "w-24",
+			type: "single",
 		},
 		{
 			image: logoServerlessGuru,
 			url: "https://www.serverlessguru.com/",
 			sponsorType: "Gold",
 			imageClassName: "!h-5",
+			type: "single",
 		},
-		{
-			image: logoServerlessDark,
-			url: "https://www.serverless.com/",
-			sponsorType: "",
-		},
+		// {
+		// 	image: [logoServerlessDark, logoAWS, logoNTTData],
+		// 	url: ["https://www.serverless.com/", "https://aws.amazon.com/", "https://www.nttdata.com/global/en/"],
+		// 	imageClassName: ["", "w-24", "h-10"],
+		// 	sponsorType: "",
+		// 	type: "multiple",
+		// },
 	];
 	return (
 		<div className="pt-3 mb-10 text-center bg-transparent lg:mb-0 ">
