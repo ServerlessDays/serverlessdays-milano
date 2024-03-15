@@ -21,7 +21,7 @@ const AgendaAccordion = () => {
 
 	const isMobile = width <= 1024;
 	return (
-		<div className="h-full pt-10 bg-white " id="agenda">
+		<div className="relative h-full pt-10 pb-5 bg-white " id="agenda" ref={containerRef}>
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
 
 			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
@@ -36,7 +36,7 @@ const AgendaAccordion = () => {
 					// collapsible
 					className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10"
 				>
-					<AccordionItem value="main_stage" className="rounded-lg lg:w-1/2" disabled={!isMobile}>
+					<AccordionItem value="main_stage" className="border-b-0 rounded-lg lg:w-1/2" disabled={!isMobile}>
 						<AccordionTrigger
 							className="p-2 text-2xl font-bold text-purple-900 no-underline min-h-16 hover:no-underline"
 							showIcon={isMobile}
@@ -47,7 +47,11 @@ const AgendaAccordion = () => {
 							<Agenda talks={mainTrack as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
-					<AccordionItem value="community_track" className="mt-4 rounded-lg lg:mt-0 lg:w-1/2" disabled={!isMobile}>
+					<AccordionItem
+						value="community_track"
+						className="mt-4 border-b-0 rounded-lg lg:mt-0 lg:w-1/2"
+						disabled={!isMobile}
+					>
 						<AccordionTrigger
 							className="p-2 text-2xl font-bold text-purple-900 no-underline hover:no-underline min-h-16"
 							showIcon={isMobile}
