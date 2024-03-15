@@ -3,13 +3,15 @@ import UnicornMascot from "../assets/unicorn_mascot.svg";
 import { Button } from "./ui/button";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import arrowHandDrawn from "../assets/handDrawnArrow.png";
+import { useRef } from "react";
 
 type UntilTime = `${number}/${number}/${number}`;
 const Home = () => {
 	const MotionButton = motion(Button);
+	const constraintsRef = useRef(null);
 
 	return (
-		<div className="flex h-full p-2 text-white md:p-10 ">
+		<div className="flex h-full p-2 text-white md:h-[65vh] lg:h-[70vh] md:p-10 ">
 			<div className="w-full h-full my-auto md:items-center md:flex md:justify-around">
 				<div className="space-y-5 ">
 					<h1 className="text-5xl font-extrabold md:text-6xl">
@@ -57,15 +59,43 @@ const Home = () => {
 					</motion.div>
 					{/* <p className="handwriting-1">(Lunch and coffee included!)</p> */}
 				</div>
-				<div className="pb-2 mt-24 md:pb-5 md:mt-16 lg:mt-0">
-					<img src={UnicornMascot} alt="unicorn" className="hidden md:block w-48 md:w-72 scale-x-[-1] " />
+				<motion.div ref={constraintsRef} className="pb-2 mt-24 md:pb-5 md:mt-16 lg:mt-0">
+					<motion.img
+						src={UnicornMascot}
+						alt="unicorn"
+						className="hidden md:block w-48 md:w-72 scale-x-[-1] "
+						drag
+						dragConstraints={constraintsRef}
+						dragElastic={0.1}
+						dragMomentum={true}
+						dragSnapToOrigin={true}
+						initial={{
+							scaleX: -1,
+						}}
+					/>
 
-					<img
+					<motion.img
+						initial={{ scaleX: -1, x: 100, y: 100 }}
+						animate={{
+							y: 0,
+							x: 0,
+							// rotate: [45, 0],
+						}}
+						transition={{
+							// duration: 2,
+							type: "spring",
+							bounce: 0.5,
+							delay: 3,
+							damping: 10,
+							mass: 1,
+
+							// velocity: 100,
+						}}
 						src={UnicornMascot}
 						alt="unicorn"
 						className="absolute top-36 -right-24 block md:hidden w-48 md:w-72 scale-x-[-1] "
 					/>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
