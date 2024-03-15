@@ -1,11 +1,18 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import slsTalk from "../assets/slsdaytalk.json";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import owl_mascot from "../assets/Animals SVG/owl_mascot.svg";
+import dino_mascot from "../assets/Animals SVG/Dino_mascot.svg";
+
 const IS_COMING_SOON = false;
 const AgendaAccordion = () => {
 	const [width, setWidth] = useState<number>(window.innerWidth);
+	const containerRef = useRef(null);
+	// const isInView = useInView(containerRef, { margin: "0px 0px -100px 0px" });
 
+	// const [owlScope, animateOwl] = useAnimate();
+	// const [dinoScope, animateDino] = useAnimate();
 	const handleWindowSizeChange = () => {
 		setWidth(window.innerWidth);
 	};
@@ -18,11 +25,37 @@ const AgendaAccordion = () => {
 		};
 	}, []);
 
+	// useEffect(() => {
+	// 	if (!isInView) return;
+	// 	animateOwl(owlScope.current, { left: "90%" }, { delay: 1, bounce: 0.1, duration: 2, type: "spring" });
+	// 	animateDino(dinoScope.current, { left: "0" }, { delay: 1.6, bounce: 0.2, duration: 3, type: "spring" });
+	// 	console.log(`Own is in view: ${isInView}`);
+	// }, [isInView]);
+
 	const isMobile = width <= 1024;
 	return (
 		<div className="relative h-full pt-10 pb-5 bg-white " id="agenda" ref={containerRef}>
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
 
+			<motion.img
+				src={owl_mascot}
+				alt="Owl Mascot"
+				// ref={owlScope}
+				// initial={{
+				// 	left: "100%",
+				// }}
+				className="absolute -top-2 left-0 w-24 scale-x-[-1]"
+			/>
+			<motion.img
+				src={dino_mascot}
+				alt="Dino Mascot"
+				// ref={dinoScope}
+				// initial={{
+				// 	left: "-100%",
+				// 	rotate: "25deg",
+				// }}
+				className="absolute -top-16 right-0 w-24 scale-x-[-1] rotate-[-14deg] "
+			/>
 			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
 				Agenda 2024
 			</h1>
