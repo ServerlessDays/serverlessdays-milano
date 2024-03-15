@@ -136,16 +136,13 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	return (
 		<div
 			id="talk"
-			className={`border-t-[1px]  border-l-0 border-r-0 border-[#5d518488] flex items-start p-2  ${
+			className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 border-[#5d518488] flex items-start p-2  ${
 				agendaTalk.agenda_details.type === "talk" ? "" : "bg-gradient-to-br from-pink-50 to-purple-100"
 			}`}
 			style={{ minHeight: `${calculateItemHeight(duration)}px` }}
 		>
 			<div id="talk-details" className="flex items-center w-full h-full gap-2 p-1 my-auto ">
-				<div
-					id="time-container"
-					className="w-16 flex md:w-24 h-full   border-slate-200 md:border-r-[#73468433] md:border-r-[1px]"
-				>
+				<div id="time-container" className="flex w-16 h-full md:w-24 ">
 					<p className="flex w-full my-auto font-light">
 						{getTimestamp(agendaTalk.agenda_details.start_time)} <span className="hidden md:block">&nbsp;-&nbsp;</span>
 						{getTimestamp(agendaTalk.agenda_details.end_time)}
