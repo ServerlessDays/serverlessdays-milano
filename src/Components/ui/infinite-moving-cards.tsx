@@ -3,10 +3,11 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 export type Image = {
-	image: string;
-	imageClassName?: string;
-	url: string;
+	image: string | string[];
+	imageClassName?: string | string[];
+	url: string | string[];
 	sponsorType: string;
+	type: "single" | "multiple";
 };
 
 export const InfiniteMovingImage = ({
@@ -81,33 +82,70 @@ export const InfiniteMovingImage = ({
 					pauseOnHover && "hover:[animation-play-state:paused]",
 				)}
 			>
-				{items.map((item, idx) => (
-					<li
-						className="w-[250px] justify-center  max-w-full relative rounded-2xl  flex-shrink-0 bg-fuchsia-600 shadow-lg  px-8 py-6 md:w-[250px]"
-						// style={{
-						// 	background: "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
-						// }}
-						key={item.image + idx}
-					>
-						<div className="h-full ">
-							<div
-								aria-hidden="true"
-								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-							></div>
-							<a href={item.url === undefined ? "#" : item.url} target="_blank">
-								<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full justify-center items-center">
-									<img src={item.image} alt="quote" className={cn("w-full h-full", item.imageClassName)} />
-								</span>
-								<div className="relative z-20 flex items-center justify-center">
-									<span className="">
-										{/* <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span> */}
-										<span className="text-sm font-bold text-gray-300 ">{item.sponsorType}</span>
+				{items.map((item, idx) => {
+					return item.type === "single" ? (
+						<li
+							className="w-[250px] justify-center  max-w-full relative rounded-2xl  flex-shrink-0 bg-fuchsia-600 shadow-lg  px-8 py-6 md:w-[250px]"
+							// style={{
+							// 	background: "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
+							// }}
+							key={(item.image as string) + idx}
+						>
+							<div className="h-full ">
+								<div
+									aria-hidden="true"
+									className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+								></div>
+								<a href={(item.url as string) === undefined ? "#" : (item.url as string)} target="_blank">
+									<span className="flex relative z-20 text-sm leading-[1.6] text-gray-100 font-normal text-center h-full justify-center items-center">
+										<img src={item.image as string} alt="quote" className={cn("w-full h-full", item.imageClassName)} />
 									</span>
+									<div className="relative z-20 flex items-center justify-center">
+										<span className="">
+											{/* <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span> */}
+											<span className="text-sm font-bold text-gray-300 ">{item.sponsorType}</span>
+										</span>
+									</div>
+								</a>
+							</div>
+						</li>
+					) : (
+						<>
+							{" "}
+							<li
+								className="w-[250px] justify-center max-w-full relative rounded-2xl flex-shrink-0 bg-fuchsia-600 shadow-lg px-8 py-6 md:w-[250px]"
+								key={item.url[0] + idx}
+							>
+								<div className="h-full scale-70">
+									<div
+										aria-hidden="true"
+										className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+									></div>
+									{(item.image as string[]).map((img: string, idImage) => (
+										<a
+											href={(item.url[idImage] as string) === undefined ? "#" : (item.url[idImage] as string)}
+											target="_blank"
+										>
+											<span className="relative z-20 flex justify-center flex-grow gap-4 text-sm font-normal text-gray-100 content-stretch">
+												<img
+													src={img as string}
+													alt="quote"
+													className={cn("p-2", item.imageClassName?.[idImage] as string)}
+												/>
+											</span>
+											<div className="relative z-20 flex items-center justify-center">
+												<span className="">
+													{/* <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span> */}
+													<span className="text-sm font-bold text-gray-300 ">{item.sponsorType}</span>
+												</span>
+											</div>
+										</a>
+									))}{" "}
 								</div>
-							</a>
-						</div>
-					</li>
-				))}
+							</li>
+						</>
+					);
+				})}
 			</ul>
 		</div>
 	);
