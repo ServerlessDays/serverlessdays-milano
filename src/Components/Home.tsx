@@ -85,7 +85,7 @@ const EarlyBirdText = ({ untilDate }: { untilDate: UntilTime }) => {
 
 	if (currentDate > until) return null;
 	return (
-		<div>
+		<div className="absolute -bottom-1 right-2">
 			<div className="absolute w-20 scale-50 -bottom-12 right-[-4.5rem]">
 				<img
 					src={arrowHandDrawn}
@@ -94,7 +94,7 @@ const EarlyBirdText = ({ untilDate }: { untilDate: UntilTime }) => {
 				/>
 			</div>
 
-			<div className="absolute text-sm font-bold w-36 top-12 -right-44 handwriting-1">
+			<div className="absolute text-sm font-bold w-36 top-7 -right-44 handwriting-1">
 				Early bird tickets starting &nbsp;
 				<span className="relative inline-block after:border-b after:rounded-[50%/100px_100px_0_0] after:border-white after:absolute after:top-4 after:-left-1 after:w-14 after:h-[1px]  after:-rotate-[3deg] after:content-['']">
 					at 35€
