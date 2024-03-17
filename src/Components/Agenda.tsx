@@ -149,7 +149,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 		num = num.toString();
 		while (num.length < size) num = "0" + num;
 		return num;
-	}
+	};
 
 	const getTimestamp = (time: string) => {
 		const hours = new Date(time).getHours();
@@ -177,16 +177,16 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 		return height;
 	};
 
-	let speakerNameTitle = ""
+	let speakerNameTitle = "";
 	if (name) {
-        speakerNameTitle += name;
-    }
+		speakerNameTitle += name;
+	}
 	if (jobTitle) {
-        speakerNameTitle += " - " + jobTitle;
-    }
+		speakerNameTitle += " - " + jobTitle;
+	}
 	if (organization) {
-        speakerNameTitle += " @ " + organization;
-    }
+		speakerNameTitle += " @ " + organization;
+	}
 
 	return (
 		<div
