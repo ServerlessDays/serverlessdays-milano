@@ -152,13 +152,13 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 
 	const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
 	const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
-	const name = agendaTalk?.talk?.name || "";
+	const name = agendaTalk?.talk?.name;
 	const duration = agendaTalk?.agenda_details.minutes || 0;
-	const profileImg = agendaTalk?.talk?.avatar || "";
+	const profileImg = agendaTalk?.talk?.avatar;
 	const talkType = agendaTalk.agenda_details.type;
 	const isKeynote = agendaTalk.agenda_details.keynote || false;
-	const jobTitle = agendaTalk?.talk?.job_title || "";
-	const organization = agendaTalk?.talk?.organization || "";
+	const jobTitle = agendaTalk?.talk?.job_title;
+	const organization = agendaTalk?.talk?.organization;
 
 	// console.log({ agendaTalk });
 
@@ -170,16 +170,17 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 		return height;
 	};
 
-	let speakerNameTitle = ""
-	if (agendaTalk.talk?.name) {
-		speakerNameTitle += name
+	let speakerNameTitle = "";
+
+	if (name) {
+		speakerNameTitle += name;
 	}
-	if (agendaTalk.talk?.jobTitle) {
-		speakerNameTitle += " - " + jobTitle;
+	if (jobTitle) {
+		speakerNameTitle += ` - ${jobTitle}`;
 	}
-	if (agendaTalk.talk?.organization) {
-        speakerNameTitle += " @ " + organization;
-    }
+	if (organization) {
+		speakerNameTitle += ` @ ${organization}`;
+	}
 
 	return (
 		<div
