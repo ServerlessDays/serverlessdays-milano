@@ -231,7 +231,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						</p>
 					)}
 				</div>
-				<div id="participants" className="w-20">
+				<div id="participants" className="flex justify-center w-20">
 					{profileImg && (
 						<a href={agendaTalk.talk?.url || "#"} className="" target="_blank">
 							{/* <AnimatedTooltip items={talkers} /> */}
@@ -246,7 +246,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 							/>
 						</a>
 					)}
-					{!profileImg && <p className="">{name}</p>}
+					{!profileImg && <p className="text-xs font-light text-center">{name}</p>}
 				</div>
 			</div>
 		</div>
