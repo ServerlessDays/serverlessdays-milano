@@ -35,7 +35,7 @@ const Sponsors = () => {
 		{
 			image: logoServerlessDark,
 			url: "https://www.serverless.com/",
-			sponsorType: "",
+			sponsorType: "Community",
 		},
 	];
 	return (
