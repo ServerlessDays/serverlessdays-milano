@@ -110,7 +110,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	const getTimestamp = (time: string) => {
 		const hours = new Date(time).getHours();
 		const minutes = new Date(time).getMinutes();
-		return `${hours}:${minutes}0`;
+		return `${hours == 0 ? "00" : hours}:${minutes == 0 ? "00" : minutes}`;
 	};
 
 	const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
@@ -132,6 +132,17 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 		if (height > 170) return 110;
 		return height;
 	};
+
+	let speakerNameTitle = ""
+	if (agendaTalk.talk?.name) {
+		speakerNameTitle += name
+	}
+	if (agendaTalk.talk?.jobTitle) {
+		speakerNameTitle += " - " + jobTitle;
+	}
+	if (agendaTalk.talk?.organization) {
+        speakerNameTitle += " @ " + organization;
+    }
 
 	return (
 		<div
@@ -171,9 +182,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						<p className="text-xs text-gray-600 md:text-xs">
 							By&nbsp;
 							<a href={agendaTalk.talk?.url} target="_blank" className="underline underline-offset-2">
-								{name}
-							</a>{" "}
-							- {jobTitle} @ {organization}
+								{speakerNameTitle}
+							</a>
 						</p>
 					)}
 				</div>
@@ -182,12 +192,12 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						<a href={agendaTalk.talk?.url || "#"} className="" target="_blank">
 							{/* <AnimatedTooltip items={talkers} /> */}
 							<img
-								className="object-cover w-10 h-10 rounded-full "
+								className="object-cover w-10 h-10 rounded-full"
 								src={profileImg}
 								height={100}
 								width={100}
-								alt={`${name} - ${jobTitle} @ ${organization}`}
-								title={`${name} - ${jobTitle} @ ${organization}`}
+								alt={speakerNameTitle}
+								title={speakerNameTitle}
 								loading="lazy"
 							/>
 						</a>
