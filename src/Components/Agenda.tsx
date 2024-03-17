@@ -3,7 +3,7 @@ import mainTrack from "../assets/mainTrack.json";
 import communityTrack from "../assets/communityTrack.json";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import owl_mascot from "../assets/Animals SVG/owl_mascot.svg";
+// import owl_mascot from "../assets/Animals SVG/owl_mascot.svg";
 import dino_mascot from "../assets/Animals SVG/Dino_mascot.svg";
 
 const IS_COMING_SOON = false;
@@ -38,15 +38,15 @@ const AgendaAccordion = () => {
 		<div className="relative h-full pt-10 pb-5 bg-white " id="agenda" ref={containerRef}>
 			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
 
-			<motion.img
+			{/* <motion.img
 				src={owl_mascot}
 				alt="Owl Mascot"
 				// ref={owlScope}
 				// initial={{
 				// 	left: "100%",
 				// }}
-				className="absolute -top-2 left-0 w-24 scale-x-[-1]"
-			/>
+				className="absolute top-[800px] -left-8 w-16 md:w-24 scale-x-[-1]"
+			/> */}
 			<motion.img
 				src={dino_mascot}
 				alt="Dino Mascot"
@@ -55,7 +55,7 @@ const AgendaAccordion = () => {
 				// 	left: "-100%",
 				// 	rotate: "25deg",
 				// }}
-				className="absolute -top-16 right-0 w-24 scale-x-[-1] rotate-[-14deg] "
+				className="absolute -top-12 md:-top-16 right-0 w-16 md:w-24 scale-x-[-1] rotate-[-14deg] "
 			/>
 			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
 				Agenda 2024
