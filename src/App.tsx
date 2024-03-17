@@ -1,7 +1,7 @@
 import "./App.css";
 // import AboutUs from "./Components/AboutUs";
 import AgendaAccordion from "./Components/Agenda";
-import CommunitySponsors from "./Components/CommunitySponsors";
+// import CommunitySponsors from "./Components/CommunitySponsors";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
@@ -16,7 +16,7 @@ function App() {
 				<Sponsors />
 
 				<AgendaAccordion />
-				<CommunitySponsors />
+				{/* <CommunitySponsors /> */}
 				{/* <AboutUs /> */}
 
 				<Footer />
