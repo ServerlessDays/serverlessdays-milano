@@ -63,7 +63,7 @@ const Home = () => {
 					<motion.img
 						src={UnicornMascot}
 						alt="unicorn"
-						className="hidden md:block w-48 md:w-72 scale-x-[-1] "
+						className="hidden md:block w-48 md:w-72 scale-x-[-1] cursor-grab active:cursor-grabbing"
 						drag
 						dragConstraints={constraintsRef}
 						dragElastic={0.1}
