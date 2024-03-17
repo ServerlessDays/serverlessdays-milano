@@ -85,7 +85,12 @@ export const InfiniteMovingImage = ({
 				{items.map((item, idx) => {
 					return item.type === "single" ? (
 						<li
-							className="w-[250px] justify-center  max-w-full relative rounded-2xl  flex-shrink-0 bg-fuchsia-600 shadow-lg  px-8 py-6 md:w-[250px]"
+							className={
+								"w-[250px] justify-center  max-w-full relative rounded-2xl  flex-shrink-0 bg-fuchsia-600 shadow-lg  px-8 py-6 md:w-[250px]" +
+								(item.sponsorType != "Gold" && item.sponsorType != "Headline"
+									? "px-6 py-6 w-[125px]"
+									: "px-8 py-6 w-[250px] md:w-[250px]")
+							}
 							// style={{
 							// 	background: "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
 							// }}
@@ -113,7 +118,12 @@ export const InfiniteMovingImage = ({
 						<>
 							{" "}
 							<li
-								className="w-[250px] justify-center max-w-full relative rounded-2xl flex-shrink-0 bg-fuchsia-600 shadow-lg px-8 py-6 md:w-[250px]"
+								className={
+									"w-[250px] justify-center max-w-full relative rounded-2xl flex-shrink-0 bg-fuchsia-600 shadow-lg px-8 py-6 md:w-[250px]" +
+									(item.sponsorType != "Gold" && item.sponsorType != "Headline"
+										? "px-6 py-6 w-[125px]"
+										: "px-8 py-6 w-[250px] md:w-[250px]")
+								}
 								key={item.url[0] + idx}
 							>
 								<div className="h-full scale-70">

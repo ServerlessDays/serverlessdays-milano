@@ -2,6 +2,7 @@ import logoServerlessGuru from "../assets/sponsors/serverless-guru-logo.svg";
 import logoBeSharp from "../assets/sponsors/logo_besharp.svg";
 import logoAWS from "../assets/sponsors/Amazon_Web_Services_Logo.svg";
 import logoNTTData from "../assets/sponsors/NTT-Data-Logo.svg";
+import logoServerlessDark from "../assets/sponsors/logo serverless dark.svg";
 
 // import { cn } from "@/lib/utils";
 import { Image, InfiniteMovingImage } from "./ui/infinite-moving-cards";
@@ -35,13 +36,13 @@ const Sponsors = () => {
 			imageClassName: "!h-5",
 			type: "single",
 		},
-		// {
-		// 	image: [logoServerlessDark, logoAWS, logoNTTData],
-		// 	url: ["https://www.serverless.com/", "https://aws.amazon.com/", "https://www.nttdata.com/global/en/"],
-		// 	imageClassName: ["", "w-24", "h-10"],
-		// 	sponsorType: "",
-		// 	type: "multiple",
-		// },
+		{
+			image: logoServerlessDark,
+			url: "https://www.serverless.com/",
+			// imageClassName: "w-24",
+			sponsorType: "Community",
+			type: "single",
+		},
 	];
 	return (
 		<div className="pt-3 mb-10 text-center bg-transparent lg:mb-0 ">
