@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
-import slsTalk from "../assets/slsdaytalk.json";
+import mainTrack from "../assets/mainTrack.json";
+import communityTrack from "../assets/communityTrack.json";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 const IS_COMING_SOON = false;
@@ -43,7 +44,7 @@ const AgendaAccordion = () => {
 							🚀 Main stage
 						</AccordionTrigger>
 						<AccordionContent>
-							<Agenda talks={slsTalk as AgendaItem[]} />
+							<Agenda talks={mainTrack as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="community_track" className="mt-4 rounded-lg lg:mt-0 lg:w-1/2" disabled={!isMobile}>
@@ -54,7 +55,7 @@ const AgendaAccordion = () => {
 							💬 Community track
 						</AccordionTrigger>
 						<AccordionContent>
-							<Agenda talks={slsTalk as AgendaItem[]} />
+							<Agenda talks={communityTrack as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>
