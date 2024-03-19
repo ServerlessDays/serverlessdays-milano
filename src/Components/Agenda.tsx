@@ -141,13 +141,13 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	};
 
 	let speakerNameTitle = ""
-	if (agendaTalk.talk?.name) {
-		speakerNameTitle += name
-	}
-	if (agendaTalk.talk?.jobTitle) {
-		speakerNameTitle += " - " + jobTitle;
-	}
-	if (agendaTalk.talk?.organization) {
+	if (name) {
+        speakerNameTitle += name;
+    }
+	if (jobTitle) {
+        speakerNameTitle += " - " + jobTitle;
+    }
+	if (organization) {
         speakerNameTitle += " @ " + organization;
     }
 
