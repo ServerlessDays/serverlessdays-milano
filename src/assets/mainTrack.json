@@ -139,7 +139,7 @@
 		},
 		"talk": {
 			"name": "Luc van Donkersgoed",
-			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/80153/IMG_2759.JPG",
+			"avatar": "./src/assets/speakers/luc.jpg",
 			"location": "Utrecht, The Netherlands",
 			"bio": "",
 			"twitter": "donkersgood",
@@ -254,7 +254,7 @@
 		},
 		"talk": {
 			"name": "Anahit Pogosova",
-			"avatar": "https://secure.gravatar.com/avatar/de035744b2d09a7aad15798fffcadbba?s=500",
+			"avatar": "./src/assets/speakers/anahit.jpg",
 			"location": "Unknown",
 			"bio": "I'm an old school developer, I started 20 years ago with Notepad as an IDE (?), then I worked as DevOps and for a few years now I've been working as a Principal Technical Architect. I'm interested in cloud computing and serverless architectures and love to dive deep into problems and find smart solutions.",
 			"twitter": "",
