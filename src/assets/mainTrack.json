@@ -326,7 +326,7 @@
 		"talk": {
 			"name": "Daniele Frasca",
 			"email": "dfrasca80@gmail.com",
-			"avatar": "https://secure.gravatar.com/avatar/a89310db145e7df1440977ae4c234bd8?s=500",
+			"avatar": "./src/assets/speakers/daniele.jpg",
 			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
 			"twitter": "dfrasca80",
 			"url": "https://dev.to/ymwjbxxq",
@@ -353,7 +353,7 @@
 		"talk": {
 			"name": "Eric Johnson",
 			"email": "dfrasca80@gmail.com",
-			"avatar": "https://secure.gravatar.com/avatar/a89310db145e7df1440977ae4c234bd8?s=500",
+			"avatar": "./src/assets/speakers/eric.jpg",
 			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
 			"twitter": "dfrasca80",
 			"url": "https://dev.to/ymwjbxxq",
