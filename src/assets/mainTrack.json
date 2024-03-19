@@ -37,7 +37,7 @@
 		},
 		"talk": {
 			"name": "Jeremy Daly",
-			"avatar": "./src/assets/speakers/jeremy.jpg",
+			"avatar": "./speakers/jeremy.jpg",
 			"location": "",
 			"bio": "",
 			"twitter": "",
@@ -139,7 +139,7 @@
 		},
 		"talk": {
 			"name": "Luc van Donkersgoed",
-			"avatar": "./src/assets/speakers/luc.jpg",
+			"avatar": "./speakers/luc.jpg",
 			"location": "Utrecht, The Netherlands",
 			"bio": "",
 			"twitter": "donkersgood",
@@ -254,7 +254,7 @@
 		},
 		"talk": {
 			"name": "Anahit Pogosova",
-			"avatar": "./src/assets/speakers/anahit.jpg",
+			"avatar": "./speakers/anahit.jpg",
 			"location": "Unknown",
 			"bio": "I'm an old school developer, I started 20 years ago with Notepad as an IDE (?), then I worked as DevOps and for a few years now I've been working as a Principal Technical Architect. I'm interested in cloud computing and serverless architectures and love to dive deep into problems and find smart solutions.",
 			"twitter": "",
@@ -326,7 +326,7 @@
 		"talk": {
 			"name": "Daniele Frasca",
 			"email": "dfrasca80@gmail.com",
-			"avatar": "./src/assets/speakers/daniele.jpg",
+			"avatar": "./speakers/daniele.jpg",
 			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
 			"twitter": "dfrasca80",
 			"url": "https://dev.to/ymwjbxxq",
@@ -353,7 +353,7 @@
 		"talk": {
 			"name": "Eric Johnson",
 			"email": "dfrasca80@gmail.com",
-			"avatar": "./src/assets/speakers/eric.jpg",
+			"avatar": "./speakers/eric.jpg",
 			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
 			"twitter": "dfrasca80",
 			"url": "https://dev.to/ymwjbxxq",
