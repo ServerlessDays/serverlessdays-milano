@@ -37,7 +37,7 @@
 		},
 		"talk": {
 			"name": "Jeremy Daly",
-			"avatar": "",
+			"avatar": "./src/assets/speakers/jeremy.jpg",
 			"location": "",
 			"bio": "",
 			"twitter": "",
