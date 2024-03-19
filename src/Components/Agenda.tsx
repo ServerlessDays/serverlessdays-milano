@@ -108,10 +108,16 @@ const Agenda = ({ talks }: { talks: AgendaItem[] }) => {
 const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number }) => {
 	if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
+	const pad = (num: any, size: number) => {
+		num = num.toString();
+		while (num.length < size) num = "0" + num;
+		return num;
+	}
+
 	const getTimestamp = (time: string) => {
 		const hours = new Date(time).getHours();
 		const minutes = new Date(time).getMinutes();
-		return `${hours == 0 ? "00" : hours}:${minutes == 0 ? "00" : minutes}`;
+		return `${pad(hours, 2)}:${pad(minutes, 2)}`;
 	};
 
 	const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
@@ -135,13 +141,13 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	};
 
 	let speakerNameTitle = ""
-	if (agendaTalk.talk?.name) {
-		speakerNameTitle += name
-	}
-	if (agendaTalk.talk?.jobTitle) {
-		speakerNameTitle += " - " + jobTitle;
-	}
-	if (agendaTalk.talk?.organization) {
+	if (name) {
+        speakerNameTitle += name;
+    }
+	if (jobTitle) {
+        speakerNameTitle += " - " + jobTitle;
+    }
+	if (organization) {
         speakerNameTitle += " @ " + organization;
     }
 
