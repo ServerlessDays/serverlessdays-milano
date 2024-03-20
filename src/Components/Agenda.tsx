@@ -55,7 +55,7 @@ const AgendaAccordion = () => {
 				// 	left: "-100%",
 				// 	rotate: "25deg",
 				// }}
-				className="absolute -top-12 md:-top-16 right-0 w-16 md:w-24 scale-x-[-1] rotate-[-14deg] "
+				className="absolute -top-12 xl:-top-16 lg:-top-9 md:-top-16 right-0 w-16 md:w-24 scale-x-[-1] rotate-[-14deg] "
 			/>
 			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
 				Agenda 2024
@@ -67,7 +67,7 @@ const AgendaAccordion = () => {
 					// defaultValue="item-1"
 					defaultValue={["main_stage", "community_track"]}
 					// collapsible
-					className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10"
+					className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10 "
 				>
 					<AccordionItem value="main_stage" className="border-b-0 rounded-lg lg:w-1/2" disabled={!isMobile}>
 						<AccordionTrigger
@@ -91,7 +91,7 @@ const AgendaAccordion = () => {
 						>
 							💬 Community track
 						</AccordionTrigger>
-						<AccordionContent>
+						<AccordionContent className="">
 							<Agenda talks={communityTrack as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
@@ -131,18 +131,33 @@ const ComingSoon = () => {
 };
 
 const Agenda = ({ talks }: { talks: AgendaItem[] }) => {
+	const maxDuration = Math.max(
+		...talks.map((item) => {
+			const start = new Date(item.agenda_details.start_time).getTime();
+			const end = new Date(item.agenda_details.end_time).getTime();
+			return (end - start) / 60000; // Convert to minutes
+		}),
+	);
 	return (
-		<div className="w-full">
-			<Accordion type="single" collapsible className="w-full ">
+		<div className="w-full ">
+			<Accordion type="single" collapsible className="!h-full">
 				{talks.map((talk, index) => (
-					<TalkCard key={index} talk={talk} index={index} />
+					<TalkCard key={index} talk={talk} index={index} maxDuration={maxDuration} />
 				))}
 			</Accordion>
 		</div>
 	);
 };
 
-const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number }) => {
+const TalkCard = ({
+	talk: agendaTalk,
+	index,
+	maxDuration,
+}: {
+	talk: AgendaItem;
+	index: number;
+	maxDuration: number;
+}) => {
 	if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
 	const pad = (num: any, size: number) => {
@@ -166,14 +181,30 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	const isKeynote = agendaTalk.agenda_details.keynote || false;
 	const jobTitle = agendaTalk?.talk?.job_title;
 	const organization = agendaTalk?.talk?.organization;
+	const startTime = agendaTalk.agenda_details.start_time;
+	const endTime = agendaTalk.agenda_details.end_time;
 
 	// console.log({ agendaTalk });
 
-	// Calculate the height of the item on the agenda based on the duration provided,
-	//the max height is capped to 110px,
-	const calculateItemHeight = (minutes: number) => {
-		const height = minutes * 1.5;
-		if (height > 170) return 110;
+	// const calculateItemHeight = (startTime: string, endTime: string, maxDuration: number, duration: number) => {
+	const calculateItemHeight = (maxDuration: number, duration: number) => {
+		// const start = new Date(startTime).getTime();
+		// const end = new Date(endTime).getTime();
+		// const difference = end - start;
+		// const minutes = difference / 60000 - 8;
+		const minutes = duration;
+		//  																^--- Subtract 8 px to account for padding,
+
+		// Calculate ratio of duration to maximum duration
+		const ratio = minutes / maxDuration;
+
+		// const minHeight = 60;
+		const maxHeight = 500; // You can adjust this value as needed
+
+		// Calculate height based on ratio
+		const height = maxHeight * ratio;
+		// const height = Math.max(minHeight, Math.min(maxHeight, maxHeight * ratio));
+
 		return height;
 	};
 
@@ -187,31 +218,36 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 	if (organization) {
 		speakerNameTitle += ` @ ${organization}`;
 	}
+	// const speakerNameTitle = [name, jobTitle, organization].filter(Boolean).join(" - ").join(" @ ");
 
 	return (
 		<div
 			id="talk"
-			className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 border-[#5d518488] flex items-start p-2  ${
+			className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 border-[#5d518488] flex  px-4 justify-start items-center box-border ${
 				agendaTalk.agenda_details.type === "talk" ? "" : "bg-gradient-to-br from-pink-50 to-purple-100"
 			}`}
-			style={{ minHeight: `${calculateItemHeight(duration)}px` }}
+			style={{
+				// minHeight: `${calculateItemHeight(startTime, endTime, maxDuration)}px`,
+				minHeight: `${calculateItemHeight(maxDuration, duration)}px`,
+				// maxHeight: `${calculateItemHeight(startTime, endTime, maxDuration) + 300}px`,
+			}}
 		>
-			<div id="talk-details" className="flex items-center w-full h-full gap-2 p-1 my-auto ">
-				<div id="time-container" className="flex w-16 h-full md:w-24 ">
-					<p className="flex w-full my-auto font-light">
-						{getTimestamp(agendaTalk.agenda_details.start_time)} <span className="hidden md:block">&nbsp;-&nbsp;</span>
-						{getTimestamp(agendaTalk.agenda_details.end_time)}
+			<div id="talk-details" className="flex flex-grow w-full gap-3 p-2 my-auto">
+				<div id="time-container" className="flex ">
+					<p className="flex my-auto font-light">
+						{getTimestamp(startTime)} <span className="hidden md:block">&nbsp;-&nbsp;</span>
+						{getTimestamp(endTime)}
 					</p>
 					{/* <span>({agendaTalk.agenda_details.minutes} mins)</span> */}
 				</div>
 				<div id="talk-content" className="w-full ">
-					<AccordionItem className="pb-0 border-0 " value={index + agendaTalk.agenda_details.start_time}>
+					<AccordionItem className="pb-0 border-0 " value={index + startTime + endTime}>
 						<AccordionTrigger
 							disabled={talkType === "break"}
 							showIcon={talkType === "talk"}
-							className={`flex justify-start text-start my-auto text-sm md:text-base ${
-								talkType === "break" ? "text-purple-900" : ""
-							} ${isKeynote ? "text-fuchsia-700 font-bold" : ""}
+							className={`flex justify-start text-start my-auto  ${talkType === "break" ? "text-purple-900" : ""} ${
+								isKeynote ? "text-fuchsia-700 font-bold" : ""
+							}
 							${talkType === "talk" ? "pb-0 pt-0" : ""}`}
 						>
 							{title}
@@ -231,7 +267,7 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
 						</p>
 					)}
 				</div>
-				<div id="participants" className="flex justify-center w-20">
+				<div id="participants" className="flex justify-end w-20">
 					{profileImg && (
 						<a href={agendaTalk.talk?.url || "#"} className="" target="_blank">
 							{/* <AnimatedTooltip items={talkers} /> */}
