@@ -50,7 +50,7 @@
 		"talk": {
 			"name": "Katie Kennedy, Ciaran Flaherty",
 			"email": "Katie.Kennedy2@fmr.com",
-			"avatar": "https://secure.gravatar.com/avatar/a906a571d6d8058cdcde41857a61f6ae?s=500",
+			"avatar": "",
 			"location": "Unknown",
 			"bio": "I'm a 28 year old from Ireland and I went to university in Gal way where I was one of the few females in my computer science and Information Technology degree. My love for new  and exciting technology led me to specialise in cloud computing. Throughout my career, I have focused on leveraging the power of cloud technology to drive innovation and efficiency. I am passionate about exploring the limitless possibilities that the cloud offers and finding creative solutions to complex problems. In my free time, you can often find me immersing myself in the world of The Witcher,  whether its through the PlayStation, tv series or books it is a fantasy series that has captured my imagination.",
 			"twitter": "",
@@ -93,11 +93,11 @@
 		},
 		"talk": {
 			"name": "BeSharp",
-			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/80153/IMG_2759.JPG",
-			"location": "Utrecht, The Netherlands",
+			"avatar": "",
+			"location": "",
 			"bio": "",
-			"twitter": "donkersgood",
-			"url": "https://lucvandonkersgoed.com",
+			"twitter": "",
+			"url": "",
 			"organization": "BeSharp",
 			"shirt_size": "Men's M",
 			"name_2": null,
@@ -110,8 +110,8 @@
 			"organization_2": null,
 			"shirt_size_2": null,
 			"title": "BeSharp",
-			"abstract": "PostNL has been building a strictly serverless application landscape since 2018. In this talk we will tell our story: a short history of PostNL, why we chose serverless, the results we achieved, and the challenges we faced.",
-			"description": "\r\n## Abstract\r\n\r\nIn the past 6 years, PostNL has built a landscape of over 70 serverless applications. We chose AWS serverless because it is a perfect match for our logistics processes, it is cost-effective, it allows us to focus on our business challenges, and it significantly reduces our operational overhead. But every decision in IT is a trade-off, and embracing serverless is no different. We will highlight the constraints we faced, the new skillsets required from our engineers, and the investment required for success.\r\n\r\nWe will conclude by making up the balance; what has serverless brought our enterprise, what has it cost, and was it worth it?\r\n\r\n## Target Audience\r\n\r\nThe target audience for \"Standing on the Shoulders of Giants - Embracing Serverless in the Enterprise\" are developers, architects, decision-makers and leaders who aim to win their market through cutting-edge software and infrastructure.\r\n\r\n## Audience Take-Away\r\n\r\nThe talk is successful when:\r\n* The audience has learned to critically assess the value of serverless, even in very large enterprises\r\n* The audience has learned adopting serverless is a matter of trade-offs\r\n* The audience has learned that a stronger commitment to a platform will exponentially increase the benefits gained\r\n\r\n## Duration\r\n\r\nThe talk takes about 30 minutes, or 45 minutes with Q\u0026A.\r\n\r\n## About the speaker\r\n\r\nLuc is an AWS Serverless Hero and Principal Engineer at PostNL, where he designs and builds enterprise-scale serverless architectures. He is well known for his articles, presentations, videos, and podcasts about AWS. You can find Luc on Twitter (https://twitter.com/donkersgood), Mastodon (https://hachyderm.io/@donkersgoed), and LinkedIn (https://www.linkedin.com/in/donkersgoed)\r\n",
+			"abstract": "",
+			"description": "",
 			"audience_level": "Beginner",
 			"tags": []
 		}
@@ -126,7 +126,7 @@
 		"talk": {
 			"name": "Matthew Wilson",
 			"email": "matthew.wilson@instil.co",
-			"avatar": "https://imgur.com/X3Z3LhQ",
+			"avatar": "https://imgur.com/X3Z3LhQ.jpeg",
 			"location": "Unknown",
 			"bio": "Distinguished Engineer at Instil and AWS Community Builder.\r\nEnjoys talking about serverless, cars and coffee. \r\nHusband to Rebekah, father to Joy Tabitha, both of which think I copy paste for a living. ",
 			"twitter": "matt_codes",
@@ -154,7 +154,7 @@
 		"talk": {
 			"name": "Louis Pinsard",
 			"email": "louispinsard@gmail.com",
-			"avatar": "https://imgur.com/nvtwTV0",
+			"avatar": "https://imgur.com/nvtwTV0.png",
 			"bio": "Louis spent four years honing his skills at Theodo, where he worked on a variety of serverless projects as part of the Kumo team of serverless experts. In 2022, he decided to venture out on his own and founded Dialog, where he currently serves as the CTO. At Dialog, Louis has implemented a serverless architecture, leveraging his extensive experience and deep love for the technology.\r\n\r\nIn his free time, Louis enjoys cycling in the French Alps and playing squash in Paris.",
 			"twitter": "LouisPinsard",
 			"url": "",
@@ -196,7 +196,7 @@
 		"talk": {
 			"name": "Slobodan Stojanović",
 			"email": "mail@slobodan.me",
-			"avatar": "https://secure.gravatar.com/avatar/7d1b5371248894e8f97da0d554d9b320?s=500",
+			"avatar": "",
 			"location": "Belgrade, Serbia",
 			"bio": "Slobodan Stojanović is the CTO and co-founder of Vacation Tracker, an application that simplifies employee leave and absence management for organizations. He is based in Belgrade and is the JS Belgrade meetup co-organizer.\r\n\r\nSlobodan is an AWS Serverless Hero and co-author of the “Serverless Applications with Node.js” book, published by Manning Publications.",
 			"twitter": "slobodan_",
@@ -228,7 +228,7 @@
 		"talk": {
 			"name": "Simon Hanmer",
 			"email": "simon.hanmer@gmail.com",
-			"avatar": "https://imgur.com/fsbXVvh",
+			"avatar": "https://imgur.com/fsbXVvh.png",
 			"location": "Scotland, United Kingdon",
 			"bio": "Starting out in a very traditional background in the data-centres of the fabled M4 corridor, Simon eventually realised it was time to give up on the problems of manually babysitting servers, racks and UPS's and migrated to the Cloud (and in the process, the Scottish Highlands) and now works to enable clients to transition their workloads, processes and swag requirements to the same route.\r\n\r\nSimon is a member of the AWS Community builder program, and these days enjoys coaching and mentoring as much as get hands-on with code, automation and head-scratching.",
 			"twitter": "simonhanmer",
@@ -270,7 +270,7 @@
 		"talk": {
 			"name": "Fabrizio Gattuso",
 			"email": "f.gattuso87@gmail.com",
-			"avatar": "https://imgur.com/LjO2Tgt",
+			"avatar": "https://imgur.com/LjO2Tgt.jpg",
 			"location": "Berlin",
 			"bio": "I'm a tech enthusiast with a pretty eclectic journey. Beginning my career in the home automation (domotic) sector, I later pivoted to study Computer Science with a focus on embedded and IoT solutions. My research journey involved delving into power-saving strategies for embedded devices and exploring innovative wireless communication protocols for energy efficiency.\r\nIn a notable chapter of my career, I contributed to building solutions in the Underwater Internet of Things sector as part of a spinoff from Sapienza University known as Wsense. There, I established the AWS team from the ground up, showcasing my leadership and technical skills.\r\nCurrently residing in Germany, I have transitioned to Nordcloud, a leading consultancy company. As a Cloud Solution Architect and People Lead for the AWS team, I bring a wealth of experience and a passion for driving innovation and excellence in cloud solutions.\r\nBeyond the tech realm, you'll find me exploring the great outdoors through endurance sports like biking (road and gravel), road and trail running, and hiking. I'm equally passionate about the finer things in life such as craft beer, wine and good food.",
 			"twitter": "",
