@@ -37,7 +37,7 @@
 		},
 		"talk": {
 			"name": "Jeremy Daly",
-			"avatar": "./speakers/jeremy.jpg",
+			"avatar": "https://imgur.com/66yfarL",
 			"location": "",
 			"bio": "CEO and Co-founder at Ampt. AWS Serverless Hero. Jeremy is a passionate serverless advocate, an AWS Serverless Hero, and a senior technology leader with more than 25 years of experience building web and cloud applications. He is an active member of the serverless community, creating and contributing to open source serverless projects, and frequently works with companies looking to adopt serverless. Jeremy also writes extensively about serverless on his blog jeremydaly.com, publishes Off-by-none (offbynone.io), a weekly email newsletter that focuses on all things serverless, and hosts the Serverless Chats Podcast. He is currently the CEO of Ampt.",
 			"twitter": "",
@@ -64,7 +64,7 @@
 		},
 		"talk": {
 			"name": "Andreea Merariu",
-			"avatar": "https://secure.gravatar.com/avatar/c9f633ce33ce332e3acbbc2db5351aa5?s=500",
+			"avatar": "https://imgur.com/NLHj1V9",
 			"location": "London, United Kingdom",
 			"bio": "Andreea is an AWS Community Builder and a Software Engineer at The Lego Group with a few years of experience in the industry. She has a passion for backend technologies but even more so for all things serverless. At the LEGO Group, she is designing and developing serverless applications on AWS. She is keen to engage with the community and constantly seeks new learning opportunities. Andreea is eager to share her journey into serverless and the interesting technical challenges she encounters along the way.",
 			"twitter": "andreea_merariu",
@@ -139,7 +139,7 @@
 		},
 		"talk": {
 			"name": "Luc van Donkersgoed",
-			"avatar": "./speakers/luc.jpg",
+			"avatar": "https://imgur.com/qhRIwns",
 			"location": "Utrecht, The Netherlands",
 			"bio": "",
 			"twitter": "donkersgood",
@@ -210,7 +210,7 @@
 		},
 		"talk": {
 			"name": "Nicola Cremaschini",
-			"avatar": "https://secure.gravatar.com/avatar/de035744b2d09a7aad15798fffcadbba?s=500",
+			"avatar": "https://imgur.com/6pR1YX9",
 			"location": "Unknown",
 			"bio": "I'm an old school developer, I started 20 years ago with Notepad as an IDE (?), then I worked as DevOps and for a few years now I've been working as a Principal Technical Architect. I'm interested in cloud computing and serverless architectures and love to dive deep into problems and find smart solutions.",
 			"twitter": "",
@@ -254,7 +254,7 @@
 		},
 		"talk": {
 			"name": "Anahit Pogosova",
-			"avatar": "./speakers/anahit.jpg",
+			"avatar": "https://imgur.com/f2vHxDB",
 			"location": "Unknown",
 			"bio": "Anahit brings over a decade of experience in full-stack and data solutions to her roles as an AWS Data Hero and a Lead Cloud Software Engineer at Solita, one of Finland's leading digital transformation companies. Anahit passionately shares her knowledge with the community through various channels, including conferences and meetups, podcasts and YouTube, as well as blogging and online courses.",
 			"twitter": "",
@@ -284,7 +284,7 @@
 		"talk": {
 			"name": "Matteo Madeddu",
 			"email": "matteo.madeddu@gmail.com",
-			"avatar": "https://secure.gravatar.com/avatar/9a321229cc86d56aab67c2119dc147aa?s=500",
+			"avatar": "https://imgur.com/D0Tg00c",
 			"location": "Torino",
 			"bio": "Sono un Platform Engineer di Torino, che lavora da tempo con i servizi AWS. Nel corso degli anni ho maturato esperienze con diversi tipi di architetture AWS-powered, da quelle serverless-driven che sfruttano servizi come AWS ApiGateway, Lambda, IoT Core, Fargate e soluzioni Cloudwatch ad ambienti completi ec2-backed che utilizzano più cluster EKS. Mi piace sperimentare, soprattutto con AWS, e cercare di ottenere il massimo dai suoi servizi! ",
 			"twitter": "",
@@ -326,7 +326,7 @@
 		"talk": {
 			"name": "Daniele Frasca",
 			"email": "dfrasca80@gmail.com",
-			"avatar": "./speakers/daniele.jpg",
+			"avatar": "https://imgur.com/SFrP6kI",
 			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
 			"twitter": "dfrasca80",
 			"url": "https://dev.to/ymwjbxxq",
@@ -353,7 +353,7 @@
 		"talk": {
 			"name": "Eric Johnson",
 			"email": "",
-			"avatar": "./speakers/eric.jpg",
+			"avatar": "https://imgur.com/Kfha39v",
 			"bio": "Eric Johnson is a Principal DA for serverless at AWS and speaks on serverless, EDA, and GenAI at events around the world. He has a passion for helping developers build robust applications on serverless while utilizing best practices and the latest technologies. Eric loves to help developers at any skill level and splits his time speaking to the pros in tech conferences as well as the up and coming in universities.",
 			"twitter": "",
 			"url": "",

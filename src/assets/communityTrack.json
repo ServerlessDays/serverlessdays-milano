@@ -23,26 +23,20 @@
 		},
 		"talk": {
 			"name": "NTT DATA",
-			"avatar": "https://secure.gravatar.com/avatar/c9f633ce33ce332e3acbbc2db5351aa5?s=500",
-			"location": "London, United Kingdom",
-			"bio": "Andreea is an AWS Community Builder and a Software Engineer at The Lego Group with a few years of experience in the industry. She has a passion for backend technologies but even more so for all things serverless. At the LEGO Group, she is designing and developing serverless applications on AWS. She is keen to engage with the community and constantly seeks new learning opportunities. Andreea is eager to share her journey into serverless and the interesting technical challenges she encounters along the way.",
-			"twitter": "andreea_merariu",
-			"url": "https://medium.com/@andreea.merariu",
+			"avatar": "",
+			"location": "",
+			"bio": "",
+			"twitter": "",
+			"url": "",
 			"organization": "NTT DATA",
 			"shirt_size": "Women's M",
 			"job_title": "",
 			"title": "NTT DATA",
-			"abstract": "Are you new to serverless destinations and want to learn more about them? Then look no further! This talk will give you an overview of the destination options, and then it will take you through a use case for each to solidify your understanding.",
-			"description": "Like any other journey, a serverless journey will eventually lead you to a destination. While the journey is essential, choosing the right destination for your use case is just as valuable.\r\nIn the AWS world, you have a few destination options such as Lambda Destinations, EventBridge API Destinations and the external HTTP endpoint integration for AWS Step Functions.  In this talk, my first focus will be to bring visibility and an overview of each destination. Following this, I will bring a use case where each destination will be explored. The focus will then shift to taking a deep dive into each destination and understanding its intricacies. With the last milestone, I will leave you with my learnings and an understanding of serverless destinations.",
+			"abstract": "",
+			"description": "",
 			"notes": "",
 			"audience_level": "All",
-			"tags": [
-				"serverless",
-				"AWS",
-				"Lambda",
-				"EventBridge",
-				"AWS Step Functions"
-			]
+			"tags": []
 		}
 	},
 	{
@@ -132,7 +126,7 @@
 		"talk": {
 			"name": "Matthew Wilson",
 			"email": "matthew.wilson@instil.co",
-			"avatar": "https://secure.gravatar.com/avatar/520464600034701c844f24b4fd659b9f?s=500",
+			"avatar": "https://imgur.com/X3Z3LhQ",
 			"location": "Unknown",
 			"bio": "Distinguished Engineer at Instil and AWS Community Builder.\r\nEnjoys talking about serverless, cars and coffee. \r\nHusband to Rebekah, father to Joy Tabitha, both of which think I copy paste for a living. ",
 			"twitter": "matt_codes",
@@ -160,7 +154,7 @@
 		"talk": {
 			"name": "Louis Pinsard",
 			"email": "louispinsard@gmail.com",
-			"avatar": "https://secure.gravatar.com/avatar/37788135afb0bb34f69b6d2773bee482?s=500",
+			"avatar": "https://imgur.com/nvtwTV0",
 			"bio": "Louis spent four years honing his skills at Theodo, where he worked on a variety of serverless projects as part of the Kumo team of serverless experts. In 2022, he decided to venture out on his own and founded Dialog, where he currently serves as the CTO. At Dialog, Louis has implemented a serverless architecture, leveraging his extensive experience and deep love for the technology.\r\n\r\nIn his free time, Louis enjoys cycling in the French Alps and playing squash in Paris.",
 			"twitter": "LouisPinsard",
 			"url": "",
@@ -234,7 +228,7 @@
 		"talk": {
 			"name": "Simon Hanmer",
 			"email": "simon.hanmer@gmail.com",
-			"avatar": "https://secure.gravatar.com/avatar/6a70b5165b94981b4fbb1a90e3d1463d?s=500",
+			"avatar": "https://imgur.com/fsbXVvh",
 			"location": "Scotland, United Kingdon",
 			"bio": "Starting out in a very traditional background in the data-centres of the fabled M4 corridor, Simon eventually realised it was time to give up on the problems of manually babysitting servers, racks and UPS's and migrated to the Cloud (and in the process, the Scottish Highlands) and now works to enable clients to transition their workloads, processes and swag requirements to the same route.\r\n\r\nSimon is a member of the AWS Community builder program, and these days enjoys coaching and mentoring as much as get hands-on with code, automation and head-scratching.",
 			"twitter": "simonhanmer",
@@ -276,7 +270,7 @@
 		"talk": {
 			"name": "Fabrizio Gattuso",
 			"email": "f.gattuso87@gmail.com",
-			"avatar": "https://secure.gravatar.com/avatar/fc8b2b6982374e00590a32ece8f17d6a?s=500",
+			"avatar": "https://imgur.com/LjO2Tgt",
 			"location": "Berlin",
 			"bio": "I'm a tech enthusiast with a pretty eclectic journey. Beginning my career in the home automation (domotic) sector, I later pivoted to study Computer Science with a focus on embedded and IoT solutions. My research journey involved delving into power-saving strategies for embedded devices and exploring innovative wireless communication protocols for energy efficiency.\r\nIn a notable chapter of my career, I contributed to building solutions in the Underwater Internet of Things sector as part of a spinoff from Sapienza University known as Wsense. There, I established the AWS team from the ground up, showcasing my leadership and technical skills.\r\nCurrently residing in Germany, I have transitioned to Nordcloud, a leading consultancy company. As a Cloud Solution Architect and People Lead for the AWS team, I bring a wealth of experience and a passion for driving innovation and excellence in cloud solutions.\r\nBeyond the tech realm, you'll find me exploring the great outdoors through endurance sports like biking (road and gravel), road and trail running, and hiking. I'm equally passionate about the finer things in life such as craft beer, wine and good food.",
 			"twitter": "",
