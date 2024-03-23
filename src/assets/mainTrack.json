@@ -283,7 +283,6 @@
 		},
 		"talk": {
 			"name": "Matteo Madeddu",
-			"email": "matteo.madeddu@gmail.com",
 			"avatar": "https://imgur.com/D0Tg00c.jpg",
 			"location": "Torino",
 			"bio": "Sono un Platform Engineer di Torino, che lavora da tempo con i servizi AWS. Nel corso degli anni ho maturato esperienze con diversi tipi di architetture AWS-powered, da quelle serverless-driven che sfruttano servizi come AWS ApiGateway, Lambda, IoT Core, Fargate e soluzioni Cloudwatch ad ambienti completi ec2-backed che utilizzano più cluster EKS. Mi piace sperimentare, soprattutto con AWS, e cercare di ottenere il massimo dai suoi servizi! ",
@@ -325,7 +324,6 @@
 		},
 		"talk": {
 			"name": "Daniele Frasca, Roman Boiko",
-			"email": "dfrasca80@gmail.com",
 			"avatar": "https://imgur.com/SFrP6kI.jpeg",
 			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
 			"twitter": "dfrasca80",
