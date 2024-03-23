@@ -9,40 +9,40 @@ import { Image, InfiniteMovingImage } from "./ui/infinite-moving-cards";
 
 const Sponsors = () => {
 	const sponsors: Image[] = [
-		{
-			image: logoBeSharp,
-			url: "https://www.besharp.it/",
-			sponsorType: "Gold",
-			type: "single",
-		},
-		{
-			image: logoNTTData,
-			url: "https://www.nttdata.com/global/en/",
-			sponsorType: "Headline",
-			imageClassName: "h-10",
-			type: "single",
-		},
-		{
-			image: logoAWS,
-			url: "https://aws.amazon.com/",
-			sponsorType: "Gold",
-			imageClassName: "w-24",
-			type: "single",
-		},
-		{
-			image: logoServerlessGuru,
-			url: "https://www.serverlessguru.com/",
-			sponsorType: "Gold",
-			imageClassName: "!h-5",
-			type: "single",
-		},
-		{
-			image: logoServerlessDark,
-			url: "https://www.serverless.com/",
-			sponsorType: "Community",
-			type: "single",
-		},
-	];
+        {
+            image: logoBeSharp,
+            url: "https://www.besharp.it/",
+            sponsorType: "Headline",
+            type: "single",
+        },
+        {
+            image: logoNTTData,
+            url: "https://www.nttdata.com/global/en/",
+            sponsorType: "Headline",
+            imageClassName: "h-10",
+            type: "single",
+        },
+        {
+            image: logoAWS,
+            url: "https://aws.amazon.com/",
+            sponsorType: "Headline",
+            imageClassName: "w-24",
+            type: "single",
+        },
+        {
+            image: logoServerlessGuru,
+            url: "https://www.serverlessguru.com/",
+            sponsorType: "Gold",
+            imageClassName: "!h-5",
+            type: "single",
+        },
+        {
+            image: logoServerlessDark,
+            url: "https://www.serverless.com/",
+            sponsorType: "Community",
+            type: "single",
+        },
+    ];
 	return (
 		<div className="pt-3 mb-10 text-center bg-transparent lg:mb-0 ">
 			<h5 className="mb-2 text-sm font-semibold text-gray-300">Sponsors</h5>

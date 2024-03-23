@@ -3,7 +3,7 @@
 		"agenda_details": {
 			"start_time": "2024-06-13T09:00+02:00",
 			"end_time": "2024-06-13T10:30+02:00",
-			"minutes": 30,
+			"minutes": 90,
 			"type": "break"
 		},
 		"break": {
@@ -28,11 +28,10 @@
 			"bio": "",
 			"twitter": "",
 			"url": "",
-			"organization": "NTT DATA",
 			"shirt_size": "Women's M",
 			"job_title": "",
-			"title": "NTT DATA",
-			"abstract": "",
+			"title": "Sponsor Talk",
+			"abstract": "Talk abstract incoming...",
 			"description": "",
 			"notes": "",
 			"audience_level": "All",
@@ -98,7 +97,6 @@
 			"bio": "",
 			"twitter": "",
 			"url": "",
-			"organization": "BeSharp",
 			"shirt_size": "Men's M",
 			"name_2": null,
 			"email_2": null,
@@ -109,8 +107,8 @@
 			"url_2": null,
 			"organization_2": null,
 			"shirt_size_2": null,
-			"title": "BeSharp",
-			"abstract": "",
+			"title": "Sponsor Talk",
+			"abstract": "Talk abstract incoming...",
 			"description": "",
 			"audience_level": "Beginner",
 			"tags": []
