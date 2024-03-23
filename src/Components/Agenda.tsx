@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import mainTrack from "../assets/mainTrack.json";
-import communityTrack from "../assets/communityTrack.json";
+import discoveryTrack from "../assets/discoveryTrack.json";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 // import owl_mascot from "../assets/Animals SVG/owl_mascot.svg";
@@ -65,7 +65,7 @@ const AgendaAccordion = () => {
 				<Accordion
 					type="multiple"
 					// defaultValue="item-1"
-					defaultValue={["main_stage", "community_track"]}
+					defaultValue={["main_stage", "discovery_track"]}
 					// collapsible
 					className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10 "
 				>
@@ -81,7 +81,7 @@ const AgendaAccordion = () => {
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem
-						value="community_track"
+						value="discovery_track"
 						className="mt-4 border-b-0 rounded-lg lg:mt-0 lg:w-1/2"
 						disabled={!isMobile}
 					>
@@ -89,10 +89,10 @@ const AgendaAccordion = () => {
 							className="p-2 text-2xl font-bold text-purple-900 no-underline hover:no-underline min-h-16"
 							showIcon={isMobile}
 						>
-							💬 Community track
+							💬 Discovery track
 						</AccordionTrigger>
 						<AccordionContent className="">
-							<Agenda talks={communityTrack as AgendaItem[]} />
+							<Agenda talks={discoveryTrack as AgendaItem[]} />
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>
