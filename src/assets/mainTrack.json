@@ -96,7 +96,7 @@
 		},
 		"talk": {
 			"name": "Raphael Manke",
-			"avatar": "",
+			"avatar": "./speakers/manke_raphael.jpeg",
 			"location": "Karlsruhe - Germany",
 			"bio": "Raphael is a full-stack web developer leveraging serverless technologies in his day to day business. He helps customers build reliable and scalable solutions with minimal operational overhead. On his cloud journey he shares his insights as a public speaker.",
 			"twitter": "RaphaelManke",

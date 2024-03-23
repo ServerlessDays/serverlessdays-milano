@@ -48,7 +48,7 @@
 		},
 		"talk": {
 			"name": "Katie Kennedy, Ciaran Flaherty",
-			"avatar": "",
+			"avatar": "./speakers/flaherty_ciaran.jpg",
 			"location": "Unknown",
 			"bio": "I'm a 28 year old from Ireland and I went to university in Gal way where I was one of the few females in my computer science and Information Technology degree. My love for new  and exciting technology led me to specialise in cloud computing. Throughout my career, I have focused on leveraging the power of cloud technology to drive innovation and efficiency. I am passionate about exploring the limitless possibilities that the cloud offers and finding creative solutions to complex problems. In my free time, you can often find me immersing myself in the world of The Witcher,  whether its through the PlayStation, tv series or books it is a fantasy series that has captured my imagination.",
 			"twitter": "",
@@ -190,7 +190,7 @@
 		},
 		"talk": {
 			"name": "Slobodan Stojanović",
-			"avatar": "",
+			"avatar": "./speakers/stojanovic_slobodan.jpeg",
 			"location": "Belgrade, Serbia",
 			"bio": "Slobodan Stojanović is the CTO and co-founder of Vacation Tracker, an application that simplifies employee leave and absence management for organizations. He is based in Belgrade and is the JS Belgrade meetup co-organizer.\r\n\r\nSlobodan is an AWS Serverless Hero and co-author of the “Serverless Applications with Node.js” book, published by Manning Publications.",
 			"twitter": "slobodan_",
