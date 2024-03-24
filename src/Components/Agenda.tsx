@@ -165,8 +165,9 @@ const TalkCard = ({
 	};
 
 	const getTimestamp = (time: string) => {
-		const hours = new Date(time).getHours();
-		const minutes = new Date(time).getMinutes();
+		const date = new Date(time);
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
 		return `${pad(hours, 2)}:${pad(minutes, 2)}`;
 	};
 
