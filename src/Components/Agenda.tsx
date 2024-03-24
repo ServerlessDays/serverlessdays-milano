@@ -264,10 +264,10 @@ const TalkCard = ({
 						</p>
 					)}
 				</div>
-				<div id="participants" className="flex justify-end w-20">
-					{profileImg && (
-						<a href={agendaTalk.talk?.url || "#"} className="" target="_blank">
-							{/* <AnimatedTooltip items={talkers} /> */}
+				<div id="participants" className="flex items-center justify-end w-20">
+					<a href={agendaTalk.talk?.url || "#"} className="" target="_blank">
+						{/* <AnimatedTooltip items={talkers} /> */}
+						{profileImg && (
 							<img
 								className="object-cover w-10 h-10 rounded-full"
 								src={profileImg}
@@ -277,9 +277,9 @@ const TalkCard = ({
 								title={speakerNameTitle}
 								loading="lazy"
 							/>
-						</a>
-					)}
-					{!profileImg && <p className="text-xs font-light text-center">{name}</p>}
+						)}
+						{!profileImg && <p className="text-xs font-light text-center">{name}</p>}
+					</a>
 				</div>
 			</div>
 		</div>
