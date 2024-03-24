@@ -160,10 +160,8 @@ const TalkCard = ({
 }) => {
 	if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
-	const pad = (num: any, size: number) => {
-		num = num.toString();
-		while (num.length < size) num = "0" + num;
-		return num;
+	const pad = (time: number, size: number) => {
+		return time.toString().padStart(size, "0");
 	};
 
 	const getTimestamp = (time: string) => {
