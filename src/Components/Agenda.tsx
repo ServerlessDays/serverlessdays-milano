@@ -191,8 +191,9 @@ const TalkCard = ({
 		// const end = new Date(endTime).getTime();
 		// const difference = end - start;
 		// const minutes = difference / 60000 - 8;
-		const minutes = duration;
-		//  																^--- Subtract 8 px to account for padding,
+		// const minutes = duration;
+		const minutes = duration - 2.8;
+		//  											 ^--- Subtract 3 px to account for padding,
 
 		// Calculate ratio of duration to maximum duration
 		const ratio = minutes / maxDuration;
