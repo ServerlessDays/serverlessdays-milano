@@ -209,15 +209,12 @@ const TalkCard = ({
 	};
 
 	let speakerNameTitle = "";
-	if (name) {
-		speakerNameTitle += name;
-	}
-	if (jobTitle) {
-		speakerNameTitle += ` - ${jobTitle}`;
-	}
-	if (organization) {
-		speakerNameTitle += ` @ ${organization}`;
-	}
+	if (name) speakerNameTitle += name;
+
+	if (jobTitle) speakerNameTitle += ` - ${jobTitle}`;
+
+	if (organization) speakerNameTitle += ` @ ${organization}`;
+
 	// const speakerNameTitle = [name, jobTitle, organization].filter(Boolean).join(" - ").join(" @ ");
 
 	return (
