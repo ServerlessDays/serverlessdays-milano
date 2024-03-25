@@ -15,22 +15,22 @@
 	},
 	{
 		"agenda_details": {
-			"start_time": "2024-05-01T10:30+02:00",
-			"end_time": "2024-05-01T11:10+02:00",
+			"start_time": "2024-05-01T10:25+02:00",
+			"end_time": "2024-05-01T11:05+02:00",
 			"minutes": 40,
 			"type": "talk",
 			"keynote": false
 		},
 		"talk": {
-			"name": "NTT DATA",
+			"name": "",
 			"avatar": "",
 			"location": "",
 			"bio": "",
 			"twitter": "",
-			"url": "https://www.nttdata.com/global/en/",
+			"url": "",
 			"shirt_size": "Women's M",
 			"job_title": "",
-			"title": "Sponsor Talk",
+			"title": "Coming soon",
 			"abstract": "Talk abstract incoming...",
 			"description": "Coming soon",
 			"notes": "",
@@ -40,8 +40,8 @@
 	},
 	{
 		"agenda_details": {
-			"start_time": "2024-05-01T11:15+02:00",
-			"end_time": "2024-05-01T11:35+02:00",
+			"start_time": "2024-05-01T11:10+02:00",
+			"end_time": "2024-05-01T11:30+02:00",
 			"minutes": 20,
 			"type": "talk",
 			"keynote": false
@@ -70,9 +70,9 @@
 	},
 	{
 		"agenda_details": {
-			"start_time": "2024-06-13T11:40+02:00",
-			"end_time": "2024-06-13T12:00+02:00",
-			"minutes": 20,
+			"start_time": "2024-06-13T11:30+02:00",
+			"end_time": "2024-06-13T12:10+02:00",
+			"minutes": 40,
 			"type": "break"
 		},
 		"break": {
@@ -84,18 +84,18 @@
 	},
 	{
 		"agenda_details": {
-			"start_time": "2024-05-01T12:00+02:00",
-			"end_time": "2024-05-01T12:40+02:00",
+			"start_time": "2024-05-01T12:10+02:00",
+			"end_time": "2024-05-01T12:50+02:00",
 			"minutes": 40,
 			"type": "talk"
 		},
 		"talk": {
-			"name": "BeSharp",
+			"name": "",
 			"avatar": "",
 			"location": "",
 			"bio": "",
 			"twitter": "",
-			"url": "https://www.besharp.it/",
+			"url": "",
 			"shirt_size": "Men's M",
 			"name_2": null,
 			"email_2": null,
@@ -106,7 +106,7 @@
 			"url_2": null,
 			"organization_2": null,
 			"shirt_size_2": null,
-			"title": "Sponsor Talk",
+			"title": "Coming soon",
 			"abstract": "Talk abstract incoming...",
 			"description": "Coming soon",
 			"audience_level": "Beginner",
@@ -115,8 +115,8 @@
 	},
 	{
 		"agenda_details": {
-			"start_time": "2024-05-01T12:45+02:00",
-			"end_time": "2024-05-01T13:05+02:00",
+			"start_time": "2024-05-01T12:55+02:00",
+			"end_time": "2024-05-01T13:15+02:00",
 			"minutes": 20,
 			"type": "talk"
 		},
@@ -142,8 +142,8 @@
 	},
 	{
 		"agenda_details": {
-			"start_time": "2024-05-01T13:10+02:00",
-			"end_time": "2024-05-01T13:50+02:00",
+			"start_time": "2024-05-01T13:20+02:00",
+			"end_time": "2024-05-01T14:00+02:00",
 			"minutes": 40,
 			"type": "talk"
 		},
@@ -295,7 +295,6 @@
 			"description": ""
 		}
 	},
-
 	{
 		"agenda_details": {
 			"start_time": "2024-06-13T18:00+02:00",
