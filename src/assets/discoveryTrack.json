@@ -3,7 +3,7 @@
 		"agenda_details": {
 			"start_time": "2024-06-13T09:00+02:00",
 			"end_time": "2024-06-13T10:20+02:00",
-			"minutes": 80,
+			"minutes": 90,
 			"type": "break"
 		},
 		"break": {
@@ -42,7 +42,7 @@
 		"agenda_details": {
 			"start_time": "2024-05-01T11:10+02:00",
 			"end_time": "2024-05-01T11:30+02:00",
-			"minutes": 20,
+			"minutes": 30,
 			"type": "talk",
 			"keynote": false
 		},
@@ -72,7 +72,7 @@
 		"agenda_details": {
 			"start_time": "2024-06-13T11:30+02:00",
 			"end_time": "2024-06-13T12:10+02:00",
-			"minutes": 40,
+			"minutes": 35.5,
 			"type": "break"
 		},
 		"break": {
