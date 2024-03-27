@@ -2,7 +2,7 @@ const Footer = () => {
 	return (
 		<footer className="relative flex flex-col items-center justify-between w-screen h-full p-6 pt-0 pb-0 text-xs md:h-16 md:flex-row bg-slate-200 text-slate-600 lg:text-base">
 			<div className="flex items-center justify-center pt-3 md:pt-0">
-				<p>ServerlessDays Milano © {new Date().getFullYear()}</p>
+				<p>ServerlessDays Milano - {new Date().getFullYear()}</p>
 				<div className="ml-6">
 					<ul className="flex items-center justify-center gap-4 ">
 						<li>
