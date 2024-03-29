@@ -273,7 +273,11 @@ const TalkCard = ({
 					)}
 				</div>
 				<div id="participants" className="flex items-center justify-end w-20">
-					<a href={agendaTalk.talk?.url || "#"} className="" target="_blank">
+					<a
+						href={agendaTalk.talk?.url || "#"}
+						className={`${name === PLACEHOLDER_NAME && "pointer-events-none"}`}
+						target="_blank"
+					>
 						{/* <AnimatedTooltip items={talkers} /> */}
 						{profileImg && (
 							<img
