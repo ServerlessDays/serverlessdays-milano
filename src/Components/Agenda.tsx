@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import dino_mascot from "../assets/Animals SVG/Dino_mascot.svg";
 
 const IS_COMING_SOON = false;
+const PLACEHOLDER_NAME = "someone to be announced";
 const AgendaAccordion = () => {
 	const [width, setWidth] = useState<number>(window.innerWidth);
 	const containerRef = useRef(null);
@@ -240,17 +241,18 @@ const TalkCard = ({
 				<div id="talk-content" className="w-full ">
 					<AccordionItem className="pb-0 border-0 " value={index + startTime + endTime}>
 						<AccordionTrigger
-							disabled={talkType === "break"}
-							showIcon={talkType === "talk"}
-							className={`flex justify-start text-start my-auto  ${talkType === "break" ? "text-purple-900" : ""} ${
-								isKeynote ? "text-fuchsia-700 font-bold" : ""
-							}
-							${talkType === "talk" ? "pb-0 pt-0" : ""}`}
+							disabled={talkType === "break" || name === PLACEHOLDER_NAME}
+							showIcon={talkType === "talk" && name !== PLACEHOLDER_NAME}
+							className={`flex justify-start text-start my-auto  
+							${talkType === "break" && "text-purple-900 hover:no-underline"}
+							${name === PLACEHOLDER_NAME && "text-zinc-600 hover:no-underline pointer-events-none"}
+							${isKeynote && "text-fuchsia-700 font-bold"}
+							${talkType === "talk" && "pb-0 pt-0"}`}
 						>
 							{title}
 						</AccordionTrigger>
 						<AccordionContent className="pb-0 text-start">
-							<div id="talk-description">
+							<div id="talk-description" className="py-1">
 								<p>{description}</p>
 							</div>
 						</AccordionContent>
@@ -258,7 +260,13 @@ const TalkCard = ({
 					{talkType === "talk" && (
 						<p className="text-xs text-gray-600 md:text-xs">
 							By&nbsp;
-							<a href={agendaTalk.talk?.url} target="_blank" className="underline underline-offset-2">
+							<a
+								href={agendaTalk.talk?.url}
+								target="_blank"
+								className={`underline underline-offset-2 ${
+									name === PLACEHOLDER_NAME && "no-underline pointer-events-none"
+								}`}
+							>
 								{speakerNameTitle}
 							</a>
 						</p>
@@ -278,7 +286,20 @@ const TalkCard = ({
 								loading="lazy"
 							/>
 						)}
-						{!profileImg && <p className="text-xs font-light text-center">{name}</p>}
+
+						{!profileImg && name === PLACEHOLDER_NAME ? (
+							<img
+								className="object-cover w-10 h-10 scale-125 rounded-full"
+								src="https://as2.ftcdn.net/v2/jpg/01/99/45/45/1000_F_199454533_GIBKQvbUBlu0hl5xhn64pJOHp1nn5W2C.jpg"
+								height={100}
+								width={100}
+								alt={speakerNameTitle}
+								title={speakerNameTitle}
+								loading="lazy"
+							/>
+						) : (
+							!profileImg && <p className="text-xs font-light text-center">{name}</p>
+						)}
 					</a>
 				</div>
 			</div>
