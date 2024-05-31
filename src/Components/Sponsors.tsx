@@ -4,6 +4,7 @@ import logoBeSharp from "../assets/sponsors/logo_besharp.svg";
 import logoAWS from "../assets/sponsors/Amazon_Web_Services_Logo.svg";
 import logoNTTData from "../assets/sponsors/NTT-Data-Logo.svg";
 import logoCodecrafters from "../assets/sponsors/codecrafters-logo.png";
+import logoTAG from "../assets/sponsors/TAG-logo.svg";
 
 // import { cn } from "@/lib/utils";
 import { Image, InfiniteMovingImage } from "./ui/infinite-moving-cards";
@@ -34,7 +35,14 @@ const Sponsors = () => {
             image: logoServerlessGuru,
             url: "https://www.serverlessguru.com/",
             sponsorType: "Gold",
-            imageClassName: "!h-5",
+            imageClassName: "!h-20",
+            type: "single",
+        },
+        {
+            image: logoTAG,
+            url: "https://talentgarden.org/en/",
+            sponsorType: "Gold",
+            imageClassName: "!h-11",
             type: "single",
         },
         {
