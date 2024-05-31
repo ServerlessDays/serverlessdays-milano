@@ -382,19 +382,5 @@
 			"location": "",
 			"description": ""
 		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T18:15+02:00",
-			"end_time": "2024-06-13T21:00+02:00",
-			"minutes": 15,
-			"type": "break"
-		},
-		"break": {
-			"title": "Happy hour",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
 	}
 ]
