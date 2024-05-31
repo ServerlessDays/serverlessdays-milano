@@ -7,6 +7,7 @@ import logoCodecrafters from "../assets/sponsors/codecrafters-logo.png";
 import logoTAG from "../assets/sponsors/TAG-logo.svg";
 import logoAmpt from "../assets/sponsors/ampt-logo.svg";
 import logoOBN from "../assets/sponsors/off-by-none-logo.svg";
+import logoEleva from "../assets/sponsors/eleva-logo.svg";
 // import { cn } from "@/lib/utils";
 import { Image, InfiniteMovingImage } from "./ui/infinite-moving-cards";
 
@@ -73,6 +74,13 @@ const Sponsors = () => {
             imageClassName: "!h-20",
             type: "single",
         },
+        {
+            image: logoEleva,
+            url: "https://eleva.it/",
+            sponsorType: "Community",
+            imageClassName: "!h-20",
+            type: "single",
+        }
     ];
     return (
         <div className="pt-3 mb-10 text-center bg-transparent lg:mb-0 ">
