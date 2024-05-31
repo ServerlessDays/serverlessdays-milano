@@ -5,7 +5,8 @@ import logoAWS from "../assets/sponsors/Amazon_Web_Services_Logo.svg";
 import logoNTTData from "../assets/sponsors/NTT-Data-Logo.svg";
 import logoCodecrafters from "../assets/sponsors/codecrafters-logo.png";
 import logoTAG from "../assets/sponsors/TAG-logo.svg";
-
+import logoAmpt from "../assets/sponsors/ampt-logo.svg";
+import logoOBN from "../assets/sponsors/off-by-none-logo.svg";
 // import { cn } from "@/lib/utils";
 import { Image, InfiniteMovingImage } from "./ui/infinite-moving-cards";
 
@@ -42,7 +43,7 @@ const Sponsors = () => {
             image: logoTAG,
             url: "https://talentgarden.org/en/",
             sponsorType: "Gold",
-            imageClassName: "!h-11",
+            imageClassName: "!h-12",
             type: "single",
         },
         {
@@ -54,6 +55,20 @@ const Sponsors = () => {
         {
             image: logoCodecrafters,
             url: "https://codecrafters.io//",
+            sponsorType: "Community",
+            imageClassName: "!h-20",
+            type: "single",
+        },
+        {
+            image: logoAmpt,
+            url: "https://www.getampt.com/",
+            sponsorType: "Community",
+            imageClassName: "!h-20",
+            type: "single",
+        },
+        {
+            image: logoOBN,
+            url: "https://offbynone.io/",
             sponsorType: "Community",
             imageClassName: "!h-20",
             type: "single",
@@ -76,7 +91,7 @@ const Sponsors = () => {
                 <InfiniteMovingImage
                     items={sponsors}
                     direction="right"
-                    speed="slow"
+                    speed="normal"
                 />
             </div>
             {/* <hr className="my-5 border-t-2 border-gray-300" />
