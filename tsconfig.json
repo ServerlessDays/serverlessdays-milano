@@ -9,6 +9,8 @@
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"skipLibCheck": true,
+		"checkJs": true,
+		"allowJs": true,
 
 		/* Bundler mode */
 		"moduleResolution": "bundler",
@@ -17,6 +19,10 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"declaration": false,
+		"forceConsistentCasingInFileNames": true,
 
 		/* Linting */
 		"strict": true,

@@ -17,7 +17,7 @@
 		"agenda_details": {
 			"start_time": "2024-05-01T10:25+02:00",
 			"end_time": "2024-05-01T11:05+02:00",
-			"minutes": 33.5,
+			"minutes": 30,
 			"type": "talk",
 			"keynote": false
 		},
@@ -86,7 +86,7 @@
 		"agenda_details": {
 			"start_time": "2024-05-01T12:10+02:00",
 			"end_time": "2024-05-01T12:50+02:00",
-			"minutes": 33,
+			"minutes": 40,
 			"type": "talk"
 		},
 		"talk": {
@@ -108,7 +108,7 @@
 		"agenda_details": {
 			"start_time": "2024-05-01T12:55+02:00",
 			"end_time": "2024-05-01T13:15+02:00",
-			"minutes": 25.75,
+			"minutes": 20,
 			"type": "talk"
 		},
 		"talk": {
