@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "standard",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "import",
+    "node",
+    "prettier",
+    "promise",
+    "@typescript-eslint",
+    "eslint-plugin-n"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "complexity": ["error", 25],
+    "no-process-env": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "no-warning-comments": "warn",
+    "no-undef": "error",
+    "no-use-before-define": "error",
+    "no-console": "warn",
+    "camelcase": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "printWidth": 120,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "parser": "typescript",
+        "semi": true
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "globals": {
+    "NodeJS": true
+  },
+  "env": {
+    "es2020": true,
+    "commonjs": true,
+    "node": true,
+    "mocha": true
+  },
+  "ignorePatterns": ["typings/**", "scripts/**", "dist/**"]
+}
