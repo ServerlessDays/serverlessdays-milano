@@ -11,10 +11,6 @@ const PLACEHOLDER_NAME = "someone to be announced";
 const AgendaAccordion = () => {
 	const [width, setWidth] = useState<number>(window.innerWidth);
 	const containerRef = useRef(null);
-	// const isInView = useInView(containerRef, { margin: "0px 0px -100px 0px" });
-
-	// const [owlScope, animateOwl] = useAnimate();
-	// const [dinoScope, animateDino] = useAnimate();
 	const handleWindowSizeChange = () => {
 		setWidth(window.innerWidth);
 	};
@@ -27,35 +23,12 @@ const AgendaAccordion = () => {
 		};
 	}, []);
 
-	// useEffect(() => {
-	// 	if (!isInView) return;
-	// 	animateOwl(owlScope.current, { left: "90%" }, { delay: 1, bounce: 0.1, duration: 2, type: "spring" });
-	// 	animateDino(dinoScope.current, { left: "0" }, { delay: 1.6, bounce: 0.2, duration: 3, type: "spring" });
-	// 	console.log(`Own is in view: ${isInView}`);
-	// }, [isInView]);
-
 	const isMobile = width <= 1024;
 	return (
 		<div className="relative h-full pt-10 pb-5 bg-white " id="agenda" ref={containerRef}>
-			{/* <h1 className="mb-4 text-2xl font-bold text-center text-purple-800 uppercase">Agenda 2024</h1> */}
-
-			{/* <motion.img
-				src={owl_mascot}
-				alt="Owl Mascot"
-				// ref={owlScope}
-				// initial={{
-				// 	left: "100%",
-				// }}
-				className="absolute top-[800px] -left-8 w-16 md:w-24 scale-x-[-1]"
-			/> */}
 			<motion.img
 				src={dino_mascot}
 				alt="Dino Mascot"
-				// ref={dinoScope}
-				// initial={{
-				// 	left: "-100%",
-				// 	rotate: "25deg",
-				// }}
 				className="absolute -top-12 xl:-top-16 lg:-top-9 md:-top-16 right-0 w-16 md:w-24 scale-x-[-1] rotate-[-14deg] "
 			/>
 			<h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
@@ -78,7 +51,7 @@ const AgendaAccordion = () => {
 							🚀 Main stage
 						</AccordionTrigger>
 						<AccordionContent>
-							<Agenda talks={mainTrack as AgendaItem[]} />
+							<Agenda talks={mainTrack as AgendaItem[]}/>
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem
@@ -93,7 +66,7 @@ const AgendaAccordion = () => {
 							💬 Discovery track
 						</AccordionTrigger>
 						<AccordionContent className="">
-							<Agenda talks={discoveryTrack as AgendaItem[]} />
+							<Agenda talks={discoveryTrack as AgendaItem[]}/>
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>
@@ -131,19 +104,20 @@ const ComingSoon = () => {
 	);
 };
 
-const Agenda = ({ talks }: { talks: AgendaItem[] }) => {
-	const maxDuration = Math.max(
-		...talks.map((item) => {
-			const start = new Date(item.agenda_details.start_time).getTime();
-			const end = new Date(item.agenda_details.end_time).getTime();
-			return (end - start) / 60000; // Convert to minutes
-		}),
-	);
+const Agenda = ({ talks }: { talks: AgendaItem[]}) => {
+	// const maxDuration = Math.max(
+	// 	...talks.map((item) => {
+	// 		const start = new Date(item.agenda_details.start_time).getTime();
+	// 		const end = new Date(item.agenda_details.end_time).getTime();
+	// 		return (end - start) / 60000; // Convert to minutes
+	// 	}),
+	// );
+	// const maxDuration = Math.max(...talks.map((item) => item.agenda_details.minutes))
 	return (
 		<div className="w-full ">
 			<Accordion type="single" collapsible className="!h-full">
 				{talks.map((talk, index) => (
-					<TalkCard key={index} talk={talk} index={index} maxDuration={maxDuration} />
+					<TalkCard key={index} talk={talk} index={index}  />
 				))}
 			</Accordion>
 		</div>
@@ -153,11 +127,9 @@ const Agenda = ({ talks }: { talks: AgendaItem[] }) => {
 const TalkCard = ({
 	talk: agendaTalk,
 	index,
-	maxDuration,
 }: {
 	talk: AgendaItem;
 	index: number;
-	maxDuration: number;
 }) => {
 	if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
@@ -172,6 +144,7 @@ const TalkCard = ({
 		return `${pad(hours, 2)}:${pad(minutes, 2)}`;
 	};
 
+
 	const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
 	const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
 	const name = agendaTalk?.talk?.name;
@@ -184,67 +157,48 @@ const TalkCard = ({
 	const startTime = agendaTalk.agenda_details.start_time;
 	const endTime = agendaTalk.agenda_details.end_time;
 
-	// console.log({ agendaTalk });
 
-	// const calculateItemHeight = (startTime: string, endTime: string, maxDuration: number, duration: number) => {
-	const calculateItemHeight = (maxDuration: number, duration: number) => {
-		// const start = new Date(startTime).getTime();
-		// const end = new Date(endTime).getTime();
-		// const difference = end - start;
-		// const minutes = difference / 60000 - 8;
-		// const minutes = duration;
-		const minutes = duration - 2.8;
-		//  											 ^--- Subtract 3 px to account for padding,
+	const timeStampString = `${getTimestamp(startTime)}  ${getTimestamp(endTime)}`;
 
-		// Calculate ratio of duration to maximum duration
-		const ratio = minutes / maxDuration;
-
-		// const minHeight = 60;
-		const maxHeight = 500; // You can adjust this value as needed
-
-		// Calculate height based on ratio
-		const height = maxHeight * ratio;
-		// const height = Math.max(minHeight, Math.min(maxHeight, maxHeight * ratio));
-
+	const calculateItemHeight = (duration: number) => {
+		const base = 10;
+		const height = Math.floor(duration) * base / 1.5;
 		return height;
 	};
 
+
 	let speakerNameTitle = "";
 	if (name) speakerNameTitle += name;
-
 	if (jobTitle) speakerNameTitle += ` - ${jobTitle}`;
-
 	if (organization) speakerNameTitle += ` @ ${organization}`;
 
-	// const speakerNameTitle = [name, jobTitle, organization].filter(Boolean).join(" - ").join(" @ ");
 
 	return (
 		<div
 			id="talk"
-			className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 border-[#5d518488] flex  px-4 justify-start items-center box-border ${
+			className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 relative border-[#5d518488] flex  px-4 justify-start items-center box-border ${
 				agendaTalk.agenda_details.type === "talk" ? "" : "bg-gradient-to-br from-pink-50 to-purple-100"
 			}`}
 			style={{
 				// minHeight: `${calculateItemHeight(startTime, endTime, maxDuration)}px`,
-				minHeight: `${calculateItemHeight(maxDuration, duration)}px`,
-				// maxHeight: `${calculateItemHeight(startTime, endTime, maxDuration) + 300}px`,
+				minHeight: `${calculateItemHeight(duration)}px`,
+				// maxHeight: `${calculateItemHeight(maxDuration, duration) + 300}px`,
 			}}
 		>
-			<div id="talk-details" className="flex flex-grow w-full gap-3 p-2 my-auto">
-				<div id="time-container" className="flex ">
-					<p className="flex my-auto font-light">
-						{getTimestamp(startTime)} <span className="hidden md:block">&nbsp;-&nbsp;</span>
-						{getTimestamp(endTime)}
+			<div id="talk-details" className="flex items-center w-full gap-3 p-2 min-h-5">
+				<div id="time-container" className="">
+					<p className="flex text-gray-600 ">
+						{timeStampString}	
 					</p>
 					{/* <span>({agendaTalk.agenda_details.minutes} mins)</span> */}
 				</div>
 				<div id="talk-content" className="w-full ">
-					<AccordionItem className="pb-0 border-0 " value={index + startTime + endTime}>
+					<AccordionItem className="pb-1 border-0 " value={index + startTime + endTime}>
 						<AccordionTrigger
 							disabled={talkType === "break" || name === PLACEHOLDER_NAME}
 							showIcon={talkType === "talk" && name !== PLACEHOLDER_NAME}
 							className={`flex justify-start text-start my-auto  
-							${talkType === "break" && "text-purple-900 hover:no-underline"}
+							${talkType === "break" && "text-purple-900 hover:no-underline py-0"}
 							${name === PLACEHOLDER_NAME && "text-zinc-600 hover:no-underline pointer-events-none"}
 							${isKeynote && "text-fuchsia-700 font-bold"}
 							${talkType === "talk" && "pb-0 pt-0"}`}
