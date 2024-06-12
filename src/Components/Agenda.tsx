@@ -1,4 +1,9 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './ui/accordion';
 import mainTrack from '../assets/mainTrack.json';
 import discoveryTrack from '../assets/discoveryTrack.json';
 import { motion } from 'framer-motion';
@@ -27,7 +32,11 @@ const AgendaAccordion = () => {
 
   const isMobile = width <= 1024;
   return (
-    <div className="relative h-full pt-10 pb-5 bg-white " id="agenda" ref={containerRef}>
+    <div
+      className="relative h-full pt-10 pb-5 bg-white "
+      id="agenda"
+      ref={containerRef}
+    >
       <motion.img
         src={dino_mascot}
         alt="Dino Mascot"
@@ -41,11 +50,15 @@ const AgendaAccordion = () => {
         <Accordion
           type="multiple"
           // defaultValue="item-1"
-          defaultValue={['main_stage', 'discovery_track']}
+          defaultValue={!isMobile ? ['main_stage', 'discovery_track'] : []}
           // collapsible
           className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10 "
         >
-          <AccordionItem value="main_stage" className="border-b-0 rounded-lg lg:w-1/2" disabled={!isMobile}>
+          <AccordionItem
+            value="main_stage"
+            className="border-b-0 rounded-lg lg:w-1/2"
+            disabled={!isMobile}
+          >
             <AccordionTrigger
               className="p-2 text-2xl font-bold text-purple-900 no-underline min-h-16 hover:no-underline"
               showIcon={isMobile}
@@ -83,7 +96,7 @@ const ComingSoon = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimationText(prevText => {
+      setAnimationText((prevText) => {
         if (prevText === 'coming soon...') {
           return 'coming soon';
         } else {
@@ -99,7 +112,9 @@ const ComingSoon = () => {
 
   return (
     <div className="p-10">
-      <motion.p className="text-2xl font-medium text-center text-blue-900">{animationText}</motion.p>
+      <motion.p className="text-2xl font-medium text-center text-blue-900">
+        {animationText}
+      </motion.p>
     </div>
   );
 };
@@ -116,7 +131,13 @@ const Agenda = ({ talks }: { talks: AgendaItem[] }) => {
   );
 };
 
-const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number }) => {
+const TalkCard = ({
+  talk: agendaTalk,
+  index,
+}: {
+  talk: AgendaItem;
+  index: number;
+}) => {
   if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
   const pad = (time: number, size: number) => {
@@ -131,7 +152,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
   };
 
   const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
-  const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
+  const description =
+    agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
   const name = agendaTalk?.talk?.name;
   const duration = agendaTalk?.agenda_details.minutes || 0;
   const profileImg = agendaTalk?.talk?.avatar;
@@ -142,7 +164,9 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
   const startTime = agendaTalk.agenda_details.start_time;
   const endTime = agendaTalk.agenda_details.end_time;
 
-  const timeStampString = `${getTimestamp(startTime)}  ${getTimestamp(endTime)}`;
+  const timeStampString = `${getTimestamp(startTime)}  ${getTimestamp(
+    endTime
+  )}`;
 
   const calculateItemHeight = (duration: number) => {
     const base = 10;
@@ -159,24 +183,35 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
     <div
       id="talk"
       className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 relative border-[#5d518488] flex  px-4 justify-start items-center box-border ${
-        agendaTalk.agenda_details.type === 'talk' ? '' : 'bg-gradient-to-br from-pink-50 to-purple-100'
+        agendaTalk.agenda_details.type === 'talk'
+          ? ''
+          : 'bg-gradient-to-br from-pink-50 to-purple-100'
       }`}
       style={{
-        minHeight: `${calculateItemHeight(duration)}px`
+        minHeight: `${calculateItemHeight(duration)}px`,
       }}
     >
-      <div id="talk-details" className="flex items-center w-full gap-3 p-2 min-h-5">
+      <div
+        id="talk-details"
+        className="flex items-center w-full gap-3 p-2 min-h-5"
+      >
         <div id="time-container" className="">
           <p className="flex text-gray-600 ">{timeStampString}</p>
         </div>
         <div id="talk-content" className="w-full ">
-          <AccordionItem className="pb-1 border-0 " value={index + startTime + endTime}>
+          <AccordionItem
+            className="pb-1 border-0 "
+            value={index + startTime + endTime}
+          >
             <AccordionTrigger
               disabled={talkType === 'break' || name === PLACEHOLDER_NAME}
               showIcon={talkType === 'talk' && name !== PLACEHOLDER_NAME}
-              className={`flex justify-start text-start my-auto  
+              className={`flex justify-start text-start my-auto
 							${talkType === 'break' && 'text-purple-900 hover:no-underline py-0'}
-							${name === PLACEHOLDER_NAME && 'text-zinc-600 hover:no-underline pointer-events-none'}
+							${
+                name === PLACEHOLDER_NAME &&
+                'text-zinc-600 hover:no-underline pointer-events-none'
+              }
 							${isKeynote && 'text-fuchsia-700 font-bold'}
 							${talkType === 'talk' && 'pb-0 pt-0'}`}
             >
@@ -195,7 +230,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
                 href={agendaTalk.talk?.url}
                 target="_blank"
                 className={`underline underline-offset-2 ${
-                  name === PLACEHOLDER_NAME && 'no-underline pointer-events-none'
+                  name === PLACEHOLDER_NAME &&
+                  'no-underline pointer-events-none'
                 }`}
               >
                 {speakerNameTitle}
@@ -233,7 +269,9 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
                 loading="lazy"
               />
             ) : (
-              !profileImg && <p className="text-xs font-light text-center">{name}</p>
+              !profileImg && (
+                <p className="text-xs font-light text-center">{name}</p>
+              )
             )}
           </a>
         </div>
