@@ -17,20 +17,21 @@ const Home = () => {
           <h1 className="text-5xl font-extrabold md:text-6xl">
             ServerlessDays <br /> Milano 🇮🇹
           </h1>
-          <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
+          <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">We are coming back! See you in 2025</h3>
+          {/* <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
             <a href="Serverless_Day_2024.ics">June, 13th 2024</a> <br className="block sm:hidden" />
             <span className="hidden md:inline-block">&nbsp;</span>@&nbsp;
             <a href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8" target="_blank">
               C30, Viale Cassala, Milano
             </a>
-          </h3>
+          </h3> */}
           <TextGenerateEffect
             words={'Join the biggest serverless community conference in Italy.'}
             containerClassName="  w-80   sm:w-full md:pb-5 pb-2"
             textClassName="text-lg font-normal md:text-2xl text-gray-200"
           />
 
-          <motion.div className="">
+          {/* <motion.div className="">
             <a
               href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047"
               target="_blank"
@@ -48,15 +49,15 @@ const Home = () => {
                   }
                 }}
               >
-                🎫 Get your ticket!
+                🎫 Get your ticket! */}
                 {/* <span className="absolute rotate-[20deg] translate-x-14 rounded-xl bg-inherit p-1 -translate-y-4 underline">
 									35$
 								</span> */}
-              </MotionButton>
+              {/* </MotionButton>
               <div className="absolute pr-2 text-md top-8 handwriting-1">* lunch and coffee included!</div>
               <EarlyBirdText untilDate="19/04/2024" />
             </a>
-          </motion.div>
+          </motion.div> */}
           {/* <p className="handwriting-1">(Lunch and coffee included!)</p> */}
         </div>
         <motion.div ref={constraintsRef} className="pb-2 mt-24 md:pb-5 md:mt-16 lg:mt-0">

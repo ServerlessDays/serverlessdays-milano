@@ -13,7 +13,7 @@ import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
 import { AgendaItem } from '../types/agenda';
 
-const IS_COMING_SOON = false;
+const IS_COMING_SOON = true;
 const PLACEHOLDER_NAME = 'someone to be announced';
 const AgendaAccordion = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -43,7 +43,7 @@ const AgendaAccordion = () => {
         className="absolute -top-12 xl:-top-16 lg:-top-9 md:-top-16 right-0 w-16 md:w-24 scale-x-[-1] rotate-[-14deg] "
       />
       <h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
-        Agenda 2024
+        Agenda 2025
       </h1>
       {IS_COMING_SOON && <ComingSoon />}
       {!IS_COMING_SOON && (
