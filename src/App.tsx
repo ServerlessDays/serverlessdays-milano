@@ -5,7 +5,7 @@ import AgendaAccordion from './Components/Agenda';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
-import Sponsors from './Components/Sponsors';
+// import Sponsors from './Components/Sponsors';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <div className="relative ">
         <Navbar />
         <Home />
-        <Sponsors />
+        {/* <Sponsors /> */}
 
         <AgendaAccordion />
         {/* <CommunitySponsors /> */}

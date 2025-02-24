@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import UnicornMascot from '../assets/unicorn_mascot.svg';
-import { Button } from './ui/button';
+// import { Button } from './ui/button';
 import { TextGenerateEffect } from './ui/text-generate-effect';
-import arrowHandDrawn from '../assets/handDrawnArrow.png';
+// import arrowHandDrawn from '../assets/handDrawnArrow.png';
 import { useRef } from 'react';
-import { UntilTime } from '@/types/home';
+// import { UntilTime } from '@/types/home';
 
 const Home = () => {
-  const MotionButton = motion(Button);
+  // const MotionButton = motion(Button);
   const constraintsRef = useRef(null);
 
   return (
@@ -110,27 +110,27 @@ export default Home;
  * @param {UntilTime} props.untilDate - The date until which the early bird ticket is available.
  * @returns {JSX.Element|null} The rendered EarlyBirdText component.
  */
-const EarlyBirdText = ({ untilDate }: { untilDate: UntilTime }) => {
-  const currentDate = new Date();
-  const until = new Date(untilDate);
+// const EarlyBirdText = ({ untilDate }: { untilDate: UntilTime }) => {
+//   const currentDate = new Date();
+//   const until = new Date(untilDate);
 
-  if (currentDate > until) return null;
-  return (
-    <div className="absolute -bottom-1 right-2">
-      <div className="absolute w-20 scale-50 -bottom-12 right-[-4.5rem]">
-        <img
-          src={arrowHandDrawn}
-          alt="hand drawn arrow"
-          className="invert sepia-0 saturate-[7491%] hue-rotate-[354deg] brightness-[103%] contrast-[101%]"
-        />
-      </div>
+//   if (currentDate > until) return null;
+//   return (
+//     <div className="absolute -bottom-1 right-2">
+//       <div className="absolute w-20 scale-50 -bottom-12 right-[-4.5rem]">
+//         <img
+//           src={arrowHandDrawn}
+//           alt="hand drawn arrow"
+//           className="invert sepia-0 saturate-[7491%] hue-rotate-[354deg] brightness-[103%] contrast-[101%]"
+//         />
+//       </div>
 
-      <div className="absolute text-sm font-bold w-36 top-7 -right-44 handwriting-1">
-        Early bird tickets starting &nbsp;
-        <span className="relative inline-block after:border-b after:rounded-[50%/100px_100px_0_0] after:border-white after:absolute after:top-4 after:-left-1 after:w-14 after:h-[1px]  after:-rotate-[3deg] after:content-['']">
-          at 35€
-        </span>
-      </div>
-    </div>
-  );
-};
+//       <div className="absolute text-sm font-bold w-36 top-7 -right-44 handwriting-1">
+//         Early bird tickets starting &nbsp;
+//         <span className="relative inline-block after:border-b after:rounded-[50%/100px_100px_0_0] after:border-white after:absolute after:top-4 after:-left-1 after:w-14 after:h-[1px]  after:-rotate-[3deg] after:content-['']">
+//           at 35€
+//         </span>
+//       </div>
+//     </div>
+//   );
+// };
