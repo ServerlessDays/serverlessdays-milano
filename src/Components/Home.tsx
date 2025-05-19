@@ -17,7 +17,9 @@ const Home = () => {
           <h1 className="text-5xl font-extrabold md:text-6xl">
             ServerlessDays <br /> Milano 🇮🇹
           </h1>
-          <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">We are coming back! See you in 2025</h3>
+          <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
+            We are coming back! See you in 2025
+          </h3>
           {/* <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
             <a href="Serverless_Day_2024.ics">June, 13th 2024</a> <br className="block sm:hidden" />
             <span className="hidden md:inline-block">&nbsp;</span>@&nbsp;
@@ -50,10 +52,10 @@ const Home = () => {
                 }}
               >
                 🎫 Get your ticket! */}
-                {/* <span className="absolute rotate-[20deg] translate-x-14 rounded-xl bg-inherit p-1 -translate-y-4 underline">
+          {/* <span className="absolute rotate-[20deg] translate-x-14 rounded-xl bg-inherit p-1 -translate-y-4 underline">
 									35$
 								</span> */}
-              {/* </MotionButton>
+          {/* </MotionButton>
               <div className="absolute pr-2 text-md top-8 handwriting-1">* lunch and coffee included!</div>
               <EarlyBirdText untilDate="19/04/2024" />
             </a>
