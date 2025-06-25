@@ -23,7 +23,7 @@ const Home = () => {
             We are coming back! See you in 2025
           </h3> */}
           <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
-            <a href="Serverless_Day_2024.ics">October, 21th 2025</a> <br className="block sm:hidden" />
+            <a href="Serverless_Day_2025.ics">October, 21th 2025</a> <br className="block sm:hidden" />
             <span className="hidden md:inline-block">&nbsp;</span>@&nbsp;
             <a href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8" target="_blank">
               C30, Viale Cassala, Milano

@@ -1,14 +1,14 @@
-import Logo2024 from '../assets/Logo 2024.png';
+import Logo2025 from '../assets/Logo no date 5000.png';
 // import CircularLogo from "../assets/Meetup Logo Circular.png";
 // import { Button } from '@/Components/ui/button';
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-around p-4 rounded-b-md space-x-7 bg-slate-100">
       <div className="block h-10 p-0 md:hidden">
-        <img src={Logo2024} alt="logo" className="w-full h-full" />
+        <img src={Logo2025} alt="logo" className="w-full h-full" />
       </div>
       <div className="hidden w-48 p-0 md:block">
-        <img src={Logo2024} alt="logo" />
+        <img src={Logo2025} alt="logo" />
       </div>
       <div className="flex items-center space-x-2 md:space-x-9">
         <div className="hidden md:block">
