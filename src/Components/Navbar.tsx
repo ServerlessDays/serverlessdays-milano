@@ -35,7 +35,7 @@ const Navbar = () => {
 						</div>
 					</div> */}
         </div>
-        <div className="">
+        {/* <div className="">
           <a href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047" target="_blank">
             <Button
               variant={'default'}
@@ -44,7 +44,7 @@ const Navbar = () => {
               Buy Ticket
             </Button>
           </a>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
