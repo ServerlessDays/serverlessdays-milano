@@ -1,6 +1,6 @@
 import Logo2024 from '../assets/Logo 2024.png';
 // import CircularLogo from "../assets/Meetup Logo Circular.png";
-import { Button } from '@/Components/ui/button';
+// import { Button } from '@/Components/ui/button';
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-around p-4 rounded-b-md space-x-7 bg-slate-100">
