@@ -36,6 +36,10 @@ const AgendaAccordion = () => {
       <h1 className="mb-3 text-2xl font-extrabold tracking-widest text-center text-purple-800 uppercase lg:text-5xl md:text-4xl">
         Agenda 2025
       </h1>
+
+      {/* Keynote Speakers Section */}
+      <KeynoteSpeakers />
+
       {IS_COMING_SOON && <ComingSoon />}
       {!IS_COMING_SOON && (
         <Accordion
@@ -79,13 +83,15 @@ const AgendaAccordion = () => {
 export default AgendaAccordion;
 
 const ComingSoon = () => {
-  const [animationText, setAnimationText] = useState('coming soon');
+  const [animationText, setAnimationText] = useState(
+    '🚧 Final agenda coming soon'
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimationText(prevText => {
-        if (prevText === 'coming soon...') {
-          return 'coming soon';
+        if (prevText === '🚧 Final agenda coming soon...') {
+          return '🚧 Final agenda coming soon';
         } else {
           return prevText + '.';
         }
@@ -236,6 +242,82 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
               !profileImg && <p className="text-xs font-light text-center">{name}</p>
             )}
           </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const KeynoteSpeakers = () => {
+  return (
+    <div className="px-4 py-8 lg:px-10">
+      <div className="mb-6 text-center">
+        <h2 className="mb-2 text-3xl font-bold text-purple-800 lg:text-4xl">
+          🎤 Keynote Speakers
+        </h2>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+        {/* Yan Cui */}
+        <div className="flex flex-col items-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="mb-4">
+            <img
+              src="/speakers/yan_cui.jpg"
+              alt="Yan Cui"
+              className="w-32 h-32 rounded-full object-cover border-4 border-purple-200 shadow-md"
+            />
+          </div>
+          <h3 className="mb-2 text-2xl font-bold text-purple-800">Yan Cui</h3>
+          <p className="mb-3 text-center text-gray-600">
+            AWS Serverless Hero & Author of "Production-Ready Serverless"
+          </p>
+          <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
+            <span>🌟 AWS Serverless Hero</span>
+            <span>📚 Author</span>
+            <span>🎯 Consultant</span>
+          </div>
+          {/* <div className="mt-4 text-center">
+            <a
+              href="https://theburningmonk.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200"
+            >
+              Visit Website
+            </a>
+          </div> */}
+        </div>
+
+        {/* James Eastham */}
+        <div className="flex flex-col items-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="mb-4">
+            <img
+              src="/speakers/james_eastham.jpg"
+              alt="James Eastham"
+              className="w-32 h-32 rounded-full object-cover border-4 border-purple-200 shadow-md"
+            />
+          </div>
+          <h3 className="mb-2 text-2xl font-bold text-purple-800">
+            James Eastham
+          </h3>
+          <p className="mb-3 text-center text-gray-600">
+            AWS Community Builder & Talking Serverless @ Datadog
+          </p>
+          <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
+            <span>☁️ AWS Community Builder</span>
+            <span>🚀 Serverless Advocate</span>
+            <span>💻 Microsoft MVP</span>
+          </div>
+          {/* <div className="mt-4 text-center">
+            <a
+              href="https://jameseastham.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200"
+            >
+              Visit Website
+            </a>
+          </div> */}
         </div>
       </div>
     </div>

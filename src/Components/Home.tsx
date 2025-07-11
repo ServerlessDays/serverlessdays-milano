@@ -110,12 +110,23 @@ const Home = () => {
 export default Home;
 
 const sponsor_and_speaker_buttons = () => {
-  return (<div className="flex items-center w-full mb-3 gap-2 lg:gap-4 justify-center md:justify-start">
+  return (<div className="flex flex-col sm:flex-row items-center w-full mb-3 gap-2 lg:gap-4 justify-center md:justify-start">
+    <button
+      className={buttonVariants({
+        variant: 'default',
+        size: 'default',
+        className: 'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4 bg-white text-purple-800 font-bold border-2 border-purple-800 shadow-2xl hover:shadow-purple-500/50 hover:bg-purple-50 transition-all duration-300 ease-in-out hover:scale-105 hover:border-purple-600'
+      })}
+    >
+      <a href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119" target="_blank">
+        🎫 Get your ticket!
+      </a>
+    </button>
     <button
       className={buttonVariants({
         variant: 'serverless',
-        size: 'xxl',
-        className: 'text-xl'
+        size: 'default',
+        className: 'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4'
       })}
     >
       <a href="https://www.papercall.io/serverlessdays-milano-2025" target="_blank">
@@ -125,8 +136,8 @@ const sponsor_and_speaker_buttons = () => {
     <button
       className={buttonVariants({
         variant: 'serverless',
-        size: 'xxl',
-        className: 'text-xl'
+        size: 'default',
+        className: 'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4'
       })}
     >
       <a href="https://drive.google.com/uc?export=download&id=1p7ZAFM7yXGp7qwGvOPjR_HuaMenHS_7W" target="_blank">
