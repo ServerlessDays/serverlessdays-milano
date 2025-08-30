@@ -35,17 +35,17 @@ const Footer = () => {
     {
       name: 'Marco Giuseppini',
       href: 'https://www.linkedin.com/in/marco-giuseppini/',
-      icon: '👨‍💻'
+      icon: ''
     },
     {
       name: 'Federico Tensi',
       href: 'https://tensi.dev',
-      icon: '🚀'
+      icon: ''
     },
     {
       name: 'Dennis Dore',
       href: 'https://www.linkedin.com/in/dennisdore//',
-      icon: '💡'
+      icon: ''
     }
   ];
 
