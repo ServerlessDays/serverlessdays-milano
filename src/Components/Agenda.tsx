@@ -13,7 +13,7 @@ const PLACEHOLDER_NAME = 'someone to be announced';
 const AgendaAccordion = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
   const [activeTrack, setActiveTrack] = useState<'main' | 'discovery' | 'both'>(
-    'both'
+    'both',
   );
   const containerRef = useRef(null);
 
@@ -172,7 +172,7 @@ export default AgendaAccordion;
 
 const ComingSoon = () => {
   const [animationText, setAnimationText] = useState(
-    '🚧 Final agenda coming soon'
+    '🚧 Final agenda coming soon',
   );
 
   useEffect(() => {
@@ -401,8 +401,8 @@ const TalkCard = ({
                     isKeynote
                       ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
                       : talkType === 'break'
-                      ? colors.accent
-                      : 'text-gray-900'
+                        ? colors.accent
+                        : 'text-gray-900'
                   } ${name === PLACEHOLDER_NAME ? 'text-gray-500' : ''}`}
                 >
                   {title}

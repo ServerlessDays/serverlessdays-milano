@@ -22,16 +22,45 @@ export default {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
-
 # To start
+
 - To install packages: `npm install`
 - To run in preview mode: `npm run dev`
 - To run in preview mode on the network: `npm run dev:host`
-- To build the application: `npm run build` 
+- To build the application: `npm run build`
+
+# Presentation Display View
+
+The application now includes a special presentation view optimized for large displays (16:9 or 9:16 aspect ratios) that can be used outside conference rooms.
+
+## Features
+
+- **Real-time agenda display**: Shows current and next sessions for both Main Stage and Discovery Track
+- **Adaptive layout**: Automatically adjusts for 16:9 (landscape) and 9:16 (portrait) displays
+- **Live updates**: Updates every 30 seconds to show current time and session status
+- **Large, readable text**: Optimized for visibility from a distance
+- **Clean, modern design**: Dark theme with high contrast for better readability
+
+## Access
+
+- **URL**: `/presentation`
+- **Navigation**: Available through the "📺 Display View" link in the navbar
+- **Direct link**: `http://localhost:5173/presentation` (during development)
+
+## Usage
+
+Perfect for displaying outside conference rooms to help attendees see:
+
+- What's currently happening in each room
+- What's coming up next
+- Session times and speakers
+- Real-time clock
+
+The display automatically adapts to different screen orientations and sizes, making it suitable for various display setups.

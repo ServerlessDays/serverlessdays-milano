@@ -9,6 +9,7 @@ export interface AgendaDetails {
 export interface Talk {
   title: string;
   description: string;
+  abstract?: string;
   name: string;
   avatar: string;
   url: string;
