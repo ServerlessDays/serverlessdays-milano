@@ -7,6 +7,7 @@ import PresentationAgenda from './Components/PresentationAgenda';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
+import NotFound from './Components/NotFound';
 // import Sponsors from './Components/Sponsors';
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
             </div>
           }
         />
+        {/* Catch-all route for 404 pages */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
