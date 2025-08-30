@@ -12,7 +12,7 @@ type ViewMode = 'current' | 'full' | 'timeline';
 const PresentationAgenda = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [orientation, setOrientation] = useState<'16:9' | '9:16'>('16:9');
-  const [viewMode, setViewMode] = useState<ViewMode>('full');
+  const [viewMode, setViewMode] = useState<ViewMode>('current');
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
