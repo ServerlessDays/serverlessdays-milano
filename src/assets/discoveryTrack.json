@@ -1,303 +1,335 @@
 [
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T09:00+02:00",
-			"end_time": "2024-06-13T10:20+02:00",
-			"minutes": 80,
-			"type": "break"
-		},
-		"break": {
-			"title": "Overflow Room",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T10:25+02:00",
-			"end_time": "2024-05-01T11:05+02:00",
-			"minutes": 30,
-			"type": "talk",
-			"keynote": false
-		},
-		"talk": {
-			"name": "Emanuel Russo, Daniel De Gaspari",
-			"avatar": "./speakers/russo.png",
-			"location": "",
-			"bio": "Emanuel is Head of AWS Competence Center of NTT DATA Italia, Daniel is Solutions Architect at Sky Italia",
-			"twitter": "",
-			"url": "https://www.linkedin.com/in/emanuel-russo/",
-			"organization": "NTT DATA",
-			"job_title": "",
-			"title": "Serverless in campo: i goal tecnologici segnati dalla piattaforma per i risultati sportivi in realtime",
-			"abstract": "In questa sessione parleremo della piattaforma di Live Data realizzata da SKY Italia ed NTT DATA, mostrando come l’approccio serverless abbia permesso di rivoluzionare l’erogazione e la presentazione dei dati sportivi agli utenti dei siti editoriali di SKY Italia. Attraverso un percorso graduale, abbiamo trasformato la nostra prima architettura monolitica in una solida infrastruttura serverless, creando un pattern riutilizzabile in diversi scenari. Questo passaggio non è stato solo un cambiamento tecnologico, ma un investimento strategico che ha permesso di migliorare l’erogazione e la presentazione dei dati sportivi in modo più efficiente e scalabile.",
-			"description": "In questa sessione parleremo della piattaforma di Live Data realizzata da SKY Italia ed NTT DATA, mostrando come l’approccio serverless abbia permesso di rivoluzionare l’erogazione e la presentazione dei dati sportivi agli utenti dei siti editoriali di SKY Italia. Attraverso un percorso graduale, abbiamo trasformato la nostra prima architettura monolitica in una solida infrastruttura serverless, creando un pattern riutilizzabile in diversi scenari. Questo passaggio non è stato solo un cambiamento tecnologico, ma un investimento strategico che ha permesso di migliorare l’erogazione e la presentazione dei dati sportivi in modo più efficiente e scalabile.",
-			"notes": "",
-			"audience_level": "All",
-			"tags": []
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T11:10+02:00",
-			"end_time": "2024-05-01T11:30+02:00",
-			"minutes": 20,
-			"type": "talk",
-			"keynote": false
-		},
-		"talk": {
-			"name": "Katie Kennedy, Ciaran Flaherty",
-			"avatar": "https://i.imgur.com/1LSwQUW.png",
-			"location": "Unknown",
-			"bio": "I'm a 28 year old from Ireland and I went to university in Gal way where I was one of the few females in my computer science and Information Technology degree. My love for new  and exciting technology led me to specialise in cloud computing. Throughout my career, I have focused on leveraging the power of cloud technology to drive innovation and efficiency. I am passionate about exploring the limitless possibilities that the cloud offers and finding creative solutions to complex problems. In my free time, you can often find me immersing myself in the world of The Witcher,  whether its through the PlayStation, tv series or books it is a fantasy series that has captured my imagination.",
-			"twitter": "",
-			"url": "https://www.linkedin.com/in/katie-kennedy-irl/",
-			"organization": "Fidelity Investments",
-			"shirt_size": "Women's M",
-			"talk_format": "Short Talk (20 minutes)",
-			"title": "Building a production ready serverless platform",
-			"abstract": "Learn how Fidelity supports 100s of applications through its scalable serverless architecture to reduce operational complexity, minimise disruption and time to recovery using Infrastructure as code pipelines and AWS services to enable highly available capabilities across our organisation.",
-			"description": "Learn how Fidelity supports 100s of applications through its scalable serverless architecture to reduce operational complexity, minimise disruption and time to recovery using Infrastructure as code pipelines and AWS services to enable highly available capabilities across our organisation. Join us for a presentation on building a highly available and secure API infrastructure with AWS. Discover how AWS services can revolutionize your API management and ensure seamless connectivity for your business.",
-			"audience_level": "Intermediate",
-			"tags": [
-				"aws",
-				"disasterrecovery",
-				"route53",
-				"lambda"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T11:30+02:00",
-			"end_time": "2024-06-13T12:10+02:00",
-			"minutes": 40,
-			"type": "break"
-		},
-		"break": {
-			"title": "Coffee Break",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T12:10+02:00",
-			"end_time": "2024-05-01T12:50+02:00",
-			"minutes": 40,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Alessandro Bertini, Alberto Roli",
-			"avatar": "./speakers/bertini.png",
-			"location": "",
-			"bio": "Alessandro è Technical Project Manager in BeSharp, Alberto è Software Development Manager in Docebo",
-			"twitter": "",
-			"url": "https://www.linkedin.com/in/alessandro-bertini-6aa921113/",
-			"organization": "BeSharp",
-			"title": "A fully serverless global application (per davvero!)",
-			"abstract": "Attraverso il caso Docebo analizziamo nel dettaglio come costruire con CDK un servizio Serverless globale in cui la data source è replicata in 6 regioni. Inoltre, per massimizzare le performance, vedremo come realizzare un cache system (pure lui globale) in modo cost-effective. Le risorse utilizzate sono: API GW, Lambda, DynamoDB Global, Cloudfront and Route53.",
-			"description": "Attraverso il caso Docebo analizziamo nel dettaglio come costruire con CDK un servizio Serverless globale in cui la data source è replicata in 6 regioni. Inoltre, per massimizzare le performance, vedremo come realizzare un cache system (pure lui globale) in modo cost-effective. Le risorse utilizzate sono: API GW, Lambda, DynamoDB Global, Cloudfront and Route53.",
-			"audience_level": "Beginner",
-			"tags": []
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T12:55+02:00",
-			"end_time": "2024-05-01T13:15+02:00",
-			"minutes": 20,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Matthew Wilson",
-			"avatar": "https://imgur.com/X3Z3LhQ.jpeg",
-			"location": "Unknown",
-			"bio": "Distinguished Engineer at Instil and AWS Community Builder.\r\nEnjoys talking about serverless, cars and coffee. \r\nHusband to Rebekah, father to Joy Tabitha, both of which think I copy paste for a living. ",
-			"twitter": "matt_codes",
-			"url": "https://dev.to/matthewwilson",
-			"organization": "Instil Software",
-			"shirt_size": "Men's XL",
-			"title": "Zero to Serverless car insurance",
-			"abstract": "At the start of 2021 we began an ambitious project, building a car insurance platform from scratch using serverless technology on AWS. This talk describes our Serverless education, warts and all, in the hope that you can learn from it.",
-			"description": "Over the past 2 years we learnt a lot about what it takes to build a Serverless platform: what it means to be Serverless-first, what works well, what doesn't, but above all we learnt to love the Serverless offering on AWS. This talk describes our team's Serverless journey, how we encouraged developers to adopt a Serverless mindset, how we enlightened them that writing less code is better and how we enabled them to deploy to production with confidence.",
-			"notes": "I'm the tech lead for a fully serverless car insurance platform running on AWS. I've been a developer for over a decade now with half of that experience using AWS. This project opened my eyes to the power of serverless which has lead me to being accepted into the AWS Community Builders program in the serverless category.",
-			"audience_level": "All",
-			"tags": [
-				"Amazon Web Services",
-				"Serverless"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T13:20+02:00",
-			"end_time": "2024-05-01T14:00+02:00",
-			"minutes": 40,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Louis Pinsard",
-			"avatar": "https://imgur.com/nvtwTV0.png",
-			"bio": "Louis spent four years honing his skills at Theodo, where he worked on a variety of serverless projects as part of the Kumo team of serverless experts. In 2022, he decided to venture out on his own and founded Dialog, where he currently serves as the CTO. At Dialog, Louis has implemented a serverless architecture, leveraging his extensive experience and deep love for the technology.\r\n\r\nIn his free time, Louis enjoys cycling in the French Alps and playing squash in Paris.",
-			"twitter": "LouisPinsard",
-			"url": "https://www.linkedin.com/in/louis-pinsard/",
-			"organization": "Dialog",
-			"shirt_size": "Men's M",
-			"talk_format": "Talk (40 minutes)",
-			"title": "Should you bet on Serverless as an early stage start-up (or new team with great ambition)?",
-			"abstract": "Serverless: A startup's secret weapon or a complex challenge? I've been there and I'm here to share. Join me for real stories, lessons learned, and to see if serverless can fuel your ambitious journey.",
-			"description": "Serverless: A startup's secret weapon or a complex challenge? I've been there and I'm here to share. When starting my company, I firmly believed that serverless was an excellent option for numerous reasons: zero infrastructure costs when the platform has no active clients, effortless scalability from day 1, the ability to personally manage the infrastructure, delaying the need to recruit a DevOps engineer for an extended period. In this presentation, I will discuss the outcomes of these points and share the insights I've gained over the past few months: how to handle the necessary non-serverless downstream services, the real impact of scaling from zero to high traffic on a serverless API and how to prepare for it, strategies for successfully training three novice software engineers in AWS serverless technology.",
-			"notes": "In the talk I will give practical advice on the following subjects:\r\n- Infrastructure as code: serverless framework/cdk\r\n- monitoring and alerting with Cloudwatch\r\n- how to use Lambda and SQS to better handle downstream non-serverless API\r\n\r\nWith a track record of launching five diverse products using AWS serverless technology across my startup and various clients including scale-ups and Parisian public transport, my experience spans a broad spectrum. I've effectively collaborated with both serverless experts and novices, which has enriched my understanding of its practical applications and challenges.\r\n\r\nMy hands-on involvement in developing, scaling, and optimizing serverless solutions underlines my expertise. This experience is complemented by my ability to demystify complex concepts for teams at different skill levels, making me adept at not just implementing but also teaching serverless technology.",
-			"audience_level": "All",
-			"tags": [
-				"aws"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T14:00+02:00",
-			"end_time": "2024-05-01T15:00+02:00",
-			"minutes": 60,
-			"type": "break"
-		},
-		"break": {
-			"title": "Lunch Break",
-			"inline_abstract": "Take a break and grab a lunch",
-			"location": "Cafeteria",
-			"description": "(dropdown) menu The menu is: fried rice, chicken curry, and salad"
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T15:00+02:00",
-			"end_time": "2024-05-01T15:40+02:00",
-			"minutes": 40,
-			"type": "talk",
-			"keynote": false
-		},
-		"talk": {
-			"name": "Slobodan Stojanović",
-			"avatar": "./speakers/stojanovic_slobodan.jpeg",
-			"location": "Belgrade, Serbia",
-			"bio": "Slobodan Stojanović is the CTO and co-founder of Vacation Tracker, an application that simplifies employee leave and absence management for organizations. He is based in Belgrade and is the JS Belgrade meetup co-organizer. Slobodan is an AWS Serverless Hero and co-author of the “Serverless Applications with Node.js” book, published by Manning Publications.",
-			"twitter": "slobodan_",
-			"url": "https://slobodan.me",
-			"organization": "Vacation Tracker",
-			"shirt_size": "Men's 2XL",
-			"title": "From 1 to 250 Lambda Functions in Production: Evolving a Startup Serverless Architecture",
-			"abstract": "Building a serverless function or an API is easy. However, things get more complicated as your application grows. What works for a few functions often doesn't work for hundreds of functions and services. As your app grows, you'll need to evolve your architecture, deployment, monitoring, and tooling.",
-			"description": "Building a serverless function or an API is easy. However, things get a bit more complicated as your application grows. What works for a few functions often doesn't work for hundreds of functions and services. As your application grows, you'll need to evolve your architecture, deployment, monitoring, and tooling. This talk is a case study of the serverless startup's architecture evolution. We started with a single Lambda function in early 2018 and evolved our application through multiple stages and architectures. Currently, the application uses CQRS with GraphQL and 250 Lambda functions serving millions of requests. We faced and solved many issues during the last four years, learned many things, and managed to keep our infrastructure costs low (just 1% of our MRR). And we do everything with a small team of fullstack developers without dedicated ops.",
-			"notes": "",
-			"audience_level": "Intermediate",
-			"tags": [
-				"Graphql",
-				"cqrs",
-				"architecture",
-				"Serverless",
-				"SaaS",
-				"aws"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T15:45+02:00",
-			"end_time": "2024-05-01T16:05+02:00",
-			"minutes": 20,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Simon Hanmer",
-			"avatar": "https://imgur.com/fsbXVvh.png",
-			"location": "Scotland, United Kingdon",
-			"bio": "Starting out in a very traditional background in the data-centres of the fabled M4 corridor, Simon eventually realised it was time to give up on the problems of manually babysitting servers, racks and UPS's and migrated to the Cloud (and in the process, the Scottish Highlands) and now works to enable clients to transition their workloads, processes and swag requirements to the same route. Simon is a member of the AWS Community builder program, and these days enjoys coaching and mentoring as much as get hands-on with code, automation and head-scratching.",
-			"twitter": "simonhanmer",
-			"url": "https://headforthe.cloud",
-			"organization": "GlobalLogic UK\u0026I",
-			"shirt_size": "Men's 2XL",
-			"title": "The case of the missing S3 keys",
-			"abstract": "Imagine a system designed to process millions of events per day, but as use grows, data mysteriously seems to disappear, only to re-appear later. We'll talk about the what, why and how we investigated the symptoms, overturned some assumptions and finally delivered a resilient, serverless solution.",
-			"description": "Imagine a system designed to process millions of events per day, but as use grows, data mysteriously seems to disappear, only to re-appear later. What was causing the system to break? We'll talk about the system architecture, how we noticed the failures and how we investigated the issue, overturned some assumptions and finally delivered a resilient, serverless solution that handled millions of events per day.",
-			"notes": "We were asked to help one of our clients understand why a system was displaying odd failures in their event processing system. The system had been rigorously tested but as we moved to a live environment where we processed millions of records per day, we saw some a tiny number of events weren't being processed. We'll discuss how we investigated the solution using the native AWS tools, ruled out some causes, but were puzzled by the provider's documentation before realising that the devil was in the detail of the documentation. We'll then describe the original solution, and how a serendipitous update allowed us to provide a simpler, more robust solution.",
-			"audience_level": "All",
-			"tags": [
-				"AWS",
-				"Serverless"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T16:10+02:00",
-			"end_time": "2024-06-13T16:30+02:00",
-			"minutes": 20,
-			"type": "break"
-		},
-		"break": {
-			"title": "Coffee Break",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T16:30+02:00",
-			"end_time": "2024-05-01T17:10+02:00",
-			"minutes": 40,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Fabrizio Gattuso",
-			"avatar": "https://imgur.com/LjO2Tgt.jpg",
-			"location": "Berlin",
-			"bio": "I'm a tech enthusiast with a pretty eclectic journey. Beginning my career in the home automation (domotic) sector, I later pivoted to study Computer Science with a focus on embedded and IoT solutions. My research journey involved delving into power-saving strategies for embedded devices and exploring innovative wireless communication protocols for energy efficiency. In a notable chapter of my career, I contributed to building solutions in the Underwater Internet of Things sector as part of a spinoff from Sapienza University known as Wsense. There, I established the AWS team from the ground up, showcasing my leadership and technical skills. Currently residing in Germany, I have transitioned to Nordcloud, a leading consultancy company. As a Cloud Solution Architect and People Lead for the AWS team, I bring a wealth of experience and a passion for driving innovation and excellence in cloud solutions. Beyond the tech realm, you'll find me exploring the great outdoors through endurance sports like biking (road and gravel), road and trail running, and hiking. I'm equally passionate about the finer things in life such as craft beer, wine and good food.",
-			"twitter": "",
-			"url": "https://www.linkedin.com/in/fabrizio-gattuso-273064a3/",
-			"organization": "Nordcloud",
-			"shirt_size": "Men's M",
-			"title": "Solving data challenges embracing serverless simplicity",
-			"abstract": "Embark on a tech journey bypassing traditional data tools for serverless simplicity with AWS Athena, Step Functions, and Lambda. Seamlessly handle terabytes of logs, turning complexity into a smooth, customer-centric data experience. No heavy engineering, just practical insights from real life.",
-			"description": "Embark on a transformative tech journey, sidestepping traditional data tools for a serverless experience with AWS Athena, Step Functions, and Lambda. Seamlessly manage terabytes of CloudWatch and CloudTrail logs, employing diverse file formats and parallel execution. Witness the alchemy of compressing and transforming data, turning complexity into a low code (no-ETL) pipeline tailored on the customer use case. This journey not only delivers practical insights but also unveils cost-saving strategies, ensuring efficiency and value to the solution. Leave behind the complexities of heavy engineering and enter a realm where serverless simplicity converges with optimized data processing. Now, individuals with minimal data experience can effortlessly construct products with ease.",
-			"notes": "I am grateful for the opportunity to be considered as your presenter. As an AWS Community Builder in the Serverless domain and a Cloud Solution Architect, my journey mirrors a fusion of Italian heritage, reflecting my professional experiences in both Italy and Germany. This diverse background has profoundly influenced my approach to crafting serverless solutions, enabling me to contribute meaningfully to global and local tech communities alike. I am excited about sharing insights that not only highlight my international experiences but also establish a genuine connection with the Italian tech landscape. Moreover, my professional journey spans startup environments, research endeavors, and consultancy roles, providing a well-rounded perspective on diverse facets of the industry.",
-			"audience_level": "Intermediate",
-			"tags": [
-				"aws",
-				"data",
-				"python"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T17:15+02:00",
-			"end_time": "2024-06-13T17:55+02:00",
-			"minutes": 40,
-			"type": "break"
-		},
-		"break": {
-			"title": "Overflow Room",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T18:00+02:00",
-			"end_time": "2024-06-13T18:15+02:00",
-			"minutes": 15,
-			"type": "break"
-		},
-		"break": {
-			"title": "Final remarks",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	}
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T07:30+02:00",
+      "end_time": "2025-06-13T07:30+02:00",
+      "minutes": 0,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T09:00+02:00",
+      "end_time": "2025-06-13T09:30+02:00",
+      "minutes": 30,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T09:30+02:00",
+      "end_time": "2025-06-13T09:40+02:00",
+      "minutes": 10,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T09:40+02:00",
+      "end_time": "2025-06-13T10:20+02:00",
+      "minutes": 40,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T10:25+02:00",
+      "end_time": "2025-06-13T11:05+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Gabriele Biagini",
+      "avatar": "/speakers/gabriele-biagini.jpeg",
+      "location": "Munich",
+      "bio": "Solutions Architect @ AWS",
+      "twitter": "",
+      "url": "",
+      "organization": "AWS",
+      "job_title": "",
+      "title": "Let's Agree to Disagree: Managing Conflicts in Multi-State Scenarios",
+      "description": "Whether you're building offline-first mobile apps, collaborative editors, or edge-deployed services, multiple users and devices may interact with the same data independently. Network partitions, latency, and asynchronous workflows guarantee that state will drift. The real challenge? Reuniting these divergent states without breaking user expectations or corrupting intent.\nWe'll explore common sync strategies and focus on Conflict-Free Replicated Data Types (CRDTs) for building systems that automatically converge over time.\nDiving deep into architectural patterns for tracking, persisting, and acknowledging operations (eg. how to deal with unacknowledged updates, resends, and client-side reconciliation), how to balance consistency, latency, and user experience when true consensus isn't possible or practical.",
+      "abstract": "In distributed systems, divergence is inevitable - especially in offline-first apps, multi-device sync, or edge-first architectures. How do you manage conflicts when multiple versions of the same data emerge? Let's build eventually convergent systems without losing data or user intent.",
+      "audience_level": "Advanced",
+      "tags": [
+        "aws",
+        "serverless"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T11:10+02:00",
+      "end_time": "2025-06-13T11:50+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Almir Zulic",
+      "avatar": "/speakers/almir-zulic.jpeg",
+      "location": "Sarajevo, Bosnia and Herzegovina",
+      "bio": "Almir Zulic is a principal developer at Serverless Guru with 28 years of IT experience, \nspecializing in cloud technologies and focusing on serverless development and security for \nenterprise customers on AWS. ",
+      "twitter": "",
+      "url": "",
+      "organization": "Serverless Guru",
+      "job_title": "",
+      "title": "Living in harmony with the data: CDC to Flink on MSK with Aurora and S3 Iceberg",
+      "description": "To set the stage, we will start with a real-world scenario: a retailer or logistics provider ingesting \npartner messages and database changes from many systems and regions. Events arrive in \ndifferent shapes and at different frequencies, meaning that spikes in traffic are possible.  \n \nThere are several interested parties involved:  \n  Operations need a live view to run a business.  \n  Analytics needs history and time travel for the reporting.  \n  Downstream systems and DevOps need something that scales reliably and with \npredictable cost.",
+      "abstract": "In todays world, where data is at the core of every business, access to data changes in near \nreal time has almost become a standard. To satisfy this requirement, technical teams need to \nprovide copies of operational data across clusters and regions without duplicates or broken \nconsumers. This is not an easy task, especially when working at scale. \n \nThis talk walks through a practical pattern that uses AWS DMS for ongoing replication of \nchanges from the source database using CDC (Change Data Capture) to stream data to \nAmazon MSK, transforms and enriches it with Apache Flink, and performs idempotent inserts \ninto Aurora MySQL for operations, while using the same pipeline to write to S3 Tables powered \nby Iceberg for history and time travel.  \n \nThe second half focuses on day-2 patterns for a harmonized schema that evolves safely without \nbreaking downstream systems and API contracts. We will talk about additive changes first, \nviews as contracts, dual-phase rollouts, idempotency, safe replays, and how Flink handles \nupstream schema drift. \n \nWe will finish with a live demo that applies all these patterns.",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T11:50+02:00",
+      "end_time": "2025-06-13T12:10+02:00",
+      "minutes": 20,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T12:10+02:00",
+      "end_time": "2025-06-13T12:50+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Guillaume Blaquiere",
+      "avatar": "/speakers/guillaume-blaquiere.png",
+      "location": "Baillargues, France",
+      "bio": "Guillaume is a Google Developer Expert on Cloud Platform since 2019 and works at Carrefour as Group Data Architect \n\nJava developer for more than 15 years, and despite positions of responsibilities, he has always kept his wish to create, develop, discover and test new solutions, especially in the Cloud, the machine learning or Python and Go language. \n\nInnovation addict and Google Cloud 3x certified, writer and speaker in his free time, he's fascinated by the serverless solution and all the \"usual\" problems that it solves.\n\nMore generally, he likes helping people stucks on Google Cloud; you can find him on Stack Overflow (guillaume-blaquiere), Medium (@guillaume-blaquiere) and Twitter (@gblaquiere)",
+      "twitter": "gblaquiere",
+      "url": "https://guillaume-blaquiere.medium.com/",
+      "organization": "Carrefour",
+      "job_title": "",
+      "title": "How the agents have colonized Carrefour",
+      "description": "The agents have started to conquer the world in 2025. Carrefour has been invaded too! And it changes the way of working, interacting and our velocity on different topics.\nCome to discover how it started, the different iteration and team impacted, and the plans for the future.\nLearn the different steps, our pain points and the quick wins. And get back to work to start the agentic conquest in your team!",
+      "abstract": "Agentic is the new trend. RAG, LLM, Long context are cool buzz words. But how to productionize agents? How to integrate with Google Chat? Serverless helps us to serve this new use cases without expensive infra",
+      "audience_level": "All",
+      "tags": [
+        "gcp",
+        "serverless",
+        "ai",
+        "agentic"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T12:55+02:00",
+      "end_time": "2025-06-13T13:15+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Alex Casalboni",
+      "avatar": "/speakers/alex-casalboni.jpeg",
+      "location": "Bologna",
+      "bio": "Alex is a software engineer passionate about web technologies and music. He began working on web projects and sharing his experiences in 2011. His passion for programming spans different languages such as Python, JavaScript, and Rust, as well as the open-source world and startups. After spending 6 years helping developers and companies adopt cloud technologies, Alex returned to the startup life to help businesses adopt edge computing and WebAssembly at Edgee.",
+      "twitter": "alex_casalboni",
+      "url": "https://www.linkedin.com/in/alexcasalboni/",
+      "organization": "TBD",
+      "job_title": "",
+      "title": "Cloud, edge, and WebAssembly: how to design extensible serverless architectures",
+      "description": "In this session, we'll explore how WebAssembly can help you build extensible architecture by easily supporting untrusted third-party code, while proving a built-in serverless experience. As a case study, we'll share Edgee's journey building a global, latency-sensitive application using a multi-region, active-active serverless architecture spanning across AWS Lambda and edge computing deployments such as Fastly and Cloudflare. We'll cover our architecture decisions and how services like Lambda, API Gateway, and DynamoDB power a truly global app on 20+ regions, with a fantastic tradeoff between costs, resiliency, and performance.",
+      "abstract": "This is a \"serverless in production\" use case, with real-world insights and a WebAssembly deep dive. As a small startup with limited infra budget, we run a global app with 100M+ invocations per month across 20+ regions, reaching enterprise-level reliability with less than $50 on AWS.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "aws",
+        "serverless",
+        "opensource",
+        "webassembly"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T13:20+02:00",
+      "end_time": "2025-06-13T14:00+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Paul Gledhill",
+      "avatar": "",
+      "location": "Unknown",
+      "bio": "Paul Gledhill is the Serverless Engineering Lead at Lloyds Banking Group, where he is driving the adoption of serverless containers to enable the bank to simplify deployment, reduce operational overhead and empower teams to deliver faster with greater autonomy. With deep expertise across GCP, AWS, and Azure, Paul has a passion for pushing the boundaries of what's possible with serverless and DevOps practices.\n\nHe is an active contributor to the tech community, organising the Liverpool AWS User Group and the Manchester Google Developer Group, liking nothing more than getting engineers engineering. He frequently speaks at events to share his practical knowledge and break down complex topics into clear, actionable insights.",
+      "twitter": "pg51pup",
+      "url": "https://twitter.com/pg51pup",
+      "organization": "Lloyds Banking Group",
+      "job_title": "",
+      "title": "Wait, GPUs can be Serverless too?! Yes, and Here's How!",
+      "description": "AI is evolving fast'but deploying and scaling large models still feels like a DevOps nightmare. What if you could harness the power of GPUs without managing servers or paying for idle time?\n\nIn this talk, we'll explore the surprising answer to the question: \"Wait'GPUs can be serverless?!' (Spoiler: Yes, they can.) You'll see a real-time demo of running an open-source Large Language Model (Google's Gemma) using Ollama, packaged into a container, and deployed to Google Cloud Run with an NVIDIA L4 GPU.\n\nThis session will cut through the hype and give you real, hands-on knowledge. You'll learn:\n- Why serverless GPUs are a game-changer for AI inference workloads\n- How to configure and deploy GPU-enabled Cloud Run services\n- How to optimise container size and model startup for responsiveness\n- How to track GPU usage and memory to stay in control of cost\n\nWhether you're a developer, architect, or just AI-curious, you'll walk away ready to run LLMs at scale - without the infrastructure burden. No marketing, no hand-waving ' just a fast-paced, practical deep dive.",
+      "abstract": "Think serverless can't handle GPUs? Think again! In this session, we'll bust that myth by live-deploying a Large Language Model on Google Cloud Run with full GPU acceleration. See how serverless is ready for the AI revolution.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "gcp",
+        "serverless",
+        "ai",
+        "opensource"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T14:00+02:00",
+      "end_time": "2025-06-13T15:00+02:00",
+      "minutes": 60,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T15:00+02:00",
+      "end_time": "2025-06-13T15:30+02:00",
+      "minutes": 30,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "TBD",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "",
+      "organization": "TBD",
+      "job_title": "",
+      "title": "TBD",
+      "description": "",
+      "abstract": "",
+      "audience_level": "All",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T15:30+02:00",
+      "end_time": "2025-06-13T16:00+02:00",
+      "minutes": 30,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "TBD",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "",
+      "organization": "TBD",
+      "job_title": "",
+      "title": "TBD",
+      "description": "",
+      "abstract": "",
+      "audience_level": "All",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T16:10+02:00",
+      "end_time": "2025-06-13T16:30+02:00",
+      "minutes": 20,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T16:30+02:00",
+      "end_time": "2025-06-13T17:10+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Mariano Calandra",
+      "avatar": "/speakers/mariano-calandra.jpg",
+      "location": "Rome Area, Italy",
+      "bio": "With a strong developer's background, Mariano daily helps companies that wish to modernize their applications embracing microservices and cloud native architectures. He's an AWS Authorized Instructor, a co-organizer of ServerlessDays and AWS UserGroup in Rome.\n\nIn his spare time he enjoys good music, reading, food and staying in front of the sea.",
+      "twitter": "MarianoCalandra",
+      "url": "https://marianocalandra.medium.com",
+      "organization": "Zero12",
+      "job_title": "",
+      "title": "One way ticket to serverless hell ...and back!",
+      "description": "In 2015, AWS Lambda ignited the serverless hype. Years later, the promise of seamless scaling and cheaper bills still enchant many teams, who believe a DynamoDB table and a couple of functions will be their silver bullet for every problem.\n\nUnfortunately, silver bullets don't exist and technologies won't fix broken architectures; nonetheless, serverless projects still fail due to these naive expectations. By distilling these failure stories, we will explore the dos and don'ts of serverless and discuss possible countermeasures.\n\nIf you are struggling with serverless, this session is for you!",
+      "abstract": "The promise of easy scaling and lower costs sparked the serverless hype. But Lambda and DynamoDB alone won't fix bad choices: you're on a highway to hell!\n\nNo worries. In this talk, we'll pull the emergency brake, throw a hard U-turn and start climbing the stairway to heaven. Fasten your seatbelt!",
+      "audience_level": "All",
+      "tags": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "Serverless"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T17:15+02:00",
+      "end_time": "2025-06-13T17:55+02:00",
+      "minutes": 40,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T18:00+02:00",
+      "end_time": "2025-06-13T18:15+02:00",
+      "minutes": 15,
+      "type": "break"
+    },
+    "break": {
+      "title": "Main Stage Overflow",
+      "inline_abstract": "Follow the main stage presentations in this overflow room",
+      "location": "Discovery Track Room",
+      "description": "This session follows the main stage content. Please refer to the main track for details."
+    }
+  }
 ]

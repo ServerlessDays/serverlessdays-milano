@@ -1,386 +1,366 @@
 [
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T09:00+02:00",
-			"end_time": "2024-06-13T09:30+02:00",
-			"minutes": 30,
-			"type": "break"
-		},
-		"break": {
-			"title": "Doors open, registration, breakfast",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T09:30+02:00",
-			"end_time": "2024-06-13T09:40+02:00",
-			"minutes": 10,
-			"type": "break"
-		},
-		"break": {
-			"title": "Welcome",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T09:40+02:00",
-			"end_time": "2024-06-13T10:20+02:00",
-			"minutes": 40,
-			"type": "talk",
-			"keynote": true
-		},
-		"talk": {
-			"name": "Jeremy Daly",
-			"avatar": "https://imgur.com/66yfarL.png",
-			"location": "",
-			"bio": "CEO and Co-founder at Ampt. AWS Serverless Hero. Jeremy is a passionate serverless advocate, an AWS Serverless Hero, and a senior technology leader with more than 25 years of experience building web and cloud applications. He is an active member of the serverless community, creating and contributing to open source serverless projects, and frequently works with companies looking to adopt serverless. Jeremy also writes extensively about serverless on his blog jeremydaly.com, publishes Off-by-none (offbynone.io), a weekly email newsletter that focuses on all things serverless, and hosts the Serverless Chats Podcast. He is currently the CEO of Ampt.",
-			"twitter": "",
-			"url": "https://www.jeremydaly.com/",
-			"organization": "Ampt",
-			"job_title": "",
-			"shirt_size": "",
-			"title": "Productized Patterns: Exploring the next evolution of Serverless",
-			"description": "In the rapidly evolving cloud landscape, serverless has become a transformative force, offering scalability, cost efficiency, and reduced operational overhead. However, the reality of selecting, customizing, and maintaining serverless patterns presents significant challenges, especially as applications grow in complexity and scale. This talk will introduce the innovative strategy of productized patterns, which standardizes common use cases into highly configurable, reusable, and adaptable components that address cross-service complexities like IAM permissions, state management, and failover mechanisms. We will explore how adopting productized patterns can streamline serverless workloads, making them more manageable, scalable, and efficient, and empower organizations to fully leverage the full power of the cloud.",
-			"abstract": "",
-			"audience_level": "Intermediate",
-			"tags": [
-				""
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T10:25+02:00",
-			"end_time": "2024-05-01T11:05+02:00",
-			"minutes": 30,
-			"type": "talk",
-			"keynote": false
-		},
-		"talk": {
-			"name": "Andreea Merariu",
-			"avatar": "https://imgur.com/NLHj1V9.jpg",
-			"location": "London, United Kingdom",
-			"bio": "Andreea is an AWS Community Builder and a Software Engineer at The Lego Group with a few years of experience in the industry. She has a passion for backend technologies but even more so for all things serverless. At the LEGO Group, she is designing and developing serverless applications on AWS. She is keen to engage with the community and constantly seeks new learning opportunities. Andreea is eager to share her journey into serverless and the interesting technical challenges she encounters along the way.",
-			"twitter": "andreea_merariu",
-			"url": "https://medium.com/@andreea.merariu",
-			"organization": "The LEGO Group",
-			"shirt_size": "Women's M",
-			"job_title": "",
-			"title": "Finding the correct destination for your serverless journey",
-			"abstract": "Are you new to serverless destinations and want to learn more about them? Then look no further! This talk will give you an overview of the destination options, and then it will take you through a use case for each to solidify your understanding.",
-			"description": "Like any other journey, a serverless journey will eventually lead you to a destination. While the journey is essential, choosing the right destination for your use case is just as valuable. In the AWS world, you have a few destination options such as Lambda Destinations, EventBridge API Destinations and the external HTTP endpoint integration for AWS Step Functions.  In this talk, my first focus will be to bring visibility and an overview of each destination. Following this, I will bring a use case where each destination will be explored. The focus will then shift to taking a deep dive into each destination and understanding its intricacies. With the last milestone, I will leave you with my learnings and an understanding of serverless destinations.",
-			"notes": "",
-			"audience_level": "All",
-			"tags": [
-				"serverless",
-				"AWS",
-				"Lambda",
-				"EventBridge",
-				"AWS Step Functions"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T11:10+02:00",
-			"end_time": "2024-05-01T11:50+02:00",
-			"minutes": 40,
-			"type": "talk",
-			"keynote": false
-		},
-		"talk": {
-			"name": "Raphael Manke",
-			"avatar": "./speakers/manke_raphael.jpeg",
-			"location": "Karlsruhe - Germany",
-			"bio": "Raphael is a full-stack web developer leveraging serverless technologies in his day to day business. He helps customers build reliable and scalable solutions with minimal operational overhead. On his cloud journey he shares his insights as a public speaker.",
-			"twitter": "RaphaelManke",
-			"url": "https://www.linkedin.com/in/raphael-manke/",
-			"organization": "codecentric AG",
-			"shirt_size": "Men's S",
-			"title": "Supercharge Lambda functions with AWS Powertools",
-			"abstract": "This talk gives the audience a new look on servereless architectures. Serverless is way more than just lambda functions. It shows multiple ways of solving a common problem by refactoring a real world application to an even more serverless version where you don't write code, just configuration.",
-			"description": "AWS Lambda functions are a crucial part of serverless workloads in modern cloud architectures. They can be used for synchronous tasks, such as handling API calls, or for asynchronous tasks, like consuming SQS queues or DynamoDB streams. Lambda functions are designed to get the job done. However, as a developer, using Lambda functions comes with its challenges. Cloud environments are prone to failures, and when dealing with a large number of lambda functions, there is often repetitive code that is not directly related to the business logic and is highly specific to AWS. AWS Powertools is a library that helps address these challenges in your Lambda functions. It enhances your functions in areas such as observability, resiliency, and operational excellence.",
-			"audience_level": "Intermediate",
-			"tags": [
-				"aws",
-				"cdk",
-				"typescript",
-				"serverless",
-				"architecture"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T11:50+02:00",
-			"end_time": "2024-06-13T12:10+02:00",
-			"minutes": 20,
-			"type": "break"
-		},
-		"break": {
-			"title": "Coffee Break",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T12:10+02:00",
-			"end_time": "2024-05-01T12:50+02:00",
-			"minutes": 40,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Luc van Donkersgoed",
-			"avatar": "https://imgur.com/qhRIwns.jpg",
-			"location": "Utrecht, The Netherlands",
-			"bio": "Luc is an AWS Serverless Hero and Principal Engineer at PostNL, where he designs and builds enterprise-scale serverless architectures. He is well known for his articles, presentations, videos, and podcasts about AWS. You can find Luc on Twitter (https://twitter.com/donkersgood), Mastodon (https://hachyderm.io/@donkersgoed), and LinkedIn (https://www.linkedin.com/in/donkersgoed)",
-			"twitter": "donkersgood",
-			"url": "https://lucvandonkersgoed.com",
-			"organization": "PostNL",
-			"shirt_size": "Men's M",
-			"name_2": null,
-			"email_2": null,
-			"avatar_2": null,
-			"location_2": null,
-			"bio_2": null,
-			"twitter_2": null,
-			"url_2": null,
-			"organization_2": null,
-			"shirt_size_2": null,
-			"title": "Standing on the Shoulders of Giants - Embracing Serverless in the Enterprise",
-			"abstract": "PostNL has been building a strictly serverless application landscape since 2018. In this talk we will tell our story: a short history of PostNL, why we chose serverless, the results we achieved, and the challenges we faced.",
-			"description": "In the past 6 years, PostNL has built a landscape of over 70 serverless applications. We chose AWS serverless because it is a perfect match for our logistics processes, it is cost-effective, it allows us to focus on our business challenges, and it significantly reduces our operational overhead. But every decision in IT is a trade-off, and embracing serverless is no different. We will highlight the constraints we faced, the new skillsets required from our engineers, and the investment required for success. We will conclude by making up the balance; what has serverless brought our enterprise, what has it cost, and was it worth it?",
-			"audience_level": "Beginner",
-			"tags": []
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T12:55+02:00",
-			"end_time": "2024-05-01T13:15+02:00",
-			"minutes": 20,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Marko Djakovic",
-			"avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/102332/JAK05933.jpg",
-			"location": "Novi Sad, Serbia",
-			"bio": "Software Architect Tech Lead with a 10 year experience in software development. Involved in different projects from heavy enterprises to start-ups. Fell in love with Serverless and AWS somewhere along the way. Third consecutive year participating in AWS Community Builders for Serverless.",
-			"twitter": "",
-			"url": "https://dev.to/imflamboyant",
-			"organization": "BVNK",
-			"job_title": "",
-			"shirt_size": "Men's L",
-			"name_2": null,
-			"email_2": null,
-			"avatar_2": null,
-			"location_2": null,
-			"bio_2": null,
-			"twitter_2": null,
-			"url_2": null,
-			"organization_2": null,
-			"shirt_size_2": null,
-			"title": "Developing Serverless Java Solutions Like a Boss",
-			"abstract": "Developing Java with Serverless? Did turning on Lambda SnapStart just magically solve all your problems? I didn't think so. Dive into new perspectives and discover techniques to optimize your development workflow using AWS CDK with Java, through examples with Spring Boot and Spring Cloud Function.",
-			"description": "Developing Java with Serverless? Did turning on Lambda SnapStart just magically solve all your problems? I didn't think so. Dive into new perspectives and discover techniques to optimize your development workflow using AWS CDK with Java. Through examples with Spring Boot and Spring Cloud Function, explore code organization strategies and learn how to leverage the power of direct service integrations offered by AWS. In this talk, we will explore practices of organizing your code into multi-module projects, combining Lambda functions with various AWS services like API Gateway, Cognito, DynamoDB, but also EventBridge and SQS for asynchronous processing. All this developed and deployed using AWS CDK, while also addressing why SnapStart is not a silver bullet and when it can even be unnecessary.",
-			"audience_level": "Intermediate",
-			"tags": [
-				"aws",
-				"serverless",
-				"java",
-				"spring",
-				"cdk"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T13:20+02:00",
-			"end_time": "2024-05-01T14:00+02:00",
-			"minutes": 40,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Nicola Cremaschini",
-			"avatar": "https://imgur.com/6pR1YX9.png",
-			"location": "Unknown",
-			"bio": "I'm an old school developer, I started 20 years ago with Notepad as an IDE (?), then I worked as DevOps and for a few years now I've been working as a Principal Technical Architect. I'm interested in cloud computing and serverless architectures and love to dive deep into problems and find smart solutions.",
-			"twitter": "",
-			"url": "https://haveyoutriedrestarting.com",
-			"organization": "Sky Italia",
-			"shirt_size": "Men's M",
-			"title": "Sky's the Limit: Lessons and Learnings in Scaling Serverless at Sky Italia",
-			"abstract": "Is Serverless the new way to go, at any cost and every scale? Sky Italia adopted a serverless-first approach in its milion-DAU digital properties, and is willing to share its experience, benefits gained, limits encountered, pitfalls and mistakes.",
-			"description": "In this presentation, we explore the critical question, \"Is Serverless the new way to go, at any cost and every scale?\" Reflecting on Sky Italia's shift to a serverless-first approach for our million-DAU digital properties, we aim to provide a comprehensive and candid look into this decision. We'll share insights into the tangible benefits we've achieved, the challenges and limitations we've faced, and the practical pitfalls and missteps encountered along the way. This talk is designed for professionals and enthusiasts alike, seeking an honest and detailed exploration of the serverless paradigm in high-traffic environments. Join us for an engaging session that goes beyond the hype, offering real-world lessons and strategies from Sky Italia's journey in the serverless landscape.",
-			"audience_level": "All",
-			"tags": [
-				"aws",
-				"limits",
-				"architecture",
-				"pitfalls",
-				"serverless"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T14:00+02:00",
-			"end_time": "2024-05-01T15:00+02:00",
-			"minutes": 60,
-			"type": "break"
-		},
-		"break": {
-			"title": "Lunch Break",
-			"inline_abstract": "Take a break and grab a lunch",
-			"location": "Cafeteria",
-			"description": "(dropdown) menu The menu is: fried rice, chicken curry, and salad"
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T15:00+02:00",
-			"end_time": "2024-05-01T15:40+02:00",
-			"minutes": 40,
-			"type": "talk",
-			"keynote": true
-		},
-		"talk": {
-			"name": "Anahit Pogosova",
-			"avatar": "https://imgur.com/f2vHxDB.jpg",
-			"location": "Unknown",
-			"bio": "Anahit brings over a decade of experience in full-stack and data solutions to her roles as an AWS Data Hero and a Lead Cloud Software Engineer at Solita, one of Finland's leading digital transformation companies. Anahit passionately shares her knowledge with the community through various channels, including conferences and meetups, podcasts and YouTube, as well as blogging and online courses.",
-			"twitter": "",
-			"url": "https://www.linkedin.com/in/anahit-pogosova/",
-			"organization": "Solita",
-			"shirt_size": "Men's M",
-			"title": " The art of embracing failures",
-			"description": "Nowadays serverless can mean many different things. Among others, it helps split bigger tasks into smaller pieces and run them in parallel, leveraging the power of distributed systems. It's also fun! And it's seemingly easy, almost magic-like! However, the real world is more nuanced than that. With all the power that distributed systems have given us, comes responsibility. In this talk, learn the most common challenges and pitfalls inferent to distributed systems and the ways to mitigate them. Delve into some real-world examples using two of the essential AWS serverless services: AWS Lambda and Amazon Kinesis. And most importantly, learn to embrace failures. Because as the CTO of Amazon Dr. Werner Vogels likes to say: everything fails, all the time.",
-			"abstract": "",
-			"audience_level": "All",
-			"tags": [
-				"aws",
-				"limits",
-				"architecture",
-				"pitfalls",
-				"serverless"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T15:45+02:00",
-			"end_time": "2024-05-01T16:05+02:00",
-			"minutes": 20,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Matteo Madeddu",
-			"avatar": "https://imgur.com/D0Tg00c.jpg",
-			"location": "Torino",
-			"bio": "Sono un Platform Engineer di Torino, che lavora da tempo con i servizi AWS. Nel corso degli anni ho maturato esperienze con diversi tipi di architetture AWS-powered, da quelle serverless-driven che sfruttano servizi come AWS ApiGateway, Lambda, IoT Core, Fargate e soluzioni Cloudwatch ad ambienti completi ec2-backed che utilizzano più cluster EKS. Mi piace sperimentare, soprattutto con AWS, e cercare di ottenere il massimo dai suoi servizi! ",
-			"twitter": "",
-			"url": "https://madeddu.xyz/",
-			"organization": "Prima Assicurazioni",
-			"shirt_size": "Men's L",
-			"title": "AWS CDK and stack inheritance unveil the the power of serverless infrastructures composition",
-			"abstract": "Explore AWS CDK for a modular serverless backend powered by AWS-managed services. Begin with a simple upload form ending up with a serverless OCR backend. CDK enables endless scenarios and promotes infrastructure reuse/modularity via stack inheritance, facilitating iterative complex infrastructures.",
-			"description": "This session will show how to leverage AWS Cloud Development Kit (AWS CDK) to build a modular backend consisting of reusable and extensible stacks. Starting with a basic scenario for building the backend of a simple serverless upload form, with minimal modifications and reusing the entire code already written, we will first build a producer/consumer chain and then the backend for a serverless OCR application that makes use of fully managed services such as Polly and Rekognition. Such an infrastructure could meet the needs of an application to help visually impaired people in their daily lives. This and a thousand other scenarios can be built with AWS CDK, which allows concepts such as infrastructure reuse and modularity to be put into practice like never before, thanks to the expressive power of stack inheritance, unveiling an infinity of scenarios and allowing increasingly complex infrastructures to be built iteratively.",
-			"audience_level": "Intermediate",
-			"tags": [
-				"aws",
-				"cdk",
-				"typescript"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T16:10+02:00",
-			"end_time": "2024-06-13T16:30+02:00",
-			"minutes": 20,
-			"type": "break"
-		},
-		"break": {
-			"title": "Coffee Break",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T16:30+02:00",
-			"end_time": "2024-05-01T17:10+02:00",
-			"minutes": 40,
-			"type": "talk"
-		},
-		"talk": {
-			"name": "Daniele Frasca, Roman Boiko",
-			"avatar": "https://imgur.com/SFrP6kI.jpeg",
-			"bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
-			"twitter": "dfrasca80",
-			"url": "https://dev.to/ymwjbxxq",
-			"organization": "ProSiebenSat.1 + AWS",
-			"shirt_size": "Men's 2XL",
-			"title": "Serverless architecture as enabler for low code solutions",
-			"abstract": "ProSiebenSat.1 Media SE's event-driven architecture and no-code development methodology is genuinely inspiring. By adopting this strategy, they have achieved faster time-to-market for their streaming app, JOYN, while enabling greater scalability and collaboration and significantly reducing costs.",
-			"description": "ProSiebenSat.1 Media SE is one of the largest German television companies operating in the entertainment sector, offering various products. Joyn, their streaming application used in the DACH regions across multiple platforms. Serving millions of customers during major events, such as popular shows or live sports, is crucial, where customers expect a fast, seamless experience. Slow responses or unavailability leads to frustration, dissatisfaction, and loss of trust. In this presentation, we will guide you through the journey of optimizing Kafka within our system, starting from its initial status upon takeover. We will tell why we went with Confluent Kafka and not with Amazon MSK. We will look into integrating Kafka with Amazon EventBridge Pipes and share encountered limitations and issues. Next, we will introduce the specific architectural patterns such as the Claim-check and Point-to-point fan-out to enhance resilience and efficiency.",
-			"audience_level": "All",
-			"tags": [
-				"serverless",
-				"event-driven",
-				"aws"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-05-01T17:15+02:00",
-			"end_time": "2024-05-01T17:55+02:00",
-			"minutes": 40,
-			"type": "talk",
-			"keynote": true
-		},
-		"talk": {
-			"name": "Eric Johnson",
-			"email": "",
-			"avatar": "https://imgur.com/Kfha39v.jpeg",
-			"bio": "Eric Johnson is a Principal DA for serverless at AWS and speaks on serverless, EDA, and GenAI at events around the world. He has a passion for helping developers build robust applications on serverless while utilizing best practices and the latest technologies. Eric loves to help developers at any skill level and splits his time speaking to the pros in tech conferences as well as the up and coming in universities.",
-			"twitter": "",
-			"url": "https://www.linkedin.com/in/singledigit/",
-			"organization": "AWS",
-			"shirt_size": "Men's 2XL",
-			"title": "Now serverless is all grown up, what's next?",
-			"description": "Since Lambda pioneered the concept of serverless 10 years ago, it's matured into a standard way for developers to build applications. With so many services adopting the serverless moniker, many Builders are asking, \"What's next?\" In this session, I revisit the core tenets serverless and show how you can embrace the benefits of a service-driven approach to solve the next wave of challenges. We now have all the tools needed to tackle the “hard problems” of managing GenAI, wrangling data at scale, and more. By the end of this session, you'll see how serverless is just getting started, and it's ready to bring the future to your applications.",
-			"abstract": "",
-			"audience_level": "All",
-			"tags": [
-				"serverless",
-				"event-driven",
-				"aws"
-			]
-		}
-	},
-	{
-		"agenda_details": {
-			"start_time": "2024-06-13T18:00+02:00",
-			"end_time": "2024-06-13T18:15+02:00",
-			"minutes": 15,
-			"type": "break"
-		},
-		"break": {
-			"title": "Final remarks",
-			"inline_abstract": "",
-			"location": "",
-			"description": ""
-		}
-	}
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T07:30+02:00",
+      "end_time": "2025-06-13T07:30+02:00",
+      "minutes": 0,
+      "type": "break"
+    },
+    "break": {
+      "title": "Staff meets at venue",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T09:00+02:00",
+      "end_time": "2025-06-13T09:30+02:00",
+      "minutes": 30,
+      "type": "break"
+    },
+    "break": {
+      "title": "Doors open, registration, breakfast",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T09:30+02:00",
+      "end_time": "2025-06-13T09:40+02:00",
+      "minutes": 10,
+      "type": "break"
+    },
+    "break": {
+      "title": "Welcome",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T09:40+02:00",
+      "end_time": "2025-06-13T10:20+02:00",
+      "minutes": 40,
+      "type": "talk",
+      "keynote": true
+    },
+    "talk": {
+      "name": "Yan Cui",
+      "avatar": "/speakers/yan_cui.jpg",
+      "location": "London",
+      "bio": "Yan is an experienced engineer who has run production workload at scale in AWS for 10 years. He has been an architect and principal engineer with a variety of industries ranging from banking, e-commerce, sports streaming to mobile gaming. He has worked extensively with AWS Lambda in production, and has been helping companies around the world adopt AWS and serverless as a consultant.\n\nYan is an [AWS Serverless Hero](https://aws.amazon.com/developer/community/heroes/yan-cui/) and a regular speaker at user groups and conferences internationally, and he is also the author of [Production-Ready Serverless](https://bit.ly/production-ready-serverless) and co-author of [Serverless Architectures on AWS 2nd Edition](https://www.manning.com/books/serverless-architectures-on-aws-second-edition), both by Manning. Yan also keeps an active blog at [https://theburningmonk.com](https://theburningmonk.com).",
+      "twitter": "theburningmonk",
+      "url": "http://theburningmonk.com",
+      "organization": "Lumigo",
+      "job_title": "",
+      "title": "Serverless the hard parts",
+      "description": "You haven't written a description for this talk yet. Having just a title is a great place to start, but you probably don't want to submit your talk to an event without any sort of description. All you need to do is click the edit button and fill it in. Think of the great sense of accomplishment you'll feel when you're finished.",
+      "abstract": "Serverless is a superpower, but with great power comes great responsibility. In this talk, let's look at the hard parts of serverless - including the need for system thinking, local development, testing, cost management and more - and how to tackle them.",
+      "audience_level": "All",
+      "tags": [
+        "aws",
+        "serverless"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T10:25+02:00",
+      "end_time": "2025-06-13T11:05+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Daniele Frasca",
+      "avatar": "/speakers/daniele.jpg",
+      "location": "Unknown",
+      "bio": "Daniele is an AWS Serverless Community Builder. Daniele is focusing on building and architect serverless applications at scale. Daniele is architecting media services for millions of users in his current role, leveraging multi-region architecture with AWS Serverless service. Daniele is sharing his ideas on his blog, and he is pushing the limits using Rust to get the extra milliseconds required to give better experiences to final customers.",
+      "twitter": "dfrasca80",
+      "url": "https://dev.to/ymwjbxxq",
+      "organization": "Seven.One Entertainment Group GmbH Ein Unternhmen der ProSiebenSat.1 Media SE",
+      "job_title": "",
+      "title": "What I learned building a Scalable, Highly Available Serverless Backend Across Multiple Regions",
+      "description": "\"Because customers are watching TV right now, not planning to watch it tomorrow.\"\n\nThis simple truth has played a significant role in shaping the evolution of our architecture. We moved from a monolithic system that often experienced outages and required manual recovery to a resilient, distributed streaming platform.\n\nIn this presentation, I'll share how we tackled the challenge of single points of failure with some thoughtful architectural choices. Each evolution step was driven by one core principle: let AWS handle the infrastructure issues.\n\nThis presentation provides strategies for engineering teams building mission-critical applications where downtime is not just a technical issue - it's a direct impact to customer satisfaction and business success.",
+      "abstract": "Multi-region applications were once complex and costly, but with \"serverless: infrastructure, it is not the case anymore. I will share what I learned in the last years running a multi-region production services and the benefits and disadvantages of achieving:",
+      "audience_level": "Intermediate",
+      "tags": [
+        "serverless",
+        "aws",
+        "multi-region"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T11:10+02:00",
+      "end_time": "2025-06-13T11:50+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Rafael Saraceni",
+      "avatar": "/speakers/rafael-saraceni.png",
+      "location": "Unknown",
+      "bio": "Software Engineer specialised in AI Powered B2B SaaS. More than 10 years of experience building digital products from startups to enterprise in LatAm, Europe and Australia. ",
+      "twitter": "",
+      "url": "https://saraceni.me/",
+      "organization": "EsgMax",
+      "job_title": "",
+      "title": "How I created a serverless AI Agent that helped more than 1k artists and music producers",
+      "description": "In my spare time I love playing guitar. I use a music production software called Ableton Live to make beats and add effects to my guitar. This software is very complex and have thousands of features. Sometimes I had to navigate for hours on tutorials, videos and documentations to be able to make a simple beat or the desired effects on my guitar. Ableton is also very visual, it have complex elements with lots of tabs, buttons and knobs. Without being able to see what you have to interact with, it is very hard to navigate the UI, so putting the manual on a CustomGPT or a NotebookLM wouldn't work because these tools are textual only. This is why I decided to create an AI Agent using Typescript, Next.js, Vercel, AI SDK and Neon Serverless Postgres that was able to understand the manual and all the images and answer questions about this software. I decided also to make it Open Source and now it has helped more than 1k music producers and artists.",
+      "abstract": "Ableton Live is one of the most popular softwares for music production. It has thousands of features and is very complex. I have created an Open Source AI Agent that helps users learn and use this software and it has helped more than 1k artists and music producers.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "serverless",
+        "ai",
+        "javascript"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T11:50+02:00",
+      "end_time": "2025-06-13T12:10+02:00",
+      "minutes": 20,
+      "type": "break"
+    },
+    "break": {
+      "title": "Coffee Break",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T12:10+02:00",
+      "end_time": "2025-06-13T12:50+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Shani Kazaz",
+      "avatar": "/speakers/shani-kazaz.jpeg",
+      "location": "Unknown",
+      "bio": "A people person, a serverless geek, and an innovation lover. I began my career at Amazon, helping customers build awesome products on the AWS cloud, and I loved every moment of it. Today, I focus on serverless&containers technologies and cutting-edge thinking.",
+      "twitter": "Shani Adadi",
+      "url": "",
+      "organization": "AWS",
+      "job_title": "",
+      "title": "Building Serverless AI Agents on AWS with Strands Agents SDK",
+      "description": "AI Agents have revolutionized what's possible beyond traditional large language models (LLMs) and retrieval-augmented generation (RAG). Agentic systems can plan, reason, and act through dynamic multi-step tasks adjusted at every phase. In this session you'll learn how to build AI Agents on AWS Serverless compute (Lambda, Fargate), implement authentication, security, and observability, and connect it to remote MCP Servers.\nIn this session we will cover:\n* GenAI evolution\n* What constitutes an Agent\n* Building AI Agents on AWS (with Strands Agents SDK)\n* Adding context awareness, authentication, security, and observability\n* Extending AI Agent functionality with local tools\n* Connecting AI Agents to remote MCP Servers ",
+      "abstract": "AI Agents go beyond LLMs and RAG by planning, reasoning, and adapting to dynamic tasks. Learn how to build agents on AWS Serverless, add authentication, security, and observability, and connect them to remote MCP servers.",
+      "audience_level": "Advanced",
+      "tags": [
+        "serverless",
+        "ai",
+        "aws"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T12:55+02:00",
+      "end_time": "2025-06-13T13:15+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Marko",
+      "avatar": "/speakers/marko-serverlesslife.jpg",
+      "location": "Slovenia",
+      "bio": "Marko is an AWS-certified professional and serverless specialist with over 20 years of experience in the industry. Hi is an author of the blog Serverless Life (https://www.serverlesslife.com), where he shares insights on serverless architectures and best practices. He contributs to the open-source community with projects like Lambda Live Debugger (https://www.lldebugger.com) and Serverless Spy (https://serverlessspy.com). Dedication to serverless technology has earned him the title of AWS Community Builder.",
+      "twitter": "ServerlessL",
+      "url": "https://www.serverlesslife.com/",
+      "organization": "ServerlessLife",
+      "job_title": "",
+      "title": "How to Lose Data Using AWS Serverless Without Even Knowing It",
+      "description": "One of the biggest challenges in serverless development is the gap between how developers expect AWS services to behave and how they actually work. In many cases, this mismatch can lead to data loss or unexpected results. \n\nWe'll begin with DynamoDB'deceptively simple, yet packed with gotchas that can lead to silent data loss or misleading results. Then we'll examine pitfalls in event-driven architecture: from misconfigured queues and dead-letter queues to misunderstood EventBridge behaviors, stream processing and more.\n\nThen we'll zoom out to explore serverless design patterns that seem fine at first'but can quietly cause issues like event duplication, out-of-order processing, and data inconsistency if not handled with care.\n\nYou'll leave with real-world war stories, practical advice, and concrete examples of what not to do'plus tips to build resilient, predictable serverless systems. Even seasoned AWS developers will likely discover a few surprises.\n",
+      "abstract": "One major drawback of serverless is that behavior often defies developer expectations. Without a deep understanding of AWS, you can easily lose data or get unexpected results. This talk dives into common traps and how to avoid them before they catch you.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "serverless",
+        "aws"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T13:20+02:00",
+      "end_time": "2025-06-13T14:00+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Enrico La Sala",
+      "avatar": "/speakers/enrico-la-sala.jpeg",
+      "location": "Marsala",
+      "bio": "Computer Science Engineer passionate about technology, experienced in Backend Development, Frontend/DB Integration and System/DevOps Processes.\n\nhiop Co-Founder and CTO, main responsibilities in building software architectures that scale up in Cloud and manage technical and development team.\nAWS Community Builder in Serverless Category.\nFabLab Western Sicily Volunteer and Co-Founder, where I coordinate and partecipate in the technical activities and events in education.\n\nEnthusiast and supporter of DevOps processes, API, serverless, microservices and cloud adoption and migration.\n\nExperienced in Research Fields (Storage and High Performance Computing), in Banking Software Development and Integration and in developing digitalization plan in Public Administration.",
+      "twitter": "enryls",
+      "url": "https://www.linkedin.com/in/enricolasala",
+      "organization": "Hiop",
+      "job_title": "",
+      "title": "Navigating Networking and Security in Serverless SaaS Platforms",
+      "description": "Serverless architectures changed the way SaaS solutions are built, yet networking and security remain complex and critical to their success.\nAt my startup, we've been building a serverless data platform using cloud services from multiple providers, overcoming challenges that could have risked our project's integrity.\n\nIn this talk, I'll walk you through our journey and share practical strategies for tackling networking and security challenges in a serverless environment.\nI'll cover:\n- Serverless Networking Basics\n- Managing Connectivity\n- Advanced Security Measures\n- Scalability Planning\n\nAttendees will leave with actionable insights to streamline networking and security, enabling them to build secure, resilient, and high-performance SaaS platforms on.",
+      "abstract": "Serverless has transformed SaaS development, but networking and security remain challenging. At my startup, we've built a serverless data platform using cloud services, this talk shares our journey and practical strategies for overcoming real-world challenges.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "multicloud",
+        "aws",
+        "gcloud",
+        "infrastructure architectures",
+        "azure",
+        "serverless"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T14:00+02:00",
+      "end_time": "2025-06-13T15:00+02:00",
+      "minutes": 60,
+      "type": "break"
+    },
+    "break": {
+      "title": "Lunch",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T15:00+02:00",
+      "end_time": "2025-06-13T15:30+02:00",
+      "minutes": 30,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "TBD",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "",
+      "organization": "TBD",
+      "job_title": "",
+      "title": "TBD",
+      "description": "",
+      "abstract": "",
+      "audience_level": "All",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T15:30+02:00",
+      "end_time": "2025-06-13T16:00+02:00",
+      "minutes": 30,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Juarez Barbosa Junior",
+      "avatar": "/speakers/juarez-barbosa-junior.png",
+      "location": "",
+      "bio": "Juarez Barbosa Junior is a Sr. Principal Java Developer Evangelist - Director of Developer Evangelism at Oracle. Previously, he was an Azure Developer Relations Lead at Microsoft and a Thought Leader and Technical Evangelist at IBM.\nHe has over 20 years of professional experience, having held senior leadership roles in DevRel, software engineering, and startup-related initiatives. His knowledge comprises Java, Python, Cloud Computing (Oracle OCI, Azure, GCP, IBM Cloud, and AWS), DevOps, IaC, CI/CD, and Cloud Native.",
+      "twitter": "",
+      "url": "",
+      "organization": "Oracle",
+      "job_title": "",
+      "title": "Scalable Multicloud with Serverless Java: Building Scalable Solutions with OCI Functions and Oracle Database@AWS",
+      "description": "Serverless architectures are transforming how developers build and deploy applications, and Oracle Cloud Infrastructure (OCI) Functions brings this flexibility to enterprise-grade workloads. In this session, well dive into how Java developers can create and deploy OCI Functions that integrate seamlessly with Oracle Database, even when the database is deployed on AWS. Using a hands-on example, well walk through building a Java-based function, testing it locally, and deploying it to OCI Functions for production use.",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T16:10+02:00",
+      "end_time": "2025-06-13T16:30+02:00",
+      "minutes": 20,
+      "type": "break"
+    },
+    "break": {
+      "title": "Pausa",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T16:30+02:00",
+      "end_time": "2025-06-13T17:10+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Walter Dal Mut",
+      "avatar": "/speakers/walter-dal-mut.jpeg",
+      "location": "Unknown",
+      "bio": "Hi, I'm Walter Dal Mut, an engineer with a passion for building scalable, infrastructures on AWS. Over the years, I've worked across multiple sectors, helping teams design clean, maintainable, and production-ready systems.\n\nLately, I've been focused on real-time APIs with AWS AppSync, combining GraphQL Subscriptions, Cognito authentication, and Terraform to create secure and fully automated deployments. I care deeply about developer experience, Infrastructure as Code, and creating systems that are both powerful and easy to maintain.",
+      "twitter": "walterdalmut",
+      "url": "https://walterdalmut.com",
+      "organization": "Corley SRL",
+      "job_title": "",
+      "title": "AWS AppSync Subscriptions and AWSCognito: Building Realtime Secure GraphQL APIs",
+      "description": "In this talk, I'll walk through how to build a secure, real-time API using AWS AppSync with GraphQL Subscriptions, backed by Cognito authentication and deployed via Terraform as Infrastructure as Code.\n\nWe'll start with the fundamentals of AppSync and how it enables real-time capabilities using GraphQL Subscriptions over WebSockets. Then, we'll explore how to integrate Amazon Cognito to manage user authentication and fine-grained access control at the resolver level.\n\nBeyond just wiring services together, this session focuses on how to structure a clean, maintainable deployment using Terraform modules",
+      "abstract": "In my talk, I'll introduce developers to how GraphQL Subscriptions work in AppSync, how to secure them with Cognito authentication, and how to use this combo to enable features like live dashboards, real-time notifications, or collaborative UIs ' all without managing infrastructure.",
+      "audience_level": "All",
+      "tags": [
+        "aws",
+        "serverless",
+        "graphql",
+        "appsync",
+        "javascript"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T17:15+02:00",
+      "end_time": "2025-06-13T17:55+02:00",
+      "minutes": 40,
+      "type": "talk",
+      "keynote": true
+    },
+    "talk": {
+      "name": "James Eastham",
+      "avatar": "/speakers/james_eastham.jpg",
+      "location": "",
+      "bio": "James Eastham is a Serverless Developer Advocate at Datadog and a Microsoft MVP. He has over 10 years of software experience at all layers of the software development process and has spoken at conferences all over the world.\n\nHe answered phones in front-line support, administered databases, and built SSIS packages, as well as developed cloud-native backends with serverless technologies. He spent time at AWS working with some of the biggest companies on the planet, migrating workloads from data centers into the cloud and modernizing in the process.\n\nJames produces content on YouTube focused on architecting and building applications with serverless technologies using .NET and Rust. He also has a strong interest in and expertise in event-driven architecture and building more loosely coupled systems.",
+      "twitter": "",
+      "url": "",
+      "organization": "Datadog",
+      "job_title": "",
+      "title": "Why Should You Think Serverless First?",
+      "description": "If youve dealt with complexity in your career, or youve looked at an architecture diagram and though wow, that looks complicated, this is the talk for you. Youre going to take a walk through some of the challenges with modern software development, the difference between complex and complicated and why you should care. \n\nBy the end of this talk, youll have a better understand what it means to be serverless in 2025. On what exactly serverless is solving for. And a clear set of heuristics for making the right technology choices for your workloads.",
+      "abstract": "Many of you will be building, or thinking about building serverless systems. Your excited about getting your hands on all this new shiny tech, Lambda functions, Step Functions workflows, DynamoDB tables. Maybe even some serverless containers on Amazon ECS. But have you ever stopped to think, why SHOULD you be thinking serverless first? And isnt that introducing an element of complexity into your system?",
+      "audience_level": "",
+      "tags": [
+        "azure",
+        "serverless"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2025-06-13T18:00+02:00",
+      "end_time": "2025-06-13T18:15+02:00",
+      "minutes": 15,
+      "type": "break"
+    },
+    "break": {
+      "title": "Final remarks",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  }
 ]

@@ -23,7 +23,8 @@ const Home = () => {
             We are coming back! See you in 2025
           </h3> */}
           <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
-            <a href="Serverless_Day_2025.ics">October, 21th 2025</a> <br className="block sm:hidden" />
+            <a href="Serverless_Day_2025.ics">October, 21th 2025</a>{' '}
+            <br className="block sm:hidden" />
             <span className="hidden md:inline-block">&nbsp;</span>@&nbsp;
             <a href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8" target="_blank">
               C30, Viale Cassala, Milano
@@ -35,7 +36,7 @@ const Home = () => {
             textClassName="text-lg font-normal md:text-2xl text-gray-200"
           />
 
-  {IS_COMING_SOON && sponsor_and_speaker_buttons()}
+          {IS_COMING_SOON && sponsor_and_speaker_buttons()}
 
           {/* <motion.div className="">
             <a
@@ -66,7 +67,10 @@ const Home = () => {
           </motion.div> */}
           {/* <p className="handwriting-1">(Lunch and coffee included!)</p> */}
         </div>
-        <motion.div ref={constraintsRef} className="pb-2 mt-24 md:pb-5 md:mt-16 lg:mt-0">
+        <motion.div
+          ref={constraintsRef}
+          className="pb-2 mt-24 md:pb-5 md:mt-16 lg:mt-0"
+        >
           <motion.img
             src={UnicornMascot}
             alt="unicorn"
@@ -77,7 +81,7 @@ const Home = () => {
             dragMomentum={true}
             dragSnapToOrigin={true}
             initial={{
-              scaleX: -1
+              scaleX: -1,
             }}
           />
 
@@ -85,7 +89,7 @@ const Home = () => {
             initial={{ scaleX: -1, x: 100, y: 100 }}
             animate={{
               y: 0,
-              x: 0
+              x: 0,
               // rotate: [45, 0],
             }}
             transition={{
@@ -94,7 +98,7 @@ const Home = () => {
               bounce: 0.5,
               delay: 3,
               damping: 10,
-              mass: 1
+              mass: 1,
 
               // velocity: 100,
             }}
@@ -110,19 +114,24 @@ const Home = () => {
 export default Home;
 
 const sponsor_and_speaker_buttons = () => {
-  return (<div className="flex flex-col sm:flex-row items-center w-full mb-3 gap-2 lg:gap-4 justify-center md:justify-start">
-    <button
-      className={buttonVariants({
-        variant: 'default',
-        size: 'default',
-        className: 'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4 bg-white text-purple-800 font-bold border-2 border-purple-800 shadow-2xl hover:shadow-purple-500/50 hover:bg-purple-50 transition-all duration-300 ease-in-out hover:scale-105 hover:border-purple-600'
-      })}
-    >
-      <a href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119" target="_blank">
-        🎫 Get your ticket!
-      </a>
-    </button>
-    <button
+  return (
+    <div className="flex flex-col sm:flex-row items-center w-full mb-3 gap-2 lg:gap-4 justify-center md:justify-start">
+      <button
+        className={buttonVariants({
+          variant: 'default',
+          size: 'default',
+          className:
+            'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4 bg-white text-purple-800 font-bold border-2 border-purple-800 shadow-2xl hover:shadow-purple-500/50 hover:bg-purple-50 transition-all duration-300 ease-in-out hover:scale-105 hover:border-purple-600',
+        })}
+      >
+        <a
+          href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119"
+          target="_blank"
+        >
+          🎫 Get your ticket!
+        </a>
+      </button>
+      {/* <button
       className={buttonVariants({
         variant: 'serverless',
         size: 'default',
@@ -132,21 +141,25 @@ const sponsor_and_speaker_buttons = () => {
       <a href="https://www.papercall.io/serverlessdays-milano-2025" target="_blank">
         Become a Speaker
       </a>
-    </button>
-    <button
-      className={buttonVariants({
-        variant: 'serverless',
-        size: 'default',
-        className: 'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4'
-      })}
-    >
-      <a href="https://drive.google.com/uc?export=download&id=1p7ZAFM7yXGp7qwGvOPjR_HuaMenHS_7W" target="_blank">
-        Become a Sponsor
-      </a>
-    </button>
-
-  </div>)
-}
+    </button> */}
+      <button
+        className={buttonVariants({
+          variant: 'serverless',
+          size: 'default',
+          className:
+            'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4',
+        })}
+      >
+        <a
+          href="https://drive.google.com/uc?export=download&id=1p7ZAFM7yXGp7qwGvOPjR_HuaMenHS_7W"
+          target="_blank"
+        >
+          Become a Sponsor
+        </a>
+      </button>
+    </div>
+  );
+};
 /**
  * Renders the EarlyBirdText component.
  *

@@ -12,5 +12,6 @@
         "titleBar.inactiveBackground": "#1857a499",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#1857a4"
+    "peacock.color": "#1857a4",
+    "python.defaultInterpreterPath": "/Users/marco/.local/share/mise/installs/python/3.12.10/bin/python"
 }

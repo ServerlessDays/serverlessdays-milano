@@ -1,4 +1,9 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './ui/accordion';
 import mainTrack from '../assets/mainTrack.json';
 import discoveryTrack from '../assets/discoveryTrack.json';
 import { motion } from 'framer-motion';
@@ -8,7 +13,7 @@ import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
 import { AgendaItem } from '../types/agenda';
 
-const IS_COMING_SOON = true;
+const IS_COMING_SOON = false;
 const PLACEHOLDER_NAME = 'someone to be announced';
 const AgendaAccordion = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -27,7 +32,11 @@ const AgendaAccordion = () => {
 
   const isMobile = width <= 1024;
   return (
-    <div className="relative h-full pt-10 pb-5 bg-white " id="agenda" ref={containerRef}>
+    <div
+      className="relative h-full pt-10 pb-5 bg-white "
+      id="agenda"
+      ref={containerRef}
+    >
       <motion.img
         src={dino_mascot}
         alt="Dino Mascot"
@@ -49,7 +58,11 @@ const AgendaAccordion = () => {
           // collapsible
           className="w-full lg:flex lg:justify-center lg:gap-4 lg:mt-10 lg:pl-10 lg:pr-10 "
         >
-          <AccordionItem value="main_stage" className="border-b-0 rounded-lg lg:w-1/2" disabled={!isMobile}>
+          <AccordionItem
+            value="main_stage"
+            className="border-b-0 rounded-lg lg:w-1/2"
+            disabled={!isMobile}
+          >
             <AccordionTrigger
               className="p-2 text-2xl font-bold text-purple-900 no-underline min-h-16 hover:no-underline"
               showIcon={isMobile}
@@ -89,7 +102,7 @@ const ComingSoon = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimationText(prevText => {
+      setAnimationText((prevText) => {
         if (prevText === '🚧 Final agenda coming soon...') {
           return '🚧 Final agenda coming soon';
         } else {
@@ -105,7 +118,9 @@ const ComingSoon = () => {
 
   return (
     <div className="p-10">
-      <motion.p className="text-2xl font-medium text-center text-blue-900">{animationText}</motion.p>
+      <motion.p className="text-2xl font-medium text-center text-blue-900">
+        {animationText}
+      </motion.p>
     </div>
   );
 };
@@ -122,7 +137,13 @@ const Agenda = ({ talks }: { talks: AgendaItem[] }) => {
   );
 };
 
-const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number }) => {
+const TalkCard = ({
+  talk: agendaTalk,
+  index,
+}: {
+  talk: AgendaItem;
+  index: number;
+}) => {
   if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
   const pad = (time: number, size: number) => {
@@ -137,7 +158,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
   };
 
   const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
-  const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
+  const description =
+    agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
   const name = agendaTalk?.talk?.name;
   const duration = agendaTalk?.agenda_details.minutes || 0;
   const profileImg = agendaTalk?.talk?.avatar;
@@ -148,7 +170,9 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
   const startTime = agendaTalk.agenda_details.start_time;
   const endTime = agendaTalk.agenda_details.end_time;
 
-  const timeStampString = `${getTimestamp(startTime)}  ${getTimestamp(endTime)}`;
+  const timeStampString = `${getTimestamp(startTime)}  ${getTimestamp(
+    endTime
+  )}`;
 
   const calculateItemHeight = (duration: number) => {
     const base = 10;
@@ -165,24 +189,35 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
     <div
       id="talk"
       className={`last:border-b-[1px] border-t-[1px] border-l-0 border-r-0 relative border-[#5d518488] flex  px-4 justify-start items-center box-border ${
-        agendaTalk.agenda_details.type === 'talk' ? '' : 'bg-gradient-to-br from-pink-50 to-purple-100'
+        agendaTalk.agenda_details.type === 'talk'
+          ? ''
+          : 'bg-gradient-to-br from-pink-50 to-purple-100'
       }`}
       style={{
-        minHeight: `${calculateItemHeight(duration)}px`
+        minHeight: `${calculateItemHeight(duration)}px`,
       }}
     >
-      <div id="talk-details" className="flex items-center w-full gap-3 p-2 min-h-5">
+      <div
+        id="talk-details"
+        className="flex items-center w-full gap-3 p-2 min-h-5"
+      >
         <div id="time-container" className="">
           <p className="flex text-gray-600 ">{timeStampString}</p>
         </div>
         <div id="talk-content" className="w-full ">
-          <AccordionItem className="pb-1 border-0 " value={index + startTime + endTime}>
+          <AccordionItem
+            className="pb-1 border-0 "
+            value={index + startTime + endTime}
+          >
             <AccordionTrigger
               disabled={talkType === 'break' || name === PLACEHOLDER_NAME}
               showIcon={talkType === 'talk' && name !== PLACEHOLDER_NAME}
               className={`flex justify-start text-start my-auto
 							${talkType === 'break' && 'text-purple-900 hover:no-underline py-0'}
-							${name === PLACEHOLDER_NAME && 'text-zinc-600 hover:no-underline pointer-events-none'}
+							${
+                name === PLACEHOLDER_NAME &&
+                'text-zinc-600 hover:no-underline pointer-events-none'
+              }
 							${isKeynote && 'text-fuchsia-700 font-bold'}
 							${talkType === 'talk' && 'pb-0 pt-0'}`}
             >
@@ -201,7 +236,8 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
                 href={agendaTalk.talk?.url}
                 target="_blank"
                 className={`underline underline-offset-2 ${
-                  name === PLACEHOLDER_NAME && 'no-underline pointer-events-none'
+                  name === PLACEHOLDER_NAME &&
+                  'no-underline pointer-events-none'
                 }`}
               >
                 {speakerNameTitle}
@@ -239,7 +275,9 @@ const TalkCard = ({ talk: agendaTalk, index }: { talk: AgendaItem; index: number
                 loading="lazy"
               />
             ) : (
-              !profileImg && <p className="text-xs font-light text-center">{name}</p>
+              !profileImg && (
+                <p className="text-xs font-light text-center">{name}</p>
+              )
             )}
           </a>
         </div>
@@ -268,24 +306,20 @@ const KeynoteSpeakers = () => {
             />
           </div>
           <h3 className="mb-2 text-2xl font-bold text-purple-800">Yan Cui</h3>
-          <p className="mb-3 text-center text-gray-600">
+          <p className="mb-2 text-center font-medium text-purple-700">Lumigo</p>
+          <p className="mb-3 text-center text-gray-600 text-sm">
             AWS Serverless Hero & Author of "Production-Ready Serverless"
           </p>
+          <div className="mb-3 text-center">
+            <h4 className="font-semibold text-gray-800 mb-1">
+              Serverless, the hard parts
+            </h4>
+          </div>
           <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
             <span>🌟 AWS Serverless Hero</span>
             <span>📚 Author</span>
             <span>🎯 Consultant</span>
           </div>
-          {/* <div className="mt-4 text-center">
-            <a
-              href="https://theburningmonk.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200"
-            >
-              Visit Website
-            </a>
-          </div> */}
         </div>
 
         {/* James Eastham */}
@@ -300,24 +334,22 @@ const KeynoteSpeakers = () => {
           <h3 className="mb-2 text-2xl font-bold text-purple-800">
             James Eastham
           </h3>
-          <p className="mb-3 text-center text-gray-600">
-            AWS Community Builder & Talking Serverless @ Datadog
+          <p className="mb-2 text-center font-medium text-purple-700">
+            Datadog
           </p>
+          <p className="mb-3 text-center text-gray-600 text-sm">
+            Serverless Developer Advocate & Microsoft MVP
+          </p>
+          <div className="mb-3 text-center">
+            <h4 className="font-semibold text-gray-800 mb-1">
+              Why Should You Think Serverless First?
+            </h4>
+          </div>
           <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
-            <span>☁️ AWS Community Builder</span>
-            <span>🚀 Serverless Advocate</span>
+            <span>☁️ Serverless Advocate</span>
+            <span>🚀 Developer Relations</span>
             <span>💻 Microsoft MVP</span>
           </div>
-          {/* <div className="mt-4 text-center">
-            <a
-              href="https://jameseastham.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200"
-            >
-              Visit Website
-            </a>
-          </div> */}
         </div>
       </div>
     </div>
