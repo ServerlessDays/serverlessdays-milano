@@ -2,7 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AboutUs from "./Components/AboutUs";
 import AgendaAccordion from './Components/Agenda';
-import PresentationAgenda from './Components/PresentationAgenda';
+import CurrentAgenda from './Components/CurrentAgenda';
+import FullAgenda from './Components/FullAgenda';
 // import CommunitySponsors from "./Components/CommunitySponsors";
 import Footer from './Components/Footer';
 import Home from './Components/Home';
@@ -14,7 +15,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/presentation" element={<PresentationAgenda />} />
+        <Route path="/presentation/current" element={<CurrentAgenda />} />
+        <Route path="/presentation/full" element={<FullAgenda />} />
+        <Route path="/presentation" element={<CurrentAgenda />} />
         <Route
           path="/"
           element={

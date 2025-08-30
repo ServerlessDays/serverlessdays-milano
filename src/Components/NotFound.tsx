@@ -68,10 +68,9 @@ const NotFound = () => {
 
       <div className="relative z-10">
         <Navbar />
-        
+
         <div className="min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 text-white">
           <div className="relative z-10 w-full max-w-4xl mx-auto text-center">
-            
             {/* Animated Dino Mascot */}
             <motion.div
               className="mb-8"
@@ -112,13 +111,14 @@ const NotFound = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <TextGenerateEffect 
+              <TextGenerateEffect
                 words="Oops! Even our serverless dino couldn't find that page!"
                 textClassName="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4"
               />
               <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-                Looks like you've wandered into uncharted serverless territory. 
-                Don't worry though - our Serverless Days Milan event is still happening!
+                Looks like you've wandered into uncharted serverless territory.
+                Don't worry though - our Serverless Days Milan event is still
+                happening!
               </p>
             </motion.div>
 
@@ -138,16 +138,6 @@ const NotFound = () => {
                   🏠 Back to Home
                 </motion.button>
               </Link>
-              
-              <Link to="/presentation">
-                <motion.button
-                  className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  📺 Presentation View
-                </motion.button>
-              </Link>
             </motion.div>
 
             {/* Fun fact */}
@@ -158,8 +148,8 @@ const NotFound = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <p className="text-sm text-white/70 max-w-md mx-auto">
-                💡 Fun fact: This 404 error is being served serverlessly, 
-                just like how we'll be discussing at Serverless Days Milan!
+                💡 Fun fact: This 404 error is being served serverlessly, just
+                like how we'll be discussing at Serverless Days Milan!
               </p>
             </motion.div>
           </div>

@@ -50,9 +50,17 @@ The application now includes a special presentation view optimized for large dis
 
 ## Access
 
-- **URL**: `/presentation`
+### Current Sessions View
+- **URL**: `/presentation` or `/presentation/current`
 - **Navigation**: Available through the "📺 Display View" link in the navbar
-- **Direct link**: `http://localhost:5173/presentation` (during development)
+- **Direct link**: `http://localhost:5173/presentation/current` (during development)
+- **Purpose**: Shows what's happening NOW and what's UP NEXT
+
+### Full Agenda View
+- **URL**: `/presentation/full`
+- **Navigation**: Available through the "📋 Full Agenda" button in the current sessions view
+- **Direct link**: `http://localhost:5173/presentation/full` (during development)
+- **Purpose**: Shows complete agenda with auto-switching between pages every 30 seconds
 
 ## Usage
 

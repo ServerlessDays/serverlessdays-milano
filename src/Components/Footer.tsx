@@ -124,7 +124,6 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
             >
-              <h4 className="text-lg font-bold mb-4 text-purple-200">Connect With Us</h4>
               <div className="grid grid-cols-2 gap-3">
                 {socialLinks.map((link) => (
                   <motion.a
@@ -144,17 +143,24 @@ const Footer = () => {
               </div>
 
               <motion.div
-                className="mt-4"
+                className="mt-4 flex flex-col gap-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
                 <Link
-                  to="/presentation"
+                  to="/presentation/current"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
                 >
-                  <span>🖥️</span>
-                  <span>Display View</span>
+                  <span>📺</span>
+                  <span>Current Sessions</span>
+                </Link>
+                <Link
+                  to="/presentation/full"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg text-sm font-medium hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                >
+                  <span>📺</span>
+                  <span>Full Agenda</span>
                 </Link>
               </motion.div>
             </motion.div>
