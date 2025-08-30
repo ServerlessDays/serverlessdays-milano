@@ -5,7 +5,7 @@ import { TextGenerateEffect } from './ui/text-generate-effect';
 // import arrowHandDrawn from '../assets/handDrawnArrow.png';
 import { useRef } from 'react';
 // import { UntilTime } from '@/types/home';
-import { buttonVariants } from './ui/button';
+// import { buttonVariants } from './ui/button';
 
 const Home = () => {
   // const MotionButton = motion(Button);
@@ -13,153 +13,311 @@ const Home = () => {
   const IS_COMING_SOON = true; // Set to false when the agenda is ready
 
   return (
-    <div className="flex h-full p-2 text-white md:h-[65vh] lg:h-[70vh] md:p-10 ">
-      <div className="w-full h-full my-auto md:items-center md:flex md:justify-around">
-        <div className="space-y-5 ">
-          <h1 className="text-5xl font-extrabold md:text-6xl">
-            ServerlessDays <br /> Milano 🇮🇹
-          </h1>
-          {/* <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
-            We are coming back! See you in 2025
-          </h3> */}
-          <h3 className="text-2xl font-semibold md:text-4xl text-secondary max-w-64 sm:max-w-full">
-            <a href="Serverless_Day_2025.ics">October, 21th 2025</a>{' '}
-            <br className="block sm:hidden" />
-            <span className="hidden md:inline-block">&nbsp;</span>@&nbsp;
-            <a href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8" target="_blank">
-              C30, Viale Cassala, Milano
-            </a>
-          </h3>
-          <TextGenerateEffect
-            words={'Join the biggest serverless community conference in Italy.'}
-            containerClassName="  w-80   sm:w-full md:pb-5 pb-2"
-            textClassName="text-lg font-normal md:text-2xl text-gray-200"
-          />
-
-          {IS_COMING_SOON && sponsor_and_speaker_buttons()}
-
-          {/* <motion.div className="">
-            <a
-              href="https://www.eventbrite.it/e/biglietti-serverlessdays-milano-2024-788514818047"
-              target="_blank"
-              className="relative "
-            >
-              <MotionButton
-                className="w-40 font-semibold text-white rounded-xl"
-                animate={{
-                  // jump with spring every 2 seconds
-                  y: [0, -5, 0],
-                  transition: {
-                    duration: 0.3,
-                    repeat: Infinity,
-                    repeatDelay: 2
-                  }
-                }}
-              >
-                🎫 Get your ticket! */}
-          {/* <span className="absolute rotate-[20deg] translate-x-14 rounded-xl bg-inherit p-1 -translate-y-4 underline">
-									35$
-								</span> */}
-          {/* </MotionButton>
-              <div className="absolute pr-2 text-md top-8 handwriting-1">* lunch and coffee included!</div>
-              <EarlyBirdText untilDate="19/04/2024" />
-            </a>
-          </motion.div> */}
-          {/* <p className="handwriting-1">(Lunch and coffee included!)</p> */}
-        </div>
+    <div className="relative min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 text-white overflow-hidden">
+      {/* Floating decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          ref={constraintsRef}
-          className="pb-2 mt-24 md:pb-5 md:mt-16 lg:mt-0"
-        >
-          <motion.img
-            src={UnicornMascot}
-            alt="unicorn"
-            className="hidden md:block w-48 md:w-72 scale-x-[-1] cursor-grab active:cursor-grabbing"
-            drag
-            dragConstraints={constraintsRef}
-            dragElastic={0.1}
-            dragMomentum={true}
-            dragSnapToOrigin={true}
-            initial={{
-              scaleX: -1,
-            }}
-          />
+          className="absolute top-20 left-10 w-2 h-2 bg-pink-300 rounded-full opacity-70"
+          animate={{ y: [0, -10, 0], opacity: [0.7, 1, 0.7] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute top-32 right-20 w-1 h-1 bg-blue-300 rounded-full opacity-80"
+          animate={{ y: [0, -15, 0], opacity: [0.8, 1, 0.8] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 1,
+          }}
+        />
+        <motion.div
+          className="absolute bottom-40 left-1/4 w-3 h-3 bg-purple-300 rounded-full opacity-60"
+          animate={{ y: [0, -20, 0], opacity: [0.6, 1, 0.6] }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />
+      </div>
 
-          <motion.img
-            initial={{ scaleX: -1, x: 100, y: 100 }}
-            animate={{
-              y: 0,
-              x: 0,
-              // rotate: [45, 0],
-            }}
-            transition={{
-              // duration: 2,
-              type: 'spring',
-              bounce: 0.5,
-              delay: 3,
-              damping: 10,
-              mass: 1,
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+          {/* Content Section */}
+          <motion.div
+            className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {/* Main Title */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                <span className="bg-gradient-to-r from-white via-pink-200 to-white bg-clip-text text-transparent drop-shadow-lg">
+                  ServerlessDays
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent drop-shadow-lg">
+                  Milano
+                </span>
+                &nbsp;🇮🇹
+              </h1>
+            </motion.div>
 
-              // velocity: 100,
-            }}
-            src={UnicornMascot}
-            alt="unicorn"
-            className="absolute top-36 -right-24 block md:hidden w-48 md:w-72 scale-x-[-1] "
-          />
-        </motion.div>
+            {/* Date and Location */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="space-y-2"
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 shadow-xl">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4">
+                  <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent flex items-center gap-2">
+                    📅{' '}
+                    <a
+                      href="Serverless_Day_2025.ics"
+                      className="hover:underline"
+                    >
+                      October 21th, 2025
+                    </a>
+                  </span>
+                  <span className="hidden sm:inline text-white/60">•</span>
+                  <span className="bg-gradient-to-r from-green-300 to-blue-400 bg-clip-text text-transparent flex items-center gap-2">
+                    📍{' '}
+                    <a
+                      href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8"
+                      target="_blank"
+                      className="hover:underline"
+                    >
+                      C30, Milano
+                    </a>
+                  </span>
+                </h3>
+              </div>
+            </motion.div>
+
+            {/* Description */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="max-w-2xl mx-auto lg:mx-0"
+            >
+              <TextGenerateEffect
+                words={
+                  '🚀 Join the biggest serverless community conference in Italy! Connect with industry experts, learn cutting-edge technologies, and network with fellow developers. 💻✨'
+                }
+                containerClassName="w-full"
+                textClassName="text-lg sm:text-xl md:text-2xl font-medium text-white/90 leading-relaxed"
+              />
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
+              {IS_COMING_SOON && <EnhancedCTAButtons />}
+            </motion.div>
+
+            {/* Additional Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-sm font-semibold"
+            >
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <span>☕</span>
+                <span className="text-white/90">Coffee & Lunch Included</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <span>🎯</span>
+                <span className="text-white/90">Networking Opportunities</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <span>🌟</span>
+                <span className="text-white/90">Industry Experts</span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Mascot Section */}
+          <motion.div
+            ref={constraintsRef}
+            className="relative order-1 lg:order-2 flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            {/* Desktop Mascot */}
+            <motion.div
+              className="hidden lg:block relative"
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <motion.img
+                src={UnicornMascot}
+                alt="unicorn"
+                className="w-64 xl:w-80 2xl:w-96 scale-x-[-1] cursor-grab active:cursor-grabbing drop-shadow-2xl"
+                drag
+                dragConstraints={constraintsRef}
+                dragElastic={0.2}
+                dragMomentum={true}
+                dragSnapToOrigin={true}
+                animate={{
+                  y: [0, -10, 0],
+                  rotate: [0, 2, 0, -2, 0],
+                }}
+                transition={{
+                  y: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
+                  rotate: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
+                }}
+                initial={{ scaleX: -1 }}
+              />
+
+              {/* Magical particles around mascot */}
+              <motion.div className="absolute inset-0 pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"
+                    style={{
+                      left: `${20 + Math.random() * 60}%`,
+                      top: `${20 + Math.random() * 60}%`,
+                    }}
+                    animate={{
+                      y: [0, -30, 0],
+                      opacity: [0, 1, 0],
+                      scale: [0, 1, 0],
+                    }}
+                    transition={{
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Mobile Mascot */}
+            <motion.div className="block lg:hidden relative">
+              <motion.img
+                initial={{ scaleX: -1, x: 50, y: 50, opacity: 0 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{
+                  type: 'spring',
+                  bounce: 0.4,
+                  delay: 1,
+                  duration: 1.5,
+                }}
+                src={UnicornMascot}
+                alt="unicorn"
+                className="w-48 sm:w-56 md:w-64 scale-x-[-1] drop-shadow-xl"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 export default Home;
 
-const sponsor_and_speaker_buttons = () => {
+const EnhancedCTAButtons = () => {
   return (
-    <div className="flex flex-col sm:flex-row items-center w-full mb-3 gap-2 lg:gap-4 justify-center md:justify-start">
-      <button
-        className={buttonVariants({
-          variant: 'default',
-          size: 'default',
-          className:
-            'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4 bg-white text-purple-800 font-bold border-2 border-purple-800 shadow-2xl hover:shadow-purple-500/50 hover:bg-purple-50 transition-all duration-300 ease-in-out hover:scale-105 hover:border-purple-600',
-        })}
+    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+      {/* Main CTA - Get Ticket */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full sm:w-auto"
       >
         <a
           href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119"
           target="_blank"
+          className="group block w-full"
         >
-          🎫 Get your ticket!
+          <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-white via-pink-50 to-white text-purple-900 font-black text-lg sm:text-xl rounded-2xl border-4 border-purple-200 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 ease-in-out group-hover:border-purple-300">
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative flex items-center justify-center gap-3">
+              <motion.span
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              >
+                🎫
+              </motion.span>
+              <span>Get Your Ticket!</span>
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: 0.5,
+                }}
+              >
+                ✨
+              </motion.span>
+            </span>
+          </button>
         </a>
-      </button>
-      {/* <button
-      className={buttonVariants({
-        variant: 'serverless',
-        size: 'default',
-        className: 'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4'
-      })}
-    >
-      <a href="https://www.papercall.io/serverlessdays-milano-2025" target="_blank">
-        Become a Speaker
-      </a>
-    </button> */}
-      <button
-        className={buttonVariants({
-          variant: 'serverless',
-          size: 'default',
-          className:
-            'text-sm sm:text-base lg:text-xl w-full sm:w-auto px-4 sm:px-8 lg:px-12 py-2 sm:py-3 lg:py-4',
-        })}
+      </motion.div>
+
+      {/* Secondary CTA - Become Sponsor */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full sm:w-auto"
       >
         <a
           href="https://drive.google.com/uc?export=download&id=1p7ZAFM7yXGp7qwGvOPjR_HuaMenHS_7W"
           target="_blank"
+          className="group block w-full"
         >
-          Become a Sponsor
+          <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 text-white font-bold text-lg sm:text-xl rounded-2xl shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out border-2 border-purple-400 group-hover:border-blue-400">
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative flex items-center justify-center gap-3">
+              <motion.span
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+              >
+                🤝
+              </motion.span>
+              <span>Become a Sponsor</span>
+              <motion.span
+                animate={{ y: [0, -3, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: 1,
+                }}
+              >
+                🚀
+              </motion.span>
+            </span>
+          </button>
         </a>
-      </button>
+      </motion.div>
     </div>
   );
 };
+
 /**
  * Renders the EarlyBirdText component.
  *

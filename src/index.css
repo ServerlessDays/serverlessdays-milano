@@ -83,11 +83,50 @@
 	}
 	body {
 		@apply bg-background text-foreground;
-		@apply h-screen;
+		@apply min-h-screen;
 		font-family: "IBM Plex Sans", sans-serif;
+		/* Enhanced mobile scrolling */
+		-webkit-overflow-scrolling: touch;
+		overflow-x: hidden;
 	}
 	html {
 		scroll-behavior: smooth;
+		/* Prevent zoom on iOS */
+		-webkit-text-size-adjust: 100%;
+		/* Better mobile viewport handling */
+		touch-action: manipulation;
+	}
+
+	/* Enhanced mobile-first utilities */
+	.mobile-safe-area {
+		padding-left: max(1rem, env(safe-area-inset-left));
+		padding-right: max(1rem, env(safe-area-inset-right));
+	}
+
+	/* Better touch targets for mobile */
+	button, a[role="button"] {
+		min-height: 44px;
+		min-width: 44px;
+	}
+
+	/* Enhanced focus states for accessibility */
+	button:focus-visible,
+	a:focus-visible,
+	[tabindex]:focus-visible {
+		outline: 2px solid theme('colors.purple.500');
+		outline-offset: 2px;
+		border-radius: 4px;
+	}
+
+	/* Smooth animations with respect to user preferences */
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		::before,
+		::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
 	}
 }
 
@@ -189,5 +228,141 @@
 	font-family: "Shadows Into Light", cursive;
 	font-weight: 400;
 	font-style: normal;
+}
+
+/* Enhanced Mobile-First Utilities */
+@layer utilities {
+	/* Gradient text utilities */
+	.gradient-text-primary {
+		@apply bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent;
+	}
+
+	.gradient-text-secondary {
+		@apply bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent;
+	}
+
+	/* Mobile-first responsive containers */
+	.container-mobile {
+		width: 100%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	@media (min-width: 640px) {
+		.container-mobile {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.container-mobile {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.container-mobile {
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	/* Enhanced backdrop blur for mobile */
+	.backdrop-blur-mobile {
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+	}
+
+	/* Better mobile button styles */
+	.btn-mobile {
+		@apply px-6 py-4 text-base font-semibold rounded-2xl transition-all duration-300 ease-in-out;
+		@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2;
+		@apply active:scale-95;
+		min-height: 48px;
+	}
+
+	.btn-mobile:hover {
+		@apply shadow-xl transform hover:scale-105;
+	}
+
+	/* Colorful glass effect */
+	.glass-effect {
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.glass-effect-dark {
+		background: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	/* Animated gradient backgrounds */
+	.animated-gradient {
+		background: linear-gradient(270deg, #ff6b9d, #c44df4, #6b73ff, #00d4ff);
+		background-size: 800% 800%;
+		animation: gradient-shift 8s ease infinite;
+	}
+
+	@keyframes gradient-shift {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+
+	/* Mobile-friendly spacing */
+	.section-spacing {
+		@apply py-8 px-4;
+	}
+
+	@media (min-width: 640px) {
+		.section-spacing {
+			@apply py-12 px-6;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.section-spacing {
+			@apply py-16 px-8;
+		}
+	}
+
+	/* Enhanced mobile typography */
+	.heading-mobile {
+		@apply text-2xl font-bold leading-tight;
+	}
+
+	@media (min-width: 640px) {
+		.heading-mobile {
+			@apply text-3xl;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.heading-mobile {
+			@apply text-4xl;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.heading-mobile {
+			@apply text-5xl;
+		}
+	}
+
+	/* Safe area utilities for modern mobile devices */
+	.safe-top {
+		padding-top: max(1rem, env(safe-area-inset-top));
+	}
+
+	.safe-bottom {
+		padding-bottom: max(1rem, env(safe-area-inset-bottom));
+	}
 }
 

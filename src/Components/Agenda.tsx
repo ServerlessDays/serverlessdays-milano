@@ -96,7 +96,7 @@ const AgendaAccordion = () => {
                   >
                     💬 Discovery Track
                   </button>
-                  <button
+                  {/* <button
                     onClick={() => setActiveTrack('both')}
                     className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                       activeTrack === 'both'
@@ -105,7 +105,7 @@ const AgendaAccordion = () => {
                     }`}
                   >
                     📅 Both
-                  </button>
+                  </button> */}
                 </div>
               </motion.div>
             )}
