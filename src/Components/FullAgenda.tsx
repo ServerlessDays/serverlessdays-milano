@@ -11,7 +11,7 @@ const FullAgenda = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [orientation, setOrientation] = useState<'16:9' | '9:16'>('16:9');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [timeRemaining, setTimeRemaining] = useState(30); // 30 seconds countdown
+  const [timeRemaining, setTimeRemaining] = useState(15); // 15 seconds countdown
   const [showInstructions, setShowInstructions] = useState(true);
 
   useEffect(() => {
