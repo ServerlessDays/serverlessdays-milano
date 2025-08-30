@@ -6,11 +6,15 @@ import { cn } from '@/lib/utils';
 export const TextGenerateEffect = ({
   words,
   containerClassName,
-  textClassName
+  textClassName,
+  duration = 2,
+  staggerDelay = 0.2,
 }: {
   words: string;
   containerClassName?: string;
   textClassName?: string;
+  duration?: number;
+  staggerDelay?: number;
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(' ');
@@ -18,14 +22,14 @@ export const TextGenerateEffect = ({
     animate(
       'span',
       {
-        opacity: 1
+        opacity: 1,
       },
       {
-        duration: 2,
-        delay: stagger(0.2)
+        duration: duration,
+        delay: stagger(staggerDelay),
       }
     );
-  }, [scope.current]);
+  }, [scope.current, duration, staggerDelay]);
 
   const renderWords = () => {
     return (
@@ -44,7 +48,9 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn('', containerClassName)}>
       <div className="mt-4">
-        <div className={cn(' leading-snug tracking-wide ', textClassName)}>{renderWords()}</div>
+        <div className={cn(' leading-snug tracking-wide ', textClassName)}>
+          {renderWords()}
+        </div>
       </div>
     </div>
   );

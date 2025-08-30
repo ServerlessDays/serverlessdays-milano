@@ -47,16 +47,16 @@ const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Content Section */}
           <motion.div
-            className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1"
+            className="space-y-6 sm:space-y-8 text-center order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             {/* Main Title */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 <span className="bg-gradient-to-r from-white via-pink-200 to-white bg-clip-text text-transparent drop-shadow-lg">
@@ -74,11 +74,11 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               className="space-y-2"
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 shadow-xl">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
                   <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent flex items-center gap-2">
                     📅{' '}
                     <a
@@ -107,8 +107,8 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="max-w-2xl mx-auto lg:mx-0"
+              transition={{ duration: 0.4, delay: 0.4 }}
+              className="max-w-2xl mx-auto"
             >
               <TextGenerateEffect
                 words={
@@ -116,6 +116,8 @@ const Home = () => {
                 }
                 containerClassName="w-full"
                 textClassName="text-lg sm:text-xl md:text-2xl font-medium text-white/90 leading-relaxed"
+                duration={0.5}
+                staggerDelay={0.13}
               />
             </motion.div>
 
@@ -123,7 +125,7 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
             >
               {IS_COMING_SOON && <EnhancedCTAButtons />}
             </motion.div>
@@ -132,8 +134,8 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-sm font-semibold"
+              transition={{ duration: 0.4, delay: 0.6 }}
+              className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm font-semibold"
             >
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <span>☕</span>
@@ -156,7 +158,7 @@ const Home = () => {
             className="relative order-1 lg:order-2 flex justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             {/* Desktop Mascot */}
             <motion.div
@@ -218,8 +220,8 @@ const Home = () => {
                 transition={{
                   type: 'spring',
                   bounce: 0.4,
-                  delay: 1,
-                  duration: 1.5,
+                  delay: 0.4,
+                  duration: 0.8,
                 }}
                 src={UnicornMascot}
                 alt="unicorn"
@@ -236,7 +238,7 @@ export default Home;
 
 const EnhancedCTAButtons = () => {
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
       {/* Main CTA - Get Ticket */}
       <motion.div
         whileHover={{ scale: 1.05 }}

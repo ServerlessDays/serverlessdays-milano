@@ -104,7 +104,7 @@ const Footer = () => {
                   🌟
                 </motion.span>
                 <p className="text-purple-200 font-medium">
-                  {currentYear} • Italy's Premier Serverless Conference
+                  {currentYear} • Italy's First Serverless Conference
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ const Footer = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <span className="text-lg">{link.icon}</span>
-                    <span className="text-sm font-medium text-white hidden sm:block">
+                    <span className="text-sm font-medium text-white sm:block">
                       {link.name}
                     </span>
                   </motion.a>
@@ -166,7 +166,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center lg:text-right"
             >
-              <h4 className="text-lg font-bold mb-4 text-purple-200">Built With ❤️ By</h4>
+              <h4 className="text-lg font-bold mb-4 text-purple-200">Website built with ❤️ by</h4>
               <div className="space-y-2">
                 {developers.map((dev) => (
                   <motion.a
