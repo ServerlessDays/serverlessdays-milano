@@ -6,12 +6,20 @@ const Footer = () => {
         <div className="ml-6">
           <ul className="flex items-center justify-center gap-4 ">
             <li>
-              <a href="https://linktr.ee/serverlessitaly" target="_blank" className="transition-all hover:underline">
+              <a
+                href="https://linktr.ee/serverlessitaly"
+                target="_blank"
+                className="transition-all hover:underline"
+              >
                 Contacts
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/ServerlessItaly" target="_blank" className="transition-all hover:underline">
+              <a
+                href="https://twitter.com/ServerlessItaly"
+                target="_blank"
+                className="transition-all hover:underline"
+              >
                 Twitter
               </a>
             </li>
@@ -25,7 +33,11 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://serverlessdays.io/coc" target="_blank" className="transition-all hover:underline">
+              <a
+                href="https://serverlessdays.io/coc"
+                target="_blank"
+                className="transition-all hover:underline"
+              >
                 Code of Conduct
               </a>
             </li>
@@ -35,8 +47,28 @@ const Footer = () => {
       <div className="pb-4 mt-4 md:mt-0 md:pb-0">
         <p className="text-xs text-center text-gray-500">
           Built with ❤️ by{' '}
-          <a href="https://tensi.dev" target="_blank" className="transition-all hover:underline ">
+          <a
+            href="https://www.linkedin.com/in/marco-giuseppini/"
+            target="_blank"
+            className="transition-all hover:underline "
+          >
+            Marco Giuseppini
+          </a>
+          ,{' '}
+          <a
+            href="https://tensi.dev"
+            target="_blank"
+            className="transition-all hover:underline "
+          >
             Federico Tensi
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.linkedin.com/in/dennisdore//"
+            target="_blank"
+            className="transition-all hover:underline "
+          >
+            Dennis Dore
           </a>
         </p>
       </div>

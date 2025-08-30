@@ -233,6 +233,20 @@ const TalkCard = ({
   trackColor: 'purple' | 'blue';
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowSizeChange = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
@@ -331,21 +345,38 @@ const TalkCard = ({
       }}
     >
       <div className="p-4">
-        <div className="flex items-start gap-4">
-          {/* Time badge */}
-          <div className="flex-shrink-0">
+        {/* Mobile: Time at top */}
+        {isMobile && (
+          <div className="mb-4">
             <div
-              className={`${colors.time} text-white px-3 py-2 rounded-xl text-sm font-bold shadow-md min-w-[80px] text-center`}
+              className={`${colors.time} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-md inline-flex items-center gap-2`}
             >
-              <div className="text-xs opacity-90">Start</div>
-              <div>{startTimeString}</div>
+              <span className="text-xs opacity-90">🕐</span>
+              <span>{startTimeString}</span>
+              {duration > 0 && (
+                <span className="text-xs opacity-90">• {duration}min</span>
+              )}
             </div>
-            {duration > 0 && (
-              <div className="text-center mt-1">
-                <span className="text-xs text-gray-500">{duration}min</span>
-              </div>
-            )}
           </div>
+        )}
+
+        <div className="flex items-start gap-4">
+          {/* Desktop: Time badge on left */}
+          {!isMobile && (
+            <div className="flex-shrink-0">
+              <div
+                className={`${colors.time} text-white px-3 py-2 rounded-xl text-sm font-bold shadow-md min-w-[80px] text-center`}
+              >
+                <div className="text-xs opacity-90">Start</div>
+                <div>{startTimeString}</div>
+              </div>
+              {duration > 0 && (
+                <div className="text-center mt-1">
+                  <span className="text-xs text-gray-500">{duration}min</span>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Content */}
           <div className="flex-1 min-w-0">
@@ -364,7 +395,9 @@ const TalkCard = ({
                 </div>
 
                 <h3
-                  className={`font-semibold text-lg leading-tight mb-1 ${
+                  className={`font-semibold ${
+                    isMobile ? 'text-xl' : 'text-lg'
+                  } leading-tight mb-1 ${
                     isKeynote
                       ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
                       : talkType === 'break'
@@ -434,19 +467,29 @@ const TalkCard = ({
                   >
                     {profileImg ? (
                       <img
-                        className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md"
+                        className={`${
+                          isMobile ? 'w-14 h-14' : 'w-12 h-12'
+                        } rounded-full object-cover ring-2 ring-white shadow-md`}
                         src={profileImg}
                         alt={speakerNameTitle}
                         title={speakerNameTitle}
                         loading="lazy"
                       />
                     ) : name === PLACEHOLDER_NAME ? (
-                      <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                      <div
+                        className={`${
+                          isMobile ? 'w-14 h-14' : 'w-12 h-12'
+                        } rounded-full bg-gray-200 flex items-center justify-center`}
+                      >
                         <span className="text-gray-400 text-xs">TBA</span>
                       </div>
                     ) : (
                       <div
-                        className={`w-12 h-12 rounded-full ${colors.time} flex items-center justify-center text-white text-xs font-bold`}
+                        className={`${
+                          isMobile ? 'w-14 h-14' : 'w-12 h-12'
+                        } rounded-full ${
+                          colors.time
+                        } flex items-center justify-center text-white text-xs font-bold`}
                       >
                         {name?.charAt(0) || '?'}
                       </div>
