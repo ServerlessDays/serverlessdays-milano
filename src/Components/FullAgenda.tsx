@@ -6,18 +6,19 @@ import { AgendaItem } from '../types/agenda';
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
 const PLACEHOLDER_NAME = 'someone to be announced';
+const COUNTDOWN_TIME_DURATION = 15; // 15 seconds countdown
 
 const FullAgenda = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [orientation, setOrientation] = useState<'16:9' | '9:16'>('16:9');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [timeRemaining, setTimeRemaining] = useState(15); // 15 seconds countdown
+  const [timeRemaining, setTimeRemaining] = useState(COUNTDOWN_TIME_DURATION);
   const [showInstructions, setShowInstructions] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 30000); // Update every 30 seconds
+    }, COUNTDOWN_TIME_DURATION * 1000); // Update every COUNTDOWN_TIME_DURATION seconds
 
     return () => clearInterval(timer);
   }, []);
@@ -38,11 +39,11 @@ const FullAgenda = () => {
             const totalPages = Math.max(maxMainPages, maxDiscoveryPages);
             return (currentIdx + 1) % totalPages;
           });
-          return 30; // Reset countdown
+          return COUNTDOWN_TIME_DURATION; // Reset countdown
         }
         return prev - 1;
       });
-    }, 1000); // Update every second
+    }, 1000); // Update every 1 second
 
     return () => clearInterval(interval);
   }, [orientation]);
@@ -79,10 +80,10 @@ const FullAgenda = () => {
 
       if (e.key === 'ArrowLeft' && currentIndex > 0) {
         setCurrentIndex(currentIndex - 1);
-        setTimeRemaining(30); // Reset timer
+        setTimeRemaining(COUNTDOWN_TIME_DURATION); // Reset timer
       } else if (e.key === 'ArrowRight') {
         setCurrentIndex((currentIndex + 1) % totalPages);
-        setTimeRemaining(30); // Reset timer
+        setTimeRemaining(COUNTDOWN_TIME_DURATION); // Reset timer
       }
     };
 
@@ -213,7 +214,7 @@ const FullAgendaView = ({
           className="h-full bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"
           initial={{ width: '100%' }}
           animate={{
-            width: `${(timeRemaining / 30) * 100}%`,
+            width: `${(timeRemaining / COUNTDOWN_TIME_DURATION) * 100}%`,
           }}
           transition={{ duration: 0.1 }}
         />
