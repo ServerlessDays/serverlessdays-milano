@@ -85,7 +85,7 @@ const Home = () => {
                       href="Serverless_Day_2025.ics"
                       className="hover:underline"
                     >
-                      October 21th, 2025
+                      October 21st, 2025
                     </a>
                   </span>
                   <span className="hidden sm:inline text-white/60">•</span>

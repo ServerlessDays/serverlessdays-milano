@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import NotFound from './Components/NotFound';
-// import Sponsors from './Components/Sponsors';
+import Sponsors from './Components/Sponsors';
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
               <div className="relative z-10">
                 <Navbar />
                 <Home />
-                {/* <Sponsors /> */}
+                <Sponsors />
 
                 <AgendaAccordion />
                 {/* <CommunitySponsors /> */}

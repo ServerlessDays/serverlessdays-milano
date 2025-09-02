@@ -8,116 +8,206 @@ import logoTAG from '../assets/sponsors/TAG-logo.svg';
 import logoAmpt from '../assets/sponsors/ampt-logo.svg';
 import logoOBN from '../assets/sponsors/off-by-none-logo.svg';
 import logoEleva from '../assets/sponsors/eleva-logo.svg';
-// import { cn } from "@/lib/utils";
-import { InfiniteMovingImage } from './ui/infinite-moving-cards';
+import logoOvernet from '../assets/sponsors/OverNet_payoff_white.svg';
+import { cn } from '@/lib/utils';
 import { Image } from '@/types/sponsors';
 
 const Sponsors = () => {
   const sponsors: Image[] = [
     {
+      image: logoEleva,
+      url: 'https://eleva.it/',
+      sponsorType: 'Headline',
+      imageClassName: 'h-24 md:h-32',
+      type: 'single',
+    },
+    {
       image: logoBeSharp,
       url: 'https://www.besharp.it/',
       sponsorType: 'Headline',
-      type: 'single'
+      imageClassName: 'h-24 md:h-32',
+      type: 'single',
     },
+    // {
+    //   image: logoNTTData,
+    //   url: 'https://www.nttdata.com/global/en/',
+    //   sponsorType: 'Headline',
+    //   imageClassName: 'h-24 md:h-32',
+    //   type: 'single',
+    // },
+    // {
+    //   image: logoAWS,
+    //   url: 'https://aws.amazon.com/',
+    //   sponsorType: 'Headline',
+    //   imageClassName: 'h-24 md:h-32',
+    //   type: 'single',
+    // },
+    // {
+    //   image: logoOBN,
+    //   url: 'https://offbynone.io/',
+    //   sponsorType: 'Headline',
+    //   imageClassName: 'h-24 md:h-32',
+    //   type: 'single',
+    // },
+    // {
+    //   image: logoServerlessGuru,
+    //   url: 'https://www.serverlessguru.com/',
+    //   sponsorType: 'Gold',
+    //   imageClassName: 'h-16 md:h-20',
+    //   type: 'single',
+    // },
+    // {
+    //   image: logoTAG,
+    //   url: 'https://talentgarden.org/en/',
+    //   sponsorType: 'Gold',
+    //   imageClassName: 'h-16 md:h-20',
+    //   type: 'single',
+    // },
     {
-      image: logoNTTData,
-      url: 'https://www.nttdata.com/global/en/',
-      sponsorType: 'Headline',
-      imageClassName: 'h-10',
-      type: 'single'
+      image: logoOvernet,
+      url: 'https://overnet.education/',
+      sponsorType: 'Partner',
+      imageClassName: 'h-12 md:h-16',
+      type: 'single',
     },
-    {
-      image: logoAWS,
-      url: 'https://aws.amazon.com/',
-      sponsorType: 'Headline',
-      imageClassName: 'w-24',
-      type: 'single'
-    },
-    {
-      image: logoServerlessGuru,
-      url: 'https://www.serverlessguru.com/',
-      sponsorType: 'Gold',
-      imageClassName: '!h-20',
-      type: 'single'
-    },
-    {
-      image: logoTAG,
-      url: 'https://talentgarden.org/en/',
-      sponsorType: 'Gold',
-      imageClassName: '!h-12',
-      type: 'single'
-    },
-    {
-      image: logoServerlessDark,
-      url: 'https://www.serverless.com/',
-      sponsorType: 'Community',
-      type: 'single'
-    },
-    {
-      image: logoCodecrafters,
-      url: 'https://codecrafters.io//',
-      sponsorType: 'Community',
-      imageClassName: '!h-20',
-      type: 'single'
-    },
-    {
-      image: logoAmpt,
-      url: 'https://www.getampt.com/',
-      sponsorType: 'Community',
-      imageClassName: '!h-20',
-      type: 'single'
-    },
-    {
-      image: logoOBN,
-      url: 'https://offbynone.io/',
-      sponsorType: 'Community',
-      imageClassName: '!h-20',
-      type: 'single'
-    },
-    {
-      image: logoEleva,
-      url: 'https://eleva.it/',
-      sponsorType: 'Community',
-      imageClassName: '!h-20',
-      type: 'single'
-    }
+    // {
+    //   image: logoServerlessDark,
+    //   url: 'https://www.serverless.com/',
+    //   sponsorType: 'Community',
+    //   imageClassName: 'h-12 md:h-16',
+    //   type: 'single',
+    // },
+    // {
+    //   image: logoCodecrafters,
+    //   url: 'https://codecrafters.io/',
+    //   sponsorType: 'Community',
+    //   imageClassName: 'h-12 md:h-16',
+    //   type: 'single',
+    // },
+    // {
+    //   image: logoAmpt,
+    //   url: 'https://www.getampt.com/',
+    //   sponsorType: 'Community',
+    //   imageClassName: 'h-12 md:h-16',
+    //   type: 'single',
+    // },
   ];
-  return (
-    <div className="pt-3 mb-10 text-center bg-transparent lg:mb-0 ">
-      <h5 className="mb-2 text-sm font-semibold text-gray-300">Sponsors</h5>
-      {/* <h2 className="text-2xl font-semibold text-white ">Headline</h2> *2024 edition sponsors/}
-			{/* <div className="flex flex-wrap justify-center ">
-				<SponsorCard logo={logoServerlessDark} />
-				<SponsorCard logo={logoServerlessLight} />
-				<SponsorCard logo={logoBeSharp} imgClassName="w-60" />
-			</div> */}
-      {/* <hr className="my-5 border-t-2 border-gray-300" /> */}
-      {/* <h2 className="text-xl font-semibold text-white">Gold</h2> */}
-      <div className=" rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-        <InfiniteMovingImage items={sponsors} direction="right" speed="normal" />
+  // Group sponsors by type
+  const sponsorsByType = {
+    Headline: sponsors.filter((sponsor) => sponsor.sponsorType === 'Headline'),
+    Gold: sponsors.filter((sponsor) => sponsor.sponsorType === 'Gold'),
+    Partner: sponsors.filter((sponsor) => sponsor.sponsorType === 'Partner'),
+    Community: sponsors.filter(
+      (sponsor) => sponsor.sponsorType === 'Community'
+    ),
+  };
+
+  const SponsorCard = ({
+    sponsor,
+    containerClass,
+  }: {
+    sponsor: Image;
+    containerClass: string;
+  }) => (
+    <a
+      href={typeof sponsor.url === 'string' ? sponsor.url : sponsor.url[0]}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block w-full transition-transform duration-300 hover:scale-105 hover:drop-shadow-2xl"
+    >
+      <div
+        className={cn(
+          'bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/10 flex items-center justify-center p-4 md:p-6',
+          containerClass
+        )}
+      >
+        <img
+          src={
+            typeof sponsor.image === 'string' ? sponsor.image : sponsor.image[0]
+          }
+          alt="Sponsor logo"
+          className={cn(
+            'object-contain w-full h-full transition-all duration-300 group-hover:brightness-110',
+            typeof sponsor.imageClassName === 'string'
+              ? sponsor.imageClassName
+              : sponsor.imageClassName?.[0]
+          )}
+        />
       </div>
-      {/* <hr className="my-5 border-t-2 border-gray-300" />
-			<h2 className="text-lg font-semibold text-white">Partner</h2>
-			<h2 className="text-base font-semibold text-white">Community</h2> */}
+    </a>
+  );
+
+  const SponsorSection = ({
+    title,
+    sponsors,
+    gridCols,
+    containerClass,
+  }: {
+    title: string;
+    sponsors: Image[];
+    gridCols: string;
+    containerClass: string;
+  }) =>
+    sponsors.length > 0 && (
+      <div className="mb-12">
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">
+          {title}
+        </h3>
+        <div
+          className={cn('grid gap-6 md:gap-8 justify-items-stretch', gridCols)}
+        >
+          {sponsors.map((sponsor, index) => (
+            <SponsorCard
+              key={index}
+              sponsor={sponsor}
+              containerClass={containerClass}
+            />
+          ))}
+        </div>
+      </div>
+    );
+
+  return (
+    <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto text-center">
+      <div className="mb-12">
+        <h2 className="text-4xl md:text-5xl font-black text-white mb-4 bg-gradient-to-r from-white via-pink-200 to-white bg-clip-text text-transparent">
+          Our Amazing Sponsors
+        </h2>
+        <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          Thank you to our incredible sponsors who make ServerlessDays Milano
+          possible! 🙏
+        </p>
+      </div>
+
+      <SponsorSection
+        title="Headline Sponsors"
+        sponsors={sponsorsByType.Headline}
+        gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        containerClass="h-32 md:h-40 w-full"
+      />
+
+      <SponsorSection
+        title="Gold Sponsors"
+        sponsors={sponsorsByType.Gold}
+        gridCols="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        containerClass="h-24 md:h-32 w-full"
+      />
+
+      <SponsorSection
+        title="Partners"
+        sponsors={sponsorsByType.Partner}
+        gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        containerClass="h-20 md:h-24 w-full"
+      />
+
+      <SponsorSection
+        title="Community Sponsors"
+        sponsors={sponsorsByType.Community}
+        gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        containerClass="h-16 md:h-20 w-full"
+      />
     </div>
   );
 };
 
 export default Sponsors;
-
-// const SponsorCard = ({
-// 	logo,
-// 	cardClassName,
-// 	imgClassName,
-// }: {
-// 	logo: string;
-// 	cardClassName?: string;
-// 	imgClassName?: string;
-// }) => {
-// 	return (
-// 		<div className={cn(" p-3 rounded-xl items-center flex", cardClassName)}>
-// 			<img src={logo} alt="logo" className={cn("w-80", imgClassName)} />
-// 		</div>
-// 	);
-// };
