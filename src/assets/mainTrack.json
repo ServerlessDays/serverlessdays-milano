@@ -45,7 +45,7 @@
       "organization": "Lumigo",
       "job_title": "",
       "title": "Serverless the hard parts",
-      "description": "You haven't written a description for this talk yet. Having just a title is a great place to start, but you probably don't want to submit your talk to an event without any sort of description. All you need to do is click the edit button and fill it in. Think of the great sense of accomplishment you'll feel when you're finished.",
+      "description": "Serverless is a superpower, but with great power comes great responsibility. In this talk, let's look at the hard parts of serverless - including the need for system thinking, local development, testing, cost management and more - and how to tackle them..",
       "abstract": "Serverless is a superpower, but with great power comes great responsibility. In this talk, let's look at the hard parts of serverless - including the need for system thinking, local development, testing, cost management and more - and how to tackle them.",
       "audience_level": "All",
       "tags": [
