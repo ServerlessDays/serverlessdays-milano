@@ -92,7 +92,7 @@ const Home = () => {
                   <span className="bg-gradient-to-r from-green-300 to-blue-400 bg-clip-text text-transparent flex items-center gap-2">
                     📍{' '}
                     <a
-                      href="https://maps.app.goo.gl/WYFXN32VHEQrjctJ8"
+                      href="https://maps.app.goo.gl/1gLrKs9DGCZFYht26"
                       target="_blank"
                       className="hover:underline"
                     >
