@@ -139,7 +139,7 @@ const Home = () => {
             >
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <span>☕</span>
-                <span className="text-white/90">Coffee & Lunch Included</span>
+                <span className="text-white/90">Breaks Included</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <span>🎯</span>
