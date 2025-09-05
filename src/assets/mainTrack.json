@@ -227,15 +227,15 @@
       "type": "talk"
     },
     "talk": {
-      "name": "TBD",
+      "name": "Sponsored Talk",
       "avatar": "",
       "location": "",
       "bio": "",
       "twitter": "",
       "url": "#",
-      "organization": "TBD",
+      "organization": "AWS",
       "job_title": "",
-      "title": "TBD",
+      "title": "AWS Sponsored Talk",
       "description": "",
       "abstract": "",
       "audience_level": "All",
