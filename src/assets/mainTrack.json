@@ -227,17 +227,17 @@
       "type": "talk"
     },
     "talk": {
-      "name": "Sponsored Talk",
-      "avatar": "",
+      "name": "Julian Wood",
+      "avatar": "/speakers/julian-wood.jpeg",
       "location": "",
       "bio": "",
       "twitter": "",
       "url": "#",
       "organization": "AWS",
       "job_title": "",
-      "title": "Sponsored Talk by AWS",
-      "description": "",
-      "abstract": "",
+      "title": "Tools and Techniques for Serverless Developers",
+      "description": "Discover how to optimize your development workflow and become a productive serverless developer. This session takes you through a day in the life of a modern serverless developer using AWS Lambda and other serverless services. From AWS Management Console to IDE and IaC, this session showcases the latest developer experience tools and techniques for streamlining application development. Simplify your development lifecycle through initialization, build, test, deploy, monitor, and optimize with a sprinkling of AI. By the end of this session, you'll have a clear roadmap to deliver high-quality code faster.",
+      "abstract": "Discover how to optimize your development workflow and become a productive serverless developer. This session takes you through a day in the life of a modern serverless developer using AWS Lambda and other serverless services. From AWS Management Console to IDE and IaC, this session showcases the latest developer experience tools and techniques for streamlining application development. Simplify your development lifecycle through initialization, build, test, deploy, monitor, and optimize with a sprinkling of AI. By the end of this session, you'll have a clear roadmap to deliver high-quality code faster.",
       "audience_level": "All",
       "tags": []
     }
