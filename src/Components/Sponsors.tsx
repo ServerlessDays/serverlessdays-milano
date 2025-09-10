@@ -1,7 +1,7 @@
 // import logoServerlessDark from '../assets/sponsors/logo serverless dark.svg';
 // import logoServerlessGuru from '../assets/sponsors/serverless-guru-logo.svg';
 import logoBeSharp from '../assets/sponsors/logo_besharp.svg';
-// import logoAWS from '../assets/sponsors/Amazon_Web_Services_Logo.svg';
+import logoAWS from '../assets/sponsors/aws-white.svg';
 // import logoNTTData from '../assets/sponsors/NTT-Data-Logo.svg';
 // import logoCodecrafters from '../assets/sponsors/codecrafters-logo.png';
 // import logoTAG from '../assets/sponsors/TAG-logo.svg';
@@ -35,13 +35,13 @@ const Sponsors = () => {
     //   imageClassName: 'h-24 md:h-32',
     //   type: 'single',
     // },
-    // {
-    //   image: logoAWS,
-    //   url: 'https://aws.amazon.com/',
-    //   sponsorType: 'Headline',
-    //   imageClassName: 'h-24 md:h-32',
-    //   type: 'single',
-    // },
+    {
+      image: logoAWS,
+      url: 'https://aws.amazon.com/',
+      sponsorType: 'Headline',
+      imageClassName: 'h-24 md:h-32',
+      type: 'single',
+    },
     // {
     //   image: logoOBN,
     //   url: 'https://offbynone.io/',

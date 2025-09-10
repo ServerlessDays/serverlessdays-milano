@@ -211,16 +211,16 @@
     },
     "talk": {
       "name": "Davide De Sio",
-      "avatar": "",
+      "avatar": "/speakers/davide-de-sio.jpeg",
       "location": "",
       "bio": "",
       "twitter": "",
-      "url": "#",
+      "url": "https://www.linkedin.com/in/desiodavide",
       "organization": "Eleva",
       "job_title": "",
-      "title": "Sponsored Talk by Eleva",
-      "description": "",
-      "abstract": "",
+      "title": "Serverless to the rescue: generative AI architectural patterns",
+      "description": "If you’re wondering how to integrate GenAI APIs, deploy RAG pipelines, run MCP servers or spin up AI agents without drowning in infrastructure, this talk is for you. We’ll show why serverless is the natural match for Generative AI: flexible, quick to adapt, designed to orchestrate. Build faster, scale seamlessly, and keep the focus on innovation instead of operations.",
+      "abstract": "If you’re wondering how to integrate GenAI APIs, deploy RAG pipelines, run MCP servers or spin up AI agents without drowning in infrastructure, this talk is for you. We’ll show why serverless is the natural match for Generative AI: flexible, quick to adapt, designed to orchestrate. Build faster, scale seamlessly, and keep the focus on innovation instead of operations.",
       "audience_level": "All",
       "tags": []
     }
