@@ -6,7 +6,8 @@ import logoAWS from '../assets/sponsors/aws-white.svg';
 // import logoCodecrafters from '../assets/sponsors/codecrafters-logo.png';
 // import logoTAG from '../assets/sponsors/TAG-logo.svg';
 // import logoAmpt from '../assets/sponsors/ampt-logo.svg';
-// import logoOBN from '../assets/sponsors/off-by-none-logo.svg';
+import logoOBN from '../assets/sponsors/off-by-none-logo.svg';
+import logoImproove from '../assets/sponsors/logo_improove.png';
 import logoEleva from '../assets/sponsors/eleva-logo.svg';
 import logoOvernet from '../assets/sponsors/OverNet_payoff_white.svg';
 import { cn } from '@/lib/utils';
@@ -43,13 +44,6 @@ const Sponsors = () => {
       type: 'single',
     },
     // {
-    //   image: logoOBN,
-    //   url: 'https://offbynone.io/',
-    //   sponsorType: 'Headline',
-    //   imageClassName: 'h-24 md:h-32',
-    //   type: 'single',
-    // },
-    // {
     //   image: logoServerlessGuru,
     //   url: 'https://www.serverlessguru.com/',
     //   sponsorType: 'Gold',
@@ -66,8 +60,22 @@ const Sponsors = () => {
     {
       image: logoOvernet,
       url: 'https://overnet.education/',
-      sponsorType: 'Partner',
+      sponsorType: 'Organization Partner',
       imageClassName: 'h-12 md:h-16',
+      type: 'single',
+    },
+    {
+      image: logoOBN,
+      url: 'https://offbynone.io/',
+      sponsorType: 'Community',
+      imageClassName: 'h-24 md:h-32',
+      type: 'single',
+    },
+    {
+      image: logoImproove,
+      url: 'https://www.improove.tech/',
+      sponsorType: 'Community',
+      imageClassName: 'h-24 md:h-32',
       type: 'single',
     },
     // {
@@ -97,6 +105,7 @@ const Sponsors = () => {
     Headline: sponsors.filter((sponsor) => sponsor.sponsorType === 'Headline'),
     Gold: sponsors.filter((sponsor) => sponsor.sponsorType === 'Gold'),
     Partner: sponsors.filter((sponsor) => sponsor.sponsorType === 'Partner'),
+    OrganizationPartner: sponsors.filter((sponsor) => sponsor.sponsorType === 'Organization Partner'),
     Community: sponsors.filter(
       (sponsor) => sponsor.sponsorType === 'Community'
     ),
@@ -196,6 +205,13 @@ const Sponsors = () => {
       <SponsorSection
         title="Partners"
         sponsors={sponsorsByType.Partner}
+        gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        containerClass="h-20 md:h-24 w-full"
+      />
+
+      <SponsorSection
+        title="Organization Partners"
+        sponsors={sponsorsByType.OrganizationPartner}
         gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
         containerClass="h-20 md:h-24 w-full"
       />
