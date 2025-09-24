@@ -61,10 +61,7 @@
       "description": "Whether you're building offline-first mobile apps, collaborative editors, or edge-deployed services, multiple users and devices may interact with the same data independently. Network partitions, latency, and asynchronous workflows guarantee that state will drift. The real challenge? Reuniting these divergent states without breaking user expectations or corrupting intent.\nWe'll explore common sync strategies and focus on Conflict-Free Replicated Data Types (CRDTs) for building systems that automatically converge over time.\nDiving deep into architectural patterns for tracking, persisting, and acknowledging operations (eg. how to deal with unacknowledged updates, resends, and client-side reconciliation), how to balance consistency, latency, and user experience when true consensus isn't possible or practical.",
       "abstract": "In distributed systems, divergence is inevitable - especially in offline-first apps, multi-device sync, or edge-first architectures. How do you manage conflicts when multiple versions of the same data emerge? Let's build eventually convergent systems without losing data or user intent.",
       "audience_level": "Advanced",
-      "tags": [
-        "aws",
-        "serverless"
-      ]
+      "tags": ["aws", "serverless"]
     }
   },
   {
@@ -124,12 +121,7 @@
       "description": "The agents have started to conquer the world in 2025. Carrefour has been invaded too! And it changes the way of working, interacting and our velocity on different topics.\nCome to discover how it started, the different iteration and team impacted, and the plans for the future.\nLearn the different steps, our pain points and the quick wins. And get back to work to start the agentic conquest in your team!",
       "abstract": "Agentic is the new trend. RAG, LLM, Long context are cool buzz words. But how to productionize agents? How to integrate with Google Chat? Serverless helps us to serve this new use cases without expensive infra",
       "audience_level": "All",
-      "tags": [
-        "gcp",
-        "serverless",
-        "ai",
-        "agentic"
-      ]
+      "tags": ["gcp", "serverless", "ai", "agentic"]
     }
   },
   {
@@ -152,12 +144,7 @@
       "description": "In this session, we'll explore how WebAssembly can help you build extensible architecture by easily supporting untrusted third-party code, while proving a built-in serverless experience. As a case study, we'll share Edgee's journey building a global, latency-sensitive application using a multi-region, active-active serverless architecture spanning across AWS Lambda and edge computing deployments such as Fastly and Cloudflare. We'll cover our architecture decisions and how services like Lambda, API Gateway, and DynamoDB power a truly global app on 20+ regions, with a fantastic tradeoff between costs, resiliency, and performance.",
       "abstract": "This is a \"serverless in production\" use case, with real-world insights and a WebAssembly deep dive. As a small startup with limited infra budget, we run a global app with 100M+ invocations per month across 20+ regions, reaching enterprise-level reliability with less than $50 on AWS.",
       "audience_level": "Intermediate",
-      "tags": [
-        "aws",
-        "serverless",
-        "opensource",
-        "webassembly"
-      ]
+      "tags": ["aws", "serverless", "opensource", "webassembly"]
     }
   },
   {
@@ -180,12 +167,7 @@
       "description": "AI is evolving fast'but deploying and scaling large models still feels like a DevOps nightmare. What if you could harness the power of GPUs without managing servers or paying for idle time?\n\nIn this talk, we'll explore the surprising answer to the question: \"Wait'GPUs can be serverless?!' (Spoiler: Yes, they can.) You'll see a real-time demo of running an open-source Large Language Model (Google's Gemma) using Ollama, packaged into a container, and deployed to Google Cloud Run with an NVIDIA L4 GPU.\n\nThis session will cut through the hype and give you real, hands-on knowledge. You'll learn:\n- Why serverless GPUs are a game-changer for AI inference workloads\n- How to configure and deploy GPU-enabled Cloud Run services\n- How to optimise container size and model startup for responsiveness\n- How to track GPU usage and memory to stay in control of cost\n\nWhether you're a developer, architect, or just AI-curious, you'll walk away ready to run LLMs at scale - without the infrastructure burden. No marketing, no hand-waving ' just a fast-paced, practical deep dive.",
       "abstract": "Think serverless can't handle GPUs? Think again! In this session, we'll bust that myth by live-deploying a Large Language Model on Google Cloud Run with full GPU acceleration. See how serverless is ready for the AI revolution.",
       "audience_level": "Intermediate",
-      "tags": [
-        "gcp",
-        "serverless",
-        "ai",
-        "opensource"
-      ]
+      "tags": ["gcp", "serverless", "ai", "opensource"]
     }
   },
   {
@@ -276,18 +258,13 @@
       "bio": "With a strong developer's background, Mariano daily helps companies that wish to modernize their applications embracing microservices and cloud native architectures. He's an AWS Authorized Instructor, a co-organizer of ServerlessDays and AWS UserGroup in Rome.\n\nIn his spare time he enjoys good music, reading, food and staying in front of the sea.",
       "twitter": "MarianoCalandra",
       "url": "https://marianocalandra.medium.com",
-      "organization": "Zero12",
+      "organization": "Var Group",
       "job_title": "",
       "title": "One way ticket to serverless hell ...and back!",
       "description": "In 2015, AWS Lambda ignited the serverless hype. Years later, the promise of seamless scaling and cheaper bills still enchant many teams, who believe a DynamoDB table and a couple of functions will be their silver bullet for every problem.\n\nUnfortunately, silver bullets don't exist and technologies won't fix broken architectures; nonetheless, serverless projects still fail due to these naive expectations. By distilling these failure stories, we will explore the dos and don'ts of serverless and discuss possible countermeasures.\n\nIf you are struggling with serverless, this session is for you!",
       "abstract": "The promise of easy scaling and lower costs sparked the serverless hype. But Lambda and DynamoDB alone won't fix bad choices: you're on a highway to hell!\n\nNo worries. In this talk, we'll pull the emergency brake, throw a hard U-turn and start climbing the stairway to heaven. Fasten your seatbelt!",
       "audience_level": "All",
-      "tags": [
-        "AWS",
-        "Azure",
-        "GCP",
-        "Serverless"
-      ]
+      "tags": ["AWS", "Azure", "GCP", "Serverless"]
     }
   },
   {
