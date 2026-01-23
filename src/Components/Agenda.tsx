@@ -32,7 +32,7 @@ const AgendaAccordion = () => {
 
   return (
     <div
-      className="relative min-h-screen pt-10 pb-10 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50"
+      className="relative min-h-[80vh] pt-10 pb-10 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50"
       id="agenda"
       ref={containerRef}
     >

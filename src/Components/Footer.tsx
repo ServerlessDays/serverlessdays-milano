@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -142,7 +142,7 @@ const Footer = () => {
                 ))}
               </div>
 
-              <motion.div
+              {/* <motion.div
                 className="mt-4 flex flex-col gap-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -162,7 +162,7 @@ const Footer = () => {
                   <span>📺</span>
                   <span>Full Agenda</span>
                 </Link>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Developers Section */}
