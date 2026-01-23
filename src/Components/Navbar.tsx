@@ -18,6 +18,8 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [salesOpened] = useState(true); // Example state
+
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled
@@ -60,15 +62,24 @@ const Navbar = () => {
 
           <div className="relative">
             <a
-              href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119"
+              href={salesOpened ? undefined : "eventbrite link goes here"}
               target="_blank"
+              className={salesOpened ? "cursor-not-allowed" : ""}
+              onClick={(e) => salesOpened && e.preventDefault()} // Extra safety: prevents click if true
             >
               <Button
                 variant={'default'}
-                className="relative overflow-hidden font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 border-0 rounded-2xl text-sm px-6 py-3 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 ease-in-out hover:scale-105 group"
+                disabled={salesOpened}
+                className={`relative overflow-hidden font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 border-0 rounded-2xl text-sm px-6 py-3 shadow-xl transition-all duration-300 ease-in-out group
+                  ${salesOpened
+                    ? 'opacity-50 grayscale pointer-events-none' // Disables interaction & dims colors
+                    : 'hover:shadow-purple-500/50 hover:scale-105'
+                  }`}
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative">🎫 Buy Ticket</span>
+                <span className="relative">
+                  {salesOpened ? '🚫 Sales Paused' : '🎫 Buy Ticket'}
+                </span>
               </Button>
             </a>
           </div>

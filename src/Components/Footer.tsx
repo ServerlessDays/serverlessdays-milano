@@ -110,7 +110,7 @@ const Footer = () => {
 
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-purple-300">
                 <span>📅</span>
-                <span>October 21st, 2025</span>
+                <span>TBD</span>
                 <span>•</span>
                 <span>📍</span>
                 <span>Milano, Italy</span>

@@ -85,7 +85,7 @@ const Home = () => {
                       href="Serverless_Day_2025.ics"
                       className="hover:underline"
                     >
-                      October 21st, 2025
+                      Stay tuned for the date!
                     </a>
                   </span>
                   <span className="hidden sm:inline text-white/60">•</span>
@@ -96,7 +96,7 @@ const Home = () => {
                       target="_blank"
                       className="hover:underline"
                     >
-                      C30, Milano
+                      TBD
                     </a>
                   </span>
                 </h3>
@@ -122,13 +122,13 @@ const Home = () => {
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
               {IS_COMING_SOON && <EnhancedCTAButtons />}
-            </motion.div>
+            </motion.div> */}
 
             {/* Additional Info */}
             <motion.div
