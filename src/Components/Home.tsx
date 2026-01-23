@@ -10,7 +10,7 @@ import { useRef } from 'react';
 const Home = () => {
   // const MotionButton = motion(Button);
   const constraintsRef = useRef(null);
-  const IS_COMING_SOON = true; // Set to false when the agenda is ready
+  const IS_COMING_SOON = true; // Set to false when the event tickets are available
 
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 text-white overflow-hidden">
@@ -122,13 +122,13 @@ const Home = () => {
             </motion.div>
 
             {/* CTA Buttons */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
-              {IS_COMING_SOON && <EnhancedCTAButtons />}
-            </motion.div> */}
+              {IS_COMING_SOON ? null : <EnhancedCTAButtons /> }
+            </motion.div>
 
             {/* Additional Info */}
             <motion.div
