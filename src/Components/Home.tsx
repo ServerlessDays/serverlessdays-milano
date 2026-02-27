@@ -242,7 +242,7 @@ const EnhancedCTAButtons = () => {
   // ---------------------------------------------------------
   const IS_TICKET_SALE_OPEN = false;
   const IS_CFP_OPEN = true;
-  const IS_SPONSOR_OPEN = false; // Set to true to enable Sponsor button
+  const IS_SPONSOR_OPEN = true; // Set to true to enable Sponsor button
 
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
@@ -297,7 +297,7 @@ const EnhancedCTAButtons = () => {
       >
         {IS_SPONSOR_OPEN ? (
           <a
-            href="https://drive.google.com/uc?export=download&id=1p7ZAFM7yXGp7qwGvOPjR_HuaMenHS_7W"
+            href="https://drive.google.com/uc?export=download&id=1_6MNbQWJJ3sky0SvlouF-7-owBKUhy-b"
             target="_blank"
             className="group block w-full"
           >
