@@ -241,7 +241,7 @@ const EnhancedCTAButtons = () => {
   // MANUAL TOGGLES: Control availability here
   // ---------------------------------------------------------
   const IS_TICKET_SALE_OPEN = false;
-  const IS_CFP_OPEN = true;
+  const IS_CFP_OPEN = false;
   const IS_SPONSOR_OPEN = true; // Set to true to enable Sponsor button
 
   return (
