@@ -82,21 +82,21 @@ const Home = () => {
                   <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent flex items-center gap-2">
                     📅{' '}
                     <a
-                      href="Serverless_Day_2025.ics"
+                      href="Serverless_Day_2026.ics"
                       className="hover:underline"
                     >
-                      Stay tuned for the date!
+                      October 13, 2026
                     </a>
                   </span>
                   <span className="hidden sm:inline text-white/60">•</span>
                   <span className="bg-gradient-to-r from-green-300 to-blue-400 bg-clip-text text-transparent flex items-center gap-2">
                     📍{' '}
                     <a
-                      href="https://maps.app.goo.gl/1gLrKs9DGCZFYht26"
+                      href="https://maps.app.goo.gl/EH7DSBzkh9SwrErA9"
                       target="_blank"
                       className="hover:underline"
                     >
-                      TBD
+                      WAO Romolo C30
                     </a>
                   </span>
                 </h3>
@@ -240,8 +240,8 @@ const EnhancedCTAButtons = () => {
   // ---------------------------------------------------------
   // MANUAL TOGGLES: Control availability here
   // ---------------------------------------------------------
-  const IS_TICKET_SALE_OPEN = false; // Set to true when tickets are available
-  const IS_CFP_OPEN = false; // Set to true to enable CFP button
+  const IS_TICKET_SALE_OPEN = true; // Set to true when tickets are available
+  const IS_CFP_OPEN = true; // Set to true to enable CFP button
   const IS_SPONSOR_OPEN = true; // Set to true to enable Sponsor button
 
   return (
@@ -255,7 +255,7 @@ const EnhancedCTAButtons = () => {
       >
         {IS_TICKET_SALE_OPEN ? (
           <a
-            href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119"
+            href="https://www.eventi.overnet.education/ServerlessDaysMilano2026#/tickets"
             target="_blank"
             className="group block w-full"
           >
@@ -276,7 +276,7 @@ const EnhancedCTAButtons = () => {
       >
         {IS_CFP_OPEN ? (
           <a
-            href="https://www.papercall.io/serverlessdays-milano-2026"
+            href="https://forms.zohopublic.eu/overnet/form/CFPServerlessDays1310/formperma/PxdFEPzD1aumi1bdUp2dJrzqOhd3uxRpGpM_0A-XX-g"
             target="_blank"
             className="group block w-full"
           >

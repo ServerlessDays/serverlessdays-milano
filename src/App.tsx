@@ -36,9 +36,9 @@ function App() {
               <div className="relative z-10">
                 <Navbar />
                 <Home />
-                <Sponsors />
+                {/* <Sponsors /> */}
 
-                <AgendaAccordion />
+                {/* <AgendaAccordion /> */}
                 {/* <CommunitySponsors /> */}
                 {/* <AboutUs /> */}
 

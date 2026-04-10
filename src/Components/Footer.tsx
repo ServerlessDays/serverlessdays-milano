@@ -110,10 +110,10 @@ const Footer = () => {
 
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-purple-300">
                 <span>📅</span>
-                <span>TBD</span>
+                <span>October 13, 2026</span>
                 <span>•</span>
                 <span>📍</span>
-                <span>Milano, Italy</span>
+                <span>WAO Romolo C30, Milano</span>
               </div>
             </motion.div>
 

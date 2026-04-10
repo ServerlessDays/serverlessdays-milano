@@ -18,7 +18,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const [salesOpened] = useState(true); // Example state
+  const [salesOpened] = useState(false);
 
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -43,12 +43,12 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </div>
-          <div className="group">
+          {/* <div className="group">
             <a href="#agenda" className="relative font-semibold text-gray-700 hover:text-purple-600 transition-colors duration-300">
               📅 Agenda
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
             </a>
-          </div>
+          </div> */}
 
           <div className="relative group">
             <a href="#aboutUs" className="pointer-events-none text-gray-400 font-semibold">
@@ -62,7 +62,7 @@ const Navbar = () => {
 
           <div className="relative">
             <a
-              href={salesOpened ? undefined : "eventbrite link goes here"}
+              href={salesOpened ? undefined : "https://www.eventi.overnet.education/ServerlessDaysMilano2026#/tickets"}
               target="_blank"
               className={salesOpened ? "cursor-not-allowed" : ""}
               onClick={(e) => salesOpened && e.preventDefault()} // Extra safety: prevents click if true
@@ -125,7 +125,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="block">
+            {/* <div className="block">
               <a
                 href="#agenda"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <span>📅</span>
                 <span>Agenda</span>
               </a>
-            </div>
+            </div> */}
 
             <div className="block">
               <div className="flex items-center space-x-3 py-3 px-4 rounded-xl bg-gray-100 text-gray-400 font-semibold relative">
@@ -146,7 +146,7 @@ const Navbar = () => {
 
             <div className="block pt-2">
               <a
-                href="https://www.eventbrite.it/e/serverlessdays-milano-2025-tickets-1460042399119"
+                href="https://www.eventi.overnet.education/ServerlessDaysMilano2026#/tickets"
                 target="_blank"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
