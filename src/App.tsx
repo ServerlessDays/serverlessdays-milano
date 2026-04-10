@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AboutUs from "./Components/AboutUs";
-import AgendaAccordion from './Components/Agenda';
 import CurrentAgenda from './Components/CurrentAgenda';
 import FullAgenda from './Components/FullAgenda';
 // import CommunitySponsors from "./Components/CommunitySponsors";
@@ -9,7 +8,6 @@ import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import NotFound from './Components/NotFound';
-import Sponsors from './Components/Sponsors';
 
 function App() {
   return (
