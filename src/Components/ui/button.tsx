@@ -15,7 +15,8 @@ const buttonVariants = cva(
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        serverless: 'bg-[#512DA8] text-white shadow-md hover:bg-[#6A1B9A] shadow-md hover:shadow-lg transition-[transform,shadow] duration-300 ease-in-out hover:scale-105'
+        serverless:
+          'bg-[#512DA8] text-white shadow-md hover:bg-[#6A1B9A] shadow-md hover:shadow-lg transition-[transform,shadow] duration-300 ease-in-out hover:scale-105'
       },
       size: {
         default: 'h-10 px-4 py-2',
@@ -35,8 +36,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   // eslint-disable-next-line no-undef
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 

@@ -20,14 +20,14 @@ const Sponsors = () => {
       url: 'https://eleva.it/',
       sponsorType: 'Headline',
       imageClassName: 'h-24 md:h-32',
-      type: 'single',
+      type: 'single'
     },
     {
       image: logoBeSharp,
       url: 'https://www.besharp.it/',
       sponsorType: 'Headline',
       imageClassName: 'h-24 md:h-32',
-      type: 'single',
+      type: 'single'
     },
     // {
     //   image: logoNTTData,
@@ -41,7 +41,7 @@ const Sponsors = () => {
       url: 'https://aws.amazon.com/',
       sponsorType: 'Headline',
       imageClassName: 'h-24 md:h-32',
-      type: 'single',
+      type: 'single'
     },
     // {
     //   image: logoServerlessGuru,
@@ -62,22 +62,22 @@ const Sponsors = () => {
       url: 'https://overnet.education/',
       sponsorType: 'Organization Partner',
       imageClassName: 'h-12 md:h-16',
-      type: 'single',
+      type: 'single'
     },
     {
       image: logoOBN,
       url: 'https://offbynone.io/',
       sponsorType: 'Community',
       imageClassName: 'h-24 md:h-32',
-      type: 'single',
+      type: 'single'
     },
     {
       image: logoImproove,
       url: 'https://www.improove.tech/',
       sponsorType: 'Community',
       imageClassName: 'h-24 md:h-32',
-      type: 'single',
-    },
+      type: 'single'
+    }
     // {
     //   image: logoServerlessDark,
     //   url: 'https://www.serverless.com/',
@@ -102,22 +102,14 @@ const Sponsors = () => {
   ];
   // Group sponsors by type
   const sponsorsByType = {
-    Headline: sponsors.filter((sponsor) => sponsor.sponsorType === 'Headline'),
-    Gold: sponsors.filter((sponsor) => sponsor.sponsorType === 'Gold'),
-    Partner: sponsors.filter((sponsor) => sponsor.sponsorType === 'Partner'),
-    OrganizationPartner: sponsors.filter((sponsor) => sponsor.sponsorType === 'Organization Partner'),
-    Community: sponsors.filter(
-      (sponsor) => sponsor.sponsorType === 'Community'
-    ),
+    Headline: sponsors.filter(sponsor => sponsor.sponsorType === 'Headline'),
+    Gold: sponsors.filter(sponsor => sponsor.sponsorType === 'Gold'),
+    Partner: sponsors.filter(sponsor => sponsor.sponsorType === 'Partner'),
+    OrganizationPartner: sponsors.filter(sponsor => sponsor.sponsorType === 'Organization Partner'),
+    Community: sponsors.filter(sponsor => sponsor.sponsorType === 'Community')
   };
 
-  const SponsorCard = ({
-    sponsor,
-    containerClass,
-  }: {
-    sponsor: Image;
-    containerClass: string;
-  }) => (
+  const SponsorCard = ({ sponsor, containerClass }: { sponsor: Image; containerClass: string }) => (
     <a
       href={typeof sponsor.url === 'string' ? sponsor.url : sponsor.url[0]}
       target="_blank"
@@ -131,15 +123,11 @@ const Sponsors = () => {
         )}
       >
         <img
-          src={
-            typeof sponsor.image === 'string' ? sponsor.image : sponsor.image[0]
-          }
+          src={typeof sponsor.image === 'string' ? sponsor.image : sponsor.image[0]}
           alt="Sponsor logo"
           className={cn(
             'object-contain w-full h-full transition-all duration-300 group-hover:brightness-110',
-            typeof sponsor.imageClassName === 'string'
-              ? sponsor.imageClassName
-              : sponsor.imageClassName?.[0]
+            typeof sponsor.imageClassName === 'string' ? sponsor.imageClassName : sponsor.imageClassName?.[0]
           )}
         />
       </div>
@@ -150,7 +138,7 @@ const Sponsors = () => {
     title,
     sponsors,
     gridCols,
-    containerClass,
+    containerClass
   }: {
     title: string;
     sponsors: Image[];
@@ -162,15 +150,9 @@ const Sponsors = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">
           {title}
         </h3>
-        <div
-          className={cn('grid gap-6 md:gap-8 justify-items-stretch', gridCols)}
-        >
+        <div className={cn('grid gap-6 md:gap-8 justify-items-stretch', gridCols)}>
           {sponsors.map((sponsor, index) => (
-            <SponsorCard
-              key={index}
-              sponsor={sponsor}
-              containerClass={containerClass}
-            />
+            <SponsorCard key={index} sponsor={sponsor} containerClass={containerClass} />
           ))}
         </div>
       </div>
@@ -183,8 +165,7 @@ const Sponsors = () => {
           Our Amazing Sponsors
         </h2>
         <p className="text-lg text-white/80 max-w-2xl mx-auto">
-          Thank you to our incredible sponsors who make ServerlessDays Milano
-          possible! 🙏
+          Thank you to our incredible sponsors who make ServerlessDays Milano possible! 🙏
         </p>
       </div>
 

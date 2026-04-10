@@ -10,8 +10,8 @@ const NotFound = () => {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: 'easeInOut',
-    },
+      ease: 'easeInOut'
+    }
   };
 
   const pulseAnimation = {
@@ -20,8 +20,8 @@ const NotFound = () => {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: 'easeInOut',
-    },
+      ease: 'easeInOut'
+    }
   };
 
   return (
@@ -48,7 +48,7 @@ const NotFound = () => {
             duration: 3,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 1,
+            delay: 1
           }}
         />
         <motion.div
@@ -58,7 +58,7 @@ const NotFound = () => {
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 2,
+            delay: 2
           }}
         />
       </div>
@@ -97,7 +97,7 @@ const NotFound = () => {
                 className="text-8xl sm:text-9xl md:text-[12rem] font-bold text-white drop-shadow-lg"
                 animate={pulseAnimation}
                 style={{
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.5)',
+                  textShadow: '0 0 30px rgba(255, 255, 255, 0.5)'
                 }}
               >
                 404
@@ -116,9 +116,8 @@ const NotFound = () => {
                 textClassName="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4"
               />
               <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-                Looks like you've wandered into uncharted serverless territory.
-                Don't worry though - our Serverless Days Milan event is still
-                happening!
+                Looks like you've wandered into uncharted serverless territory. Don't worry though - our Serverless Days
+                Milan event is still happening!
               </p>
             </motion.div>
 
@@ -148,8 +147,8 @@ const NotFound = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <p className="text-sm text-white/70 max-w-md mx-auto">
-                💡 Fun fact: This 404 error is being served serverlessly, just
-                like how we'll be discussing at Serverless Days Milan!
+                💡 Fun fact: This 404 error is being served serverlessly, just like how we'll be discussing at
+                Serverless Days Milan!
               </p>
             </motion.div>
           </div>

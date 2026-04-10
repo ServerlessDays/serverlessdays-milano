@@ -35,11 +35,9 @@ const CurrentAgenda = () => {
     const currentSessions: AgendaItem[] = [];
     const nextSessions: AgendaItem[] = [];
 
-    tracks.forEach((session) => {
+    tracks.forEach(session => {
       const startTime = new Date(session.agenda_details.start_time);
-      const endTime = new Date(
-        startTime.getTime() + session.agenda_details.minutes * 60000
-      );
+      const endTime = new Date(startTime.getTime() + session.agenda_details.minutes * 60000);
 
       if (now >= startTime && now < endTime) {
         currentSessions.push(session);
@@ -50,16 +48,12 @@ const CurrentAgenda = () => {
 
     return {
       current: currentSessions[0] || null,
-      next: nextSessions[0] || null,
+      next: nextSessions[0] || null
     };
   };
 
-  const mainTrackSessions = getCurrentAndNextSessions(
-    mainTrack as AgendaItem[]
-  );
-  const discoveryTrackSessions = getCurrentAndNextSessions(
-    discoveryTrack as AgendaItem[]
-  );
+  const mainTrackSessions = getCurrentAndNextSessions(mainTrack as AgendaItem[]);
+  const discoveryTrackSessions = getCurrentAndNextSessions(discoveryTrack as AgendaItem[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
@@ -92,14 +86,14 @@ const CurrentAgenda = () => {
             <div className="text-2xl font-mono font-bold">
               {currentTime.toLocaleTimeString('it-IT', {
                 hour: '2-digit',
-                minute: '2-digit',
+                minute: '2-digit'
               })}
             </div>
             <div className="text-sm text-gray-300">
               {currentTime.toLocaleDateString('it-IT', {
                 weekday: 'short',
                 month: 'short',
-                day: 'numeric',
+                day: 'numeric'
               })}
             </div>
           </div>
@@ -112,11 +106,7 @@ const CurrentAgenda = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`${
-            orientation === '16:9'
-              ? 'grid grid-cols-2 gap-8 p-8 h-full'
-              : 'space-y-6 p-6 h-full'
-          }`}
+          className={`${orientation === '16:9' ? 'grid grid-cols-2 gap-8 p-8 h-full' : 'space-y-6 p-6 h-full'}`}
         >
           {/* Main Stage */}
           <TrackDisplay
@@ -141,8 +131,7 @@ const CurrentAgenda = () => {
       {/* Navigation hint */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30">
         <div className="bg-black bg-opacity-50 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-gray-300">
-          Press F11 for fullscreen • Visit /presentation/full for complete
-          agenda
+          Press F11 for fullscreen • Visit /presentation/full for complete agenda
         </div>
       </div>
     </div>
@@ -157,24 +146,18 @@ interface TrackDisplayProps {
   orientation: '16:9' | '9:16';
 }
 
-const TrackDisplay = ({
-  title,
-  current,
-  next,
-  color,
-  orientation,
-}: TrackDisplayProps) => {
+const TrackDisplay = ({ title, current, next, color, orientation }: TrackDisplayProps) => {
   const colorClasses = {
     purple: {
       bg: 'from-purple-800 to-purple-600',
       accent: 'from-purple-500 to-pink-500',
-      text: 'text-purple-200',
+      text: 'text-purple-200'
     },
     blue: {
       bg: 'from-blue-800 to-blue-600',
       accent: 'from-blue-500 to-cyan-500',
-      text: 'text-blue-200',
-    },
+      text: 'text-blue-200'
+    }
   };
 
   const colors = colorClasses[color];
@@ -184,18 +167,14 @@ const TrackDisplay = ({
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`bg-gradient-to-br ${
-        colors.bg
-      } rounded-3xl p-8 shadow-2xl border border-white border-opacity-20 ${
+      className={`bg-gradient-to-br ${colors.bg} rounded-3xl p-8 shadow-2xl border border-white border-opacity-20 ${
         orientation === '9:16' ? 'min-h-[45vh]' : 'h-full'
       }`}
     >
       {/* Track Title */}
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-2">{title}</h2>
-        <div
-          className={`h-2 bg-gradient-to-r ${colors.accent} rounded-full mx-auto w-32`}
-        ></div>
+        <div className={`h-2 bg-gradient-to-r ${colors.accent} rounded-full mx-auto w-32`}></div>
       </div>
 
       {/* Current Session */}
@@ -248,7 +227,7 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
     const date = new Date(time);
     return date.toLocaleTimeString('it-IT', {
       hour: '2-digit',
-      minute: '2-digit',
+      minute: '2-digit'
     });
   };
 
@@ -260,10 +239,7 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
   const talkType = session.agenda_details.type;
   const isKeynote = session.agenda_details.keynote || false;
   const profileImg = session?.talk?.avatar;
-  const description =
-    session?.talk?.abstract ||
-    session?.talk?.description ||
-    session?.break?.inline_abstract;
+  const description = session?.talk?.abstract || session?.talk?.description || session?.break?.inline_abstract;
 
   return (
     <motion.div
@@ -271,38 +247,26 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`bg-black bg-opacity-40 backdrop-blur-sm rounded-2xl p-6 border-2 ${
-        isLive
-          ? 'border-green-500 shadow-green-500/20'
-          : 'border-white border-opacity-20'
+        isLive ? 'border-green-500 shadow-green-500/20' : 'border-white border-opacity-20'
       } shadow-2xl`}
     >
       <div className="flex items-start justify-between gap-6">
         <div className="flex-1">
           {/* Time and Duration */}
           <div className="flex items-center gap-4 mb-4">
-            <div
-              className={`bg-gradient-to-r ${colors.accent} text-white px-4 py-2 rounded-xl font-bold text-lg`}
-            >
+            <div className={`bg-gradient-to-r ${colors.accent} text-white px-4 py-2 rounded-xl font-bold text-lg`}>
               {startTime}
             </div>
-            {duration > 0 && (
-              <div className="bg-white bg-opacity-20 px-3 py-1 rounded-lg text-sm">
-                {duration}min
-              </div>
-            )}
+            {duration > 0 && <div className="bg-white bg-opacity-20 px-3 py-1 rounded-lg text-sm">{duration}min</div>}
             {isKeynote && (
-              <div className="bg-yellow-500 text-black px-3 py-1 rounded-lg text-sm font-bold">
-                ⭐ KEYNOTE
-              </div>
+              <div className="bg-yellow-500 text-black px-3 py-1 rounded-lg text-sm font-bold">⭐ KEYNOTE</div>
             )}
           </div>
 
           {/* Title */}
           <h4
             className={`text-2xl font-bold mb-3 ${
-              isKeynote
-                ? 'bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent'
-                : 'text-white'
+              isKeynote ? 'bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent' : 'text-white'
             } ${name === PLACEHOLDER_NAME ? 'text-gray-400' : ''}`}
           >
             {title}
@@ -312,18 +276,14 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
           {talkType === 'talk' && name && name !== PLACEHOLDER_NAME && (
             <div className="space-y-2">
               <p className="text-xl text-gray-200 font-medium">{name}</p>
-              {organization && (
-                <p className={`text-lg ${colors.text}`}>{organization}</p>
-              )}
+              {organization && <p className={`text-lg ${colors.text}`}>{organization}</p>}
             </div>
           )}
 
           {/* Description */}
           {description && description.length > 0 && talkType === 'talk' && (
             <div className="mt-3">
-              <p className="text-base text-gray-300 leading-relaxed line-clamp-3">
-                {description}
-              </p>
+              <p className="text-base text-gray-300 leading-relaxed line-clamp-3">{description}</p>
             </div>
           )}
 
@@ -334,9 +294,7 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
                 <span className="text-2xl">☕</span>
                 <p className="text-lg text-gray-300">Break Time</p>
               </div>
-              {description && (
-                <p className="text-sm text-gray-400">{description}</p>
-              )}
+              {description && <p className="text-sm text-gray-400">{description}</p>}
             </div>
           )}
         </div>

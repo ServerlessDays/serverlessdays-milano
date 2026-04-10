@@ -8,7 +8,7 @@ export const TextGenerateEffect = ({
   containerClassName,
   textClassName,
   duration = 2,
-  staggerDelay = 0.2,
+  staggerDelay = 0.2
 }: {
   words: string;
   containerClassName?: string;
@@ -22,11 +22,11 @@ export const TextGenerateEffect = ({
     animate(
       'span',
       {
-        opacity: 1,
+        opacity: 1
       },
       {
-        duration: duration,
-        delay: stagger(staggerDelay),
+        duration,
+        delay: stagger(staggerDelay)
       }
     );
   }, [scope.current, duration, staggerDelay]);
@@ -48,9 +48,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn('', containerClassName)}>
       <div className="mt-4">
-        <div className={cn(' leading-snug tracking-wide ', textClassName)}>
-          {renderWords()}
-        </div>
+        <div className={cn(' leading-snug tracking-wide ', textClassName)}>{renderWords()}</div>
       </div>
     </div>
   );

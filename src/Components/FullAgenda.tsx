@@ -26,16 +26,12 @@ const FullAgenda = () => {
   // Auto-switching timer for full agenda view
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeRemaining((prev) => {
+      setTimeRemaining(prev => {
         if (prev <= 1) {
           // Switch to next page, cycling through all available pages
-          setCurrentIndex((currentIdx) => {
-            const maxMainPages = Math.ceil(
-              mainTrack.length / (orientation === '16:9' ? 6 : 4)
-            );
-            const maxDiscoveryPages = Math.ceil(
-              discoveryTrack.length / (orientation === '16:9' ? 6 : 4)
-            );
+          setCurrentIndex(currentIdx => {
+            const maxMainPages = Math.ceil(mainTrack.length / (orientation === '16:9' ? 6 : 4));
+            const maxDiscoveryPages = Math.ceil(discoveryTrack.length / (orientation === '16:9' ? 6 : 4));
             const totalPages = Math.max(maxMainPages, maxDiscoveryPages);
             return (currentIdx + 1) % totalPages;
           });
@@ -70,12 +66,8 @@ const FullAgenda = () => {
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
-      const maxMainPages = Math.ceil(
-        mainTrack.length / (orientation === '16:9' ? 6 : 4)
-      );
-      const maxDiscoveryPages = Math.ceil(
-        discoveryTrack.length / (orientation === '16:9' ? 6 : 4)
-      );
+      const maxMainPages = Math.ceil(mainTrack.length / (orientation === '16:9' ? 6 : 4));
+      const maxDiscoveryPages = Math.ceil(discoveryTrack.length / (orientation === '16:9' ? 6 : 4));
       const totalPages = Math.max(maxMainPages, maxDiscoveryPages);
 
       if (e.key === 'ArrowLeft' && currentIndex > 0) {
@@ -126,14 +118,14 @@ const FullAgenda = () => {
             <div className="text-2xl font-mono font-bold">
               {currentTime.toLocaleTimeString('it-IT', {
                 hour: '2-digit',
-                minute: '2-digit',
+                minute: '2-digit'
               })}
             </div>
             <div className="text-sm text-gray-300">
               {currentTime.toLocaleDateString('it-IT', {
                 weekday: 'short',
                 month: 'short',
-                day: 'numeric',
+                day: 'numeric'
               })}
             </div>
           </div>
@@ -181,21 +173,10 @@ interface FullAgendaViewProps {
   timeRemaining: number;
 }
 
-const FullAgendaView = ({
-  orientation,
-  currentIndex,
-  itemsPerPage,
-  timeRemaining,
-}: FullAgendaViewProps) => {
+const FullAgendaView = ({ orientation, currentIndex, itemsPerPage, timeRemaining }: FullAgendaViewProps) => {
   const startIndex = currentIndex * itemsPerPage;
-  const mainTrackItems = (mainTrack as AgendaItem[]).slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
-  const discoveryTrackItems = (discoveryTrack as AgendaItem[]).slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
+  const mainTrackItems = (mainTrack as AgendaItem[]).slice(startIndex, startIndex + itemsPerPage);
+  const discoveryTrackItems = (discoveryTrack as AgendaItem[]).slice(startIndex, startIndex + itemsPerPage);
 
   // Calculate actual number of pages needed
   const maxMainPages = Math.ceil(mainTrack.length / itemsPerPage);
@@ -214,24 +195,18 @@ const FullAgendaView = ({
           className="h-full bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"
           initial={{ width: '100%' }}
           animate={{
-            width: `${(timeRemaining / COUNTDOWN_TIME_DURATION) * 100}%`,
+            width: `${(timeRemaining / COUNTDOWN_TIME_DURATION) * 100}%`
           }}
           transition={{ duration: 0.1 }}
         />
       </motion.div>
 
       {/* Main Content Grid */}
-      <div
-        className={`${
-          orientation === '16:9' ? 'grid grid-cols-2 gap-6' : 'space-y-6'
-        } h-[calc(100%-40px)]`}
-      >
+      <div className={`${orientation === '16:9' ? 'grid grid-cols-2 gap-6' : 'space-y-6'} h-[calc(100%-40px)]`}>
         {/* Main Stage Full Schedule */}
         <div className="bg-gradient-to-br from-purple-800 to-purple-600 rounded-3xl p-6 shadow-2xl border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold text-white flex items-center gap-3">
-              🚀 MAIN STAGE
-            </h2>
+            <h2 className="text-3xl font-bold text-white flex items-center gap-3">🚀 MAIN STAGE</h2>
             <div className="text-sm text-purple-200">
               Page {currentIndex + 1} of {maxPages}
             </div>
@@ -239,12 +214,7 @@ const FullAgendaView = ({
 
           <div className="space-y-3">
             {mainTrackItems.map((item, index) => (
-              <CompactSessionCard
-                key={startIndex + index}
-                session={item}
-                color="purple"
-                orientation={orientation}
-              />
+              <CompactSessionCard key={startIndex + index} session={item} color="purple" orientation={orientation} />
             ))}
 
             {mainTrackItems.length === 0 && (
@@ -258,9 +228,7 @@ const FullAgendaView = ({
         {/* Discovery Track Full Schedule */}
         <div className="bg-gradient-to-br from-blue-800 to-blue-600 rounded-3xl p-6 shadow-2xl border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold text-white flex items-center gap-3">
-              💬 DISCOVERY TRACK
-            </h2>
+            <h2 className="text-3xl font-bold text-white flex items-center gap-3">💬 DISCOVERY TRACK</h2>
             <div className="text-sm text-blue-200">
               Page {currentIndex + 1} of {maxPages}
             </div>
@@ -268,12 +236,7 @@ const FullAgendaView = ({
 
           <div className="space-y-3">
             {discoveryTrackItems.map((item, index) => (
-              <CompactSessionCard
-                key={startIndex + index}
-                session={item}
-                color="blue"
-                orientation={orientation}
-              />
+              <CompactSessionCard key={startIndex + index} session={item} color="blue" orientation={orientation} />
             ))}
 
             {discoveryTrackItems.length === 0 && (
@@ -294,16 +257,12 @@ interface CompactSessionCardProps {
   orientation: '16:9' | '9:16';
 }
 
-const CompactSessionCard = ({
-  session,
-  color,
-  orientation,
-}: CompactSessionCardProps) => {
+const CompactSessionCard = ({ session, color, orientation }: CompactSessionCardProps) => {
   const getTimestamp = (time: string) => {
     const date = new Date(time);
     return date.toLocaleTimeString('it-IT', {
       hour: '2-digit',
-      minute: '2-digit',
+      minute: '2-digit'
     });
   };
 
@@ -320,13 +279,13 @@ const CompactSessionCard = ({
     purple: {
       bg: 'from-purple-600 to-purple-500',
       accent: 'from-purple-400 to-pink-400',
-      text: 'text-purple-100',
+      text: 'text-purple-100'
     },
     blue: {
       bg: 'from-blue-600 to-blue-500',
       accent: 'from-blue-400 to-cyan-400',
-      text: 'text-blue-100',
-    },
+      text: 'text-blue-100'
+    }
   };
 
   const colors = colorClasses[color];
@@ -341,35 +300,19 @@ const CompactSessionCard = ({
       <div className="flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-3 mb-2">
-            <div
-              className={`bg-gradient-to-r ${colors.accent} text-white px-3 py-1 rounded-lg text-sm font-bold`}
-            >
+            <div className={`bg-gradient-to-r ${colors.accent} text-white px-3 py-1 rounded-lg text-sm font-bold`}>
               {startTime}
             </div>
-            {duration > 0 && (
-              <div className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs">
-                {duration}min
-              </div>
-            )}
+            {duration > 0 && <div className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs">{duration}min</div>}
             {isKeynote && (
-              <div className="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">
-                ⭐ KEYNOTE
-              </div>
+              <div className="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">⭐ KEYNOTE</div>
             )}
-            {talkType === 'break' && (
-              <div className="bg-gray-600 text-white px-2 py-1 rounded text-xs">
-                ☕ Break
-              </div>
-            )}
+            {talkType === 'break' && <div className="bg-gray-600 text-white px-2 py-1 rounded text-xs">☕ Break</div>}
           </div>
 
           <h4
-            className={`font-bold mb-1 ${
-              orientation === '16:9' ? 'text-lg' : 'text-base'
-            } ${
-              isKeynote
-                ? 'bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent'
-                : 'text-white'
+            className={`font-bold mb-1 ${orientation === '16:9' ? 'text-lg' : 'text-base'} ${
+              isKeynote ? 'bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent' : 'text-white'
             } ${name === PLACEHOLDER_NAME ? 'text-gray-400' : ''}`}
           >
             {title}
@@ -377,21 +320,9 @@ const CompactSessionCard = ({
 
           {talkType === 'talk' && name && name !== PLACEHOLDER_NAME && (
             <div className="space-y-1">
-              <p
-                className={`${colors.text} ${
-                  orientation === '16:9' ? 'text-sm' : 'text-xs'
-                }`}
-              >
-                {name}
-              </p>
+              <p className={`${colors.text} ${orientation === '16:9' ? 'text-sm' : 'text-xs'}`}>{name}</p>
               {organization && (
-                <p
-                  className={`text-gray-300 ${
-                    orientation === '16:9' ? 'text-xs' : 'text-xs'
-                  }`}
-                >
-                  {organization}
-                </p>
+                <p className={`text-gray-300 ${orientation === '16:9' ? 'text-xs' : 'text-xs'}`}>{organization}</p>
               )}
             </div>
           )}
@@ -411,9 +342,7 @@ const CompactSessionCard = ({
               />
             ) : name ? (
               <div
-                className={`${
-                  orientation === '16:9' ? 'w-12 h-12' : 'w-10 h-10'
-                } rounded-full bg-gradient-to-r ${
+                className={`${orientation === '16:9' ? 'w-12 h-12' : 'w-10 h-10'} rounded-full bg-gradient-to-r ${
                   colors.accent
                 } flex items-center justify-center text-white text-sm font-bold ring-2 ring-white ring-opacity-30`}
               >

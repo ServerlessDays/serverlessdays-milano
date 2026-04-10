@@ -12,9 +12,7 @@ const IS_COMING_SOON = true;
 const PLACEHOLDER_NAME = 'someone to be announced';
 const AgendaAccordion = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
-  const [activeTrack, setActiveTrack] = useState<'main' | 'discovery' | 'both'>(
-    'both',
-  );
+  const [activeTrack, setActiveTrack] = useState<'main' | 'discovery' | 'both'>('both');
   const containerRef = useRef(null);
 
   const handleWindowSizeChange = () => {
@@ -111,13 +109,7 @@ const AgendaAccordion = () => {
             )}
 
             {/* Agenda tracks */}
-            <div
-              className={`${
-                isMobile
-                  ? 'space-y-6'
-                  : 'grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto'
-              }`}
-            >
+            <div className={`${isMobile ? 'space-y-6' : 'grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto'}`}>
               <AnimatePresence>
                 {(activeTrack === 'main' || activeTrack === 'both') && (
                   <motion.div
@@ -132,10 +124,7 @@ const AgendaAccordion = () => {
                         🚀 <span>Main Stage</span>
                       </h2>
                     </div>
-                    <Agenda
-                      talks={mainTrack as AgendaItem[]}
-                      trackColor="purple"
-                    />
+                    <Agenda talks={mainTrack as AgendaItem[]} trackColor="purple" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -154,10 +143,7 @@ const AgendaAccordion = () => {
                         💬 <span>Discovery Track</span>
                       </h2>
                     </div>
-                    <Agenda
-                      talks={discoveryTrack as AgendaItem[]}
-                      trackColor="blue"
-                    />
+                    <Agenda talks={discoveryTrack as AgendaItem[]} trackColor="blue" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -171,13 +157,11 @@ const AgendaAccordion = () => {
 export default AgendaAccordion;
 
 const ComingSoon = () => {
-  const [animationText, setAnimationText] = useState(
-    '🚧 Final agenda coming soon',
-  );
+  const [animationText, setAnimationText] = useState('🚧 Final agenda coming soon');
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimationText((prevText) => {
+      setAnimationText(prevText => {
         if (prevText === '🚧 Final agenda coming soon...') {
           return '🚧 Final agenda coming soon';
         } else {
@@ -193,30 +177,17 @@ const ComingSoon = () => {
 
   return (
     <div className="p-10">
-      <motion.p className="text-2xl font-medium text-center text-blue-900">
-        {animationText}
-      </motion.p>
+      <motion.p className="text-2xl font-medium text-center text-blue-900">{animationText}</motion.p>
     </div>
   );
 };
 
-const Agenda = ({
-  talks,
-  trackColor,
-}: {
-  talks: AgendaItem[];
-  trackColor: 'purple' | 'blue';
-}) => {
+const Agenda = ({ talks, trackColor }: { talks: AgendaItem[]; trackColor: 'purple' | 'blue' }) => {
   return (
     <div className="w-full">
       <div className="space-y-0">
         {talks.map((talk, index) => (
-          <TalkCard
-            key={index}
-            talk={talk}
-            index={index}
-            trackColor={trackColor}
-          />
+          <TalkCard key={index} talk={talk} index={index} trackColor={trackColor} />
         ))}
       </div>
     </div>
@@ -226,7 +197,7 @@ const Agenda = ({
 const TalkCard = ({
   talk: agendaTalk,
   index,
-  trackColor,
+  trackColor
 }: {
   talk: AgendaItem;
   index: number;
@@ -262,8 +233,7 @@ const TalkCard = ({
   };
 
   const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
-  const description =
-    agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
+  const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
   const name = agendaTalk?.talk?.name;
   const duration = agendaTalk?.agenda_details.minutes || 0;
   const profileImg = agendaTalk?.talk?.avatar;
@@ -283,28 +253,18 @@ const TalkCard = ({
   const colorClasses = {
     purple: {
       border: 'border-purple-200',
-      bg:
-        talkType === 'break'
-          ? 'bg-gradient-to-r from-purple-50 to-pink-50'
-          : 'bg-white hover:bg-purple-50',
+      bg: talkType === 'break' ? 'bg-gradient-to-r from-purple-50 to-pink-50' : 'bg-white hover:bg-purple-50',
       time: 'bg-gradient-to-r from-purple-500 to-pink-500',
       accent: 'text-purple-600',
-      badge: isKeynote
-        ? 'bg-gradient-to-r from-purple-600 to-pink-600'
-        : 'bg-purple-100 text-purple-800',
+      badge: isKeynote ? 'bg-gradient-to-r from-purple-600 to-pink-600' : 'bg-purple-100 text-purple-800'
     },
     blue: {
       border: 'border-blue-200',
-      bg:
-        talkType === 'break'
-          ? 'bg-gradient-to-r from-blue-50 to-purple-50'
-          : 'bg-white hover:bg-blue-50',
+      bg: talkType === 'break' ? 'bg-gradient-to-r from-blue-50 to-purple-50' : 'bg-white hover:bg-blue-50',
       time: 'bg-gradient-to-r from-blue-500 to-purple-500',
       accent: 'text-blue-600',
-      badge: isKeynote
-        ? 'bg-gradient-to-r from-blue-600 to-purple-600'
-        : 'bg-blue-100 text-blue-800',
-    },
+      badge: isKeynote ? 'bg-gradient-to-r from-blue-600 to-purple-600' : 'bg-blue-100 text-blue-800'
+    }
   };
 
   const colors = colorClasses[trackColor];
@@ -333,9 +293,7 @@ const TalkCard = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
-      className={`border-b ${colors.border} ${
-        colors.bg
-      } transition-all duration-300 ${
+      className={`border-b ${colors.border} ${colors.bg} transition-all duration-300 ${
         talkType === 'talk' && name !== PLACEHOLDER_NAME ? 'cursor-pointer' : ''
       }`}
       onClick={() => {
@@ -353,9 +311,7 @@ const TalkCard = ({
             >
               <span className="text-xs opacity-90">🕐</span>
               <span>{startTimeString}</span>
-              {duration > 0 && (
-                <span className="text-xs opacity-90">• {duration}min</span>
-              )}
+              {duration > 0 && <span className="text-xs opacity-90">• {duration}min</span>}
             </div>
           </div>
         )}
@@ -383,9 +339,7 @@ const TalkCard = ({
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-lg">
-                    {getTypeIcon(talkType, isKeynote)}
-                  </span>
+                  <span className="text-lg">{getTypeIcon(talkType, isKeynote)}</span>
                   {getDurationBadge(duration)}
                   {talkType === 'break' && (
                     <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
@@ -395,9 +349,7 @@ const TalkCard = ({
                 </div>
 
                 <h3
-                  className={`font-semibold ${
-                    isMobile ? 'text-xl' : 'text-lg'
-                  } leading-tight mb-1 ${
+                  className={`font-semibold ${isMobile ? 'text-xl' : 'text-lg'} leading-tight mb-1 ${
                     isKeynote
                       ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
                       : talkType === 'break'
@@ -414,14 +366,10 @@ const TalkCard = ({
                     <a
                       href={agendaTalk.talk?.url}
                       target="_blank"
-                      className={`text-sm font-medium hover:underline ${
-                        colors.accent
-                      } ${
-                        name === PLACEHOLDER_NAME
-                          ? 'pointer-events-none text-gray-400'
-                          : ''
+                      className={`text-sm font-medium hover:underline ${colors.accent} ${
+                        name === PLACEHOLDER_NAME ? 'pointer-events-none text-gray-400' : ''
                       }`}
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={e => e.stopPropagation()}
                     >
                       {speakerNameTitle}
                     </a>
@@ -431,13 +379,11 @@ const TalkCard = ({
                 {/* Description preview */}
                 {description && talkType === 'talk' && (
                   <div className="text-sm text-gray-600 leading-relaxed">
-                    <p className={`${isExpanded ? '' : 'line-clamp-2'}`}>
-                      {description}
-                    </p>
+                    <p className={`${isExpanded ? '' : 'line-clamp-2'}`}>{description}</p>
                     {description.length > 100 && (
                       <button
                         className={`text-xs ${colors.accent} hover:underline mt-1`}
-                        onClick={(e) => {
+                        onClick={e => {
                           e.stopPropagation();
                           setIsExpanded(!isExpanded);
                         }}
@@ -449,9 +395,7 @@ const TalkCard = ({
                 )}
 
                 {/* Break description */}
-                {description && talkType === 'break' && (
-                  <p className="text-sm text-gray-600 mt-1">{description}</p>
-                )}
+                {description && talkType === 'break' && <p className="text-sm text-gray-600 mt-1">{description}</p>}
               </div>
 
               {/* Speaker avatar */}
@@ -459,11 +403,9 @@ const TalkCard = ({
                 <div className="flex-shrink-0">
                   <a
                     href={agendaTalk.talk?.url || '#'}
-                    className={`block ${
-                      name === PLACEHOLDER_NAME ? 'pointer-events-none' : ''
-                    }`}
+                    className={`block ${name === PLACEHOLDER_NAME ? 'pointer-events-none' : ''}`}
                     target="_blank"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={e => e.stopPropagation()}
                   >
                     {profileImg ? (
                       <img
@@ -485,9 +427,7 @@ const TalkCard = ({
                       </div>
                     ) : (
                       <div
-                        className={`${
-                          isMobile ? 'w-14 h-14' : 'w-12 h-12'
-                        } rounded-full ${
+                        className={`${isMobile ? 'w-14 h-14' : 'w-12 h-12'} rounded-full ${
                           colors.time
                         } flex items-center justify-center text-white text-xs font-bold`}
                       >

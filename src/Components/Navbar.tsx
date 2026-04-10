@@ -23,19 +23,13 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-purple-200'
-          : 'bg-white/80 backdrop-blur-sm'
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-purple-200' : 'bg-white/80 backdrop-blur-sm'
       } rounded-2xl mx-2 mt-2 sm:mx-4 sm:mt-4`}
     >
       <div className="flex items-center justify-between p-3 sm:p-5">
         {/* Logo */}
         <div className="block h-8 p-0 sm:h-10 md:hidden">
-          <img
-            src={Logo2025}
-            alt="logo"
-            className="w-full h-full drop-shadow-md"
-          />
+          <img src={Logo2025} alt="logo" className="w-full h-full drop-shadow-md" />
         </div>
         <div className="hidden w-36 p-0 sm:w-48 md:block">
           <img src={Logo2025} alt="logo" className="drop-shadow-md" />
@@ -60,10 +54,7 @@ const Navbar = () => {
           </div> */}
 
           <div className="relative group">
-            <a
-              href="#aboutUs"
-              className="pointer-events-none text-gray-400 font-semibold"
-            >
+            <a href="#aboutUs" className="pointer-events-none text-gray-400 font-semibold">
               👥 About us
             </a>
             <div className="absolute -rotate-[8deg] w-28 top-5 -left-2 text-xs font-bold text-fuchsia-600 handwriting-1 animate-pulse">
@@ -81,7 +72,7 @@ const Navbar = () => {
               }
               target="_blank"
               className={salesOpened ? 'cursor-not-allowed' : ''}
-              onClick={(e) => salesOpened && e.preventDefault()} // Extra safety: prevents click if true
+              onClick={e => salesOpened && e.preventDefault()} // Extra safety: prevents click if true
             >
               <Button
                 variant={'default'}
@@ -94,9 +85,7 @@ const Navbar = () => {
                   }`}
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative">
-                  {salesOpened ? '🚫 Sales Paused' : '🎫 Buy Ticket'}
-                </span>
+                <span className="relative">{salesOpened ? '🚫 Sales Paused' : '🎫 Buy Ticket'}</span>
               </Button>
             </a>
           </div>
@@ -157,9 +146,7 @@ const Navbar = () => {
               <div className="flex items-center space-x-3 py-3 px-4 rounded-xl bg-gray-100 text-gray-400 font-semibold relative">
                 <span>👥</span>
                 <span>About us</span>
-                <span className="absolute right-3 text-xs text-fuchsia-500 font-bold animate-pulse">
-                  Coming soon!
-                </span>
+                <span className="absolute right-3 text-xs text-fuchsia-500 font-bold animate-pulse">Coming soon!</span>
               </div>
             </div>
 

@@ -62,7 +62,7 @@ const Footer = () => {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: 'linear'
           }}
         />
         <motion.div
@@ -74,7 +74,7 @@ const Footer = () => {
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "linear"
+            ease: 'linear'
           }}
         />
       </div>
@@ -83,7 +83,6 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-
             {/* Brand Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -99,13 +98,11 @@ const Footer = () => {
               <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                 <motion.span
                   animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
                 >
                   🌟
                 </motion.span>
-                <p className="text-purple-200 font-medium">
-                  {currentYear} • Italy's First Serverless Conference
-                </p>
+                <p className="text-purple-200 font-medium">{currentYear} • Italy's First Serverless Conference</p>
               </div>
 
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-purple-300">
@@ -125,7 +122,7 @@ const Footer = () => {
               className="text-center"
             >
               <div className="grid grid-cols-2 gap-3">
-                {socialLinks.map((link) => (
+                {socialLinks.map(link => (
                   <motion.a
                     key={link.name}
                     href={link.href}
@@ -135,9 +132,7 @@ const Footer = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <span className="text-lg">{link.icon}</span>
-                    <span className="text-sm font-medium text-white sm:block">
-                      {link.name}
-                    </span>
+                    <span className="text-sm font-medium text-white sm:block">{link.name}</span>
                   </motion.a>
                 ))}
               </div>
@@ -174,7 +169,7 @@ const Footer = () => {
             >
               <h4 className="text-lg font-bold mb-4 text-purple-200">Website built with ❤️ by</h4>
               <div className="space-y-2">
-                {developers.map((dev) => (
+                {developers.map(dev => (
                   <motion.a
                     key={dev.name}
                     href={dev.href}
@@ -183,9 +178,7 @@ const Footer = () => {
                     whileHover={{ x: -5 }}
                   >
                     <span className="text-lg">{dev.icon}</span>
-                    <span className="text-sm font-medium text-purple-200 group-hover:text-white">
-                      {dev.name}
-                    </span>
+                    <span className="text-sm font-medium text-purple-200 group-hover:text-white">{dev.name}</span>
                   </motion.a>
                 ))}
               </div>
@@ -200,15 +193,13 @@ const Footer = () => {
             className="border-t border-purple-700/50 pt-6 text-center"
           >
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-sm text-purple-300">
-                © {currentYear} ServerlessDays Milano. All rights reserved.
-              </p>
+              <p className="text-sm text-purple-300">© {currentYear} ServerlessDays Milano. All rights reserved.</p>
 
               <div className="flex items-center gap-6 text-xs text-purple-400">
                 <span className="flex items-center gap-1">
                   <motion.span
                     animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   >
                     ⚡
                   </motion.span>
@@ -217,7 +208,7 @@ const Footer = () => {
                 <span className="flex items-center gap-1">
                   <motion.span
                     animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
                   >
                     🎨
                   </motion.span>
