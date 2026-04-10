@@ -21,15 +21,21 @@ const Navbar = () => {
   const [salesOpened] = useState(false);
 
   return (
-    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-purple-200'
-        : 'bg-white/80 backdrop-blur-sm'
-    } rounded-2xl mx-2 mt-2 sm:mx-4 sm:mt-4`}>
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-purple-200'
+          : 'bg-white/80 backdrop-blur-sm'
+      } rounded-2xl mx-2 mt-2 sm:mx-4 sm:mt-4`}
+    >
       <div className="flex items-center justify-between p-3 sm:p-5">
         {/* Logo */}
         <div className="block h-8 p-0 sm:h-10 md:hidden">
-          <img src={Logo2025} alt="logo" className="w-full h-full drop-shadow-md" />
+          <img
+            src={Logo2025}
+            alt="logo"
+            className="w-full h-full drop-shadow-md"
+          />
         </div>
         <div className="hidden w-36 p-0 sm:w-48 md:block">
           <img src={Logo2025} alt="logo" className="drop-shadow-md" />
@@ -38,7 +44,10 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 lg:space-x-9">
           <div className="group">
-            <Link to="/" className="relative font-semibold text-gray-700 hover:text-purple-600 transition-colors duration-300">
+            <Link
+              to="/"
+              className="relative font-semibold text-gray-700 hover:text-purple-600 transition-colors duration-300"
+            >
               🏠 Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
@@ -51,7 +60,10 @@ const Navbar = () => {
           </div> */}
 
           <div className="relative group">
-            <a href="#aboutUs" className="pointer-events-none text-gray-400 font-semibold">
+            <a
+              href="#aboutUs"
+              className="pointer-events-none text-gray-400 font-semibold"
+            >
               👥 About us
             </a>
             <div className="absolute -rotate-[8deg] w-28 top-5 -left-2 text-xs font-bold text-fuchsia-600 handwriting-1 animate-pulse">
@@ -62,18 +74,23 @@ const Navbar = () => {
 
           <div className="relative">
             <a
-              href={salesOpened ? undefined : "https://www.eventi.overnet.education/ServerlessDaysMilano2026#/tickets"}
+              href={
+                salesOpened
+                  ? undefined
+                  : 'https://www.eventi.overnet.education/ServerlessDaysMilano2026#/buyTickets/selectTickets'
+              }
               target="_blank"
-              className={salesOpened ? "cursor-not-allowed" : ""}
+              className={salesOpened ? 'cursor-not-allowed' : ''}
               onClick={(e) => salesOpened && e.preventDefault()} // Extra safety: prevents click if true
             >
               <Button
                 variant={'default'}
                 disabled={salesOpened}
                 className={`relative overflow-hidden font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 border-0 rounded-2xl text-sm px-6 py-3 shadow-xl transition-all duration-300 ease-in-out group
-                  ${salesOpened
-                    ? 'opacity-50 grayscale pointer-events-none' // Disables interaction & dims colors
-                    : 'hover:shadow-purple-500/50 hover:scale-105'
+                  ${
+                    salesOpened
+                      ? 'opacity-50 grayscale pointer-events-none' // Disables interaction & dims colors
+                      : 'hover:shadow-purple-500/50 hover:scale-105'
                   }`}
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -140,13 +157,15 @@ const Navbar = () => {
               <div className="flex items-center space-x-3 py-3 px-4 rounded-xl bg-gray-100 text-gray-400 font-semibold relative">
                 <span>👥</span>
                 <span>About us</span>
-                <span className="absolute right-3 text-xs text-fuchsia-500 font-bold animate-pulse">Coming soon!</span>
+                <span className="absolute right-3 text-xs text-fuchsia-500 font-bold animate-pulse">
+                  Coming soon!
+                </span>
               </div>
             </div>
 
             <div className="block pt-2">
               <a
-                href="https://www.eventi.overnet.education/ServerlessDaysMilano2026#/tickets"
+                href="https://www.eventi.overnet.education/ServerlessDaysMilano2026#/buyTickets/selectTickets"
                 target="_blank"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

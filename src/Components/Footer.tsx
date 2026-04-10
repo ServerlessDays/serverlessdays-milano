@@ -170,7 +170,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center lg:text-right"
+              className="text-center lg:text-right md:col-span-2 lg:col-span-1"
             >
               <h4 className="text-lg font-bold mb-4 text-purple-200">Website built with ❤️ by</h4>
               <div className="space-y-2">

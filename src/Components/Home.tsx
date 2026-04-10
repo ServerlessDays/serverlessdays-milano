@@ -127,7 +127,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
-              {IS_COMING_SOON ? null : <EnhancedCTAButtons /> }
+              {IS_COMING_SOON ? null : <EnhancedCTAButtons />}
             </motion.div>
 
             {/* Additional Info */}
@@ -245,17 +245,16 @@ const EnhancedCTAButtons = () => {
   const IS_SPONSOR_OPEN = true; // Set to true to enable Sponsor button
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
-
+    <div className="flex flex-col sm:flex-row flex-wrap items-stretch justify-center gap-3 sm:gap-4 w-full">
       {/* 1. Main CTA - Get Ticket */}
       <motion.div
         whileHover={IS_TICKET_SALE_OPEN ? { scale: 1.05 } : {}}
         whileTap={IS_TICKET_SALE_OPEN ? { scale: 0.95 } : {}}
-        className={`w-full sm:w-auto ${!IS_TICKET_SALE_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
+        className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_TICKET_SALE_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
       >
         {IS_TICKET_SALE_OPEN ? (
           <a
-            href="https://www.eventi.overnet.education/ServerlessDaysMilano2026#/tickets"
+            href="https://www.eventi.overnet.education/ServerlessDaysMilano2026#/buyTickets/selectTickets"
             target="_blank"
             className="group block w-full"
           >
@@ -263,7 +262,7 @@ const EnhancedCTAButtons = () => {
           </a>
         ) : (
           <div className="block w-full pointer-events-none">
-             <TicketButtonContent isOpen={false} />
+            <TicketButtonContent isOpen={false} />
           </div>
         )}
       </motion.div>
@@ -272,7 +271,7 @@ const EnhancedCTAButtons = () => {
       <motion.div
         whileHover={IS_CFP_OPEN ? { scale: 1.05 } : {}}
         whileTap={IS_CFP_OPEN ? { scale: 0.95 } : {}}
-        className={`w-full sm:w-auto ${!IS_CFP_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
+        className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_CFP_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
       >
         {IS_CFP_OPEN ? (
           <a
@@ -280,7 +279,7 @@ const EnhancedCTAButtons = () => {
             target="_blank"
             className="group block w-full"
           >
-             <SpeakerButtonContent isOpen={true} />
+            <SpeakerButtonContent isOpen={true} />
           </a>
         ) : (
           <div className="block w-full pointer-events-none">
@@ -293,7 +292,7 @@ const EnhancedCTAButtons = () => {
       <motion.div
         whileHover={IS_SPONSOR_OPEN ? { scale: 1.05 } : {}}
         whileTap={IS_SPONSOR_OPEN ? { scale: 0.95 } : {}}
-        className={`w-full sm:w-auto ${!IS_SPONSOR_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
+        className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_SPONSOR_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
       >
         {IS_SPONSOR_OPEN ? (
           <a
@@ -309,7 +308,6 @@ const EnhancedCTAButtons = () => {
           </div>
         )}
       </motion.div>
-
     </div>
   );
 };
@@ -321,14 +319,25 @@ const EnhancedCTAButtons = () => {
 const TicketButtonContent = ({ isOpen }: { isOpen: boolean }) => {
   if (isOpen) {
     return (
-      <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-white via-pink-50 to-white text-purple-900 font-black text-lg sm:text-xl rounded-2xl border-4 border-purple-200 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 ease-in-out group-hover:border-purple-300 cursor-pointer">
+      <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-white via-pink-50 to-white text-purple-900 font-black text-base sm:text-lg lg:text-xl rounded-2xl border-4 border-purple-200 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 ease-in-out group-hover:border-purple-300 cursor-pointer">
         <span className="absolute inset-0 bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         <span className="relative flex items-center justify-center gap-3">
-          <motion.span animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
+          <motion.span
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          >
             🎫
           </motion.span>
           <span>Get Your Ticket!</span>
-          <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}>
+          <motion.span
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: 0.5,
+            }}
+          >
             ✨
           </motion.span>
         </span>
@@ -336,7 +345,7 @@ const TicketButtonContent = ({ isOpen }: { isOpen: boolean }) => {
     );
   }
   return (
-    <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-slate-100 text-slate-400 font-bold text-lg sm:text-xl rounded-2xl border-4 border-slate-200 shadow-none cursor-not-allowed grayscale">
+    <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-slate-100 text-slate-400 font-bold text-base sm:text-lg lg:text-xl rounded-2xl border-4 border-slate-200 shadow-none cursor-not-allowed grayscale">
       <span className="relative flex items-center justify-center gap-3">
         <span>🎫</span>
         <span>Tickets coming Soon</span>
@@ -350,14 +359,25 @@ const SpeakerButtonContent = ({ isOpen }: { isOpen: boolean }) => {
   if (isOpen) {
     // Active: Vibrant Orchid (Pink/Purple)
     return (
-      <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 text-white font-bold text-lg sm:text-xl rounded-2xl shadow-xl hover:shadow-pink-500/50 transition-all duration-300 ease-in-out border-2 border-purple-300 group-hover:border-pink-300 cursor-pointer">
+      <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 text-white font-bold text-base sm:text-lg lg:text-xl rounded-2xl shadow-xl hover:shadow-pink-500/50 transition-all duration-300 ease-in-out border-2 border-purple-300 group-hover:border-pink-300 cursor-pointer">
         <span className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         <span className="relative flex items-center justify-center gap-3">
-          <motion.span animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
+          <motion.span
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          >
             📢
           </motion.span>
           <span>Become a Speaker</span>
-          <motion.span animate={{ y: [0, -3, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 1 }}>
+          <motion.span
+            animate={{ y: [0, -3, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: 1,
+            }}
+          >
             🗣️
           </motion.span>
         </span>
@@ -366,7 +386,7 @@ const SpeakerButtonContent = ({ isOpen }: { isOpen: boolean }) => {
   }
   // Disabled
   return (
-    <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-slate-100 text-slate-400 font-bold text-lg sm:text-xl rounded-2xl border-2 border-slate-200 shadow-none cursor-not-allowed grayscale">
+    <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-slate-100 text-slate-400 font-bold text-base sm:text-lg lg:text-xl rounded-2xl border-2 border-slate-200 shadow-none cursor-not-allowed grayscale">
       <span className="relative flex items-center justify-center gap-3">
         <span>📢</span>
         <span>CFP Coming Soon</span>
@@ -380,14 +400,25 @@ const SponsorButtonContent = ({ isOpen }: { isOpen: boolean }) => {
   if (isOpen) {
     // Active: Purple/Blue
     return (
-      <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 text-white font-bold text-lg sm:text-xl rounded-2xl shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out border-2 border-purple-400 group-hover:border-blue-400 cursor-pointer">
+      <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 text-white font-bold text-base sm:text-lg lg:text-xl rounded-2xl shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out border-2 border-purple-400 group-hover:border-blue-400 cursor-pointer">
         <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         <span className="relative flex items-center justify-center gap-3">
-          <motion.span animate={{ rotate: [0, 360] }} transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}>
+          <motion.span
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+          >
             🤝
           </motion.span>
           <span>Become a Sponsor</span>
-          <motion.span animate={{ y: [0, -3, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 1 }}>
+          <motion.span
+            animate={{ y: [0, -3, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: 1,
+            }}
+          >
             🚀
           </motion.span>
         </span>
@@ -396,7 +427,7 @@ const SponsorButtonContent = ({ isOpen }: { isOpen: boolean }) => {
   }
   // Disabled
   return (
-    <button className="relative overflow-hidden w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-slate-100 text-slate-400 font-bold text-lg sm:text-xl rounded-2xl border-2 border-slate-200 shadow-none cursor-not-allowed grayscale">
+    <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-slate-100 text-slate-400 font-bold text-base sm:text-lg lg:text-xl rounded-2xl border-2 border-slate-200 shadow-none cursor-not-allowed grayscale">
       <span className="relative flex items-center justify-center gap-3">
         <span>🤝</span>
         <span>Become Sponsor Soon</span>
