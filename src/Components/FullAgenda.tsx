@@ -65,15 +65,17 @@ const FullAgenda = () => {
   }, []);
 
   useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
+    const handleKeyPress = (e: Event) => {
+      if (!('key' in e) || typeof e.key !== 'string') return;
       const maxMainPages = Math.ceil(mainTrack.length / (orientation === '16:9' ? 6 : 4));
       const maxDiscoveryPages = Math.ceil(discoveryTrack.length / (orientation === '16:9' ? 6 : 4));
       const totalPages = Math.max(maxMainPages, maxDiscoveryPages);
 
-      if (e.key === 'ArrowLeft' && currentIndex > 0) {
+      const { key } = e;
+      if (key === 'ArrowLeft' && currentIndex > 0) {
         setCurrentIndex(currentIndex - 1);
         setTimeRemaining(COUNTDOWN_TIME_DURATION); // Reset timer
-      } else if (e.key === 'ArrowRight') {
+      } else if (key === 'ArrowRight') {
         setCurrentIndex((currentIndex + 1) % totalPages);
         setTimeRemaining(COUNTDOWN_TIME_DURATION); // Reset timer
       }

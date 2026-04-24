@@ -28,7 +28,7 @@ const Home = () => {
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 1
+            delay: 1,
           }}
         />
         <motion.div
@@ -38,7 +38,7 @@ const Home = () => {
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 2
+            delay: 2,
           }}
         />
       </div>
@@ -81,14 +81,21 @@ const Home = () => {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
                   <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent flex items-center gap-2">
                     📅{' '}
-                    <a href="Serverless_Day_2026.ics" className="hover:underline">
+                    <a
+                      href="Serverless_Day_2026.ics"
+                      className="hover:underline"
+                    >
                       October 13, 2026
                     </a>
                   </span>
                   <span className="hidden sm:inline text-white/60">•</span>
                   <span className="bg-gradient-to-r from-green-300 to-blue-400 bg-clip-text text-transparent flex items-center gap-2">
                     📍{' '}
-                    <a href="https://maps.app.goo.gl/EH7DSBzkh9SwrErA9" target="_blank" className="hover:underline">
+                    <a
+                      href="https://maps.app.goo.gl/EH7DSBzkh9SwrErA9"
+                      target="_blank"
+                      className="hover:underline"
+                    >
                       WAO Romolo C30
                     </a>
                   </span>
@@ -170,11 +177,11 @@ const Home = () => {
                 dragSnapToOrigin={true}
                 animate={{
                   y: [0, -10, 0],
-                  rotate: [0, 2, 0, -2, 0]
+                  rotate: [0, 2, 0, -2, 0],
                 }}
                 transition={{
                   y: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
-                  rotate: { duration: 6, repeat: Infinity, ease: 'easeInOut' }
+                  rotate: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
                 }}
                 initial={{ scaleX: -1 }}
               />
@@ -187,18 +194,18 @@ const Home = () => {
                     className="absolute w-2 h-2 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"
                     style={{
                       left: `${20 + Math.random() * 60}%`,
-                      top: `${20 + Math.random() * 60}%`
+                      top: `${20 + Math.random() * 60}%`,
                     }}
                     animate={{
                       y: [0, -30, 0],
                       opacity: [0, 1, 0],
-                      scale: [0, 1, 0]
+                      scale: [0, 1, 0],
                     }}
                     transition={{
                       duration: 3 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 2,
-                      ease: 'easeInOut'
+                      ease: 'easeInOut',
                     }}
                   />
                 ))}
@@ -214,7 +221,7 @@ const Home = () => {
                   type: 'spring',
                   bounce: 0.4,
                   delay: 0.4,
-                  duration: 0.8
+                  duration: 0.8,
                 }}
                 src={UnicornMascot}
                 alt="unicorn"
@@ -289,7 +296,7 @@ const EnhancedCTAButtons = () => {
       >
         {IS_SPONSOR_OPEN ? (
           <a
-            href="https://drive.google.com/uc?export=download&id=1_6MNbQWJJ3sky0SvlouF-7-owBKUhy-b"
+            href="https://drive.google.com/drive/folders/1W8pUsRGf4560L6EM5dv8OK9Im6GamVnd?usp=sharing"
             target="_blank"
             className="group block w-full"
           >
@@ -328,7 +335,7 @@ const TicketButtonContent = ({ isOpen }: { isOpen: boolean }) => {
               duration: 2,
               repeat: Infinity,
               ease: 'easeInOut',
-              delay: 0.5
+              delay: 0.5,
             }}
           >
             ✨
@@ -368,7 +375,7 @@ const SpeakerButtonContent = ({ isOpen }: { isOpen: boolean }) => {
               duration: 2,
               repeat: Infinity,
               ease: 'easeInOut',
-              delay: 1
+              delay: 1,
             }}
           >
             🗣️
@@ -396,7 +403,10 @@ const SponsorButtonContent = ({ isOpen }: { isOpen: boolean }) => {
       <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 text-white font-bold text-base sm:text-lg lg:text-xl rounded-2xl shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out border-2 border-purple-400 group-hover:border-blue-400 cursor-pointer">
         <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         <span className="relative flex items-center justify-center gap-3">
-          <motion.span animate={{ rotate: [0, 360] }} transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}>
+          <motion.span
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+          >
             🤝
           </motion.span>
           <span>Become a Sponsor</span>
@@ -406,7 +416,7 @@ const SponsorButtonContent = ({ isOpen }: { isOpen: boolean }) => {
               duration: 2,
               repeat: Infinity,
               ease: 'easeInOut',
-              delay: 1
+              delay: 1,
             }}
           >
             🚀
@@ -415,16 +425,6 @@ const SponsorButtonContent = ({ isOpen }: { isOpen: boolean }) => {
       </button>
     );
   }
-  // Disabled
-  return (
-    <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-slate-100 text-slate-400 font-bold text-base sm:text-lg lg:text-xl rounded-2xl border-2 border-slate-200 shadow-none cursor-not-allowed grayscale">
-      <span className="relative flex items-center justify-center gap-3">
-        <span>🤝</span>
-        <span>Become Sponsor Soon</span>
-        <span>🚀</span>
-      </span>
-    </button>
-  );
 };
 
 /**
