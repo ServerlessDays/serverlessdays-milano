@@ -60,7 +60,7 @@ const AgendaAccordion = () => {
         </motion.h1>
 
         {/* Keynote Speakers Section */}
-        {/* <KeynoteSpeakers /> */}
+        <KeynoteSpeakers />
 
         {IS_COMING_SOON && <ComingSoon />}
         {!IS_COMING_SOON && (
@@ -445,116 +445,116 @@ const TalkCard = ({
   );
 };
 
-// const KeynoteSpeakers = () => {
-//   return (
-//     <div className="px-4 py-8 lg:px-10 relative">
-//       <motion.div
-//         className="mb-8 text-center"
-//         initial={{ opacity: 0, y: -20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ delay: 0.2 }}
-//       >
-//         <h2 className="mb-4 text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent lg:text-5xl">
-//           🎤 Keynote Speakers
-//         </h2>
-//         <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
-//       </motion.div>
+const KeynoteSpeakers = () => {
+  return (
+    <div className="px-4 py-6 lg:px-10 relative">
+      <motion.div
+        className="mb-10 text-center relative z-20"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <h2 className="mb-4 text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent lg:text-5xl">
+          🎤 Keynote Speakers
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+      </motion.div>
 
-//       <div className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-4xl mx-auto">
-//         {/* Yan Cui */}
-//         <motion.div
-//           className="group relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-//           initial={{ opacity: 0, x: -50 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ delay: 0.4 }}
-//         >
-//           <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-400 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-//           <div className="relative p-8 text-center">
-//             <div className="mb-6 relative">
-//               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-lg opacity-30 scale-110"></div>
-//               <img
-//                 src="/speakers/yan_cui.jpg"
-//                 alt="Yan Cui"
-//                 className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl mx-auto"
-//               />
-//               <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-//                 ⭐ KEYNOTE
-//               </div>
-//             </div>
-//             <h3 className="mb-3 text-2xl font-bold bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent">
-//               Yan Cui
-//             </h3>
-//             <p className="mb-2 text-lg font-semibold text-purple-600">Lumigo</p>
-//             <p className="mb-4 text-sm text-gray-600 leading-relaxed">
-//               AWS Serverless Hero & Author of "Production-Ready Serverless"
-//             </p>
-//             <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl">
-//               <h4 className="font-bold text-gray-800 text-lg">
-//                 "Serverless, the hard parts"
-//               </h4>
-//             </div>
-//             <div className="flex flex-wrap justify-center gap-2 text-xs">
-//               <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
-//                 🌟 AWS Hero
-//               </span>
-//               <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-medium">
-//                 📚 Author
-//               </span>
-//               <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-//                 🎯 Consultant
-//               </span>
-//             </div>
-//           </div>
-//         </motion.div>
+      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:gap-12 max-w-4xl mx-auto">
+        {/* Luca Mezzalira */}
+        <motion.div
+          className="group relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-400 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div className="relative p-8 text-center">
+            <div className="mb-6 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-lg opacity-30 scale-110"></div>
+              <img
+                src="/speakers/luca-mezzalira.jpeg"
+                alt="Luca Mezzalira"
+                className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl mx-auto"
+              />
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                ⭐ KEYNOTE
+              </div>
+            </div>
+            <h3 className="mb-3 text-2xl font-bold bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent">
+              Luca Mezzalira
+            </h3>
+            <p className="mb-2 text-lg font-semibold text-purple-600">Amazon Web Services</p>
+            <p className="mb-4 text-sm text-gray-600 leading-relaxed">
+              Software Architect, International speaker & author
+            </p>
+            <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl">
+              <h4 className="font-bold text-gray-800 text-lg">
+                Serverless is not what you think it is
+              </h4>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2 text-xs">
+              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
+                🌟 International speaker
+              </span>
+              <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-medium">
+                📚 Author
+              </span>
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                📹 Content Creator
+              </span>
+            </div>
+          </div>
+        </motion.div>
 
-//         {/* James Eastham */}
-//         <motion.div
-//           className="group relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-//           initial={{ opacity: 0, x: 50 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ delay: 0.6 }}
-//         >
-//           <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-//           <div className="relative p-8 text-center">
-//             <div className="mb-6 relative">
-//               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-lg opacity-30 scale-110"></div>
-//               <img
-//                 src="/speakers/james_eastham.jpg"
-//                 alt="James Eastham"
-//                 className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl mx-auto"
-//               />
-//               <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-//                 ⭐ KEYNOTE
-//               </div>
-//             </div>
-//             <h3 className="mb-3 text-2xl font-bold bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">
-//               James Eastham
-//             </h3>
-//             <p className="mb-2 text-lg font-semibold text-blue-600">Datadog</p>
-//             <p className="mb-4 text-sm text-gray-600 leading-relaxed">
-//               Serverless Developer Advocate & Microsoft MVP
-//             </p>
-//             <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
-//               <h4 className="font-bold text-gray-800 text-lg">
-//                 "Why Should You Think Serverless First?"
-//               </h4>
-//             </div>
-//             <div className="flex flex-wrap justify-center gap-2 text-xs">
-//               <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-//                 ☁️ Advocate
-//               </span>
-//               <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
-//                 🚀 DevRel
-//               </span>
-//               <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
-//                 💻 MVP
-//               </span>
-//             </div>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </div>
-//   );
-// };
+        {/* James Eastham */}
+        {/* <motion.div
+          className="group relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div className="relative p-8 text-center">
+            <div className="mb-6 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-lg opacity-30 scale-110"></div>
+              <img
+                src="/speakers/james_eastham.jpg"
+                alt="James Eastham"
+                className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl mx-auto"
+              />
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                ⭐ KEYNOTE
+              </div>
+            </div>
+            <h3 className="mb-3 text-2xl font-bold bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">
+              James Eastham
+            </h3>
+            <p className="mb-2 text-lg font-semibold text-blue-600">Datadog</p>
+            <p className="mb-4 text-sm text-gray-600 leading-relaxed">
+              Serverless Developer Advocate & Microsoft MVP
+            </p>
+            <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+              <h4 className="font-bold text-gray-800 text-lg">
+                "Why Should You Think Serverless First?"
+              </h4>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2 text-xs">
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                ☁️ Advocate
+              </span>
+              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
+                🚀 DevRel
+              </span>
+              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
+                💻 MVP
+              </span>
+            </div>
+          </div>
+        </motion.div> */}
+      </div>
+    </div>
+  );
+};
 
 // use the json schema from the file and create a type

@@ -7,6 +7,7 @@ import FullAgenda from './Components/FullAgenda';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
+import AgendaAccordion from './Components/Agenda';
 import NotFound from './Components/NotFound';
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
                 <Home />
                 {/* <Sponsors /> */}
 
-                {/* <AgendaAccordion /> */}
+                <AgendaAccordion />
                 {/* <CommunitySponsors /> */}
                 {/* <AboutUs /> */}
 
