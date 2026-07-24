@@ -241,7 +241,7 @@ const EnhancedCTAButtons = () => {
   // MANUAL TOGGLES: Control availability here
   // ---------------------------------------------------------
   const IS_TICKET_SALE_OPEN = true; // Set to true when tickets are available
-  const IS_CFP_OPEN = true; // Set to true to enable CFP button
+  const IS_CFP_OPEN = false; // Set to true to enable CFP button
   const IS_SPONSOR_OPEN = true; // Set to true to enable Sponsor button
 
   return (
@@ -389,7 +389,7 @@ const SpeakerButtonContent = ({ isOpen }: { isOpen: boolean }) => {
     <button className="relative overflow-hidden w-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-slate-100 text-slate-400 font-bold text-base sm:text-lg lg:text-xl rounded-2xl border-2 border-slate-200 shadow-none cursor-not-allowed grayscale">
       <span className="relative flex items-center justify-center gap-3">
         <span>📢</span>
-        <span>CFP Coming Soon</span>
+        <span>CFP Has Ended</span>
         <span>🗣️</span>
       </span>
     </button>
