@@ -111,6 +111,226 @@ const Agenda = ({ talks, trackColor }: { talks: AgendaItem[]; trackColor: 'purpl
   );
 };
 
+const isSpeakerPlaceholder = (name?: string) => !name || name === PLACEHOLDER_NAME;
+
+const speakerTitle = (name?: string, jobTitle?: string, organization?: string) => {
+  if (!name) return '';
+  let result = name;
+  if (jobTitle) result += ` - ${jobTitle}`;
+  if (organization) result += ` @ ${organization}`;
+  return result;
+};
+
+const SpeakerAvatar = ({
+  profileImg,
+  name,
+  accentClass,
+  isMobile
+}: {
+  profileImg?: string;
+  name?: string;
+  accentClass: string;
+  isMobile: boolean;
+}) => {
+  const sizeClass = isMobile ? 'w-14 h-14' : 'w-12 h-12';
+  if (profileImg) {
+    return (
+      <img
+        className={`${sizeClass} rounded-full object-cover ring-2 ring-white shadow-md`}
+        src={profileImg}
+        alt={name || ''}
+        title={name || ''}
+        loading="lazy"
+      />
+    );
+  }
+  if (isSpeakerPlaceholder(name)) {
+    return (
+      <div className={`${sizeClass} rounded-full bg-gray-200 flex items-center justify-center`}>
+        <span className="text-xs text-gray-400">TBA</span>
+      </div>
+    );
+  }
+  return (
+    <div
+      className={`${sizeClass} rounded-full ${accentClass} flex items-center justify-center text-xs font-bold text-white`}
+    >
+      {name?.charAt(0) || '?'}
+    </div>
+  );
+};
+
+const TimeBadge = ({
+  startTime,
+  duration,
+  accentClass,
+  isMobile
+}: {
+  startTime: string;
+  duration: number;
+  accentClass: string;
+  isMobile: boolean;
+}) => {
+  if (isMobile) {
+    return (
+      <div className="mb-4">
+        <div
+          className={`${accentClass} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-md inline-flex items-center gap-2`}
+        >
+          <span className="text-xs opacity-90">🕐</span>
+          <span>{startTime}</span>
+          {duration > 0 && <span className="text-xs opacity-90">• {duration}min</span>}
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="flex-shrink-0">
+      <div
+        className={`${accentClass} text-white px-3 py-2 rounded-xl text-sm font-bold shadow-md min-w-[80px] text-center`}
+      >
+        <div className="text-xs opacity-90">Start</div>
+        <div>{startTime}</div>
+      </div>
+      {duration > 0 && (
+        <div className="text-center mt-1">
+          <span className="text-xs text-gray-500">{duration}min</span>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const getDurationBadge = (minutes: number, badgeClass: string, isKeynote: boolean) => {
+  if (minutes <= 0) return null;
+  return (
+    <span
+      className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${badgeClass} ${isKeynote ? 'text-white' : ''}`}
+    >
+      {minutes}min {isKeynote && '⭐'}
+    </span>
+  );
+};
+
+const getTypeIcon = (type: string, isKeynote: boolean) => {
+  if (isKeynote) return '🎤';
+  if (type === 'break') return '☕';
+  return '💬';
+};
+
+interface CardContentProps {
+  agendaTalk: AgendaItem;
+  colors: { accent: string; badge: string };
+  title: string;
+  description: string;
+  name?: string;
+  talkType: string;
+  isKeynote: boolean;
+  isMobile: boolean;
+  isExpanded: boolean;
+  onToggleExpand: () => void;
+}
+
+const CardContent = ({
+  agendaTalk,
+  colors,
+  title,
+  description,
+  name,
+  talkType,
+  isKeynote,
+  isMobile,
+  isExpanded,
+  onToggleExpand
+}: CardContentProps) => {
+  const speakerNameTitle = speakerTitle(name, agendaTalk?.talk?.job_title, agendaTalk?.talk?.organization);
+  const isPlaceholder = isSpeakerPlaceholder(name);
+
+  return (
+    <div className="flex items-start justify-between gap-3">
+      <div className="flex-1">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-lg">{getTypeIcon(talkType, isKeynote)}</span>
+          {getDurationBadge(agendaTalk?.agenda_details.minutes || 0, colors.badge, isKeynote)}
+          {talkType === 'break' && (
+            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+              Break
+            </span>
+          )}
+        </div>
+
+        <h3
+          className={`font-semibold ${isMobile ? 'text-xl' : 'text-lg'} leading-tight mb-1 ${
+            isKeynote
+              ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
+              : talkType === 'break'
+                ? colors.accent
+                : 'text-gray-900'
+          } ${isPlaceholder ? 'text-gray-500' : ''}`}
+        >
+          {title}
+        </h3>
+
+        {talkType === 'talk' && name && (
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-sm text-gray-600">by</span>
+            <a
+              href={agendaTalk.talk?.url}
+              target="_blank"
+              className={`text-sm font-medium hover:underline ${colors.accent} ${
+                isPlaceholder ? 'pointer-events-none text-gray-400' : ''
+              }`}
+              onClick={e => e.stopPropagation()}
+            >
+              {speakerNameTitle}
+            </a>
+          </div>
+        )}
+
+        {/* Description preview */}
+        {description && talkType === 'talk' && (
+          <div className="text-sm text-gray-600 leading-relaxed">
+            <p className={`${isExpanded ? '' : 'line-clamp-2'}`}>{description}</p>
+            {description.length > 100 && (
+              <button
+                className={`text-xs ${colors.accent} hover:underline mt-1`}
+                onClick={e => {
+                  e.stopPropagation();
+                  onToggleExpand();
+                }}
+              >
+                {isExpanded ? 'Show less' : 'Read more'}
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Break description */}
+        {description && talkType === 'break' && <p className="text-sm text-gray-600 mt-1">{description}</p>}
+      </div>
+
+      {/* Speaker avatar */}
+      {talkType === 'talk' && (name || agendaTalk?.talk?.avatar) && (
+        <div className="flex-shrink-0">
+          <a
+            href={agendaTalk.talk?.url || '#'}
+            className={`block ${isPlaceholder ? 'pointer-events-none' : ''}`}
+            target="_blank"
+            onClick={e => e.stopPropagation()}
+          >
+            <SpeakerAvatar
+              profileImg={agendaTalk?.talk?.avatar}
+              name={name}
+              accentClass={colors.accent}
+              isMobile={isMobile}
+            />
+          </a>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const TalkCard = ({
   talk: agendaTalk,
   index,
@@ -147,23 +367,13 @@ const TalkCard = ({
     });
   };
 
-  const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
-  const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract;
+  const title = agendaTalk?.talk?.title || agendaTalk?.break?.title || '';
+  const description = agendaTalk?.talk?.description || agendaTalk?.break?.inline_abstract || '';
   const name = agendaTalk?.talk?.name;
   const duration = agendaTalk?.agenda_details.minutes || 0;
-  const profileImg = agendaTalk?.talk?.avatar;
   const talkType = agendaTalk.agenda_details.type;
   const isKeynote = agendaTalk.agenda_details.keynote || false;
-  const jobTitle = agendaTalk?.talk?.job_title;
-  const organization = agendaTalk?.talk?.organization;
-  const startTime = agendaTalk.agenda_details.start_time;
-
-  const startTimeString = getTimestamp(startTime);
-
-  let speakerNameTitle = '';
-  if (name) speakerNameTitle += name;
-  if (jobTitle) speakerNameTitle += ` - ${jobTitle}`;
-  if (organization) speakerNameTitle += ` @ ${organization}`;
+  const startTimeString = getTimestamp(agendaTalk.agenda_details.start_time);
 
   const colorClasses = {
     purple: {
@@ -184,175 +394,38 @@ const TalkCard = ({
 
   const colors = colorClasses[trackColor];
 
-  const getDurationBadge = (minutes: number) => {
-    if (minutes <= 0) return null;
-    return (
-      <span
-        className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-          colors.badge
-        } ${isKeynote ? 'text-white' : ''}`}
-      >
-        {minutes}min {isKeynote && '⭐'}
-      </span>
-    );
-  };
-
-  const getTypeIcon = (type: string, isKeynote: boolean) => {
-    if (isKeynote) return '🎤';
-    if (type === 'break') return '☕';
-    return '💬';
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
       className={`border-b ${colors.border} ${colors.bg} transition-all duration-300 ${
-        talkType === 'talk' && name !== PLACEHOLDER_NAME ? 'cursor-pointer' : ''
+        talkType === 'talk' && !isSpeakerPlaceholder(name) ? 'cursor-pointer' : ''
       }`}
       onClick={() => {
-        if (talkType === 'talk' && name !== PLACEHOLDER_NAME && description) {
+        if (talkType === 'talk' && !isSpeakerPlaceholder(name) && description) {
           setIsExpanded(!isExpanded);
         }
       }}
     >
       <div className="p-4">
-        {/* Mobile: Time at top */}
-        {isMobile && (
-          <div className="mb-4">
-            <div
-              className={`${colors.time} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-md inline-flex items-center gap-2`}
-            >
-              <span className="text-xs opacity-90">🕐</span>
-              <span>{startTimeString}</span>
-              {duration > 0 && <span className="text-xs opacity-90">• {duration}min</span>}
-            </div>
-          </div>
-        )}
-
         <div className="flex items-start gap-4">
-          {/* Desktop: Time badge on left */}
-          {!isMobile && (
-            <div className="flex-shrink-0">
-              <div
-                className={`${colors.time} text-white px-3 py-2 rounded-xl text-sm font-bold shadow-md min-w-[80px] text-center`}
-              >
-                <div className="text-xs opacity-90">Start</div>
-                <div>{startTimeString}</div>
-              </div>
-              {duration > 0 && (
-                <div className="text-center mt-1">
-                  <span className="text-xs text-gray-500">{duration}min</span>
-                </div>
-              )}
-            </div>
-          )}
+          <TimeBadge startTime={startTimeString} duration={duration} accentClass={colors.time} isMobile={isMobile} />
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-lg">{getTypeIcon(talkType, isKeynote)}</span>
-                  {getDurationBadge(duration)}
-                  {talkType === 'break' && (
-                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                      Break
-                    </span>
-                  )}
-                </div>
-
-                <h3
-                  className={`font-semibold ${isMobile ? 'text-xl' : 'text-lg'} leading-tight mb-1 ${
-                    isKeynote
-                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
-                      : talkType === 'break'
-                        ? colors.accent
-                        : 'text-gray-900'
-                  } ${name === PLACEHOLDER_NAME ? 'text-gray-500' : ''}`}
-                >
-                  {title}
-                </h3>
-
-                {talkType === 'talk' && name && (
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-sm text-gray-600">by</span>
-                    <a
-                      href={agendaTalk.talk?.url}
-                      target="_blank"
-                      className={`text-sm font-medium hover:underline ${colors.accent} ${
-                        name === PLACEHOLDER_NAME ? 'pointer-events-none text-gray-400' : ''
-                      }`}
-                      onClick={e => e.stopPropagation()}
-                    >
-                      {speakerNameTitle}
-                    </a>
-                  </div>
-                )}
-
-                {/* Description preview */}
-                {description && talkType === 'talk' && (
-                  <div className="text-sm text-gray-600 leading-relaxed">
-                    <p className={`${isExpanded ? '' : 'line-clamp-2'}`}>{description}</p>
-                    {description.length > 100 && (
-                      <button
-                        className={`text-xs ${colors.accent} hover:underline mt-1`}
-                        onClick={e => {
-                          e.stopPropagation();
-                          setIsExpanded(!isExpanded);
-                        }}
-                      >
-                        {isExpanded ? 'Show less' : 'Read more'}
-                      </button>
-                    )}
-                  </div>
-                )}
-
-                {/* Break description */}
-                {description && talkType === 'break' && <p className="text-sm text-gray-600 mt-1">{description}</p>}
-              </div>
-
-              {/* Speaker avatar */}
-              {talkType === 'talk' && (name || profileImg) && (
-                <div className="flex-shrink-0">
-                  <a
-                    href={agendaTalk.talk?.url || '#'}
-                    className={`block ${name === PLACEHOLDER_NAME ? 'pointer-events-none' : ''}`}
-                    target="_blank"
-                    onClick={e => e.stopPropagation()}
-                  >
-                    {profileImg ? (
-                      <img
-                        className={`${
-                          isMobile ? 'w-14 h-14' : 'w-12 h-12'
-                        } rounded-full object-cover ring-2 ring-white shadow-md`}
-                        src={profileImg}
-                        alt={speakerNameTitle}
-                        title={speakerNameTitle}
-                        loading="lazy"
-                      />
-                    ) : name === PLACEHOLDER_NAME ? (
-                      <div
-                        className={`${
-                          isMobile ? 'w-14 h-14' : 'w-12 h-12'
-                        } rounded-full bg-gray-200 flex items-center justify-center`}
-                      >
-                        <span className="text-gray-400 text-xs">TBA</span>
-                      </div>
-                    ) : (
-                      <div
-                        className={`${isMobile ? 'w-14 h-14' : 'w-12 h-12'} rounded-full ${
-                          colors.time
-                        } flex items-center justify-center text-white text-xs font-bold`}
-                      >
-                        {name?.charAt(0) || '?'}
-                      </div>
-                    )}
-                  </a>
-                </div>
-              )}
-            </div>
+            <CardContent
+              agendaTalk={agendaTalk}
+              colors={colors}
+              title={title}
+              description={description}
+              name={name}
+              talkType={talkType}
+              isKeynote={isKeynote}
+              isMobile={isMobile}
+              isExpanded={isExpanded}
+              onToggleExpand={() => setIsExpanded(!isExpanded)}
+            />
           </div>
         </div>
       </div>
@@ -404,20 +477,14 @@ const KeynoteSpeakers = () => {
               Software Architect, International speaker & author
             </p>
             <div className="mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl">
-              <h4 className="font-bold text-gray-800 text-lg">
-                Serverless is not what you think it is
-              </h4>
+              <h4 className="font-bold text-gray-800 text-lg">Serverless is not what you think it is</h4>
             </div>
             <div className="flex flex-wrap justify-center gap-2 text-xs">
               <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
                 🌟 International speaker
               </span>
-              <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-medium">
-                📚 Author
-              </span>
-              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-                📹 Content Creator
-              </span>
+              <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-medium">📚 Author</span>
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">📹 Content Creator</span>
             </div>
           </div>
         </motion.div>

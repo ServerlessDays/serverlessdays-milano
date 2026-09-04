@@ -211,6 +211,45 @@ interface SessionCardProps {
   isLive?: boolean;
 }
 
+const Avatar = ({
+  profileImg,
+  name,
+  accentClass,
+  sizeClass
+}: {
+  profileImg?: string;
+  name?: string;
+  accentClass: string;
+  sizeClass: string;
+}) => {
+  if (profileImg) {
+    return (
+      <img
+        className={`${sizeClass} rounded-full object-cover ring-4 ring-white ring-opacity-50 shadow-xl`}
+        src={profileImg}
+        alt={name || ''}
+        loading="lazy"
+      />
+    );
+  }
+  if (name) {
+    return (
+      <div
+        className={`${sizeClass} rounded-full bg-gradient-to-r ${accentClass} flex items-center justify-center text-2xl font-bold text-white ring-4 ring-white ring-opacity-50`}
+      >
+        {name.charAt(0)}
+      </div>
+    );
+  }
+  return (
+    <div
+      className={`${sizeClass} rounded-full bg-gray-600 flex items-center justify-center text-sm text-gray-300 ring-4 ring-white ring-opacity-50`}
+    >
+      TBA
+    </div>
+  );
+};
+
 const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
   const getTimestamp = (time: string) => {
     const date = new Date(time);
@@ -292,24 +331,7 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
         {/* Speaker Avatar */}
         {talkType === 'talk' && name !== PLACEHOLDER_NAME && (
           <div className="flex-shrink-0">
-            {profileImg ? (
-              <img
-                className="w-20 h-20 rounded-full object-cover ring-4 ring-white ring-opacity-50 shadow-xl"
-                src={profileImg}
-                alt={name || ''}
-                loading="lazy"
-              />
-            ) : name ? (
-              <div
-                className={`w-20 h-20 rounded-full bg-gradient-to-r ${colors.accent} flex items-center justify-center text-white text-2xl font-bold ring-4 ring-white ring-opacity-50`}
-              >
-                {name.charAt(0)}
-              </div>
-            ) : (
-              <div className="w-20 h-20 rounded-full bg-gray-600 flex items-center justify-center text-gray-300 text-sm ring-4 ring-white ring-opacity-50">
-                TBA
-              </div>
-            )}
+            <Avatar profileImg={profileImg} name={name} accentClass={colors.accent} sizeClass="w-20 h-20" />
           </div>
         )}
       </div>
