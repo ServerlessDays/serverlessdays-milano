@@ -1,0 +1,395 @@
+[
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T09:10+02:00",
+      "end_time": "2026-10-13T09:20+02:00",
+      "minutes": 10,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "#",
+      "organization": "",
+      "job_title": "",
+      "title": "Welcome",
+      "description": "",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T09:20+02:00",
+      "end_time": "2026-10-13T10:00+02:00",
+      "minutes": 40,
+      "type": "talk",
+      "keynote": true
+    },
+    "talk": {
+      "name": "Luca Mezzalira",
+      "avatar": "/speakers/luca-mezzalira.jpeg",
+      "location": "",
+      "bio": "Software Architect, International speaker & author",
+      "twitter": "",
+      "url": "#",
+      "organization": "Amazon Web Services",
+      "job_title": "",
+      "title": "Serverless is not what you think it is",
+      "description": "",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T10:00+02:00",
+      "end_time": "2026-10-13T10:40+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Prerit Munjal",
+      "avatar": "/speakers/prerit-munjal.jpeg",
+      "location": "",
+      "bio": "Prerit is a Cloud-Native Platform Leader with extensive experience designing and scaling secure, resilient cloud infrastructures. As the former CTO of KubeCloud, he built no-code solutions bridging Cloud, DevOps, and SRE, leading the company to a successful acquisition. Currently, he drives cloud-native, observability, CI/CD, and AI initiatives as a technical leader at Groupon.",
+      "twitter": "prerit_munjal",
+      "url": "https://preritmunjal.me",
+      "organization": "Groupon",
+      "job_title": "Senior Technical Product Manager",
+      "title": "Agents are invasive. Sidecars complicate scaling. Dashboards rot quietly in the background. We wanted observability that didn’t require duct-taping our infrastructure or running a new control plane.",
+      "description": "Agents are invasive. Sidecars complicate scaling. Dashboards rot quietly in the background. We wanted observability that didn’t require duct-taping our infrastructure or running a new control plane.\n\nSo we built a new layer: event-driven, serverless context agents running on Cloud Run, powered by Model Context Protocol (MCP) servers. No daemons. Just lightweight context snapshots that stream into a shared intelligence layer, and make our infrastructure speak for itself. In this talk, we’ll share how we:\n\n• Deployed on-demand MCP servers on Cloud Run triggered by CI/CD events, alerts, policy changes, and anomalies\n• Gathered real-time system state like diffed IAM policies, config drifts, recent deploys and funneled it into an LLM-accessible context index\n• Used this model-aware context to answer questions like “Why is this pod crashing?”, “What else broke when this happened?” and more\n\nThis is observability without the bloat. No daemons burning CPU. No telemetry black holes. Just the intelligence you actually need when you need it.",
+      "abstract": "Event-driven, serverless context agents running on Cloud Run, powered by MCP servers. No daemons burning CPU. No telemetry black holes. Just the intelligence you actually need when you need it.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "gcp",
+        "mcp"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T10:40+02:00",
+      "end_time": "2026-10-13T11:20+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Diego Rossi",
+      "avatar": "/speakers/diego-rossi.jpeg",
+      "location": "",
+      "bio": "Tech Lead at THRON, where I focus on content conversion and delivery. I spend my days making sure images, video and audio end up in the right place, in the right format, every time. Passionate about systems that hold up under real-world pressure.",
+      "twitter": "",
+      "url": "#",
+      "organization": "THRON",
+      "job_title": "Tech Lead",
+      "title": "Serverless orchestration on a system that never stops: one year with Step Functions at the core of THRON's conversion engine — audio, video, images, everything. A custom layer for fairness and concurrency control, and the full picture, one year in.",
+      "description": "Step Functions promise to simplify the orchestration of complex processes — but what happens when you apply them to a system that simply cannot go down?\nWe'll share one year of experience from THRON's conversion team: migrating from shared containers to dedicated lambdas per file, adopting JSONata to simplify data transformation, implementing asynchronous patterns with callback tokens to integrate external providers via webhook, and handling parallel branches within a workflow.\nWe'll also cover less obvious architectural choices — like deliberately avoiding reuse across different state machines — and a custom coordination layer built to ensure fairness and cap concurrent executions.\nWe'll talk about cost impact too: a before/after comparison on what changed when we moved to this architecture.\nAnd we won't skip the rough parts: local testing complexity, resource sizing, error handling, and failure detection in a distributed workflow.\nA practical talk, with CDK examples in Go, for anyone evaluating whether and how to adopt Step Functions on real-world processes.",
+      "abstract": "A practical talk, with CDK examples in Go, for anyone evaluating whether and how to adopt Step Functions on real-world processes.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "step-functions",
+        "serverless",
+        "aws",
+        "lambda",
+        "architecture"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T11:20+02:00",
+      "end_time": "2026-10-13T11:40+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "someone to be announced",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "#",
+      "organization": "",
+      "job_title": "",
+      "title": "TBD",
+      "description": "",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T11:40+02:00",
+      "end_time": "2026-10-13T12:00+02:00",
+      "minutes": 20,
+      "type": "break"
+    },
+    "break": {
+      "title": "Coffee Break",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T12:00+02:00",
+      "end_time": "2026-10-13T12:40+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Giulia Scalaberni",
+      "avatar": "/speakers/giulia-scalaberni.jpeg",
+      "location": "",
+      "bio": "Giulia began her journey as a web dev, moved to data analyst and today she’s a product manager of a BI tool in an IT healthcare company, leading remote Scrum teams with members from 8 different cultures, starting from India. She’s relentlessly people‐centric, fascinated by how diverse cultures interact and always reading and exploring differences to make teamwork more “human”. When she’s not shaping product strategy or pondering team dynamics, you’ll find her at concerts imagining the tour management behind the scenes, or with a plane ticket already booked - Osaka and Lisbon are her places of the heart. She’s hopelessly obsessed with bubble tea, loves kangaroos and shares honest storytelling and practical insights that anyone can steal and use tomorrow.",
+      "twitter": "",
+      "url": "https://substack.com/@giuliascalaberni",
+      "organization": "Dedalus",
+      "job_title": "People and Product Manager",
+      "title": "Humanship: the critical asset to scale teams",
+      "description": "Serverless architecture taught us how to design distributed systems in code but we still often design the human side of systems as if it were monolithic. In this talk, I introduce “Humanship”: the idea that trust, communication, and culture are not soft skills, but critical asset for high-performing engineering teams.\n\nWe’ve learned to embrace complexity in our architectures: breaking monoliths into services, designing for failure, and scaling through loose coupling.\n\nYet the human systems behind these architectures often remain tightly coupled, assumption-heavy, and fragile.\n\nIn this talk, I introduce “Humanship”: a way of thinking about leadership and collaboration as the invisible infrastructure behind engineering performance. Just as serverless systems rely on well-orchestrated events, distributed teams rely on trust, clarity, and cultural alignment to function effectively.\n\nBased on hands-on experience leading a fully remote engineering team across nine cultures, with deep collaboration between Europe and India, I will share real situations where cultural differences directly impacted delivery, decision-making, incident response, and team alignment.",
+      "abstract": "Trust, communication, and culture are not soft skills, but critical assets for high-performing engineering teams.",
+      "audience_level": "All",
+      "tags": [
+        "leadership",
+        "culture",
+        "teams"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T12:40+02:00",
+      "end_time": "2026-10-13T13:20+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Daniele Frasca",
+      "avatar": "/speakers/daniele-frasca.jpeg",
+      "location": "",
+      "bio": "Daniele is an AWS Serverless Community Builder focused on designing global, event-driven systems on AWS. He works on multi-region architectures with strong tenant isolation, data residency, and operational governance. His current focus is not only on building serverless workloads but also on making them explainable, auditable, and sustainable at scale. He shares his experience through articles and talks on trust, observability, and real-world serverless operations.",
+      "twitter": "dfrasca80",
+      "url": "https://dev.to/ymwjbxxq",
+      "organization": "DanAds",
+      "job_title": "Enterprise Architect",
+      "title": "Trust Is the Architecture: Global Serverless at Scale",
+      "description": "Serverless makes building applications simpler, but it does not guarantee safety, clarity, or easy scaling across regions and teams. In this session, I will discuss what happens when serverless is used at scale, including challenges such as strict data boundaries and real compliance requirements. I will also cover how to design boundaries, set up guardrails and contracts, build evidence into the architecture, and keep observability working across hundreds of functions without breaking data residency rules.",
+      "abstract": "What happens when your architecture must respect strict data residency laws, prove compliance to auditors, support multiple regions, and still allow teams to move quickly? Lessons learned from designing and governing large-scale serverless platforms.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "governance",
+        "security",
+        "serverless",
+        "aws"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T13:20+02:00",
+      "end_time": "2026-10-13T14:00+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Martin Mueller",
+      "avatar": "/speakers/martin-mueller.jpeg",
+      "location": "",
+      "bio": "Martin Mueller is a Full Stack Developer and AWS Community Builder from northern Germany. He builds cloud infrastructure with AWS CDK and runs autonomous AI agent systems in production — from automated development pipelines that turn GitHub issues into PRs, to AI-powered security compliance auditing. He currently helps Air Canada build conversational AI agents and works with German insurance group HDI on an AI-driven cybersecurity insurance product. He speaks regularly at AWS Summits and developer conferences across Europe, always bringing real production stories over slides.",
+      "twitter": "MartinMueller_",
+      "url": "https://martinmueller.dev",
+      "organization": "martinmueller.dev",
+      "job_title": "DevOps & AI Engineer",
+      "title": "The AI Factory That Never Sleeps: Building an Autonomous Dev Pipeline with Serverless Agents",
+      "description": "I run an AI agent system that monitors GitHub issues, auto-generates implementation plans, writes code, opens PRs, manages my calendar and email — all autonomously. The architecture is event-driven and serverless at its core: webhooks trigger Lambda functions, agents spin up on demand, and everything scales to zero when idle. In this talk, I'll show how I built this \"AI Factory\", the serverless patterns that make it work, and where it spectacularly breaks. Real architecture, real cost numbers, live demo.",
+      "abstract": "An AI agent system that monitors GitHub issues, auto-generates implementation plans, writes code, opens PRs, manages my calendar and email — all autonomously. Real architecture, real cost numbers, live demo.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "aws",
+        "ai",
+        "lambda",
+        "automation"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T14:00+02:00",
+      "end_time": "2026-10-13T15:00+02:00",
+      "minutes": 60,
+      "type": "break"
+    },
+    "break": {
+      "title": "Lunch",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T15:00+02:00",
+      "end_time": "2026-10-13T15:40+02:00",
+      "minutes": 40,
+      "type": "talk",
+      "keynote": true
+    },
+    "talk": {
+      "name": "someone to be announced",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "#",
+      "organization": "",
+      "job_title": "",
+      "title": "Keynote 2",
+      "description": "",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T15:40+02:00",
+      "end_time": "2026-10-13T16:00+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "someone to be announced",
+      "avatar": "",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "#",
+      "organization": "",
+      "job_title": "",
+      "title": "TBD",
+      "description": "",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T16:00+02:00",
+      "end_time": "2026-10-13T16:20+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Manu Muraleedharan",
+      "avatar": "/speakers/manu-muraleedharan.jpeg",
+      "location": "",
+      "bio": "Manu is a seasoned software professional with over 20 years of experience in the tech industry, spanning enterprise applications, cloud solutions, and data-driven platforms. As an AWS Community Builder for 3 years and a holder of multiple AWS certifications, he brings deep expertise in designing scalable, cloud-native architectures. A passionate advocate for AI, data, and automation, Manu focuses on practical applications of emerging technologies. When not building or mentoring in the cloud space, he can be found whipping up delicious cakes in his home kitchen.",
+      "twitter": "",
+      "url": "https://dev.to/manumaan",
+      "organization": "ServerlessGuru",
+      "job_title": "Architect",
+      "title": "Superpowered Workflows - Now 10x easier with Durable Functions in Lambda",
+      "description": "Ever wished you had something better than Step Functions for building workflows? In this fast-paced session, you’ll discover how to build long-running, stateful workflows directly in Lambda —without complex state machines. You will learn all about checkpointing, replay, and automatic recovery, parallel executions and callbacks. Includes a live demo of all the cool features of Durable Functions.",
+      "abstract": "Build long-running, stateful workflows directly in Lambda — without complex state machines. Checkpointing, replay, automatic recovery, parallel executions and callbacks, with a live demo of Durable Functions.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "aws",
+        "serverless",
+        "lambda"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T16:20+02:00",
+      "end_time": "2026-10-13T16:40+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Luca Ippolito",
+      "avatar": "/speakers/luca-ippolito.jpeg",
+      "location": "",
+      "bio": "Luca is a Cloud Platform Engineer at Swisscom, Switzerland's largest telecom provider, where he builds and operates the AWS landing zone, the platform Swisscom uses to run workloads in the public cloud. Passionate about serverless, he initiated an internal initiative to leverage the sustainable and cost-effective approach of serverless application development and pushes for broader adoption. Whether through workshops, blog posts, internal and external talks, he loves enabling others to embrace cloud-native thinking. He holds multiple AWS certifications such as Solutions Architect Professional and DevOps Engineer Professional, and graduated top of his class with a BSc in Computer Science.",
+      "twitter": "",
+      "url": "https://ch.linkedin.com/in/luca-ippolito",
+      "organization": "Swisscom",
+      "job_title": "Cloud Platform Engineer",
+      "title": "From Blog Posts, to Blueprints, to AI-Powered DevEx: How Bottom-Up Engineering Advocacy Put Serverless on the Strategy at Swisscom",
+      "description": "Swisscom's journey to the AWS public cloud started in 2021. While the strategy of migrating applications to EKS has allowed speed, applying the pattern for small workloads led to oversized, expensive clusters that didn't justify their cost. Our team asked a simple question: why run containers in EKS when there's ECS? And why run containers at all when you might not have to? Convinced there was a better way, we set out to explore what a serverless-first approach could look like. What started as a side project and a few internal blog posts grew into a management-backed initiative with dedicated platform capabilities, one-click blueprints, and AI-powered developer experience. This is the story of how bottom-up engineering advocacy put serverless on the strategy, and what we built along the way.",
+      "abstract": "The story of how bottom-up engineering advocacy put serverless on Swisscom's corporate strategy, and the technical building blocks that made it stick.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "serverless",
+        "aws",
+        "platform engineering",
+        "developer experience"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T16:40+02:00",
+      "end_time": "2026-10-13T17:00+02:00",
+      "minutes": 20,
+      "type": "break"
+    },
+    "break": {
+      "title": "Coffee Break",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T17:00+02:00",
+      "end_time": "2026-10-13T17:40+02:00",
+      "minutes": 40,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Nicola Racco",
+      "avatar": "/speakers/nicola-racco.jpeg",
+      "location": "",
+      "bio": "Nicola Racco is CTO @ CoNDENSE.tech, helping organisations modernize their platforms through cloud-native architecture, hybrid-cloud strategies, and solutions designed around data sovereignty requirements. His work ranges from serverless systems to scalable distributed architectures and Kubernetes-based workloads, across both public-cloud and private-cloud environments. His experience includes major projects on AWS, with a focus on building resilient, efficient platforms that integrate strong security and observability practices to support long-term growth and reliable operations.",
+      "twitter": "",
+      "url": "#",
+      "organization": "CoNDENSE.tech",
+      "job_title": "CTO",
+      "title": "From Months to Days: Building an AI-Powered Omnichannel Customer Service on AWS",
+      "description": "Building a modern customer service platform has traditionally required multiple systems, custom integrations, dedicated chatbot frameworks, IVR development, and significant engineering effort.\n\nToday, the combination of Amazon Connect, Bedrock Knowledge Bases, AgentCore, and serverless services is fundamentally changing that equation, along with the introduction of some interesting and specialized foundation models like Amazon Nova Sonic.\n\nIn this session, we'll explore how we built an AI-powered omnichannel customer service platform capable of handling voice calls, web chat, WhatsApp, Telegram, and traditional phone interactions while integrating seamlessly with existing business applications.\n\nWe'll discuss the architectural building blocks, integration patterns, knowledge management strategies, and operational considerations that allowed us to deliver a production-ready platform with a fraction of the complexity traditionally associated with customer service solutions.",
+      "abstract": "How to build an AI-powered omnichannel customer service platform — voice, web chat, WhatsApp, Telegram — on Amazon Connect, Bedrock Knowledge Bases, AgentCore, and serverless AWS services.",
+      "audience_level": "Intermediate",
+      "tags": [
+        "aws",
+        "generative ai",
+        "architecture"
+      ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T17:40+02:00",
+      "end_time": "2026-10-13T17:50+02:00",
+      "minutes": 10,
+      "type": "break"
+    },
+    "break": {
+      "title": "Closing",
+      "inline_abstract": "",
+      "location": "",
+      "description": ""
+    }
+  }
+]

@@ -1,32 +1,16 @@
 // Removed unused accordion imports since we're using a card-based design now
-import mainTrack from '../assets/mainTrack.json';
-import discoveryTrack from '../assets/discoveryTrack.json';
-import { motion, AnimatePresence } from 'framer-motion';
+import agenda2026 from '../assets/agenda2026.json';
+import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 // import owl_mascot from "../assets/Animals SVG/owl_mascot.svg";
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
 import { AgendaItem } from '../types/agenda';
 
-const IS_COMING_SOON = true;
+const IS_COMING_SOON = false;
 const PLACEHOLDER_NAME = 'someone to be announced';
 const AgendaAccordion = () => {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-  const [activeTrack, setActiveTrack] = useState<'main' | 'discovery' | 'both'>('both');
   const containerRef = useRef(null);
-
-  const handleWindowSizeChange = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 1024;
 
   return (
     <div
@@ -65,88 +49,21 @@ const AgendaAccordion = () => {
         {IS_COMING_SOON && <ComingSoon />}
         {!IS_COMING_SOON && (
           <div className="px-4 mt-12">
-            {/* Track selector for mobile */}
-            {isMobile && (
+            {/* Agenda track */}
+            <div className="max-w-3xl mx-auto">
               <motion.div
-                className="flex justify-center mb-6"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl shadow-xl border border-purple-100 overflow-hidden"
               >
-                <div className="flex bg-white rounded-full p-1 shadow-lg border border-purple-100">
-                  <button
-                    onClick={() => setActiveTrack('main')}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                      activeTrack === 'main' || activeTrack === 'both'
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md'
-                        : 'text-purple-600 hover:bg-purple-50'
-                    }`}
-                  >
-                    🚀 Main Stage
-                  </button>
-                  <button
-                    onClick={() => setActiveTrack('discovery')}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                      activeTrack === 'discovery' || activeTrack === 'both'
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md'
-                        : 'text-purple-600 hover:bg-purple-50'
-                    }`}
-                  >
-                    💬 Discovery Track
-                  </button>
-                  {/* <button
-                    onClick={() => setActiveTrack('both')}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                      activeTrack === 'both'
-                        ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-md'
-                        : 'text-purple-600 hover:bg-purple-50'
-                    }`}
-                  >
-                    📅 Both
-                  </button> */}
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-center">
+                  <h2 className="text-2xl font-bold text-white flex items-center justify-center gap-2">
+                    🚀 <span>Main Stage</span>
+                  </h2>
                 </div>
+                <Agenda talks={agenda2026 as AgendaItem[]} trackColor="purple" />
               </motion.div>
-            )}
-
-            {/* Agenda tracks */}
-            <div className={`${isMobile ? 'space-y-6' : 'grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto'}`}>
-              <AnimatePresence>
-                {(activeTrack === 'main' || activeTrack === 'both') && (
-                  <motion.div
-                    initial={{ opacity: 0, x: isMobile ? 0 : -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: isMobile ? 0 : -50 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl shadow-xl border border-purple-100 overflow-hidden"
-                  >
-                    <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-center">
-                      <h2 className="text-2xl font-bold text-white flex items-center justify-center gap-2">
-                        🚀 <span>Main Stage</span>
-                      </h2>
-                    </div>
-                    <Agenda talks={mainTrack as AgendaItem[]} trackColor="purple" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <AnimatePresence>
-                {(activeTrack === 'discovery' || activeTrack === 'both') && (
-                  <motion.div
-                    initial={{ opacity: 0, x: isMobile ? 0 : 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: isMobile ? 0 : 50 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden"
-                  >
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-center">
-                      <h2 className="text-2xl font-bold text-white flex items-center justify-center gap-2">
-                        💬 <span>Discovery Track</span>
-                      </h2>
-                    </div>
-                    <Agenda talks={discoveryTrack as AgendaItem[]} trackColor="blue" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
             </div>
           </div>
         )}
@@ -221,15 +138,13 @@ const TalkCard = ({
 
   if (!agendaTalk || !agendaTalk.agenda_details.type === undefined) return null;
 
-  const pad = (time: number, size: number) => {
-    return time.toString().padStart(size, '0');
-  };
-
   const getTimestamp = (time: string) => {
     const date = new Date(time);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    return `${pad(hours, 2)}:${pad(minutes, 2)}`;
+    return date.toLocaleTimeString('it-IT', {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'Europe/Rome'
+    });
   };
 
   const title = agendaTalk?.talk?.title || agendaTalk?.break?.title;
@@ -399,7 +314,7 @@ const TalkCard = ({
               </div>
 
               {/* Speaker avatar */}
-              {talkType === 'talk' && (
+              {talkType === 'talk' && (name || profileImg) && (
                 <div className="flex-shrink-0">
                   <a
                     href={agendaTalk.talk?.url || '#'}

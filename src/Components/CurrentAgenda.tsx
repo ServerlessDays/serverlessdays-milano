@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import mainTrack from '../assets/mainTrack.json';
-import discoveryTrack from '../assets/discoveryTrack.json';
+import agenda2026 from '../assets/agenda2026.json';
 import { AgendaItem } from '../types/agenda';
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
@@ -52,8 +51,7 @@ const CurrentAgenda = () => {
     };
   };
 
-  const mainTrackSessions = getCurrentAndNextSessions(mainTrack as AgendaItem[]);
-  const discoveryTrackSessions = getCurrentAndNextSessions(discoveryTrack as AgendaItem[]);
+  const mainTrackSessions = getCurrentAndNextSessions(agenda2026 as AgendaItem[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
@@ -106,7 +104,7 @@ const CurrentAgenda = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`${orientation === '16:9' ? 'grid grid-cols-2 gap-8 p-8 h-full' : 'space-y-6 p-6 h-full'}`}
+          className={`max-w-4xl mx-auto ${orientation === '16:9' ? '' : 'h-full'}`}
         >
           {/* Main Stage */}
           <TrackDisplay
@@ -114,15 +112,6 @@ const CurrentAgenda = () => {
             current={mainTrackSessions.current}
             next={mainTrackSessions.next}
             color="purple"
-            orientation={orientation}
-          />
-
-          {/* Discovery Track */}
-          <TrackDisplay
-            title="💬 DISCOVERY TRACK"
-            current={discoveryTrackSessions.current}
-            next={discoveryTrackSessions.next}
-            color="blue"
             orientation={orientation}
           />
         </motion.div>
@@ -227,7 +216,8 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
     const date = new Date(time);
     return date.toLocaleTimeString('it-IT', {
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
+      timeZone: 'Europe/Rome'
     });
   };
 

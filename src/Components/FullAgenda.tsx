@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import mainTrack from '../assets/mainTrack.json';
-import discoveryTrack from '../assets/discoveryTrack.json';
+import agenda2026 from '../assets/agenda2026.json';
 import { AgendaItem } from '../types/agenda';
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
@@ -30,9 +29,7 @@ const FullAgenda = () => {
         if (prev <= 1) {
           // Switch to next page, cycling through all available pages
           setCurrentIndex(currentIdx => {
-            const maxMainPages = Math.ceil(mainTrack.length / (orientation === '16:9' ? 6 : 4));
-            const maxDiscoveryPages = Math.ceil(discoveryTrack.length / (orientation === '16:9' ? 6 : 4));
-            const totalPages = Math.max(maxMainPages, maxDiscoveryPages);
+            const totalPages = Math.ceil(agenda2026.length / (orientation === '16:9' ? 6 : 4));
             return (currentIdx + 1) % totalPages;
           });
           return COUNTDOWN_TIME_DURATION; // Reset countdown
@@ -67,9 +64,7 @@ const FullAgenda = () => {
   useEffect(() => {
     const handleKeyPress = (e: Event) => {
       if (!('key' in e) || typeof e.key !== 'string') return;
-      const maxMainPages = Math.ceil(mainTrack.length / (orientation === '16:9' ? 6 : 4));
-      const maxDiscoveryPages = Math.ceil(discoveryTrack.length / (orientation === '16:9' ? 6 : 4));
-      const totalPages = Math.max(maxMainPages, maxDiscoveryPages);
+      const totalPages = Math.ceil(agenda2026.length / (orientation === '16:9' ? 6 : 4));
 
       const { key } = e;
       if (key === 'ArrowLeft' && currentIndex > 0) {
@@ -177,13 +172,10 @@ interface FullAgendaViewProps {
 
 const FullAgendaView = ({ orientation, currentIndex, itemsPerPage, timeRemaining }: FullAgendaViewProps) => {
   const startIndex = currentIndex * itemsPerPage;
-  const mainTrackItems = (mainTrack as AgendaItem[]).slice(startIndex, startIndex + itemsPerPage);
-  const discoveryTrackItems = (discoveryTrack as AgendaItem[]).slice(startIndex, startIndex + itemsPerPage);
+  const agendaItems = (agenda2026 as AgendaItem[]).slice(startIndex, startIndex + itemsPerPage);
 
   // Calculate actual number of pages needed
-  const maxMainPages = Math.ceil(mainTrack.length / itemsPerPage);
-  const maxDiscoveryPages = Math.ceil(discoveryTrack.length / itemsPerPage);
-  const maxPages = Math.max(maxMainPages, maxDiscoveryPages);
+  const maxPages = Math.ceil(agenda2026.length / itemsPerPage);
 
   return (
     <div className="h-full p-6">
@@ -203,10 +195,9 @@ const FullAgendaView = ({ orientation, currentIndex, itemsPerPage, timeRemaining
         />
       </motion.div>
 
-      {/* Main Content Grid */}
-      <div className={`${orientation === '16:9' ? 'grid grid-cols-2 gap-6' : 'space-y-6'} h-[calc(100%-40px)]`}>
-        {/* Main Stage Full Schedule */}
-        <div className="bg-gradient-to-br from-purple-800 to-purple-600 rounded-3xl p-6 shadow-2xl border border-white border-opacity-20">
+      {/* Full Schedule */}
+      <div className="h-[calc(100%-40px)] max-w-4xl mx-auto">
+        <div className="bg-gradient-to-br from-purple-800 to-purple-600 rounded-3xl p-6 shadow-2xl border border-white border-opacity-20 h-full overflow-y-auto">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-3xl font-bold text-white flex items-center gap-3">🚀 MAIN STAGE</h2>
             <div className="text-sm text-purple-200">
@@ -215,33 +206,11 @@ const FullAgendaView = ({ orientation, currentIndex, itemsPerPage, timeRemaining
           </div>
 
           <div className="space-y-3">
-            {mainTrackItems.map((item, index) => (
+            {agendaItems.map((item, index) => (
               <CompactSessionCard key={startIndex + index} session={item} color="purple" orientation={orientation} />
             ))}
 
-            {mainTrackItems.length === 0 && (
-              <div className="bg-black bg-opacity-30 rounded-xl p-6 text-center">
-                <p className="text-xl text-gray-300">No more sessions</p>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Discovery Track Full Schedule */}
-        <div className="bg-gradient-to-br from-blue-800 to-blue-600 rounded-3xl p-6 shadow-2xl border border-white border-opacity-20">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold text-white flex items-center gap-3">💬 DISCOVERY TRACK</h2>
-            <div className="text-sm text-blue-200">
-              Page {currentIndex + 1} of {maxPages}
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            {discoveryTrackItems.map((item, index) => (
-              <CompactSessionCard key={startIndex + index} session={item} color="blue" orientation={orientation} />
-            ))}
-
-            {discoveryTrackItems.length === 0 && (
+            {agendaItems.length === 0 && (
               <div className="bg-black bg-opacity-30 rounded-xl p-6 text-center">
                 <p className="text-xl text-gray-300">No more sessions</p>
               </div>
@@ -264,7 +233,8 @@ const CompactSessionCard = ({ session, color, orientation }: CompactSessionCardP
     const date = new Date(time);
     return date.toLocaleTimeString('it-IT', {
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
+      timeZone: 'Europe/Rome'
     });
   };
 
