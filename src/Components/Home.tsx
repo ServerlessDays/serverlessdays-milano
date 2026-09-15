@@ -243,7 +243,7 @@ const EnhancedCTAButtons = () => {
       <motion.div
         whileHover={IS_TICKET_SALE_OPEN ? { scale: 1.05 } : {}}
         whileTap={IS_TICKET_SALE_OPEN ? { scale: 0.95 } : {}}
-        className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_TICKET_SALE_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
+        className={`flex-1 min-w-0 sm:min-w-[10rem] ${!IS_TICKET_SALE_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
       >
         {IS_TICKET_SALE_OPEN ? (
           <a
@@ -260,47 +260,51 @@ const EnhancedCTAButtons = () => {
         )}
       </motion.div>
 
-      {/* 2. Secondary CTA - CFP (Become a Speaker) */}
-      <motion.div
-        whileHover={IS_CFP_OPEN ? { scale: 1.05 } : {}}
-        whileTap={IS_CFP_OPEN ? { scale: 0.95 } : {}}
-        className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_CFP_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
-      >
-        {IS_CFP_OPEN ? (
-          <a
-            href="https://forms.zohopublic.eu/overnet/form/CFPServerlessDays1310/formperma/PxdFEPzD1aumi1bdUp2dJrzqOhd3uxRpGpM_0A-XX-g"
-            target="_blank"
-            className="group block w-full"
-          >
-            <SpeakerButtonContent isOpen={true} />
-          </a>
-        ) : (
-          <div className="block w-full pointer-events-none">
-            <SpeakerButtonContent isOpen={false} />
-          </div>
-        )}
-      </motion.div>
+      {/* 2. Secondary CTA - CFP (Become a Speaker) - hidden */}
+      {false && (
+        <motion.div
+          whileHover={IS_CFP_OPEN ? { scale: 1.05 } : {}}
+          whileTap={IS_CFP_OPEN ? { scale: 0.95 } : {}}
+          className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_CFP_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
+        >
+          {IS_CFP_OPEN ? (
+            <a
+              href="https://forms.zohopublic.eu/overnet/form/CFPServerlessDays1310/formperma/PxdFEPzD1aumi1bdUp2dJrzqOhd3uxRpGpM_0A-XX-g"
+              target="_blank"
+              className="group block w-full"
+            >
+              <SpeakerButtonContent isOpen={true} />
+            </a>
+          ) : (
+            <div className="block w-full pointer-events-none">
+              <SpeakerButtonContent isOpen={false} />
+            </div>
+          )}
+        </motion.div>
+      )}
 
-      {/* 3. Secondary CTA - Become Sponsor */}
-      <motion.div
-        whileHover={IS_SPONSOR_OPEN ? { scale: 1.05 } : {}}
-        whileTap={IS_SPONSOR_OPEN ? { scale: 0.95 } : {}}
-        className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_SPONSOR_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
-      >
-        {IS_SPONSOR_OPEN ? (
-          <a
-            href="https://drive.google.com/drive/folders/1W8pUsRGf4560L6EM5dv8OK9Im6GamVnd?usp=sharing"
-            target="_blank"
-            className="group block w-full"
-          >
-            <SponsorButtonContent isOpen={true} />
-          </a>
-        ) : (
-          <div className="block w-full pointer-events-none">
-            <SponsorButtonContent isOpen={false} />
-          </div>
-        )}
-      </motion.div>
+      {/* 3. Secondary CTA - Become Sponsor - hidden */}
+      {false && (
+        <motion.div
+          whileHover={IS_SPONSOR_OPEN ? { scale: 1.05 } : {}}
+          whileTap={IS_SPONSOR_OPEN ? { scale: 0.95 } : {}}
+          className={`flex-1 min-w-0 sm:min-w-[10rem] sm:max-w-[14rem] ${!IS_SPONSOR_OPEN ? 'cursor-not-allowed opacity-80' : ''}`}
+        >
+          {IS_SPONSOR_OPEN ? (
+            <a
+              href="https://drive.google.com/drive/folders/1W8pUsRGf4560L6EM5dv8OK9Im6GamVnd?usp=sharing"
+              target="_blank"
+              className="group block w-full"
+            >
+              <SponsorButtonContent isOpen={true} />
+            </a>
+          ) : (
+            <div className="block w-full pointer-events-none">
+              <SponsorButtonContent isOpen={false} />
+            </div>
+          )}
+        </motion.div>
+      )}
     </div>
   );
 };
