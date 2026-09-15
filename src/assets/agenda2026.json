@@ -388,13 +388,22 @@
       "start_time": "2026-10-13T17:40+02:00",
       "end_time": "2026-10-13T17:50+02:00",
       "minutes": 10,
-      "type": "break"
+      "type": "talk"
     },
-    "break": {
-      "title": "Closing",
-      "inline_abstract": "",
+    "talk": {
+      "name": "",
+      "avatar": "",
       "location": "",
-      "description": ""
+      "bio": "",
+      "twitter": "",
+      "url": "#",
+      "organization": "",
+      "job_title": "",
+      "title": "Closing",
+      "description": "",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
     }
   }
 ]
