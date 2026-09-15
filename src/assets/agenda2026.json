@@ -36,12 +36,12 @@
       "location": "",
       "bio": "Software Architect, International speaker & author",
       "twitter": "",
-      "url": "#",
+      "url": "https://uk.linkedin.com/in/lucamezzalira",
       "organization": "Amazon Web Services",
       "job_title": "",
       "title": "Serverless is not what you think it is",
-      "description": "",
-      "abstract": "",
+      "description": "Almost a decade after Lambda, we are still arguing about cold starts and vendor lock-in while the conversation has moved on without us. Serverless was never about servers. It was about reshaping how teams design, own, and evolve systems, and most organisations are still treating it as a deployment tactic instead of an architectural stance.\n\nIn this keynote we unpack the misconceptions that have quietly calcified into industry orthodoxy. Why \"serverless is only for glue code\" misses the point. Why \"we will move to containers when we scale\" is usually a confession, not a strategy. Why the cost conversation has been framed dishonestly on both sides. And why the teams getting the most value from serverless today are the ones who stopped asking whether to use it and started asking what it lets them stop doing.\n\nYou will leave with a sharper mental model for where serverless belongs in your architecture, the questions worth asking your teams on Monday morning, and an honest read on where this is all going.",
+      "abstract": "Almost a decade after Lambda, we are still arguing about cold starts and vendor lock-in while the conversation has moved on without us. Serverless was never about servers. It was about reshaping how teams design, own, and evolve systems. In this keynote we unpack the misconceptions that have quietly calcified into industry orthodoxy, and you will leave with a sharper mental model for where serverless belongs in your architecture.",
       "audience_level": "",
       "tags": []
     }
@@ -244,19 +244,24 @@
       "keynote": true
     },
     "talk": {
-      "name": "someone to be announced",
-      "avatar": "",
+      "name": "Julian Wood",
+      "avatar": "/speakers/julian-wood.jpeg",
       "location": "",
-      "bio": "",
-      "twitter": "",
-      "url": "#",
-      "organization": "",
-      "job_title": "",
-      "title": "Keynote 2",
-      "description": "",
-      "abstract": "",
-      "audience_level": "",
-      "tags": []
+      "bio": "Julian is a Principal Developer Advocate at Amazon Web Services who helps developers love how serverless and AI technologies can transform the way they build and run applications.",
+      "twitter": "julian_wood",
+      "url": "https://uk.linkedin.com/in/julianrwood",
+      "organization": "Amazon Web Services",
+      "job_title": "Principal Developer Advocate for AWS Serverless",
+      "title": "Serverless Compute for All Kinds of Workloads",
+      "description": "For ten years, AWS Lambda meant one thing: you write a function, it handles an event. But that same simplicity now reaches much further. Durable workflows, AI agents, isolated sandboxes, and more. Serverless compute has quietly grown to handle use cases most developers never expected. Learn how to use Lambda for far more ambitious workloads.",
+      "abstract": "For ten years, AWS Lambda meant one thing: you write a function, it handles an event. But that same simplicity now reaches much further. Durable workflows, AI agents, isolated sandboxes, and more. Learn how to use Lambda for far more ambitious workloads.",
+      "audience_level": "All",
+      "tags": [
+        "aws",
+        "lambda",
+        "serverless",
+        "ai"
+      ]
     }
   },
   {

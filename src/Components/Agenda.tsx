@@ -489,6 +489,44 @@ const KeynoteSpeakers = () => {
           </div>
         </motion.div>
 
+        {/* Julian Wood */}
+        <motion.div
+          className="group relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div className="relative p-8 text-center">
+            <div className="mb-6 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-lg opacity-30 scale-110"></div>
+              <img
+                src="/speakers/julian-wood.jpeg"
+                alt="Julian Wood"
+                className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl mx-auto"
+              />
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                ⭐ KEYNOTE
+              </div>
+            </div>
+            <h3 className="mb-3 text-2xl font-bold bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">
+              Julian Wood
+            </h3>
+            <p className="mb-2 text-lg font-semibold text-blue-600">Amazon Web Services</p>
+            <p className="mb-4 text-sm text-gray-600 leading-relaxed">
+              Principal Developer Advocate for AWS Serverless
+            </p>
+            <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+              <h4 className="font-bold text-gray-800 text-lg">Serverless Compute for All Kinds of Workloads</h4>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2 text-xs">
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">☁️ AWS</span>
+              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">🎤 Advocate</span>
+              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">🤖 AI & Serverless</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* James Eastham */}
         {/* <motion.div
           className="group relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
