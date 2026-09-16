@@ -109,14 +109,14 @@
       "type": "talk"
     },
     "talk": {
-      "name": "Claudia Belloli, Luca Formenti",
-      "avatar": "",
+      "name": "Davide De Sio",
+      "avatar": "/speakers/davide-de-sio.jpeg",
       "location": "",
       "bio": "",
       "twitter": "",
       "url": "https://eleva.it",
       "organization": "Eleva",
-      "job_title": "",
+      "job_title": "Head of Software Engineering",
       "title": "From Functions to Agents: Evolving Serverless Architectures for Autonomous Software",
       "description": "Serverless changed the way we build applications by moving from servers to functions.\n\nNow, AI agents are changing the programming model again: an agent doesn't simply execute predefined code, it can decide what to do, choose the tools it needs and interact with existing applications.\n\nBut introducing agents doesn't mean rewriting everything from scratch: in this talk, we'll explore the Agentic Strangler Pattern and how to gradually evolve an existing serverless application by turning existing capabilities into tools and introducing agents around them, using Amazon Bedrock AgentCore and familiar serverless building blocks.\n\nWe'll also look at why agents should be treated as a serverless distributed systems, where failures, identity, observability and communication between components become part of the architecture.",
       "abstract": "",
