@@ -286,16 +286,16 @@
       "type": "talk"
     },
     "talk": {
-      "name": "someone to be announced",
-      "avatar": "",
+      "name": "Alberto Ossola",
+      "avatar": "/speakers/alberto-ossola.jpg",
       "location": "",
       "bio": "",
       "twitter": "",
       "url": "#",
-      "organization": "",
-      "job_title": "",
-      "title": "TBD",
-      "description": "",
+      "organization": "beSharp",
+      "job_title": "Cloud-native Developer",
+      "title": "Da 2 secondi a 200 millisecondi: .NET Native AOT su AWS Lambda",
+      "description": ".NET è storicamente uno dei runtime più penalizzati su AWS Lambda: una funzione appena creata può impiegare anche due secondi prima di rispondere alla prima richiesta, in attesa del runtime. Ci sono due alternative: Snapstart e Compilazione Native AOT, ma nessuna delle due tecnologie viene via gratis. Alcune parti di un'applicazione .NET tipica non sopravvivono alla compilazione nativa, e snapstart richiede alcuni trick per far funzionare correttamente l'applicazione; vedremo insieme quale approccio conviene adottare a seconda dello scenario e confronteremo i risultati.",
       "abstract": "",
       "audience_level": "",
       "tags": []
