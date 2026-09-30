@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import agenda2026 from '../assets/agenda2026.json';
-import { AgendaItem } from '../types/agenda';
+import { AgendaItem, Speaker } from '../types/agenda';
+import { getTalkSpeakers } from '../lib/agenda';
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
 const PLACEHOLDER_NAME = 'someone to be announced';
@@ -228,6 +229,63 @@ interface CompactSessionCardProps {
   orientation: '16:9' | '9:16';
 }
 
+const SpeakerInfo = ({
+  speakers,
+  textClass,
+  orientation
+}: {
+  speakers: Speaker[];
+  textClass: string;
+  orientation: '16:9' | '9:16';
+}) => {
+  const nameSize = orientation === '16:9' ? 'text-sm' : 'text-xs';
+  return (
+    <div className="space-y-1">
+      {speakers.map((speaker, speakerIndex) => (
+        <div key={speakerIndex}>
+          <p className={`${textClass} ${nameSize}`}>{speaker.name}</p>
+          {speaker.organization && <p className="text-gray-300 text-xs">{speaker.organization}</p>}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const SpeakerAvatars = ({
+  speakers,
+  accentClass,
+  orientation
+}: {
+  speakers: Speaker[];
+  accentClass: string;
+  orientation: '16:9' | '9:16';
+}) => {
+  const sizeClass = orientation === '16:9' ? 'w-12 h-12' : 'w-10 h-10';
+  return (
+    <div className={`flex flex-shrink-0 items-center ${speakers.length > 1 ? '-space-x-3' : ''}`}>
+      {speakers.map((speaker, speakerIndex) =>
+        speaker.avatar ? (
+          <img
+            key={speakerIndex}
+            className={`${sizeClass} rounded-full object-cover ring-2 ring-white ring-opacity-30`}
+            src={speaker.avatar}
+            alt={speaker.name}
+            title={speaker.name}
+            loading="lazy"
+          />
+        ) : (
+          <div
+            key={speakerIndex}
+            className={`${sizeClass} rounded-full bg-gradient-to-r ${accentClass} flex items-center justify-center text-white text-sm font-bold ring-2 ring-white ring-opacity-30`}
+          >
+            {speaker.name.charAt(0)}
+          </div>
+        )
+      )}
+    </div>
+  );
+};
+
 const CompactSessionCard = ({ session, color, orientation }: CompactSessionCardProps) => {
   const getTimestamp = (time: string) => {
     const date = new Date(time);
@@ -240,12 +298,12 @@ const CompactSessionCard = ({ session, color, orientation }: CompactSessionCardP
 
   const title = session?.talk?.title || session?.break?.title || 'TBD';
   const name = session?.talk?.name;
-  const organization = session?.talk?.organization;
   const duration = session?.agenda_details.minutes || 0;
   const startTime = getTimestamp(session.agenda_details.start_time);
   const talkType = session.agenda_details.type;
   const isKeynote = session.agenda_details.keynote || false;
-  const profileImg = session?.talk?.avatar;
+  const speakers = getTalkSpeakers(session?.talk);
+  const showSpeakers = talkType === 'talk' && speakers.length > 0 && name !== PLACEHOLDER_NAME;
 
   const colorClasses = {
     purple: {
@@ -290,39 +348,10 @@ const CompactSessionCard = ({ session, color, orientation }: CompactSessionCardP
             {title}
           </h4>
 
-          {talkType === 'talk' && name && name !== PLACEHOLDER_NAME && (
-            <div className="space-y-1">
-              <p className={`${colors.text} ${orientation === '16:9' ? 'text-sm' : 'text-xs'}`}>{name}</p>
-              {organization && (
-                <p className={`text-gray-300 ${orientation === '16:9' ? 'text-xs' : 'text-xs'}`}>{organization}</p>
-              )}
-            </div>
-          )}
+          {showSpeakers && <SpeakerInfo speakers={speakers} textClass={colors.text} orientation={orientation} />}
         </div>
 
-        {/* Speaker Avatar */}
-        {talkType === 'talk' && name !== PLACEHOLDER_NAME && (
-          <div className="flex-shrink-0">
-            {profileImg ? (
-              <img
-                className={`${
-                  orientation === '16:9' ? 'w-12 h-12' : 'w-10 h-10'
-                } rounded-full object-cover ring-2 ring-white ring-opacity-30`}
-                src={profileImg}
-                alt={name || ''}
-                loading="lazy"
-              />
-            ) : name ? (
-              <div
-                className={`${orientation === '16:9' ? 'w-12 h-12' : 'w-10 h-10'} rounded-full bg-gradient-to-r ${
-                  colors.accent
-                } flex items-center justify-center text-white text-sm font-bold ring-2 ring-white ring-opacity-30`}
-              >
-                {name.charAt(0)}
-              </div>
-            ) : null}
-          </div>
-        )}
+        {showSpeakers && <SpeakerAvatars speakers={speakers} accentClass={colors.accent} orientation={orientation} />}
       </div>
     </motion.div>
   );

@@ -6,6 +6,14 @@ export interface AgendaDetails {
   type: 'talk' | 'break';
 }
 
+export interface Speaker {
+  name: string;
+  avatar: string;
+  url: string;
+  organization: string;
+  job_title: string;
+}
+
 export interface Talk {
   title: string;
   description: string;
@@ -15,6 +23,7 @@ export interface Talk {
   url: string;
   organization: string;
   job_title: string;
+  speakers?: Speaker[];
 }
 
 export interface Break {

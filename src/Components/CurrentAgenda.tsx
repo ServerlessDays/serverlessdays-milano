@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import agenda2026 from '../assets/agenda2026.json';
-import { AgendaItem } from '../types/agenda';
+import { AgendaItem, Speaker } from '../types/agenda';
+import { getTalkSpeakers } from '../lib/agenda';
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
 const PLACEHOLDER_NAME = 'someone to be announced';
@@ -250,6 +251,19 @@ const Avatar = ({
   );
 };
 
+const SpeakerInfo = ({ speakers, textClass }: { speakers: Speaker[]; textClass: string }) => {
+  return (
+    <div className="space-y-2">
+      {speakers.map((speaker, speakerIndex) => (
+        <div key={speakerIndex}>
+          <p className="text-xl text-gray-200 font-medium">{speaker.name}</p>
+          {speaker.organization && <p className={`text-lg ${textClass}`}>{speaker.organization}</p>}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
   const getTimestamp = (time: string) => {
     const date = new Date(time);
@@ -262,12 +276,12 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
 
   const title = session?.talk?.title || session?.break?.title || 'TBD';
   const name = session?.talk?.name;
-  const organization = session?.talk?.organization;
   const duration = session?.agenda_details.minutes || 0;
   const startTime = getTimestamp(session.agenda_details.start_time);
   const talkType = session.agenda_details.type;
   const isKeynote = session.agenda_details.keynote || false;
-  const profileImg = session?.talk?.avatar;
+  const speakers = getTalkSpeakers(session?.talk);
+  const showSpeakers = talkType === 'talk' && speakers.length > 0 && name !== PLACEHOLDER_NAME;
   const description = session?.talk?.abstract || session?.talk?.description || session?.break?.inline_abstract;
 
   return (
@@ -302,12 +316,7 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
           </h4>
 
           {/* Speaker Info */}
-          {talkType === 'talk' && name && name !== PLACEHOLDER_NAME && (
-            <div className="space-y-2">
-              <p className="text-xl text-gray-200 font-medium">{name}</p>
-              {organization && <p className={`text-lg ${colors.text}`}>{organization}</p>}
-            </div>
-          )}
+          {showSpeakers && <SpeakerInfo speakers={speakers} textClass={colors.text} />}
 
           {/* Description */}
           {description && description.length > 0 && talkType === 'talk' && (
@@ -329,9 +338,17 @@ const SessionCard = ({ session, colors, isLive = false }: SessionCardProps) => {
         </div>
 
         {/* Speaker Avatar */}
-        {talkType === 'talk' && name !== PLACEHOLDER_NAME && (
-          <div className="flex-shrink-0">
-            <Avatar profileImg={profileImg} name={name} accentClass={colors.accent} sizeClass="w-20 h-20" />
+        {showSpeakers && (
+          <div className={`flex flex-shrink-0 items-center ${speakers.length > 1 ? '-space-x-4' : ''}`}>
+            {speakers.map((speaker, speakerIndex) => (
+              <Avatar
+                key={speakerIndex}
+                profileImg={speaker.avatar}
+                name={speaker.name}
+                accentClass={colors.accent}
+                sizeClass="w-20 h-20"
+              />
+            ))}
           </div>
         )}
       </div>

@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 // import owl_mascot from "../assets/Animals SVG/owl_mascot.svg";
 import dino_mascot from '../assets/Animals SVG/Dino_mascot.svg';
 
-import { AgendaItem } from '../types/agenda';
+import { AgendaItem, Speaker } from '../types/agenda';
+import { getTalkSpeakers } from '../lib/agenda';
 
 const IS_COMING_SOON = false;
 const PLACEHOLDER_NAME = 'someone to be announced';
@@ -119,6 +120,36 @@ const speakerTitle = (name?: string, jobTitle?: string, organization?: string) =
   if (jobTitle) result += ` - ${jobTitle}`;
   if (organization) result += ` @ ${organization}`;
   return result;
+};
+
+const SpeakerByLine = ({
+  speakers,
+  accentClass,
+  isPlaceholder
+}: {
+  speakers: Speaker[];
+  accentClass: string;
+  isPlaceholder: boolean;
+}) => {
+  return (
+    <div className="flex flex-col gap-1 mb-2">
+      {speakers.map((speaker, speakerIndex) => (
+        <div key={speakerIndex} className="flex items-center gap-2">
+          <span className="text-sm text-gray-600">by</span>
+          <a
+            href={speaker.url}
+            target="_blank"
+            className={`text-sm font-medium hover:underline ${accentClass} ${
+              isPlaceholder ? 'pointer-events-none text-gray-400' : ''
+            }`}
+            onClick={e => e.stopPropagation()}
+          >
+            {speakerTitle(speaker.name, speaker.job_title, speaker.organization)}
+          </a>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 const SpeakerAvatar = ({
@@ -243,7 +274,7 @@ const CardContent = ({
   isExpanded,
   onToggleExpand
 }: CardContentProps) => {
-  const speakerNameTitle = speakerTitle(name, agendaTalk?.talk?.job_title, agendaTalk?.talk?.organization);
+  const speakers = getTalkSpeakers(agendaTalk?.talk);
   const isPlaceholder = isSpeakerPlaceholder(name);
 
   return (
@@ -271,20 +302,8 @@ const CardContent = ({
           {title}
         </h3>
 
-        {talkType === 'talk' && name && (
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-sm text-gray-600">by</span>
-            <a
-              href={agendaTalk.talk?.url}
-              target="_blank"
-              className={`text-sm font-medium hover:underline ${colors.accent} ${
-                isPlaceholder ? 'pointer-events-none text-gray-400' : ''
-              }`}
-              onClick={e => e.stopPropagation()}
-            >
-              {speakerNameTitle}
-            </a>
-          </div>
+        {talkType === 'talk' && speakers.length > 0 && name && (
+          <SpeakerByLine speakers={speakers} accentClass={colors.accent} isPlaceholder={isPlaceholder} />
         )}
 
         {/* Description preview */}
@@ -310,21 +329,24 @@ const CardContent = ({
       </div>
 
       {/* Speaker avatar */}
-      {talkType === 'talk' && (name || agendaTalk?.talk?.avatar) && (
-        <div className="flex-shrink-0">
-          <a
-            href={agendaTalk.talk?.url || '#'}
-            className={`block ${isPlaceholder ? 'pointer-events-none' : ''}`}
-            target="_blank"
-            onClick={e => e.stopPropagation()}
-          >
-            <SpeakerAvatar
-              profileImg={agendaTalk?.talk?.avatar}
-              name={name}
-              accentClass={colors.accent}
-              isMobile={isMobile}
-            />
-          </a>
+      {talkType === 'talk' && speakers.length > 0 && (
+        <div className={`flex flex-shrink-0 items-center ${speakers.length > 1 ? '-space-x-3' : ''}`}>
+          {speakers.map((speaker, speakerIndex) => (
+            <a
+              key={speakerIndex}
+              href={speaker.url || '#'}
+              className={`block ${isPlaceholder ? 'pointer-events-none' : 'transition-transform hover:z-10 hover:scale-105'}`}
+              target="_blank"
+              onClick={e => e.stopPropagation()}
+            >
+              <SpeakerAvatar
+                profileImg={speaker.avatar}
+                name={speaker.name}
+                accentClass={colors.accent}
+                isMobile={isMobile}
+              />
+            </a>
+          ))}
         </div>
       )}
     </div>

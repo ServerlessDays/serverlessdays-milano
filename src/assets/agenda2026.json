@@ -63,27 +63,47 @@
   {
     "agenda_details": {
       "start_time": "2026-10-13T10:00+02:00",
-      "end_time": "2026-10-13T10:40+02:00",
-      "minutes": 40,
+      "end_time": "2026-10-13T10:20+02:00",
+      "minutes": 20,
       "type": "talk"
     },
     "talk": {
-      "name": "Prerit Munjal",
-      "avatar": "/speakers/prerit-munjal.jpeg",
+      "name": "Tommaso Stocchi",
+      "avatar": "/speakers/tommaso-stocchi.jpg",
       "location": "",
-      "bio": "Prerit is a Cloud-Native Platform Leader with extensive experience designing and scaling secure, resilient cloud infrastructures. As the former CTO of KubeCloud, he built no-code solutions bridging Cloud, DevOps, and SRE, leading the company to a successful acquisition. Currently, he drives cloud-native, observability, CI/CD, and AI initiatives as a technical leader at Groupon.",
-      "twitter": "prerit_munjal",
-      "url": "https://preritmunjal.me",
-      "organization": "Groupon",
-      "job_title": "Senior Technical Product Manager",
-      "title": "Agents are invasive. Sidecars complicate scaling. Dashboards rot quietly in the background. We wanted observability that didn’t require duct-taping our infrastructure or running a new control plane.",
-      "description": "Agents are invasive. Sidecars complicate scaling. Dashboards rot quietly in the background. We wanted observability that didn’t require duct-taping our infrastructure or running a new control plane.\n\nSo we built a new layer: event-driven, serverless context agents running on Cloud Run, powered by Model Context Protocol (MCP) servers. No daemons. Just lightweight context snapshots that stream into a shared intelligence layer, and make our infrastructure speak for itself. In this talk, we’ll share how we:\n\n• Deployed on-demand MCP servers on Cloud Run triggered by CI/CD events, alerts, policy changes, and anomalies\n• Gathered real-time system state like diffed IAM policies, config drifts, recent deploys and funneled it into an LLM-accessible context index\n• Used this model-aware context to answer questions like “Why is this pod crashing?”, “What else broke when this happened?” and more\n\nThis is observability without the bloat. No daemons burning CPU. No telemetry black holes. Just the intelligence you actually need when you need it.",
-      "abstract": "Event-driven, serverless context agents running on Cloud Run, powered by MCP servers. No daemons burning CPU. No telemetry black holes. Just the intelligence you actually need when you need it.",
-      "audience_level": "Intermediate",
-      "tags": [
-        "gcp",
-        "mcp"
-      ]
+      "bio": "",
+      "twitter": "",
+      "url": "https://www.linkedin.com/in/tommaso-stocchi",
+      "organization": "Microsoft",
+      "job_title": "Cloud Solution Architect",
+      "title": "Serverless in the Cloud, Chaos on Local? Fixing the Inner Loop with Aspire",
+      "description": "Deploying serverless workloads to the cloud has become a breeze... until we need to test the entire architecture on our local development machine. Between manually orchestrating Docker containers, scattered environment variables, and fragmented local observability, the developer inner loop ends up slowing down the entire delivery cycle.",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T10:20+02:00",
+      "end_time": "2026-10-13T10:40+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Alberto Ossola",
+      "avatar": "/speakers/alberto-ossola.jpg",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "https://www.besharp.it",
+      "organization": "beSharp",
+      "job_title": "Cloud-native Developer",
+      "title": "Da 2 secondi a 200 millisecondi: .NET Native AOT su AWS Lambda",
+      "description": ".NET è storicamente uno dei runtime più penalizzati su AWS Lambda: una funzione appena creata può impiegare anche due secondi prima di rispondere alla prima richiesta, in attesa del runtime. Ci sono due alternative: Snapstart e Compilazione Native AOT, ma nessuna delle due tecnologie viene via gratis. Alcune parti di un'applicazione .NET tipica non sopravvivono alla compilazione nativa, e snapstart richiede alcuni trick per far funzionare correttamente l'applicazione; vedremo insieme quale approccio conviene adottare a seconda dello scenario e confronteremo i risultati.",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
     }
   },
   {
@@ -286,19 +306,35 @@
       "type": "talk"
     },
     "talk": {
-      "name": "Alberto Ossola",
-      "avatar": "/speakers/alberto-ossola.jpg",
+      "name": "Alessandro Frangioni, Andrea Ricci",
+      "avatar": "/speakers/alessandro-frangioni.jpg",
       "location": "",
       "bio": "",
       "twitter": "",
-      "url": "https://www.besharp.it",
-      "organization": "beSharp",
-      "job_title": "Cloud-native Developer",
-      "title": "Da 2 secondi a 200 millisecondi: .NET Native AOT su AWS Lambda",
-      "description": ".NET è storicamente uno dei runtime più penalizzati su AWS Lambda: una funzione appena creata può impiegare anche due secondi prima di rispondere alla prima richiesta, in attesa del runtime. Ci sono due alternative: Snapstart e Compilazione Native AOT, ma nessuna delle due tecnologie viene via gratis. Alcune parti di un'applicazione .NET tipica non sopravvivono alla compilazione nativa, e snapstart richiede alcuni trick per far funzionare correttamente l'applicazione; vedremo insieme quale approccio conviene adottare a seconda dello scenario e confronteremo i risultati.",
+      "url": "#",
+      "organization": "Docebo",
+      "job_title": "Engineering Managers",
+      "title": "From Events to Outcomes: Building Resilient Slack Integrations with Serverless Patterns",
+      "description": "What happens when a Slack integration has to do more than deliver a webhook?\n\nIn this talk, we’ll take a practical look at a production Slack integration and the serverless, event-driven patterns behind two real-world use cases: user mapping and message delivery.\n\nFirst, we’ll explore how a dedicated identity-mapping component enables partial bidirectional mapping between a learning platform and Slack, following the flow from an incoming event to the mapped user. Then, we’ll look at message delivery: how notification events are processed, sent to Slack, and retried when needed to make delivery more resilient.\n\nFor both use cases, we’ll share simplified, public-safe architecture diagrams, walk through the key flows, and discuss performance numbers and scaling behaviour. We’ll also take a brief look at observability dashboards and how they help teams understand throughput, failures, retries, and system health in production.\n\nThe goal is not to present a complete architecture, but to show the design decisions and serverless patterns that help turn asynchronous events into reliable user-facing outcomes.",
       "abstract": "",
       "audience_level": "",
-      "tags": []
+      "tags": [],
+      "speakers": [
+        {
+          "name": "Alessandro Frangioni",
+          "avatar": "/speakers/alessandro-frangioni.jpg",
+          "url": "#",
+          "organization": "Docebo",
+          "job_title": "Engineering Manager, team Integrations"
+        },
+        {
+          "name": "Andrea Ricci",
+          "avatar": "/speakers/andrea-ricci.jpg",
+          "url": "#",
+          "organization": "Docebo",
+          "job_title": "Engineering Manager, team Integration Headless"
+        }
+      ]
     }
   },
   {
