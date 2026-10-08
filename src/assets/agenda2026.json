@@ -2,8 +2,8 @@
   {
     "agenda_details": {
       "start_time": "2026-10-13T08:30+02:00",
-      "end_time": "2026-10-13T09:00+02:00",
-      "minutes": 30,
+      "end_time": "2026-10-13T09:20+02:00",
+      "minutes": 50,
       "type": "break"
     },
     "break": {
@@ -15,8 +15,8 @@
   },
   {
     "agenda_details": {
-      "start_time": "2026-10-13T09:00+02:00",
-      "end_time": "2026-10-13T09:20+02:00",
+      "start_time": "2026-10-13T09:20+02:00",
+      "end_time": "2026-10-13T09:40+02:00",
       "minutes": 20,
       "type": "talk"
     },
@@ -38,8 +38,8 @@
   },
   {
     "agenda_details": {
-      "start_time": "2026-10-13T09:20+02:00",
-      "end_time": "2026-10-13T10:00+02:00",
+      "start_time": "2026-10-13T09:40+02:00",
+      "end_time": "2026-10-13T10:20+02:00",
       "minutes": 40,
       "type": "talk",
       "keynote": true
@@ -62,8 +62,8 @@
   },
   {
     "agenda_details": {
-      "start_time": "2026-10-13T10:00+02:00",
-      "end_time": "2026-10-13T10:20+02:00",
+      "start_time": "2026-10-13T10:20+02:00",
+      "end_time": "2026-10-13T10:40+02:00",
       "minutes": 20,
       "type": "talk"
     },
@@ -78,29 +78,6 @@
       "job_title": "Cloud Solution Architect",
       "title": "Serverless in the Cloud, Chaos on Local? Fixing the Inner Loop with Aspire",
       "description": "Deploying serverless workloads to the cloud has become a breeze... until we need to test the entire architecture on our local development machine. Between manually orchestrating Docker containers, scattered environment variables, and fragmented local observability, the developer inner loop ends up slowing down the entire delivery cycle.",
-      "abstract": "",
-      "audience_level": "",
-      "tags": []
-    }
-  },
-  {
-    "agenda_details": {
-      "start_time": "2026-10-13T10:20+02:00",
-      "end_time": "2026-10-13T10:40+02:00",
-      "minutes": 20,
-      "type": "talk"
-    },
-    "talk": {
-      "name": "Alberto Ossola",
-      "avatar": "/speakers/alberto-ossola.jpg",
-      "location": "",
-      "bio": "",
-      "twitter": "",
-      "url": "https://www.besharp.it",
-      "organization": "beSharp",
-      "job_title": "Cloud-native Developer",
-      "title": "Da 2 secondi a 200 millisecondi: .NET Native AOT su AWS Lambda",
-      "description": ".NET è storicamente uno dei runtime più penalizzati su AWS Lambda: una funzione appena creata può impiegare anche due secondi prima di rispondere alla prima richiesta, in attesa del runtime. Ci sono due alternative: Snapstart e Compilazione Native AOT, ma nessuna delle due tecnologie viene via gratis. Alcune parti di un'applicazione .NET tipica non sopravvivono alla compilazione nativa, e snapstart richiede alcuni trick per far funzionare correttamente l'applicazione; vedremo insieme quale approccio conviene adottare a seconda dello scenario e confronteremo i risultati.",
       "abstract": "",
       "audience_level": "",
       "tags": []
@@ -345,34 +322,7 @@
       "type": "talk"
     },
     "talk": {
-      "name": "Manu Muraleedharan",
-      "avatar": "/speakers/manu-muraleedharan.jpeg",
-      "location": "",
-      "bio": "Manu is a seasoned software professional with over 20 years of experience in the tech industry, spanning enterprise applications, cloud solutions, and data-driven platforms. As an AWS Community Builder for 3 years and a holder of multiple AWS certifications, he brings deep expertise in designing scalable, cloud-native architectures. A passionate advocate for AI, data, and automation, Manu focuses on practical applications of emerging technologies. When not building or mentoring in the cloud space, he can be found whipping up delicious cakes in his home kitchen.",
-      "twitter": "",
-      "url": "https://dev.to/manumaan",
-      "organization": "ServerlessGuru",
-      "job_title": "Architect",
-      "title": "Superpowered Workflows - Now 10x easier with Durable Functions in Lambda",
-      "description": "Ever wished you had something better than Step Functions for building workflows? In this fast-paced session, you’ll discover how to build long-running, stateful workflows directly in Lambda —without complex state machines. You will learn all about checkpointing, replay, and automatic recovery, parallel executions and callbacks. Includes a live demo of all the cool features of Durable Functions.",
-      "abstract": "Build long-running, stateful workflows directly in Lambda — without complex state machines. Checkpointing, replay, automatic recovery, parallel executions and callbacks, with a live demo of Durable Functions.",
-      "audience_level": "Intermediate",
-      "tags": [
-        "aws",
-        "serverless",
-        "lambda"
-      ]
-    }
-  },
-  {
-    "agenda_details": {
-      "start_time": "2026-10-13T16:20+02:00",
-      "end_time": "2026-10-13T16:40+02:00",
-      "minutes": 20,
-      "type": "talk"
-    },
-    "talk": {
-      "name": "Luca Ippolito",
+      "name": "Luca Ippolito, Andrea Bartilucci",
       "avatar": "/speakers/luca-ippolito.jpeg",
       "location": "",
       "bio": "Luca is a Cloud Platform Engineer at Swisscom, Switzerland's largest telecom provider, where he builds and operates the AWS landing zone, the platform Swisscom uses to run workloads in the public cloud. Passionate about serverless, he initiated an internal initiative to leverage the sustainable and cost-effective approach of serverless application development and pushes for broader adoption. Whether through workshops, blog posts, internal and external talks, he loves enabling others to embrace cloud-native thinking. He holds multiple AWS certifications such as Solutions Architect Professional and DevOps Engineer Professional, and graduated top of his class with a BSc in Computer Science.",
@@ -389,7 +339,46 @@
         "aws",
         "platform engineering",
         "developer experience"
+      ],
+      "speakers": [
+        {
+          "name": "Luca Ippolito",
+          "avatar": "/speakers/luca-ippolito.jpeg",
+          "url": "https://ch.linkedin.com/in/luca-ippolito",
+          "organization": "Swisscom",
+          "job_title": "Cloud Platform Engineer"
+        },
+        {
+          "name": "Andrea Bartilucci",
+          "avatar": "/speakers/andrea-bartilucci.jpg",
+          "url": "https://www.linkedin.com/in/abartilucci/",
+          "organization": "Swisscom",
+          "job_title": "Cloud Architect"
+        }
       ]
+    }
+  },
+  {
+    "agenda_details": {
+      "start_time": "2026-10-13T16:20+02:00",
+      "end_time": "2026-10-13T16:40+02:00",
+      "minutes": 20,
+      "type": "talk"
+    },
+    "talk": {
+      "name": "Alberto Ossola",
+      "avatar": "/speakers/alberto-ossola.jpg",
+      "location": "",
+      "bio": "",
+      "twitter": "",
+      "url": "https://www.besharp.it",
+      "organization": "beSharp",
+      "job_title": "Cloud-native Developer",
+      "title": "Da 2 secondi a 200 millisecondi: .NET Native AOT su AWS Lambda",
+      "description": ".NET è storicamente uno dei runtime più penalizzati su AWS Lambda: una funzione appena creata può impiegare anche due secondi prima di rispondere alla prima richiesta, in attesa del runtime. Ci sono due alternative: Snapstart e Compilazione Native AOT, ma nessuna delle due tecnologie viene via gratis. Alcune parti di un'applicazione .NET tipica non sopravvivono alla compilazione nativa, e snapstart richiede alcuni trick per far funzionare correttamente l'applicazione; vedremo insieme quale approccio conviene adottare a seconda dello scenario e confronteremo i risultati.",
+      "abstract": "",
+      "audience_level": "",
+      "tags": []
     }
   },
   {
