@@ -144,7 +144,7 @@ const Sponsors = () => {
     );
 
   return (
-    <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto text-center">
+    <div className="pt-10 pb-16 px-4 md:px-8 md:pt-6 lg:pt-2 max-w-7xl mx-auto text-center">
       <div className="mb-12">
         <h2 className="text-4xl md:text-5xl font-black text-white mb-4 bg-gradient-to-r from-white via-pink-200 to-white bg-clip-text text-transparent">
           Our Amazing Sponsors

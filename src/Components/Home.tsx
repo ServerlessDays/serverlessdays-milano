@@ -13,7 +13,7 @@ const Home = () => {
   const IS_COMING_SOON = false; // Set to false when the event tickets are available
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 text-white overflow-hidden">
+    <div className="relative min-h-screen lg:min-h-[80vh] flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 text-white overflow-hidden">
       {/* Floating decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -44,7 +44,7 @@ const Home = () => {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] lg:min-h-[70vh]">
           {/* Content Section */}
           <motion.div
             className="space-y-6 sm:space-y-8 text-center order-2 lg:order-1"
