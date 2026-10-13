@@ -7,6 +7,7 @@ import FullAgenda from './Components/FullAgenda';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
+import Sponsors from './Components/Sponsors';
 import AgendaAccordion from './Components/Agenda';
 import NotFound from './Components/NotFound';
 
@@ -35,7 +36,7 @@ function App() {
               <div className="relative z-10">
                 <Navbar />
                 <Home />
-                {/* <Sponsors /> */}
+                <Sponsors />
 
                 <AgendaAccordion />
                 {/* <CommunitySponsors /> */}
