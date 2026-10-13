@@ -204,14 +204,11 @@ const TimeBadge = ({
 }) => {
   if (isMobile) {
     return (
-      <div className="mb-4">
-        <div
-          className={`${accentClass} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-md inline-flex items-center gap-2`}
-        >
-          <span className="text-xs opacity-90">🕐</span>
-          <span>{startTime}</span>
-          {duration > 0 && <span className="text-xs opacity-90">• {duration}min</span>}
-        </div>
+      <div
+        className={`${accentClass} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-md inline-flex items-center gap-2`}
+      >
+        <span className="text-xs opacity-90">🕐</span>
+        <span>{startTime}</span>
       </div>
     );
   }
@@ -251,7 +248,7 @@ const getTypeIcon = (type: string, isKeynote: boolean) => {
 
 interface CardContentProps {
   agendaTalk: AgendaItem;
-  colors: { accent: string; badge: string };
+  colors: { accent: string; badge: string; time: string };
   title: string;
   description: string;
   name?: string;
@@ -259,6 +256,7 @@ interface CardContentProps {
   isKeynote: boolean;
   isMobile: boolean;
   isExpanded: boolean;
+  startTime: string;
   onToggleExpand: () => void;
 }
 
@@ -272,83 +270,114 @@ const CardContent = ({
   isKeynote,
   isMobile,
   isExpanded,
+  startTime,
   onToggleExpand
 }: CardContentProps) => {
   const speakers = getTalkSpeakers(agendaTalk?.talk);
   const isPlaceholder = isSpeakerPlaceholder(name);
 
+  const badges = (
+    <div className="flex flex-wrap items-center gap-2">
+      {isMobile && (
+        <TimeBadge
+          startTime={startTime}
+          duration={agendaTalk?.agenda_details.minutes || 0}
+          accentClass={colors.time}
+          isMobile
+        />
+      )}
+      <span className="text-lg">{getTypeIcon(talkType, isKeynote)}</span>
+      {getDurationBadge(agendaTalk?.agenda_details.minutes || 0, colors.badge, isKeynote)}
+      {talkType === 'break' && (
+        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+          Break
+        </span>
+      )}
+    </div>
+  );
+
+  const body = (
+    <>
+      <h3
+        className={`font-semibold ${isMobile ? 'text-xl' : 'text-lg'} leading-tight mb-1 ${
+          isKeynote
+            ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
+            : talkType === 'break'
+              ? colors.accent
+              : 'text-gray-900'
+        } ${isPlaceholder ? 'text-gray-500' : ''}`}
+      >
+        {title}
+      </h3>
+
+      {talkType === 'talk' && speakers.length > 0 && name && (
+        <SpeakerByLine speakers={speakers} accentClass={colors.accent} isPlaceholder={isPlaceholder} />
+      )}
+
+      {/* Description preview */}
+      {description && talkType === 'talk' && (
+        <div className="text-sm text-gray-600 leading-relaxed">
+          <p className={`${isExpanded ? '' : 'line-clamp-2'}`}>{description}</p>
+          {description.length > 100 && (
+            <button
+              className={`text-xs ${colors.accent} hover:underline mt-1`}
+              onClick={e => {
+                e.stopPropagation();
+                onToggleExpand();
+              }}
+            >
+              {isExpanded ? 'Show less' : 'Read more'}
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Break description */}
+      {description && talkType === 'break' && <p className="text-sm text-gray-600 mt-1">{description}</p>}
+    </>
+  );
+
+  const avatars = talkType === 'talk' && speakers.length > 0 && (
+    <div className={`flex flex-shrink-0 items-center ${speakers.length > 1 ? '-space-x-3' : ''}`}>
+      {speakers.map((speaker, speakerIndex) => (
+        <a
+          key={speakerIndex}
+          href={speaker.url || '#'}
+          className={`block ${isPlaceholder ? 'pointer-events-none' : 'transition-transform hover:z-10 hover:scale-105'}`}
+          target="_blank"
+          onClick={e => e.stopPropagation()}
+        >
+          <SpeakerAvatar
+            profileImg={speaker.avatar}
+            name={speaker.name}
+            accentClass={colors.accent}
+            isMobile={isMobile}
+          />
+        </a>
+      ))}
+    </div>
+  );
+
+  // On mobile everything (time, badges, avatars) sits on top so the title and body span the full width.
+  if (isMobile) {
+    return (
+      <div className="flex flex-col">
+        <div className="flex items-center justify-between gap-3 mb-2">
+          {badges}
+          {avatars}
+        </div>
+        {body}
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-start justify-between gap-3">
       <div className="flex-1">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-lg">{getTypeIcon(talkType, isKeynote)}</span>
-          {getDurationBadge(agendaTalk?.agenda_details.minutes || 0, colors.badge, isKeynote)}
-          {talkType === 'break' && (
-            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-              Break
-            </span>
-          )}
-        </div>
-
-        <h3
-          className={`font-semibold ${isMobile ? 'text-xl' : 'text-lg'} leading-tight mb-1 ${
-            isKeynote
-              ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'
-              : talkType === 'break'
-                ? colors.accent
-                : 'text-gray-900'
-          } ${isPlaceholder ? 'text-gray-500' : ''}`}
-        >
-          {title}
-        </h3>
-
-        {talkType === 'talk' && speakers.length > 0 && name && (
-          <SpeakerByLine speakers={speakers} accentClass={colors.accent} isPlaceholder={isPlaceholder} />
-        )}
-
-        {/* Description preview */}
-        {description && talkType === 'talk' && (
-          <div className="text-sm text-gray-600 leading-relaxed">
-            <p className={`${isExpanded ? '' : 'line-clamp-2'}`}>{description}</p>
-            {description.length > 100 && (
-              <button
-                className={`text-xs ${colors.accent} hover:underline mt-1`}
-                onClick={e => {
-                  e.stopPropagation();
-                  onToggleExpand();
-                }}
-              >
-                {isExpanded ? 'Show less' : 'Read more'}
-              </button>
-            )}
-          </div>
-        )}
-
-        {/* Break description */}
-        {description && talkType === 'break' && <p className="text-sm text-gray-600 mt-1">{description}</p>}
+        <div className="mb-2">{badges}</div>
+        {body}
       </div>
-
-      {/* Speaker avatar */}
-      {talkType === 'talk' && speakers.length > 0 && (
-        <div className={`flex flex-shrink-0 items-center ${speakers.length > 1 ? '-space-x-3' : ''}`}>
-          {speakers.map((speaker, speakerIndex) => (
-            <a
-              key={speakerIndex}
-              href={speaker.url || '#'}
-              className={`block ${isPlaceholder ? 'pointer-events-none' : 'transition-transform hover:z-10 hover:scale-105'}`}
-              target="_blank"
-              onClick={e => e.stopPropagation()}
-            >
-              <SpeakerAvatar
-                profileImg={speaker.avatar}
-                name={speaker.name}
-                accentClass={colors.accent}
-                isMobile={isMobile}
-              />
-            </a>
-          ))}
-        </div>
-      )}
+      {avatars}
     </div>
   );
 };
@@ -432,7 +461,9 @@ const TalkCard = ({
     >
       <div className="p-4">
         <div className="flex items-start gap-4">
-          <TimeBadge startTime={startTimeString} duration={duration} accentClass={colors.time} isMobile={isMobile} />
+          {!isMobile && (
+            <TimeBadge startTime={startTimeString} duration={duration} accentClass={colors.time} isMobile={false} />
+          )}
 
           {/* Content */}
           <div className="flex-1 min-w-0">
@@ -446,6 +477,7 @@ const TalkCard = ({
               isKeynote={isKeynote}
               isMobile={isMobile}
               isExpanded={isExpanded}
+              startTime={startTimeString}
               onToggleExpand={() => setIsExpanded(!isExpanded)}
             />
           </div>
